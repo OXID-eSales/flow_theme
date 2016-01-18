@@ -1,0 +1,16 @@
+production:
+  - "copy:fonts"
+  - "jshint:theme"
+  - "less:theme"
+  - "less:vendor"
+  - "uglify:theme"
+  - "uglify:vendor"
+  - "uglify:widgets"
+
+development:
+  - "jshint:theme"
+  - "less:theme"
+  - "uglify:theme"
+
+default:
+  - "production"

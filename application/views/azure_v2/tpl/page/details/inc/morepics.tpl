@@ -1,0 +1,22 @@
+[{if $oView->morePics()}]
+    [{assign var="iMorePics" value=$oView->getIcons()|@count}]
+    [{if $iMorePics > 4}]
+        [{oxscript include="js/libs/jquery.flexslider.min.js" priority=2}]
+        [{oxstyle include="css/libs/jquery.flexslider.min.css"}]
+    [{/if}]
+
+    <div class="otherPictures[{if $iMorePics > 4}] flexslider[{/if}]" id="morePicsContainer">
+        <ul class="[{if $iMorePics > 4}]slides[{else}]list-inline[{/if}]">
+            [{oxscript add="var aMorePic=new Array();"}]
+            [{foreach from=$oView->getIcons() key="iPicNr" item="oArtIcon" name="sMorePics"}]
+                [{* ToDo *}]
+                [{*assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl($iPicNr)|@getimagesize*}]
+                <li>
+                    <a id="morePics_[{$smarty.foreach.sMorePics.iteration}]" [{if $smarty.foreach.sMorePics.first}] class="selected"[{/if}] href="[{$oPictureProduct->getPictureUrl($iPicNr)}]" data-num="[{$smarty.foreach.sMorePics.iteration}]" data-width="800" data-height="600" data-zoom-url="[{$oPictureProduct->getMasterZoomPictureUrl($iPicNr)}]">
+                        <img src="[{$oPictureProduct->getIconUrl($iPicNr)}]" alt="morepic-[{$smarty.foreach.sMorePics.iteration}]">
+                    </a>
+                </li>
+            [{/foreach}]
+        </ul>
+    </div>
+[{/if}]

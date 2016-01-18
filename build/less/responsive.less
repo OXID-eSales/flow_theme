@@ -1,0 +1,95 @@
+/**
+ *
+ *     |o     o    |          |
+ * ,---|.,---..,---|,---.,---.|__/
+ * |   |||   |||   ||---'`---.|  \
+ * `---'``---|``---'`---'`---'`   `
+ *       `---'    [media solutions]
+ *
+ * @copyright   (c) digidesk - media solutions
+ * @link        http://www.digidesk.de
+ */
+
+@media ( max-width: @screen-xs-max ) {
+
+    //
+    // Body
+    // --------------------------------------------------
+    body {
+        &.fixed-header {
+            #header #mainnav {
+                &.fadeIn {
+                    width: 100%;
+                }
+
+                a .fa-angle-down {
+                    display: none;
+                }
+            }
+        }
+
+        &.cl- {
+            &basket {
+                #basketVoucher .input-group {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.is-checkout {
+            ol.checkoutSteps {
+                height: 20px;
+
+                .text {
+                    display: none;
+                }
+            }
+
+            #basketSummary {
+                width: 100%!important;
+            }
+        }
+    }
+
+    .boxwrapper {
+        .list-container {
+            // 4 cols list view
+            .gridView {
+                text-align: center;
+            }
+
+            // 2 cols list view
+            .infogridView {
+                text-align: center;
+
+                .productBox .picture {
+                    border-bottom: 1px dashed @gray-lighter;
+                    margin-bottom: @ox-listitem-grid-picture-padding;
+                }
+            }
+
+            .lineView {
+                .productBox {
+                    .functions {
+                        input.amount {
+                            width: 45px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    // Footer
+    // --------------------------------------------------
+
+    #footer {
+        text-align: center;
+
+        .footer-box {
+            margin-bottom: @grid-gutter-width;
+        }
+    }
+}

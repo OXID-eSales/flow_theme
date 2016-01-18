@@ -1,0 +1,1 @@
+# OXID responsive Theme
