@@ -12,9 +12,9 @@
             </div>
 
             [{block name="dd_footer_newsletter_form_inner_group"}]
-                <label class="sr-only" for="footer_newsletter_oxusername">[{oxmultilang ident="WIDGET_FOOTER_NEWSLETTER_TITLE"}]</label>
+                <label class="sr-only" for="footer_newsletter_oxusername">[{oxmultilang ident="NEWSLETTER"}]</label>
                 <input class="form-control" type="email" name="editval[oxuser__oxusername]" id="footer_newsletter_oxusername" value="" placeholder="[{oxmultilang ident="EMAIL"}]">
-                <button class="btn btn-primary" type="submit">[{oxmultilang ident="FORM_NEWSLETTER_SUBSCRIBE"}]</button>
+                <button class="btn btn-primary" type="submit">[{oxmultilang ident="SUBSCRIBE"}]</button>
             [{/block}]
         [{/block}]
     </form>

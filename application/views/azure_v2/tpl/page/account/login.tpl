@@ -1,4 +1,4 @@
-[{assign var="template_title" value="PAGE_ACCOUNT_INC_LOGIN_LOGIN"|oxmultilangassign}]
+[{assign var="template_title" value="REGISTER"|oxmultilangassign}]
 [{capture append="oxidBlock_content"}]
     <div class="accountLoginView">
         <h1 id="loginAccount" class="page-header">[{oxmultilang ident="LOGIN"}]</h1>

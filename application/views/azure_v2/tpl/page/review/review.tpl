@@ -1,7 +1,5 @@
-[{assign var="template_title" value="REVIEW_YOURREVIEW"|oxmultilangassign}]
-
 [{capture append="oxidBlock_content"}]
-    [{oxscript include="js/libs/pages/review.js" priority=10}]
+    [{oxscript include="js/libs/pages/review.min.js" priority=10}]
 
     [{if $oView->getProduct()}]
         [{assign var="product" value=$oView->getProduct()}]
@@ -20,7 +18,7 @@
 
     [{if $oView->isReviewActive()}]
         <div class="widgetBox reviews">
-            <h4>[{oxmultilang ident="DETAILS_PRODUCTREVIEW"}]</h4>
+            <h4>[{oxmultilang ident="WRITE_PRODUCT_REVIEW"}]</h4>
             [{include file="widget/reviews/reviews.tpl" sReviewUserHash=$oView->getReviewUserHash() oDetailsProduct=$oView->getProduct() oReviewUser=$oView->getReviewUser()}]
         </div>
     [{/if}]

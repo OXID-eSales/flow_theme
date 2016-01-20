@@ -1,11 +1,11 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_ACCOUNT_NOTICELIST_MYWISHLIST"|oxmultilangassign}]
-     <h1 class="page-header">[{oxmultilang ident="PAGE_ACCOUNT_NOTICELIST_MYWISHLIST"}]</h1>
+    [{assign var="template_title" value="MY_WISH_LIST"|oxmultilangassign}]
+     <h1 class="page-header">[{oxmultilang ident="MY_WISH_LIST"}]</h1>
 
     [{if $oView->getNoticeProductList()}]
         [{include file="widget/product/list.tpl" type="line" listId="noticelistProductList" title="" products=$oView->getNoticeProductList() removeFunction="tonoticelist" owishid=$oxcmp_user->oxuser__oxid->value}]
     [{else}]
-        <p class="alert alert-info">[{oxmultilang ident="PAGE_ACCOUNT_NOTICELIST_EMPTYWISHLIST"}]</p>
+        <p class="alert alert-info">[{oxmultilang ident="WISH_LIST_EMPTY"}]</p>
     [{/if}]
 
     [{insert name="oxid_tracker" title=$template_title}]

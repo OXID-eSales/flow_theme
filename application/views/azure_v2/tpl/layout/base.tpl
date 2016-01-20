@@ -140,7 +140,6 @@
 
         [{block name="base_style"}]
             [{oxstyle include="css/styles.min.css"}]
-            [{oxstyle include="css/styles2.min.css"}]
         [{/block}]
 
         [{block name="base_fonts"}]

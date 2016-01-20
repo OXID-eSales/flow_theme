@@ -1,10 +1,11 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_INFO_CLEARCOOKIE_TITLE"|oxmultilangassign}]
-    <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_CLEARCOOKIE_TITLE"}]</h1>
+    [{assign var="template_title" value=$oView->getTitle()}]
+    <h1 class="page-header">[{$oView->getTitle()}]</h1>
     <div class="cmsContent">
         <p>
-            [{oxmultilang ident="PAGE_INFO_CLEARCOOKIE_CONTENT"}]
-            [{insert name="oxid_tracker" title=$template_title}]
+            [{oxifcontent ident="oxcookiesexplanation" object="oCont"}]
+                [{$oCont->oxcontents__oxcontent->value}]
+            [{/oxifcontent}]
         </p>
     </div>
 [{/capture}]

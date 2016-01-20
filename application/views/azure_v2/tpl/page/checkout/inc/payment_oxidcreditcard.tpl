@@ -7,11 +7,11 @@
     <dd class="[{if $oView->getCheckedPaymentId() == $paymentmethod->oxpayments__oxid->value}]activePayment[{/if}]">
 
         <div class="form-group">
-            <label class="req control-label col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_CREDITCARD"}]</label>
+            <label class="req control-label col-lg-3">[{oxmultilang ident="CREDITCARD"}]</label>
             <div class="col-lg-9">
                 <select name="dynvalue[kktype]" class="form-control selectpicker" required="required">
-                    <option value="mcd" [{if ($dynvalue.kktype == "mcd" || !$dynvalue.kktype)}]selected[{/if}]>[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_MASTERCARD"}]</option>
-                    <option value="vis" [{if $dynvalue.kktype == "vis"}]selected[{/if}]>[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_VISA"}]</option>
+                    <option value="mcd" [{if ($dynvalue.kktype == "mcd" || !$dynvalue.kktype)}]selected[{/if}]>[{oxmultilang ident="CARD_MASTERCARD"}]</option>
+                    <option value="vis" [{if $dynvalue.kktype == "vis"}]selected[{/if}]>[{oxmultilang ident="CARD_VISA"}]</option>
                     <!--
                     <option value="amx" [{if $dynvalue.kktype == "amx"}]selected[{/if}]>American Express</option>
                     <option value="dsc" [{if $dynvalue.kktype == "dsc"}]selected[{/if}]>Discover</option>
@@ -26,14 +26,14 @@
         </div>
 
         <div class="form-group">
-            <label class="req control-label col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_NUMBER"}]</label>
+            <label class="req control-label col-lg-3">[{oxmultilang ident="NUMBER"}]</label>
             <div class="col-lg-9">
                 <input type="text" class="form-control js-oxValidate js-oxValidate_notEmpty" size="20" maxlength="64" name="dynvalue[kknumber]" value="[{$dynvalue.kknumber}]" required="required">
             </div>
         </div>
 
         <div class="form-group">
-            <label class="req control-label col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_ACCOUNTHOLDER"}]</label>
+            <label class="req control-label col-lg-3">[{oxmultilang ident="BANK_ACCOUNT_HOLDER"}]</label>
             <div class="col-lg-9">
                 <input type="text" size="20" class="form-control js-oxValidate js-oxValidate_notEmpty" maxlength="64" name="dynvalue[kkname]" value="[{if $dynvalue.kkname}][{$dynvalue.kkname}][{else}][{$oxcmp_user->oxuser__oxfname->value}] [{$oxcmp_user->oxuser__oxlname->value}][{/if}]" required="required">
                 <span class="help-block">[{oxmultilang ident="IF_DIFFERENT_FROM_BILLING_ADDRESS"}]</span>
@@ -41,7 +41,7 @@
         </div>
 
         <div class="form-group">
-            <label class="req control-label col-xs-12 col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_VALIDUNTIL"}]</label>
+            <label class="req control-label col-xs-12 col-lg-3">[{oxmultilang ident="VALID_UNTIL"}]</label>
             <div class="col-xs-6 col-lg-2">
                 <select name="dynvalue[kkmonth]" class="form-control selectpicker" required="required">
                     <option [{if $dynvalue.kkmonth == "01"}]selected[{/if}]>01</option>
@@ -69,10 +69,10 @@
         </div>
 
         <div class="form-group">
-            <label class="req control-label col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_SECURITYCODE"}]</label>
+            <label class="req control-label col-lg-3">[{oxmultilang ident="CARD_SECURITY_CODE"}]</label>
             <div class="col-lg-9">
                 <input type="text" class="form-control js-oxValidate js-oxValidate_notEmpty" size="20" maxlength="64" name="dynvalue[kkpruef]" value="[{$dynvalue.kkpruef}]" required="required">
-                <span class="help-block">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_SECURITYCODEDESCRIPTION"}]</span>
+                <span class="help-block">[{oxmultilang ident="CARD_SECURITY_CODE_DESCRIPTION"}]</span>
             </div>
         </div>
 

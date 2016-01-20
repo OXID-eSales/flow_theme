@@ -20,13 +20,13 @@
 
 [{include file="email/html/header.tpl" title="DD_OWNER_REMINDER_HEADING"|oxmultilangassign style=$style}]
 
-<p>[{oxmultilang ident="EMAIL_OWNER_REMINDER_HTML_STOCKLOW"}]</p>
+<p>[{oxmultilang ident="MESSAGE_STOCK_LOW"}]</p>
 
 <table class="orderarticles" border="0" cellspacing="0" cellpadding="0" width="100%">
     <thead>
         <tr>
-            <th colspan="2">[{oxmultilang ident="EMAIL_OWNER_REMINDER_HTML_PRODUCT"}]</th>
-            <th class="text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_QUANTITY"}]</th>
+            <th colspan="2">[{oxmultilang ident="PRODUCT"}]</th>
+            <th class="text-right">[{oxmultilang ident="QUANTITY"}]</th>
         </tr>
     </thead>
     <tbody>

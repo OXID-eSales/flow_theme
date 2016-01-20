@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 
 [{capture assign="sValidationJS"}]
     [{strip}]
@@ -39,8 +35,8 @@
             <input type="hidden" name="blshowshipaddress" value="1">
 
             <div class="well well-sm">
-                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepTop"><i class="fa fa-caret-left"></i> [{oxmultilang ident="FORM_USER_CHECKOUT_CHANGE_BACKSTEP"}]</a>
-                <button id="userNextStepTop" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="FORM_USER_CHECKOUT_CHANGE_NEXTSTEP"}] <i class="fa fa-caret-right"></i></button>
+                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepTop"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                <button id="userNextStepTop" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>
                 <div class="clearfix"></div>
             </div>
 
@@ -50,8 +46,8 @@
                         <div class="panel-heading">
                             [{block name="user_checkout_billing_head"}]
                                 <h3 class="panel-title">
-                                    [{oxmultilang ident="FORM_REGISTER_BILLINGADDRESS"}]
-                                    <button id="userChangeAddress" class="btn btn-xs btn-warning pull-right submitButton largeButton" name="changeBillAddress" type="submit" title="[{oxmultilang ident="PAGE_CHECKOUT_BASKET_CHANGE"}]">
+                                    [{oxmultilang ident="BILLING_ADDRESS"}]
+                                    <button id="userChangeAddress" class="btn btn-xs btn-warning pull-right submitButton largeButton" name="changeBillAddress" type="submit" title="[{oxmultilang ident="CHANGE"}]">
                                         <i class="fa fa-pencil"></i>
                                     </button>
                                 </h3>
@@ -78,9 +74,9 @@
                         <div class="panel-heading">
                             [{block name="user_checkout_shipping_head"}]
                                 <h3 class="panel-title">
-                                    [{oxmultilang ident="FORM_REGISTER_SHIPPINGADDRESS"}]
+                                    [{oxmultilang ident="SHIPPING_ADDRESS"}]
                                     [{if $oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}]
-                                        <button id="userChangeShippingAddress" class="btn btn-xs btn-warning pull-right submitButton largeButton" name="changeShippingAddress" type="submit" [{if !$oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}] style="display: none;" [{/if}] title="[{oxmultilang ident="PAGE_CHECKOUT_BASKET_CHANGE"}]">
+                                        <button id="userChangeShippingAddress" class="btn btn-xs btn-warning pull-right submitButton largeButton" name="changeShippingAddress" type="submit" [{if !$oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}] style="display: none;" [{/if}] title="[{oxmultilang ident="CHANGE"}]">
                                             <i class="fa fa-pencil"></i>
                                         </button>
                                     [{/if}]
@@ -95,7 +91,7 @@
                                 <div class="col-lg-9 col-lg-offset-3">
                                     <div class="checkbox">
                                         <label for="showShipAddress">
-                                            <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="FORM_REGISTER_USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
+                                            <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
                                         </label>
                                     </div>
                                 </div>
@@ -116,8 +112,8 @@
             </div>
 
             <div class="well well-sm">
-                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="FORM_USER_CHECKOUT_CHANGE_BACKSTEP"}]</a>
-                <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="FORM_USER_CHECKOUT_CHANGE_NEXTSTEP"}] <i class="fa fa-caret-right"></i></button>
+                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>
                 <div class="clearfix"></div>
             </div>
         [{/block}]

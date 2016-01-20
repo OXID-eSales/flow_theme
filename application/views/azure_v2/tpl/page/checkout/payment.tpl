@@ -17,7 +17,7 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">[{if $oView->getAllSetsCnt() > 1}][{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_SELECTSHIPPING"}][{else}][{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_SELECTEDSHIPPING"}][{/if}]</h3>
+                            <h3 class="panel-title">[{if $oView->getAllSetsCnt() > 1}][{oxmultilang ident="SELECT_SHIPPING_METHOD"}][{else}][{oxmultilang ident="SELECTED_SHIPPING_CARRIER"}][{/if}]</h3>
                         </div>
                         <div class="panel-body">
                             [{block name="act_shipping"}]
@@ -30,7 +30,7 @@
                                 </div>
                                 <noscript>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-success submitButton largeButton">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_UPDATESHIPPING"}]</button>
+                                        <button type="submit" class="btn btn-success submitButton largeButton">[{oxmultilang ident="UPDATE_SHIPPING_CARRIER"}]</button>
                                     </div>
                                 </noscript>
                             [{/block}]
@@ -38,7 +38,7 @@
                             [{if $oxcmp_basket->getDeliveryCosts()}]
                                 [{if $oxcmp_basket->getDelCostNet()}]
                                     <div id="shipSetCost">
-                                        <b>[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_CHARGE"}] [{$oxcmp_basket->getDelCostNet()}] [{$currency->sign}]
+                                        <b>[{oxmultilang ident="CHARGES"}] [{$oxcmp_basket->getDelCostNet()}] [{$currency->sign}]
                                             [{if $oxcmp_basket->getDelCostVat()}]
                                                 ([{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_PLUSTAX1"}]
                                                 [{$oxcmp_basket->getDelCostVat()}] [{$currency->sign}])
@@ -47,7 +47,7 @@
                                     </div>
                                 [{else}]
                                     <div id="shipSetCost">
-                                        <b>[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_CHARGE"}] [{$oxcmp_basket->getFDeliveryCosts()}] [{$currency->sign}]</b>
+                                        <b>[{oxmultilang ident="CHARGES"}] [{$oxcmp_basket->getFDeliveryCosts()}] [{$currency->sign}]</b>
                                     </div>
                                 [{/if}]
                             [{/if}]
@@ -61,24 +61,24 @@
             [{assign var="iPayError" value=$oView->getPaymentError()}]
 
             [{if $iPayError == 1}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_COMLETEALLFIELDS"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="ERROR_MESSAGE_COMPLETE_FIELDS_CORRECTLY"}]</div>
             [{elseif $iPayError == 2}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_AUTHORIZATIONFAILED"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_AUTHORIZATION_FAILED"}]</div>
             [{elseif $iPayError == 4}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_UNAVAILABLESHIPPING"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_UNAVAILABLE_SHIPPING_METHOD"}]</div>
             [{elseif $iPayError == 5}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_UNAVAILABLEPAYMENT"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_AUTHORIZATION_FAILED"}]</div>
             [{elseif $iPayError == 6}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_UNAVAILABLETSPROTECTION"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="TRUSTED_SHOP_UNAVAILABLE_PROTECTION"}]</div>
             [{elseif $iPayError > 6}]
                 <!--Add custom error message here-->
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_UNAVAILABLEPAYMENT"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_AUTHORIZATION_FAILED"}]</div>
             [{elseif $iPayError == -1}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_ERRUNAVAILABLEPAYMENT"}] "[{$oView->getPaymentErrorText()}]").</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_UNAVAILABLE_PAYMENT_ERROR"}] "[{$oView->getPaymentErrorText()}]").</div>
             [{elseif $iPayError == -2}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_NOSHIPPINGFOUND"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_NO_SHIPPING_METHOD_FOUND"}]</div>
             [{elseif $iPayError == -3}]
-                <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_SELECTANOTHERPAYMENT"}]</div>
+                <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_SELECT_ANOTHER_PAYMENT"}]</div>
             [{elseif $iPayError == -4}]
                 <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_BANK_CODE_INVALID"}]</div>
             [{elseif $iPayError == -5}]
@@ -132,12 +132,12 @@
                     [{block name="checkout_payment_nextstep"}]
                         [{if $oView->isLowOrderPrice()}]
                             <div class="alert alert-info">
-                                <b>[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_MINORDERPRICE"}] [{$oView->getMinOrderPrice()}] [{$currency->sign}]</b>
+                                <b>[{oxmultilang ident="MIN_ORDER_PRICE"}] [{$oView->getMinOrderPrice()}] [{$currency->sign}]</b>
                             </div>
                         [{else}]
                             <div class="well well-sm">
-                                <a href="[{oxgetseourl ident=$oViewConf->getOrderLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="paymentBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_BACKSTEP"}]</a>
-                                <button type="submit" name="userform" class="btn btn-primary pull-right submitButton nextStep largeButton" id="paymentNextStepBottom">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_NEXTSTEP"}] <i class="fa fa-caret-right"></i></button>
+                                <a href="[{oxgetseourl ident=$oViewConf->getOrderLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="paymentBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                                <button type="submit" name="userform" class="btn btn-primary pull-right submitButton nextStep largeButton" id="paymentNextStepBottom">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>
                                 <div class="clearfix"></div>
                             </div>
                         [{/if}]
@@ -146,12 +146,14 @@
                 [{elseif $oView->getEmptyPayment()}]
                     [{block name="checkout_payment_nopaymentsfound"}]
                         <div class="lineBlock"></div>
-                        <h3 id="paymentHeader" class="blockHead">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_INFO"}]</h3>
-                        [{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_EMPTY_TEXT"}]
+                        <h3 id="paymentHeader" class="blockHead">[{oxmultilang ident="PAYMENT_INFORMATION"}]</h3>
+                        [{oxifcontent ident="oxnopaymentmethod" object="oCont"}]
+                            [{$oCont->oxcontents__oxcontent->value}]
+                        [{/oxifcontent}]
                         <input type="hidden" name="paymentid" value="oxempty">
                         <div class="lineBox clear">
-                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=user"}]" class="btn btn-default pull-left prevStep submitButton largeButton"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_BACKSTEP"}]</a>
-                            <button type="submit" name="userform" class="btn btn-primary pull-right submitButton nextStep largeButton" id="paymentNextStepBottom">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_NEXTSTEP"}] <i class="fa fa-caret-right"></i></button>
+                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=user"}]" class="btn btn-default pull-left prevStep submitButton largeButton"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                            <button type="submit" name="userform" class="btn btn-primary pull-right submitButton nextStep largeButton" id="paymentNextStepBottom">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>
                         </div>
                     [{/block}]
                 [{/if}]

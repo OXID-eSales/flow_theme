@@ -56,7 +56,7 @@
           [{if $oView->isActive('FbFacepile') && $oView->isConnectedWithFb()}]
             <div id="facebookFacepile" class="box well well-sm">
                 <section>
-                    <div class="page-header h3">[{oxmultilang ident="WIDGET_FACEBOOK_FACEPILE_HEADER"}]</div>
+                    <div class="page-header h3">[{oxmultilang ident="FACEBOOK_FACEPILE"}]</div>
                     <div class="content" id="productFbFacePile">
                         [{include file="widget/facebook/enable.tpl" source="widget/facebook/facepile.tpl" ident="#productFbFacePile"}]
                     </div>

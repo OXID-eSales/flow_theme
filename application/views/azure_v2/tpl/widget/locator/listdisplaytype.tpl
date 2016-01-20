@@ -5,7 +5,7 @@
 [{if $oView->canSelectDisplayType()}]
     <div class="btn-group">
         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-            <strong>[{oxmultilang ident="view"}]</strong> [{oxmultilang ident=$listType}] <span class="caret"></span>
+            <strong>[{oxmultilang ident="LIST_DISPLAY_TYPE"}]</strong> [{oxmultilang ident=$listType}] <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
             <li><a href="[{$oView->getLink()|oxaddparams:"ldtype=infogrid&amp;_artperpage=$_artPerPage&amp;pgNr=0&amp;$_additionalParams"}]" [{if $listType eq 'infogrid'}]class="selected" [{/if}]>[{oxmultilang ident="infogrid"}]</a></li>

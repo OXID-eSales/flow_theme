@@ -28,7 +28,7 @@
     [{/block}]
 
     [{block name="email_html_ordershipped_infoheader"}]
-        <h3 class="underline">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGADDRESS"}]</h3>
+        <h3 class="underline">[{oxmultilang ident="SHIPPING_ADDRESS"}]</h3>
     [{/block}]
 
     [{block name="email_html_ordershipped_address"}]

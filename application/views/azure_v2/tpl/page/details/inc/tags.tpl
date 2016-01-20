@@ -10,7 +10,7 @@
     <p class="tagCloud">
         [{assign var="oCloudManager" value=$oView->getTagCloudManager()}]
         [{if $oCloudManager->getCloudArray()|count < 0}]
-            [{oxmultilang ident="PAGE_DETAILS_TAGS_NOTAGS"}]
+            [{oxmultilang ident="NO_TAGS"}]
         [{/if}]
         [{foreach from=$oCloudManager->getCloudArray() item="oTag" name="detailsTags"}]
             <a class="tagitem_[{$oCloudManager->getTagSize($oTag->getTitle())}]" href="[{$oTag->getLink()}]">[{$oTag->getTitle()}]</a>[{if !$smarty.foreach.detailsTags.last}], [{/if}]
@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <button class="submitButton btn btn-primary" id="editTag" type="submit">
-                    <i class="fa fa-pencil"></i> [{oxmultilang ident="PAGE_DETAILS_TAGS_EDIT"}]
+                    <i class="fa fa-pencil"></i> [{oxmultilang ident="EDIT_TAGS"}]
                 </button>
             </div>
         </form>

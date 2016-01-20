@@ -20,7 +20,7 @@ $aTheme = array(
     'id'           => 'azure_v2',
     'title'        => 'Azure v2',
     'description'  => 'Azure v2 Beschreibung',
-    'thumbnail'    => 'theme.png',
+    'thumbnail'    => 'theme.jpg',
     'version'      => '1.0.0',
     'author'       => '<a href="http://www.digidesk.de/" title="digidesk - media solutions">digidesk - media solutions</a>',
 );

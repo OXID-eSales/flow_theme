@@ -1,6 +1,6 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_ACCOUNT_ORDER_TITLE"|oxmultilangassign}]
-    <h1 class="page-header">[{oxmultilang ident="PAGE_ACCOUNT_ORDER_TITLE"}]</h1>
+    [{assign var="template_title" value="ORDER_HISTORY"|oxmultilangassign}]
+    <h1 class="page-header">[{oxmultilang ident="ORDER_HISTORY"}]</h1>
 
     [{assign var=oOrders value=$oView->getOrderList()}]
 
@@ -19,14 +19,14 @@
                                         <span>[{$order->oxorder__oxorderdate->value|date_format:"%H:%M:%S"}]</span>
                                     </div>
                                     <div class="col-xs-3">
-                                        <strong>[{oxmultilang ident="PAGE_ACCOUNT_ORDER_STATUS"}]</strong>
+                                        <strong>[{oxmultilang ident="STATUS"}]</strong>
                                         <span id="accOrderStatus_[{$order->oxorder__oxordernr->value}]">
                                             [{if $order->oxorder__oxstorno->value}]
-                                                <span class="note">[{oxmultilang ident="PAGE_ACCOUNT_ORDER_STORNO"}]</span>
+                                                <span class="note">[{oxmultilang ident="ORDER_IS_CANCELED"}]</span>
                                             [{elseif $order->oxorder__oxsenddate->value !="-"}]
-                                                <span>[{oxmultilang ident="PAGE_ACCOUNT_ORDER_SHIPPED"}]</span>
+                                                <span>[{oxmultilang ident="SHIPPED"}]</span>
                                             [{else}]
-                                                <span class="note">[{oxmultilang ident="PAGE_ACCOUNT_ORDER_NOTSHIPPED"}]</span>
+                                                <span class="note">[{oxmultilang ident="NOT_SHIPPED_YET"}]</span>
                                             [{/if}]
                                         </span>
                                     </div>
@@ -35,7 +35,7 @@
                                         <span id="accOrderNo_[{$order->oxorder__oxordernr->value}]">[{$order->oxorder__oxordernr->value}]</span>
                                     </div>
                                     <div class="col-xs-3">
-                                        <strong>[{oxmultilang ident="PAGE_ACCOUNT_ORDER_SHIPMENTTO"}]</strong>
+                                        <strong>[{oxmultilang ident="SHIPMENT_TO"}]</strong>
                                             <span id="accOrderName_[{$order->oxorder__oxordernr->value}]">
                                             [{if $order->oxorder__oxdellname->value}]
                                                 [{$order->oxorder__oxdelfname->value}]
@@ -46,22 +46,22 @@
                                             [{/if}]
                                         </span>
                                         [{if $order->getShipmentTrackingUrl()}]
-                                            &nbsp;|&nbsp;<strong>[{oxmultilang ident="PAGE_ACCOUNT_ORDER_TRACKINGID"}]</strong>
+                                            &nbsp;|&nbsp;<strong>[{oxmultilang ident="TRACKING_ID"}]</strong>
                                             <span id="accOrderTrack_[{$order->oxorder__oxordernr->value}]">
-                                                <a href="[{$order->getShipmentTrackingUrl()}]">[{oxmultilang ident="PAGE_ACCOUNT_ORDER_TRACKSHIPMENT"}]</a>
+                                                <a href="[{$order->getShipmentTrackingUrl()}]">[{oxmultilang ident="TRACK_SHIPMENT"}]</a>
                                             </span>
                                         [{/if}]
                                     </div>
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <strong>[{oxmultilang ident="PAGE_ACCOUNT_ORDER_CART"}]</strong>
+                                <strong>[{oxmultilang ident="CART"}]</strong>
                                 <ol class="list-unstyled">
                                     [{foreach from=$order->getOrderArticles(true) item=orderitem name=testOrderItem}]
                                         [{assign var=sArticleId value=$orderitem->oxorderarticles__oxartid->value}]
                                         [{assign var=oArticle value=$oArticleList[$sArticleId]}]
                                         <li id="accOrderAmount_[{$order->oxorder__oxordernr->value}]_[{$smarty.foreach.testOrderItem.iteration}]">
-                                            [{$orderitem->oxorderarticles__oxamount->value}] [{oxmultilang ident="PAGE_ACCOUNT_ORDERHISTORY_QNT"}]
+                                            [{$orderitem->oxorderarticles__oxamount->value}] [{oxmultilang ident="QNT"}]
                                             [{if $oArticle->oxarticles__oxid->value && $oArticle->isVisible()}]
                                                 <a id="accOrderLink_[{$order->oxorder__oxordernr->value}]_[{$smarty.foreach.testOrderItem.iteration}]" href="[{$oArticle->getLink()}]">
                                             [{/if}]
@@ -71,7 +71,7 @@
                                             [{/if}]
                                             [{foreach key=sVar from=$orderitem->getPersParams() item=aParam}]
                                                 [{if $aParam}]
-                                                    <br />[{oxmultilang ident="ORDER_DETAILS"}]: [{$aParam}]
+                                                    <br />[{oxmultilang ident="DETAILS"}]: [{$aParam}]
                                                 [{/if}]
                                             [{/foreach}]
                                             [{* Commented due to Trusted Shops precertification. Enable if needed *}]
@@ -79,7 +79,7 @@
                                             [{oxhasrights ident="TOBASKET"}]
                                             [{if $oArticle->isBuyable()}]
                                               [{if $oArticle->oxarticles__oxid->value}]
-                                                <a id="accOrderToBasket_[{$order->oxorder__oxordernr->value}]_[{$smarty.foreach.testOrderItem.iteration}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_order" params="fnc=tobasket&amp;aid=`$oArticle->oxarticles__oxid->value`&amp;am=1"}]">[{oxmultilang ident="ADD_TO_CART"}]</a>
+                                                <a id="accOrderToBasket_[{$order->oxorder__oxordernr->value}]_[{$smarty.foreach.testOrderItem.iteration}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_order" params="fnc=tobasket&amp;aid=`$oArticle->oxarticles__oxid->value`&amp;am=1"}]">[{oxmultilang ident="TO_CART"}]</a>
                                               [{/if}]
                                             [{/if}]
                                             [{/oxhasrights}]
@@ -94,7 +94,7 @@
             </ol>
             [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigation() place="bottom"}]
         [{else}]
-            [{oxmultilang ident="PAGE_ACCOUNT_ORDER_EMPTYHISTORY"}]
+            [{oxmultilang ident="ORDER_EMPTY_HISTORY"}]
         [{/if}]
     [{/block}]
     [{insert name="oxid_tracker" title=$template_title}]

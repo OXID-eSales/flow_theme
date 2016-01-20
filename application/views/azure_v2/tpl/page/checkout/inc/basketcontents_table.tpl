@@ -12,14 +12,14 @@
     <thead>
         <tr>
             [{if $editable}]<th></th>[{/if}]
-            <th>[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_PRODUCT"}]</th>
+            <th>[{oxmultilang ident="PRODUCT"}]</th>
             [{if $oView->isWrapping()}]
-                <th>[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_WRAPPING"}]</th>
+                <th>[{oxmultilang ident="WRAPPING"}]</th>
             [{/if}]
-            <th>[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_QUANTITY"}]</th>
-            <th class="unitPrice">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_UNITPRICE"}]</th>
-            <th class="vatPercent">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_TAX"}]</th>
-            <th>[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_TOTAL"}]</th>
+            <th>[{oxmultilang ident="QUANTITY"}]</th>
+            <th class="unitPrice">[{oxmultilang ident="UNIT_PRICE"}]</th>
+            <th class="vatPercent">[{oxmultilang ident="VAT"}]</th>
+            <th>[{oxmultilang ident="TOTAL"}]</th>
         </tr>
     </thead>
 
@@ -60,7 +60,7 @@
                                         [{if $editable}]</a>[{/if}]
                                     [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
                                     <div class="smallFont">
-                                        [{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_ARTNOMBER"}] [{$basketproduct->oxarticles__oxartnum->value}]
+                                        [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
                                     </div>
                                     <div class="smallFont">
                                         [{assign var=sep value=", "}]
@@ -136,14 +136,14 @@
                             <td align="center">
                                 [{if !$basketitem->getWrappingId()}]
                                     [{if $editable}]
-                                        <a href="#" class="btn btn-default btn-xs" title="[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_ADDWRAPPING"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_ADDWRAPPING"}]</a>
+                                        <a href="#" class="btn btn-default btn-xs" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="ADD"}]</a>
                                     [{else}]
-                                        [{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_NONE"}]
+                                        [{oxmultilang ident="NONE"}]
                                     [{/if}]
                                 [{else}]
                                     [{assign var="oWrap" value=$basketitem->getWrapping()}]
                                     [{if $editable}]
-                                        <a class="btn btn-default btn-xs" href="#" title="[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_ADDWRAPPING"}]" data-toggle="modal" data-target="#giftoptions"><i class="fa fa-pencil"></i> [{$oWrap->oxwrapping__oxname->value}]</a>
+                                        <a class="btn btn-default btn-xs" href="#" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions"><i class="fa fa-pencil"></i> [{$oWrap->oxwrapping__oxname->value}]</a>
                                     [{else}]
                                         [{$oWrap->oxwrapping__oxname->value}]
                                     [{/if}]
@@ -247,9 +247,9 @@
                 [{if $oCard}]
                     <tr>
                         [{if $editable}]<td></td>[{/if}]
-                        <td id="orderCardTitle" colspan="3">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_GREETINGCARD"}] "[{$oCard->oxwrapping__oxname->value}]"
+                        <td id="orderCardTitle" colspan="3">[{oxmultilang ident="GREETING_CARD"}] "[{$oCard->oxwrapping__oxname->value}]"
                             <br>
-                            <b>[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_YOURMESSAGE"}]</b>
+                            <b>[{oxmultilang ident="YOUR_MESSAGE"}]</b>
                             <br>
                             <div id="orderCardText">[{$oxcmp_basket->getCardMessage()|nl2br}]</div>
                         </td>
@@ -273,12 +273,12 @@
             <tfoot id="basketFn" class="basketFunctions">
                 <tr>
                     <td class="text-center" style="display:table-cell;vertical-align:middle;">
-                        <input type="checkbox" name="checkAll" id="checkAll" title="[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_SELECT_ALL"}]">
+                        <input type="checkbox" name="checkAll" id="checkAll" title="[{oxmultilang ident="ALL"}]">
                     </td>
                     <td colspan="[{if $oView->isWrapping()}]6[{else}]5[{/if}]">
-                        <button name="removeAllBtn" class="btn btn-sm" id="basketRemoveAll" type="button">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_SELECT_ALL"}]</button>
-                        <button name="removeBtn" class="btn btn-sm btn-danger" id="basketRemove" type="submit">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_REMOVE"}]</button>
-                        <button name="updateBtn" class="btn btn-sm btn-warning" id="basketUpdate" type="submit">[{oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_UPDATE"}]</button>
+                        <button name="removeAllBtn" class="btn btn-sm" id="basketRemoveAll" type="button">[{oxmultilang ident="ALL"}]</button>
+                        <button name="removeBtn" class="btn btn-sm btn-danger" id="basketRemove" type="submit">[{oxmultilang ident="REMOVE"}]</button>
+                        <button name="updateBtn" class="btn btn-sm btn-warning" id="basketUpdate" type="submit">[{oxmultilang ident="UPDATE"}]</button>
                     </td>
                 </tr>
             </tfoot>

@@ -1,11 +1,7 @@
 [{if $oView->isEnabled() && $smarty.cookies.displayedCookiesNotification != '1'}]
     [{oxscript include="js/libs/cookie/jquery.cookie.min.js"}]
     [{oxscript add="$.cookie('testing', 'yes'); if(!$.cookie('testing')) $('#cookieNote').hide(); else{ $('#cookieNote').show(); $.cookie('testing', null, -1);}"}]
-    [{if $oxcmp_shop->oxshops__oxproductive->value}]
-        [{oxscript include="js/widgets/oxcookienote.min.js"}]
-    [{else}]
-        [{oxscript include="js/widgets/oxcookienote.js"}]
-    [{/if}]
+    [{oxscript include="js/widgets/oxcookienote.min.js"}]
     <div id="cookieNote">
         <div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert">

@@ -26,7 +26,7 @@
     [{/if}]
 [{else}]
     <div class="alert alert-info">
-        [{oxmultilang ident="FORM_GUESTBOOK_YOUHAVETOBELOGGED"}]
+        [{oxmultilang ident="MESSAGE_TO_BE_LOGGED_WRITE_GUESTBOOK"}]
         <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="sourcecl="|cat:$oViewConf->getActiveClassName()|cat:$oViewConf->getNavUrlParams()}]" class="pull-right btn btn-default">[{oxmultilang ident="LOGIN"}]</a>
         <div class="clearfix"></div>
     </div>

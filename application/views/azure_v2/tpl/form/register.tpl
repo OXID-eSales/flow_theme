@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 <form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" name="order" method="post" novalidate="novalidate">
     <div class="hidden">
@@ -16,12 +12,12 @@
         <input type="hidden" name="option" value="3">
     </div>
 
-    <h3 class="blockHead">[{oxmultilang ident="FORM_REGISTER_ACCOUNTINFO"}]</h3>
+    <h3 class="blockHead">[{oxmultilang ident="ACCOUNT_INFORMATION"}]</h3>
     [{include file="form/fieldset/user_account.tpl"}]
 
     [{if $oView->isActive('PsLogin')}]
         <div class="form-group">
-            <label class="control-label col-lg-3">[{oxmultilang ident="FORM_REGISTER_IAGREETOTERMS2"}]</label>
+            <label class="control-label col-lg-3">[{oxmultilang ident="TERMS_AND_CONDITIONS"}]</label>
             <div class="col-lg-9">
                 <input type="hidden" name="ord_agb" value="0">
                 <div class="checkbox">
@@ -29,7 +25,7 @@
                         <input id="orderConfirmAgbBottom" type="checkbox" class="checkbox" name="ord_agb" value="1">
                         [{oxifcontent ident="oxagb" object="oCont"}]
                             [{oxmultilang ident="FORM_REGISTER_IAGREETOTERMS1"}]
-                                <a href="#" data-toggle="modal" data-target="#popup1">[{oxmultilang ident="FORM_REGISTER_IAGREETOTERMS2"}]</a>
+                                <a href="#" data-toggle="modal" data-target="#popup1">[{oxmultilang ident="TERMS_AND_CONDITIONS"}]</a>
                             [{oxmultilang ident="FORM_REGISTER_IAGREETOTERMS3"}],&nbsp;
                         [{/oxifcontent}]
                         [{oxifcontent ident="oxrightofwithdrawal" object="oCont"}]
@@ -43,7 +39,7 @@
         </div>
     [{/if}]
 
-    <h3 class="blockHead">[{oxmultilang ident="FORM_REGISTER_BILLINGADDRESS"}]</h3>
+    <h3 class="blockHead">[{oxmultilang ident="BILLING_ADDRESS"}]</h3>
     [{include file="form/fieldset/user_billing.tpl"}]
 </form>
 [{if $oView->isActive('PsLogin')}]

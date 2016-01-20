@@ -1,13 +1,13 @@
 [{capture append="oxidBlock_content"}]
     <div class="err-404">
-        <h1 class="page-header">[{oxmultilang ident="MESSAGE_ERR_404TITLE"}]</h1>
+        <h1 class="page-header">[{oxmultilang ident="ERROR"}]</h1>
         <div class="row">
             <div class="col-md-6">
                 <p>
                     [{if $sUrl}]
-                    [{oxmultilang ident="MESSAGE_ERR_404_PREURL"}] <i><strong>'[{$sUrl|escape}]'</strong></i> [{oxmultilang ident="MESSAGE_ERR_404_POSTURL"}]
+                    [{oxmultilang ident="ERROR_404"}] <i><strong>'[{$sUrl|escape}]'</strong></i> [{oxmultilang ident="ERROR_404_POSTURL"}]
                     [{else}]
-                    [{oxmultilang ident="MESSAGE_ERR_404"}]
+                    [{oxmultilang ident="ERROR_404"}]
                     [{/if}]
                 </p>
 

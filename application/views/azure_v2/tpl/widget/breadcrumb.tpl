@@ -5,7 +5,7 @@
                 [{block name="dd_widget_breadcrumb_list_inner"}]
                     <ol id="breadcrumb" class="breadcrumb">
                         [{block name="dd_widget_breadcrumb_list"}]
-                            <li class="text-muted">[{oxmultilang ident="WIDGET_BREADCRUMB_YOUAREHERE"}]:</li>
+                            <li class="text-muted">[{oxmultilang ident="YOU_ARE_HERE"}]:</li>
                             
                             [{foreach from=$oView->getBreadCrumb() item="sCrum" name="breadcrumb"}]
                                 <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"[{if $smarty.foreach.breadcrumb.last}] class="active"[{/if}]>

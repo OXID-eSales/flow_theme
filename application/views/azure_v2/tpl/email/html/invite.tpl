@@ -7,13 +7,13 @@
 <table border="0" width="100%" cellspacing="10" cellpadding="0" bgcolor="#FFFFFF">
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_INVITE_HTML_FROM"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="FROM"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userinfo->send_name|oxescape}]</td>
     </tr>
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_INVITE_HTML_EMAIL"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userinfo->send_email|oxescape}]</td>
     </tr>
@@ -33,7 +33,7 @@
         <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-        <td colspan="2">[{oxmultilang ident="EMAIL_INVITE_HTML_MENYGREETINGS"}] [{$userinfo->send_name|oxescape}]</td>
+        <td colspan="2">[{oxmultilang ident="MANY_GREETINGS"}] [{$userinfo->send_name|oxescape}]</td>
     </tr>
 </table>
 <br/>

@@ -13,7 +13,7 @@
                 [{foreach from=$oView->getManufacturerForSlider() item=oManufacturer}]
                     [{if $oManufacturer->oxmanufacturers__oxicon->value}]
                         <li>
-                            <a href="[{$oManufacturer->getLink()}]" title="[{oxmultilang ident="WIDGET_MANUFACTURERS_SLIDER_VIEWALL"}]">
+                            <a href="[{$oManufacturer->getLink()}]" title="[{oxmultilang ident="VIEW_ALL_PRODUCTS"}]">
                                 <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$oManufacturer->getIconUrl()}]" alt="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
                             </a>
                         </li>

@@ -1,6 +1,6 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_GUESTBOOK_LIST_GUESTBOOK"|oxmultilangassign}]
-    <h1 class="page-header">[{oxmultilang ident="PAGE_GUESTBOOK_LIST_GUESTBOOK"}]</h1>
+    [{assign var="template_title" value="GUESTBOOK"|oxmultilangassign}]
+    <h1 class="page-header">[{oxmultilang ident="GUESTBOOK"}]</h1>
 
     <div class="row reviews">
         <div class="col-xs-12">
@@ -37,7 +37,7 @@
                     [{/foreach}]
                 </ol>
             [{else}]
-                <p class="alert alert-info">[{oxmultilang ident="PAGE_GUESTBOOK_LIST_NOENTRYAVAILABLE"}]</p>
+                <p class="alert alert-info">[{oxmultilang ident="NO_ENTRY_AVAILABLE"}]</p>
             [{/if}]
         </div>
     </div>

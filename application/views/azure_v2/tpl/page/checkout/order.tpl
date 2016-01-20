@@ -15,13 +15,13 @@
 
     [{block name="checkout_order_main"}]
         [{if !$oView->showOrderButtonOnTop()}]
-            <div class="alert alert-info">[{oxmultilang ident="PAGE_CHECKOUT_ORDER_TITLE2"}]</div>
+            <div class="alert alert-info">[{oxmultilang ident="MESSAGE_SUBMIT_BOTTOM"}]</div>
         [{/if}]
 
         [{block name="checkout_order_details"}]
             [{if !$oxcmp_basket->getProductsCount() }]
                 [{block name="checkout_order_emptyshippingcart"}]
-                    <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_ORDER_BASKETEMPTY"}]</div>
+                    <div class="alert alert-danger">[{oxmultilang ident="BASKET_EMPTY"}]</div>
                 [{/block}]
             [{else}]
                 [{assign var="currency" value=$oView->getActCurrency()}]
@@ -33,19 +33,19 @@
                 [{else}]
                     [{if $oView->showOrderButtonOnTop()}]
                         <div class="well well-sm">
-                            <a href="[{oxgetseourl ident=$oViewConf->getPaymentLink()}]" class="btn btn-default prevStep submitButton largeButton">[{oxmultilang ident="PAGE_CHECKOUT_ORDER_BACKSTEP"}]</a>
+                            <a href="[{oxgetseourl ident=$oViewConf->getPaymentLink()}]" class="btn btn-default prevStep submitButton largeButton">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
                         </div>
                     [{/if}]
                 [{/if}]
 
                 [{block name="checkout_order_vouchers"}]
                     [{if $oViewConf->getShowVouchers() && $oxcmp_basket->getVouchers()}]
-                        [{oxmultilang ident="PAGE_CHECKOUT_ORDER_USEDCOUPONS"}]
+                        [{oxmultilang ident="USED_COUPONS"}]
                         [{foreach from=$Errors.basket item=oEr key=key}]
                             [{if $oEr->getErrorClassType() == 'oxVoucherException'}]
                                 <div class="alert alert-danger">
                                     [{oxmultilang ident="PAGE_CHECKOUT_ORDER_COUPONNOTACCEPTED1"}] [{$oEr->getValue('voucherNr')}] [{oxmultilang ident="PAGE_CHECKOUT_ORDER_COUPONNOTACCEPTED2"}]<br>
-                                    [{oxmultilang ident="PAGE_CHECKOUT_ORDER_REASON"}]
+                                    [{oxmultilang ident="REASON"}]
                                     [{$oEr->getOxMessage()}]
                                 </div>
                             [{/if}]
@@ -71,7 +71,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            [{oxmultilang ident="PAGE_CHECKOUT_ORDER_BILLINGADDRESS"}]
+                                            [{oxmultilang ident="BILLING_ADDRESS"}]
                                             <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
@@ -94,7 +94,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            [{oxmultilang ident="PAGE_CHECKOUT_ORDER_SHIPPINGADDRESS"}]
+                                            [{oxmultilang ident="SHIPPING_ADDRESS"}]
                                             <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
@@ -127,7 +127,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            [{oxmultilang ident="PAGE_CHECKOUT_ORDER_SHIPPINGCARRIER"}]
+                                            [{oxmultilang ident="SHIPPING_CARRIER"}]
                                             <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
@@ -151,7 +151,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            [{oxmultilang ident="PAGE_CHECKOUT_ORDER_PAYMENTMETHOD"}]
+                                            [{oxmultilang ident="PAYMENT_METHOD"}]
                                             <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                                 <i class="fa fa-pencil"></i>
                                             </button>
@@ -179,7 +179,7 @@
                             <div class="panel panel-default orderRemarks">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
-                                        [{oxmultilang ident="PAGE_CHECKOUT_ORDER_WHATIWANTEDTOSAY"}]
+                                        [{oxmultilang ident="WHAT_I_WANTED_TO_SAY"}]
                                         <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                             <i class="fa fa-pencil"></i>
                                         </button>
@@ -219,7 +219,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
-                                    [{oxmultilang ident="PAGE_CHECKOUT_ORDER_BASKET"}]
+                                    [{oxmultilang ident="CART"}]
                                     <button type="submit" class="btn btn-xs btn-warning pull-right submitButton largeButton" title="[{oxmultilang ident="EDIT"}]">
                                         <i class="fa fa-pencil"></i>
                                     </button>
@@ -265,7 +265,7 @@
 
                         <div class="well well-sm">
                             <button type="submit" class="btn btn-lg btn-primary pull-right submitButton nextStep largeButton">
-                                <i class="fa fa-check"></i> [{oxmultilang ident="PAGE_CHECKOUT_ORDER_SUBMITORDER"}]
+                                <i class="fa fa-check"></i> [{oxmultilang ident="SUBMIT_ORDER"}]
                             </button>
                             <div class="clearfix"></div>
                         </div>
@@ -277,5 +277,5 @@
     [{insert name="oxid_tracker" title=$template_title}]
 [{/capture}]
 
-[{assign var="template_title" value="PAGE_CHECKOUT_ORDER_TITLE"|oxmultilangassign}]
+[{assign var="template_title" value="REVIEW_YOUR_ORDER"|oxmultilangassign}]
 [{include file="layout/page.tpl" title=$template_title location=$template_title}]

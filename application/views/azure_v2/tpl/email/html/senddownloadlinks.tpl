@@ -44,8 +44,8 @@
         <h3 class="underline">[{oxmultilang ident="EMAIL_SENDEDNOW_HTML_TS_RATINGS_RATEUS"}]</h3>
 
         <p>
-            <a href="[{$oViewConf->getTsRatingUrl()}]" target="_blank" title="[{oxmultilang ident="TS_RATINGS_URL_TITLE"}]">
-                <img src="[{$sTSRatingImg}]" border="0" alt="[{oxmultilang ident="TS_RATINGS_BUTTON_ALT"}]" align="middle">
+            <a href="[{$oViewConf->getTsRatingUrl()}]" target="_blank" title="[{oxmultilang ident="TRUSTED_SHOPS_RATINGS"}]">
+                <img src="[{$sTSRatingImg}]" border="0" alt="[{oxmultilang ident="WRITE_REVIEW"}]" align="middle">
             </a>
         </p>
         <br/>

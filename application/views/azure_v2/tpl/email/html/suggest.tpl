@@ -7,13 +7,13 @@
 <table border="0" width="100%" cellspacing="10" cellpadding="0">
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_SUGGEST_HTML_FROM"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="FROM"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userInfo->send_name|oxescape}]</td>
     </tr>
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_SUGGEST_HTML_EMAIL"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userInfo->send_email|oxescape}]</td>
     </tr>
@@ -22,13 +22,13 @@
     </tr>
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_SUGGEST_HTML_TO"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="TO"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userInfo->rec_name|oxescape}]</td>
     </tr>
     <tr>
         <td style="white-space:nowrap;">
-            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL_SUGGEST_HTML_EMAIL2"}]</b>
+            <b style="white-space:nowrap;">[{oxmultilang ident="EMAIL"}]</b>
         </td>
         <td style="white-space:nowrap;">[{$userInfo->rec_email|oxescape}]</td>
     </tr>

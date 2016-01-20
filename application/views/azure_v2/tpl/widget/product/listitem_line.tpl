@@ -53,7 +53,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-2">
+            <div class="col-xs-12 col-sm-2">
                 <div class="picture">
                     [{block name="widget_product_listitem_line_picturebox"}]
                         <a id="[{$testid}]" href="[{$_productLink}]" title="[{$product->oxarticles__oxtitle->value}] [{$product->oxarticles__oxvarselect->value}]">
@@ -141,8 +141,8 @@
                             <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit text-nowrap">[{$product->oxarticles__oxunitquantity->value}] [{$product->getUnitName()}] | [{oxprice price=$oUnitPrice currency=$currency}]/[{$product->getUnitName()}]</span>
                         [{elseif $product->oxarticles__oxweight->value }]
                             <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit text-nowrap">
-                                <span title="weight">[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_ARTWEIGHT"}]</span>
-                                <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_ARTWEIGHT2"}]</span>
+                                <span title="weight">[{oxmultilang ident="WEIGHT"}]</span>
+                                <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="KG"}]</span>
                             </span>
                         [{/if}]
                         [{/oxhasrights}]
@@ -180,11 +180,11 @@
                                     <div class="input-group">
                                         <input id="amountToBasket_[{$testid}]" type="text" name="am" value="1" size="3" autocomplete="off" class="form-control amount">
                                         <span class="input-group-btn">
-                                            <button id="toBasket_[{$testid}]" type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="DETAILS_ADDTOCART"}]">
+                                            <button id="toBasket_[{$testid}]" type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="TO_CART"}]">
                                                 <i class="fa fa-shopping-cart"></i>
                                             </button>
                                             [{if $removeFunction && (($owishid && ($owishid==$oxcmp_user->oxuser__oxid->value)) || (($wishid==$oxcmp_user->oxuser__oxid->value)) || $recommid)}]
-                                                <button triggerForm="remove_[{$removeFunction}][{$testid}]" type="submit" class="btn btn-danger removeButton hasTooltip" title="[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_REMOVE"}]">
+                                                <button triggerForm="remove_[{$removeFunction}][{$testid}]" type="submit" class="btn btn-danger removeButton hasTooltip" title="[{oxmultilang ident="REMOVE"}]">
                                                     <i class="fa fa-times"></i>
                                                 </button>
                                             [{/if}]
@@ -193,11 +193,11 @@
                                 </div>
                             [{/oxhasrights}]
                         [{else}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_MOREINFO"}]</a>
+                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
 
                             [{if $removeFunction && (($owishid && ($owishid==$oxcmp_user->oxuser__oxid->value)) || (($wishid==$oxcmp_user->oxuser__oxid->value)) || $recommid)}]
                                 <button triggerForm="remove_[{$removeFunction}][{$testid}]" type="submit" class="btn btn-danger btn-block removeButton">
-                                    <i class="fa fa-times"></i> [{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_REMOVE"}]
+                                    <i class="fa fa-times"></i> [{oxmultilang ident="REMOVE"}]
                                 </button>
                             [{/if}]
                         [{/if}]

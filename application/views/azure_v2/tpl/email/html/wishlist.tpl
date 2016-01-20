@@ -7,10 +7,10 @@
 <p>[{$userInfo->send_message|oxescape}]</p>
 <br/>
 
-<p>[{oxmultilang ident="EMAIL_WISHLIST_HTML_TOMYWISHLISTCLICKHERE1"}] <a href="[{$oViewConf->getBaseDir()}]index.php?cl=wishlist&wishid=[{$userInfo->send_id}]"><b>[{oxmultilang ident="EMAIL_WISHLIST_HTML_TOMYWISHLISTCLICKHERE2"}]</b></a></p>
+<p>[{oxmultilang ident="TO_MY_WISHLIST"}] <a href="[{$oViewConf->getBaseDir()}]index.php?cl=wishlist&wishid=[{$userInfo->send_id}]"><b>[{oxmultilang ident="CLICK_HERE"}]</b></a></p>
 <br/>
 
-<p>[{oxmultilang ident="EMAIL_WISHLIST_HTML_WITHLOVE"}]</p>
+<p>[{oxmultilang ident="WITH_LOVE"}]</p>
 
 <p>[{$userInfo->send_name|oxescape}]</p>
 <br/>

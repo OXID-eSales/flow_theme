@@ -10,7 +10,7 @@
         </p>
     [{else}]
         <div class="btn-group">
-            <a href="#" class="btn btn-default btn-sm oxfbenable fbEnableButton"><i class="fa fa-facebook-square"></i> [{oxmultilang ident="FACEBOOK_ENABLEBUTTONTEXT"}]</a>
+            <a href="#" class="btn btn-default btn-sm oxfbenable fbEnableButton"><i class="fa fa-facebook-square"></i> [{oxmultilang ident="ENABLE"}]</a>
             <a href="#" class="oxfbinfo helpText btn btn-default btn-sm" data-toggle="modal" data-target="#fbinfo">?</a>
         </div>
     [{/if}]

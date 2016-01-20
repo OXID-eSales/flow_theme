@@ -4,7 +4,7 @@
 [{if $_oRecommendationList || $oRecommList->getRecommSearch()}]
     <div class="box well well-sm hidden-sm hidden-xs" id="recommendationsBox">
         <section>
-            <div class="page-header h3">[{oxmultilang ident="WIDGET_RECOMMENDATIONLIST_HEADER"}]</div>
+            <div class="page-header h3">[{oxmultilang ident="LISTMANIA"}]</div>
             <div>
                 [{if $_oRecommendationList}]
                     [{$_oRecommendationList->rewind()}]
@@ -25,7 +25,7 @@
                         [{foreach from=$_oRecommendationList item=_oListItem name="testRecommendationsList"}]
                             <li>
                                 <a href="[{$_oListItem->getLink()}]"><b>[{$_oListItem->oxrecommlists__oxtitle->value|strip_tags}]</b></a>
-                                <div class="desc">[{oxmultilang ident="WIDGET_RECOMMENDATIONLIST_LISTBY"}]: [{$_oListItem->oxrecommlists__oxauthor->value|strip_tags}]</div>
+                                <div class="desc">[{oxmultilang ident="LIST_BY"}]: [{$_oListItem->oxrecommlists__oxauthor->value|strip_tags}]</div>
                             </li>
                         [{/foreach}]
                     [{/if}]
@@ -36,7 +36,7 @@
                                 <input type="hidden" name="cl" value="recommlist">
                                 [{$oViewConf->getHiddenSid()}]
                             </div>
-                            <label>[{oxmultilang ident="WIDGET_RECOMMENDATIONLIST_SEARCHFORLISTS"}]</label>
+                            <label>[{oxmultilang ident="SEARCH_FOR_LISTS"}]</label>
                             <div class="input-group">
                                 <input type="text" name="searchrecomm" id="searchRecomm" value="[{$oRecommList->getRecommSearch()}]" class="searchInput form-control">
                                 <span class="input-group-btn">

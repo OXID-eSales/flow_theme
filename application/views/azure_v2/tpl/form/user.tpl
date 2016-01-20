@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 
 [{capture assign="sValidationJS"}]
     [{strip}]
@@ -42,7 +38,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 [{oxmultilang ident="FORM_USER_BILLINGADDRESS"}]
-                <button id="userChangeAddress" class="btn btn-warning btn-xs hasTooltip pull-right" name="changeBillAddress" type="button" title="[{oxmultilang ident="PAGE_CHECKOUT_BASKET_CHANGE"}]">
+                <button id="userChangeAddress" class="btn btn-warning btn-xs hasTooltip pull-right" name="changeBillAddress" type="button" title="[{oxmultilang ident="CHANGE"}]">
                     <i class="fa fa-pencil"></i>
                 </button>
             </div>
@@ -61,11 +57,11 @@
 
         [{* Lieferadresse *}]
         <div class="panel panel-default">
-            <div class="panel-heading">[{oxmultilang ident="FORM_USER_SHIPPINGADDRESSES"}]</div>
+            <div class="panel-heading">[{oxmultilang ident="SHIPPING_ADDRESSES"}]</div>
             <div class="panel-body">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="FORM_REGISTER_USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
+                        <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
                     </label>
                 </div>
                 <div id="shippingAddress" class="spacer" [{if !$oView->showShipAddress()}] style="display: none;" [{/if}]>
@@ -77,7 +73,7 @@
     </div>
     <div class="form-group">
         <div class="col-lg-12">
-            <button id="accUserSaveTop" class="btn btn-primary" name="userform" type="submit">[{oxmultilang ident="FORM_FIELDSET_USER_BILLING_SAVE"}]</button>
+            <button id="accUserSaveTop" class="btn btn-primary" name="userform" type="submit">[{oxmultilang ident="SAVE"}]</button>
         </div>
     </div>
 </form>

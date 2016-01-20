@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 <div class="row">
     <div class="col-xs-12 col-md-6 pull-right">
@@ -26,16 +22,16 @@
                         [{/if}]
                     </div>
 
-                    <p>[{oxmultilang ident="PAGE_ACCOUNT_INC_LOGIN_ALREADYCUSTOMER"}]</p>
+                    <p>[{oxmultilang ident="LOGIN_ALREADY_CUSTOMER"}]</p>
 
                     <div class="form-group[{if $aErrors}] oxInValid[{/if}]">
-                        <label class="req control-label col-lg-2">[{oxmultilang ident="FORM_LOGIN_ACCOUNT_EMAIL"}]</label>
+                        <label class="req control-label col-lg-2">[{oxmultilang ident="EMAIL"}]</label>
                         <div class="col-lg-10">
                             <input id="loginUser" class="js-oxValidate js-oxValidate_notEmpty form-control" type="text" name="lgn_usr" role="loginUser" required="required">
                             <div class="help-block"></div></div>
                     </div>
                     <div class="form-group[{if $aErrors}] oxInValid[{/if}]">
-                        <label class="req control-label col-lg-2">[{oxmultilang ident="FORM_LOGIN_ACCOUNT_PWD"}]</label>
+                        <label class="req control-label col-lg-2">[{oxmultilang ident="PASSWORD"}]</label>
                         <div class="col-lg-10">
                             <input id="loginPwd" class="js-oxValidate js-oxValidate_notEmpty  form-control" type="password" name="lgn_pwd" role="loginPwd" required="required">
                             <div class="help-block"></div></div>
@@ -45,7 +41,7 @@
                             <div class="col-lg-offset-2 col-lg-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" class="checkbox" name="lgn_cook" value="1"> [{oxmultilang ident="FORM_LOGIN_ACCOUNT_KEEPLOGGEDIN"}]
+                                        <input type="checkbox" class="checkbox" name="lgn_cook" value="1"> [{oxmultilang ident="KEEP_LOGGED_IN"}]
                                     </label>
                                 </div>
                             </div>
@@ -54,7 +50,7 @@
 
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
-                            <button id="loginButton" type="submit" class="btn btn-primary btn-block" role="loginButton">[{oxmultilang ident="FORM_LOGIN_ACCOUNT_LOGIN"}]</button>
+                            <button id="loginButton" type="submit" class="btn btn-primary btn-block" role="loginButton">[{oxmultilang ident="LOGIN"}]</button>
                         </div>
                     </div>
 
@@ -73,7 +69,7 @@
             <div class="panel-heading">[{oxmultilang ident="DD_LOGIN_ACCOUNT_PANEL_CREATE_TITLE"}]</div>
             <div class="panel-body">
                 <p>[{oxmultilang ident="DD_LOGIN_ACCOUNT_PANEL_CREATE_BODY"}]</p>
-                <a id="openAccountLink" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" class="btn btn-primary btn-block" role="button">[{oxmultilang ident="FORM_LOGIN_ACCOUNT_OPENACCOUNT"}]</a><br />
+                <a id="openAccountLink" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" class="btn btn-primary btn-block" role="button">[{oxmultilang ident="OPEN_ACCOUNT"}]</a><br />
             </div>
         </div>
         <div class="clearfix"></div>

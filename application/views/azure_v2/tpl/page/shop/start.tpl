@@ -11,7 +11,7 @@
         [{assign var="blActionLoaded" value=$oAction->load('oxbargain')}]
 
         [{if $blActionLoaded}]
-            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head=$oAction->oxactions__oxtitle->value subhead=$oAction->oxactions__oxshortdesc->value listId="bargainItems" products=$oView->getBargainArticleList() rsslink=$rsslinks.bargainArticles rssId="rssBargainProducts" showMainLink=true iProductsPerLine=4}]
+            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head=$oAction->oxactions__oxtitle->value subhead="START_BARGAIN_SUBHEADER"|oxmultilangassign listId="bargainItems" products=$oView->getBargainArticleList() rsslink=$rsslinks.bargainArticles rssId="rssBargainProducts" showMainLink=true iProductsPerLine=4}]
         [{/if}]
     [{/if}]
 
@@ -24,7 +24,7 @@
         [{assign var="blActionLoaded" value=$oAction->load('oxnewest')}]
 
         [{if $blActionLoaded}]
-            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head=$oAction->oxactions__oxtitle->value subhead=$oAction->oxactions__oxshortdesc->value listId="newItems" products=$oView->getNewestArticles() rsslink=$rsslinks.newestArticles rssId="rssNewestProducts" showMainLink=true iProductsPerLine=4}]
+            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head=$oAction->oxactions__oxtitle->value subhead="START_NEWEST_SUBHEADER"|oxmultilangassign listId="newItems" products=$oView->getNewestArticles() rsslink=$rsslinks.newestArticles rssId="rssNewestProducts" showMainLink=true iProductsPerLine=4}]
         [{/if}]
     [{/if}]
 
@@ -39,7 +39,7 @@
         [{assign var="blActionLoaded" value=$oAction->load('oxtop5')}]
 
         [{if $blActionLoaded}]
-            [{include file="widget/product/list.tpl" type="infogrid" head=$oAction->oxactions__oxtitle->value subhead=$oAction->oxactions__oxshortdesc->value listId="topBox" products=$oView->getTop5ArticleList() rsslink=$rsslinks.topArticles rssId="rssTopProducts" showMainLink=true iProductsPerLine=2}]
+            [{include file="widget/product/list.tpl" type="infogrid" head=$oAction->oxactions__oxtitle->value subhead="START_TOP_PRODUCTS_SUBHEADER"|oxmultilangassign listId="topBox" products=$oView->getTop5ArticleList() rsslink=$rsslinks.topArticles rssId="rssTopProducts" showMainLink=true iProductsPerLine=2}]
         [{/if}]
     [{/if}]
 

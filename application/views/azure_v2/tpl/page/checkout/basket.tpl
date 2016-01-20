@@ -9,7 +9,7 @@
 
         [{if $oView->isLowOrderPrice()}]
             [{block name="checkout_basket_loworderprice_top"}]
-                <div class="alert alert-info">[{oxmultilang ident="PAGE_CHECKOUT_BASKET_MINORDERPRICE"}] [{$oView->getMinOrderPrice()}] [{$currency->sign}]</div>
+                <div class="alert alert-info">[{oxmultilang ident="MIN_ORDER_PRICE"}] [{$oView->getMinOrderPrice()}] [{$currency->sign}]</div>
                 <div class="spacer"></div>
             [{/block}]
         [{/if}]
@@ -18,7 +18,7 @@
             [{block name="checkout_basket_emptyshippingcart"}]
                 <div class="spacer"></div>
                 <div class="alert alert-danger">
-                    [{oxmultilang ident="PAGE_CHECKOUT_BASKET_EMPTYSHIPPINGCART"}]
+                    [{oxmultilang ident="BASKET_EMPTY"}]
                     <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="btn btn-default btn-xs pull-right"><i class="fa fa-caret-left"></i> [{oxmultilang ident="DD_BASKET_BACK_TO_SHOP"}]</a>
                 </div>
             [{/block}]
@@ -33,12 +33,12 @@
                                 <input type="hidden" name="fnc" value="backtoshop">
                             </div>
                             <button type="submit" class="btn btn-default submitButton largeButton pull-left">
-                                <i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_BASKET_CONTINUESHOPPING"}]
+                                <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                             </button>
                         </form>
                     [{else}]
                         <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-default submitButton largeButton pull-left">
-                            <i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_BASKET_CONTINUESHOPPING"}]
+                            <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                         </a>
                     [{/if}]
                 [{/block}]
@@ -51,7 +51,7 @@
                                 <input type="hidden" name="cl" value="user">
                             </div>
                             <button type="submit" class="btn btn-primary submitButton largeButton nextStep pull-right">
-                                [{oxmultilang ident="PAGE_CHECKOUT_BASKET_NEXTSTEP"}] <i class="fa fa-caret-right"></i>
+                                [{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i>
                             </button>
                         </form>
                     [{/block}]
@@ -73,13 +73,13 @@
                                 <input type="hidden" name="cl" value="basket">
                                 <input type="hidden" name="fnc" value="backtoshop">
                                 <button type="submit" class="btn btn-default submitButton largeButton pull-left">
-                                    <i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_BASKET_CONTINUESHOPPING"}]
+                                    <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                                 </button>
                             </div>
                         </form>
                     [{else}]
                         <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-default submitButton largeButton pull-left">
-                            <i class="fa fa-caret-left"></i> [{oxmultilang ident="PAGE_CHECKOUT_BASKET_CONTINUESHOPPING"}]
+                            <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                         </a>
                     [{/if}]
                 [{/block}]
@@ -92,7 +92,7 @@
                                 <input type="hidden" name="cl" value="user">
                             </div>
                             <button type="submit" class="btn btn-primary submitButton largeButton nextStep pull-right">
-                                [{oxmultilang ident="PAGE_CHECKOUT_BASKET_NEXTSTEP"}] <i class="fa fa-caret-right"></i>
+                                [{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i>
                             </button>
                         </form>
                     [{/block}]

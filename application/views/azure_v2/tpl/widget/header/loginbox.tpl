@@ -24,14 +24,14 @@
             <span class="lead">[{oxmultilang ident="LOGIN"}]</span>
 
             <div class="form-group">
-                <input id="loginEmail" type="email" name="lgn_usr" value="" class="form-control" placeholder="[{oxmultilang ident="WIDGET_LOGINBOX_EMAIL_ADDRESS"}]">
+                <input id="loginEmail" type="email" name="lgn_usr" value="" class="form-control" placeholder="[{oxmultilang ident="EMAIL_ADDRESS"}]">
             </div>
 
             <div class="form-group">
                 <div class="input-group">
-                    <input id="loginPasword" type="password" name="lgn_pwd" class="form-control" value="" placeholder="[{oxmultilang ident="WIDGET_LOGINBOX_PASSWORD"}]">
+                    <input id="loginPasword" type="password" name="lgn_pwd" class="form-control" value="" placeholder="[{oxmultilang ident="PASSWORD"}]">
                     <span class="input-group-btn">
-                        <a class="forgotPasswordOpener btn btn-default" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=forgotpwd"}]" title="[{oxmultilang ident="WIDGET_LOGINBOX_FORGOT_PASSWORD"}]">?</a>
+                        <a class="forgotPasswordOpener btn btn-default" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=forgotpwd"}]" title="[{oxmultilang ident="FORGOT_PASSWORD"}]">?</a>
                     </span>
                 </div>
             </div>
@@ -39,7 +39,7 @@
             [{if $oViewConf->isFunctionalityEnabled( "blShowRememberMe" )}]
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" class="checkbox" value="1" name="lgn_cook" id="remember"> [{oxmultilang ident="WIDGET_LOGINBOX_REMEMBER_ME"}]
+                        <input type="checkbox" class="checkbox" value="1" name="lgn_cook" id="remember"> [{oxmultilang ident="REMEMBER_ME"}]
                     </label>
                 </div>
             [{/if}]
@@ -47,12 +47,12 @@
             <button type="submit" class="btn btn-primary">[{oxmultilang ident="LOGIN"}]</button>
 
             [{if !$oxcmp_user}]
-                <a class="btn" id="registerLink" role="button" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" title="[{oxmultilang ident="PAGE_ACCOUNT_REGISTER_REGISTER"}]">[{oxmultilang ident="PAGE_ACCOUNT_REGISTER_REGISTER"}]</a>
+                <a class="btn" id="registerLink" role="button" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" title="[{oxmultilang ident="REGISTER"}]">[{oxmultilang ident="REGISTER"}]</a>
             [{/if}]
 
             [{if $oViewConf->getShowFbConnect()}]
                 <div class="altLoginBox corners clear">
-                    <span>[{oxmultilang ident="WIDGET_LOGINBOX_WITH"}]</span>
+                    <span>[{oxmultilang ident="LOGIN_WITH"}]</span>
                     <div id="loginboxFbConnect">
                         [{include file="widget/facebook/enable.tpl" source="widget/facebook/connect.tpl" ident="#loginboxFbConnect"}]
                     </div>

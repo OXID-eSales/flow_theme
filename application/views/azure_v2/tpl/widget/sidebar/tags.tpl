@@ -29,7 +29,7 @@
         [{if $oView->isMoreTagsVisible()}]
             [{block name="dd_widget_sidebar_tags_morelink"}]
                 <p class="text-right">
-                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=tags"}]" class="btn btn-primary btn-sm">[{oxmultilang ident="WIDGET_TAGS_LINKMORE"}]</a>
+                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=tags"}]" class="btn btn-primary btn-sm">[{oxmultilang ident="MORE"}]</a>
                 </p>
             [{/block}]
         [{/if}]

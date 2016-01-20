@@ -12,7 +12,7 @@
             <div class="col-xs-12">
                 <div class="google-maps">
                     <figure>
-                        <iframe width="100%" height="400" style="width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.de/maps?t=m&amp;q=[{$sGoogleMapsAddr|urlencode}]&amp;ie=UTF8&amp;hq=[{$sGoogleMapsAddr|urlencode}]&amp;output=embed"></iframe>
+                        <iframe width="100%" height="400" style="width:100%; pointer-events: none;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.de/maps?t=m&amp;q=[{$sGoogleMapsAddr|urlencode}]&amp;ie=UTF8&amp;hq=[{$sGoogleMapsAddr|urlencode}]&amp;output=embed"></iframe>
                     </figure>
                 </div>
             </div>
@@ -32,13 +32,13 @@
                         <span class="hidden" itemprop="addressLocality">[{$oxcmp_shop->oxshops__oxcity->value}], [{$oxcmp_shop->oxshops__oxcountry->value}]</span>
                     </span>
                     [{if $oxcmp_shop->oxshops__oxtelefon->value}]
-                        <strong>[{oxmultilang ident="PAGE_INFO_CONTACT_PHONE" suffix="COLON"}]</strong> <span itemprop="telephone">[{$oxcmp_shop->oxshops__oxtelefon->value}]</span><br>
+                        <strong>[{oxmultilang ident="PHONE" suffix="COLON"}]</strong> <span itemprop="telephone">[{$oxcmp_shop->oxshops__oxtelefon->value}]</span><br>
                     [{/if}]
                     [{if $oxcmp_shop->oxshops__oxtelefax->value}]
-                        <strong>[{oxmultilang ident="PAGE_INFO_CONTACT_FAX" suffix="COLON"}]</strong> <span itemprop="faxNumber">[{$oxcmp_shop->oxshops__oxtelefax->value}]</span><br>
+                        <strong>[{oxmultilang ident="FAX" suffix="COLON"}]</strong> <span itemprop="faxNumber">[{$oxcmp_shop->oxshops__oxtelefax->value}]</span><br>
                     [{/if}]
                     [{if $oxcmp_shop->oxshops__oxinfoemail->value}]
-                        <strong>[{oxmultilang ident="PAGE_INFO_CONTACT_EMAIL" suffix="COLON"}]</strong> <span itemprop="email">[{oxmailto address=$oxcmp_shop->oxshops__oxinfoemail->value}]</span><br>
+                        <strong>[{oxmultilang ident="EMAIL" suffix="COLON"}]</strong> <span itemprop="email">[{oxmailto address=$oxcmp_shop->oxshops__oxinfoemail->value}]</span><br>
                     [{/if}]
                     <span class="hidden" itemprop="url">[{$oViewConf->getHomeLink()}]</span>
                 </address>

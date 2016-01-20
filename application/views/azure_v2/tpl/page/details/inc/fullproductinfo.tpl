@@ -11,7 +11,7 @@
                 [{if $oView->isReviewActive()}]
                     <div class="spacer"></div>
                     <div class="widgetBox reviews">
-                        <div class="h2 page-header">[{oxmultilang ident="DETAILS_PRODUCTREVIEW"}]</div>
+                        <div class="h2 page-header">[{oxmultilang ident="WRITE_PRODUCT_REVIEW"}]</div>
                         [{include file="widget/reviews/reviews.tpl"}]
                     </div>
                 [{/if}]

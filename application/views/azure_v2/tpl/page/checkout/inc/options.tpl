@@ -22,18 +22,18 @@
 
                         <div class="panel panel-default" id="optionNoRegistration">
                             <div class="panel-heading">
-                                <h3 class="panel-title">[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_NOREGISTRATION"}]</h3>
+                                <h3 class="panel-title">[{oxmultilang ident="PURCHASE_WITHOUT_REGISTRATION"}]</h3>
                             </div>
                             <div class="panel-body">
                                 [{block name="checkout_options_noreg_text"}]
-                                    <p>[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_NOREGISTRATION_DESCRIPTION"}]</p>
+                                    <p>[{oxmultilang ident="DO_NOT_WANT_CREATE_ACCOUNT"}]</p>
                                     [{if $oView->isDownloadableProductWarning()}]
                                         <p class="errorMsg">[{oxmultilang ident="MESSAGE_DOWNLOADABLE_PRODUCT"}]</p>
                                     [{/if}]
                                 [{/block}]
                             </div>
                             <div class="panel-footer text-right">
-                                <button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_NEXT"}] <i class="fa fa-caret-right"></i></button>
+                                <button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="NEXT"}] <i class="fa fa-caret-right"></i></button>
                             </div>
                         </div>
                     </form>
@@ -54,15 +54,17 @@
 
                     <div class="panel panel-default" id="optionRegistration">
                         <div class="panel-heading">
-                            <h3 class="panel-title">[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_REGISTRATION"}]</h3>
+                            <h3 class="panel-title">[{oxmultilang ident="OPEN_ACCOUNT"}]</h3>
                         </div>
                         <div class="panel-body">
                             [{block name="checkout_options_reg_text"}]
-                                <p>[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_REGISTRATION_DESCRIPTION"}]</p>
+                                [{oxifcontent ident="oxregistrationdescription" object="oCont"}]
+                                    [{$oCont->oxcontents__oxcontent->value}]
+                                [{/oxifcontent}]
                             [{/block}]
                         </div>
                         <div class="panel-footer text-right">
-                            <button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="PAGE_CHECKOUT_USER_OPTION_NEXT"}] <i class="fa fa-caret-right"></i></button>
+                            <button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="NEXT"}] <i class="fa fa-caret-right"></i></button>
                         </div>
                     </div>
                 </form>

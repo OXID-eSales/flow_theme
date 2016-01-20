@@ -6,24 +6,24 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 [{block name="checkout_wrapping_header"}]
-                    <span class="h4 modal-title" id="giftoptions_modal_label">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_GIFTOPTION"}]</span>
+                    <span class="h4 modal-title" id="giftoptions_modal_label">[{oxmultilang ident="GIFT_OPTION"}]</span>
                 [{/block}]
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="[{$oViewConf->getImageUrl('gift-wrapping.jpg')}]" alt="[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_ADDWRAPPING"}]" class="img-thumbnail">
+                        <img src="[{$oViewConf->getImageUrl('gift-wrapping.jpg')}]" alt="[{oxmultilang ident="ADD_WRAPPING"}]" class="img-thumbnail">
                     </div>
                     <div class="col-md-9">
-                        <p>[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_PERSONALMESSAGE"}]</p>
+                        <p>[{oxmultilang ident="WRAPPING_DESCRIPTION"}]</p>
                     </div>
                 </div>
 
                 [{block name="checkout_wrapping_contents"}]
-                    <h3 class="page-header blockHead">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_ADDWRAPPING"}]</h3>
+                    <h3 class="page-header blockHead">[{oxmultilang ident="ADD_WRAPPING"}]</h3>
 
                     [{if !$oxcmp_basket->getProductsCount()}]
-                        <div class="alert alert-danger">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_BASKETEMPTY"}]</div>
+                        <div class="alert alert-danger">[{oxmultilang ident="BASKET_EMPTY"}]</div>
                     [{else}]
                         <form name="basket" action="[{$oViewConf->getSelfActionLink()}]" method="post" role="form" id="giftoptions_modal_form">
                             <div class="hidden">
@@ -55,7 +55,7 @@
                                                                     <div class="radio">
                                                                         <label>
                                                                             <input class="radiobox" type="radio" name="wrapping[[{$basketindex}]]" id="wrapping_[{$basketindex}]" value="0" [{if !$basketitem->getWrappingId()}]CHECKED[{/if}]>
-                                                                            [{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_NONE"}] <strong>0,00 [{$currency->sign}]</strong>
+                                                                            [{oxmultilang ident="NONE"}] <strong>0,00 [{$currency->sign}]</strong>
                                                                         </label>
                                                                     </div>
                                                                 </div>
@@ -98,7 +98,7 @@
                             [{assign var="oCardList" value=$oView->getCardList()}]
                             [{if $oCardList->count()}]
                                 [{block name="checkout_wrapping_cards"}]
-                                    <h3 class="page-header blockHead">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_GREETINGCARD"}]</h3>
+                                    <h3 class="page-header blockHead">[{oxmultilang ident="GREETING_CARD"}]</h3>
                                     <div class="wrappingCard clear" id="wrappCard">
                                         <div class="well well-sm">
                                             <div class="row">
@@ -106,7 +106,7 @@
                                                     <div class="form-group">
                                                         <div class="radio">
                                                             <label>
-                                                                <input type="radio" class="radiobox" name="chosencard" id="chosencard" value="0" [{if !$oxcmp_basket->getCardId()}]CHECKED[{/if}]> [{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_NOGREETINGCARD"}]
+                                                                <input type="radio" class="radiobox" name="chosencard" id="chosencard" value="0" [{if !$oxcmp_basket->getCardId()}]CHECKED[{/if}]> [{oxmultilang ident="NO_GREETING_CARD"}]
                                                             </label>
                                                         </div>
                                                     </div>
@@ -145,7 +145,7 @@
                                 [{/block}]
                                 [{block name="checkout_wrapping_comment"}]
                                     <div class="form-group wrappingComment">
-                                        <label for="giftmessage" class="control-label">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_GREETINGMESSAGE"}]</label>
+                                        <label for="giftmessage" class="control-label">[{oxmultilang ident="GREETING_MESSAGE"}]</label>
                                         <textarea cols="102" rows="5" name="giftmessage" id="giftmessage" class="form-control">[{$oxcmp_basket->getCardMessage()}]</textarea>
                                     </div>
                                 [{/block}]
@@ -156,8 +156,8 @@
             </div>
             <div class="modal-footer">
                 [{block name="checkout_wrapping_submit"}]
-                    <button type="button" class="btn btn-default" data-dismiss="modal">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_CANCEL"}]</button>
-                    <button type="submit" class="btn btn-primary" onclick="window.giftoptions_modal_form.submit();return false;">[{oxmultilang ident="PAGE_CHECKOUT_WRAPPING_BACKTOORDER"}]</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">[{oxmultilang ident="CANCEL"}]</button>
+                    <button type="submit" class="btn btn-primary" onclick="window.giftoptions_modal_form.submit();return false;">[{oxmultilang ident="APPLAY"}]</button>
                 [{/block}]
             </div>
         </div>

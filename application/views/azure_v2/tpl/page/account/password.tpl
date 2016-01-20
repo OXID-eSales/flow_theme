@@ -3,7 +3,7 @@
 
     [{if $oView->isPasswordChanged()}]
         <div class="alert alert-success">
-            [{oxmultilang ident="PAGE_ACCOUNT_PASSWORD_PASSWORDCHANGED"}]
+            [{oxmultilang ident="MESSAGE_PASSWORD_CHANGED"}]
         </div>
     [{/if}]
     [{if count($Errors) > 0 && count($Errors.user) > 0}]

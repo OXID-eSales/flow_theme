@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 <form class="form-horizontal" action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post" role="form"  novalidate="novalidate">
@@ -17,14 +13,14 @@
     </div>
 
     <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
-        <label class="control-label col-sm-3">[{oxmultilang ident="PAGE_ACCOUNT_FORGOTPWD_NEWPASSWORD"}]</label>
+        <label class="control-label col-sm-3">[{oxmultilang ident="NEW_PASSWORD"}]</label>
         <div class="col-md-9">
             <input type="password" name="password_new" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox">
         </div>
         <p class="help-block"></p>
     </div>
     <div class="form-group [{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
-        <label class="control-label col-md-3">[{oxmultilang ident="PAGE_ACCOUNT_FORGOTPWD_CONFIRMPASSWORD"}]</label>
+        <label class="control-label col-md-3">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
         <div class="col-md-9">
             <input type="password" name="password_new_confirm" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox">
         </div>

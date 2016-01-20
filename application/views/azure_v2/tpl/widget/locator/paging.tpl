@@ -2,9 +2,9 @@
     <ol class="pagination pagination-sm[{if $place eq "bottom"}] lineBox[{/if}]" id="itemsPager[{$place}]">
         <li class="prev[{if !$pages->previousPage}] disabled[{/if}]">
             [{if $pages->previousPage}]
-                <a href="[{$pages->previousPage}]">&larr; [{oxmultilang ident="WIDGET_PRODUCT_LOCATOR_PREV"}]</a>
+                <a href="[{$pages->previousPage}]">&larr; [{oxmultilang ident="PREVIOUS"}]</a>
             [{else}]
-                <span>&larr; [{oxmultilang ident="WIDGET_PRODUCT_LOCATOR_PREV"}]</span>
+                <span>&larr; [{oxmultilang ident="PREVIOUS"}]</span>
             [{/if}]
         </li>
 
@@ -36,9 +36,9 @@
 
         <li class="next[{if !$pages->nextPage}] disabled[{/if}]">
             [{if $pages->nextPage}]
-                <a href="[{$pages->nextPage}]">[{oxmultilang ident="WIDGET_PRODUCT_LOCATOR_NEXT"}] &rarr;</a>
+                <a href="[{$pages->nextPage}]">[{oxmultilang ident="NEXT"}] &rarr;</a>
             [{else}]
-                <span>[{oxmultilang ident="WIDGET_PRODUCT_LOCATOR_NEXT"}] &rarr;</span>
+                <span>[{oxmultilang ident="NEXT"}] &rarr;</span>
             [{/if}]
         </li>
      </ol>

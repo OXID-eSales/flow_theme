@@ -110,8 +110,8 @@
                                 </span>
                             [{elseif $product->oxarticles__oxweight->value }]
                                 <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit">
-                                    <span title="weight">[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_ARTWEIGHT"}]</span>
-                                    <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_ARTWEIGHT2"}]</span>
+                                    <span title="weight">[{oxmultilang ident="WEIGHT"}]</span>
+                                    <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="KG"}]</span>
                                 </span>
                             [{/if}]
                         [{/oxhasrights}]
@@ -123,13 +123,13 @@
                     <div class="btn-group">
                         [{if $blShowToBasket}]
                             [{oxhasrights ident="TOBASKET"}]
-                                <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_ADDTOCART"}]">
+                                <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="TO_CART"}]">
                                     <i class="fa fa-shopping-cart"></i>
                                 </button>
                             [{/oxhasrights}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_MOREINFO"}]</a>
+                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
                         [{else}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_MOREINFO"}]</a>
+                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
                         [{/if}]
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_INFO_LINKS_LINKS"|oxmultilangassign}]
-    <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_LINKS_LINKS"}]</h1>
+    [{assign var="template_title" value="LINKS"|oxmultilangassign}]
+    <h1 class="page-header">[{oxmultilang ident="LINKS"}]</h1>
 
     [{assign var="aLinkList" value=$oView->getLinksList()}]
     [{if $aLinkList|@count > 0}]

@@ -1,11 +1,11 @@
 [{if $oDetailsProduct->oxarticles__oxmindeltime->value || $oDetailsProduct->oxarticles__oxmaxdeltime->value}]
-    [{oxmultilang ident="PAGE_DETAILS_DELIVERYTIME_DELIVERYTIME" suffix="COLON"}]
+    [{oxmultilang ident="DELIVERYTIME_DELIVERYTIME" suffix="COLON"}]
     [{if $oDetailsProduct->oxarticles__oxmindeltime->value && $oDetailsProduct->oxarticles__oxmindeltime->value != $oDetailsProduct->oxarticles__oxmaxdeltime->value}]
         [{$oDetailsProduct->oxarticles__oxmindeltime->value}] -
     [{/if}]
     [{if $oDetailsProduct->oxarticles__oxmaxdeltime->value}]
         [{assign var="unit" value=$oDetailsProduct->oxarticles__oxdeltimeunit->value}]
-        [{assign var="ident" value=PAGE_DETAILS_DELIVERYTIME_$unit}]
+        [{assign var="ident" value=$unit}]
         [{if $oDetailsProduct->oxarticles__oxmaxdeltime->value > 1}]
             [{assign var="ident" value=$ident|cat:"S"}]
         [{/if}]

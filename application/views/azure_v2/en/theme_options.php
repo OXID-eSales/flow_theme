@@ -125,7 +125,7 @@ $aLang = array(
     'SHOP_THEME_blGAAnonymizeIPs'                   => 'Anonymize IP-Adresses',
 
     'SHOP_THEME_sLogoFile'                          => 'Filename of logo',
-    'HELP_SHOP_THEME_sLogoFile'                     => 'This is relative to the path <code>/out/dd_roxive/img/</code>.',
+    'HELP_SHOP_THEME_sLogoFile'                     => 'This is relative to the path <code>/out/azure_v2/img/</code>.',
 
     'SHOP_THEME_sLogoWidth'                         => 'Width of header logo',
     'HELP_SHOP_THEME_sLogoWidth'                    => 'Specify in as a pixel value.',
@@ -133,10 +133,10 @@ $aLang = array(
     'HELP_SHOP_THEME_sLogoHeight'                   => 'Specify in as a pixel value.',
 
     'SHOP_THEME_sEmailLogo'                         => 'Filename of logo for email header',
-    'HELP_SHOP_THEME_sEmailLogo'                    => 'This is relative to the path <code>/out/dd_roxive/img/</code>.',
+    'HELP_SHOP_THEME_sEmailLogo'                    => 'This is relative to the path <code>/out/azure_v2/img/</code>.',
 
     'SHOP_THEME_sFaviconFile'                       => 'Favicon filename',
-    'HELP_SHOP_THEME_sFaviconFile'                  => 'This favicon is meant to be displayed in the browser\'s tab.<br>In general, this is an ico file.<br>This is relative to the path <code>/out/dd_roxive/img/favicons/</code>.',
+    'HELP_SHOP_THEME_sFaviconFile'                  => 'This favicon is meant to be displayed in the browser\'s tab.<br>In general, this is an ico file.<br>This is relative to the path <code>/out/azure_v2/img/favicons/</code>.',
     'SHOP_THEME_sFavicon16File'                     => 'Filename of the favicon with 16*16px.',
     'SHOP_THEME_sFavicon32File'                     => 'Filename of the favicon with 32*32px.',
     'SHOP_THEME_sFavicon48File'                     => 'Filename of the favicon with 48*48px.',
@@ -150,7 +150,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundColor'                   => 'Background-color of shop',
     'HELP_SHOP_THEME_sBackgroundColor'              => 'Specified as a hexadecimal value.<br>E.g.: #D83434',
     'SHOP_THEME_sBackgroundPath'                    => 'Filename of background-image',
-    'HELP_SHOP_THEME_sBackgroundPath'               => 'This is relative to the path <code>/out/dd_roxive/img/backgrounds/</code>.',
+    'HELP_SHOP_THEME_sBackgroundPath'               => 'This is relative to the path <code>/out/azure_v2/img/backgrounds/</code>.',
     'SHOP_THEME_sBackgroundRepeat'                  => 'Repeat background-image?',
     'SHOP_THEME_sBackgroundRepeat_no-repeat'        => 'No',
     'SHOP_THEME_sBackgroundRepeat_repeat-x'         => 'Yes, horizontal',

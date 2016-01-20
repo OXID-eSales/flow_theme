@@ -9,7 +9,7 @@
                 [{if $showStepLinks}]<a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]">[{/if}]
                 <div class="num">1</div>
                 <div class="text">
-                    [{oxmultilang ident="PAGE_CHECKOUT_STEPS_BASKET"}]
+                    [{oxmultilang ident="STEPS_BASKET"}]
                 </div>
                 [{if $showStepLinks}]</a>[{/if}]
             </li>
@@ -25,7 +25,7 @@
                 [{if $showStepLinks}]<a href="[{oxgetseourl ident=$oViewConf->getOrderLink()}]">[{/if}]
                 <div class="num">2</div>
                 <div class="text">
-                    [{oxmultilang ident="PAGE_CHECKOUT_STEPS_SEND"}]
+                    [{oxmultilang ident="STEPS_SEND"}]
                 </div>
                 [{if $showStepLinks}]</a>[{/if}]
             </li>
@@ -41,7 +41,7 @@
                 [{if $showStepLinks}]<a [{if $oViewConf->getActiveClassName() == "user"}]id="paymentStep"[{/if}] href="[{oxgetseourl ident=$oViewConf->getPaymentLink()}]">[{/if}]
                 <div class="num">3</div>
                 <div class="text">
-                    [{oxmultilang ident="PAGE_CHECKOUT_STEPS_PAY"}]
+                    [{oxmultilang ident="STEPS_PAY"}]
                 </div>
                 [{if $showStepLinks}]</a>[{/if}]
             </li>
@@ -58,7 +58,7 @@
                 [{if $showStepLinks}]<a [{if $oViewConf->getActiveClassName() == "payment"}]id="orderStep"[{/if}] href="[{if $oViewConf->getActiveClassName() == "payment"}]javascript:document.forms.order.submit();[{else}][{oxgetseourl ident=$oViewConf->getOrderConfirmLink()}][{/if}]">[{/if}]
                 <div class="num">4</div>
                 <div class="text">
-                    [{oxmultilang ident="PAGE_CHECKOUT_STEPS_ORDER"}]
+                    [{oxmultilang ident="STEPS_ORDER"}]
                 </div>
                 [{if $showStepLinks}]</a>[{/if}]
             </li>
@@ -69,7 +69,7 @@
             <li class="step5[{if $active == 5}] activeLast [{else}] defaultLast [{/if}] ">
                 <div class="num">5</div>
                 <div class="text">
-                    [{oxmultilang ident="PAGE_CHECKOUT_STEPS_LASTSTEP"}]
+                    [{oxmultilang ident="READY"}]
                 </div>
             </li>
         [{/block}]

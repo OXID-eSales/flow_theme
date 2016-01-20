@@ -1,7 +1,7 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_ACCOUNT_WISHLIST_TITLE"|oxmultilangassign}]
+    [{assign var="template_title" value="MY_GIFT_REGISTRY"|oxmultilangassign}]
     [{if !$oView->getWishListUsers() && $oView->getWishListSearchParam()}]
-        [{assign var="_statusMessage" value="PAGE_ACCOUNT_WISHLIST_SORRYNOWISHLIST"|oxmultilangassign}]
+        [{assign var="_statusMessage" value="MESSAGE_SORRY_NO_GIFT_REGISTRY"|oxmultilangassign}]
         [{include file="message/error.tpl" statusMessage=$_statusMessage}]
     [{/if}]
     [{assign var="editval" value=$oView->getEnteredData()}]
@@ -11,7 +11,7 @@
         [{include file="message/notice.tpl" statusMessage=$_statusMessage|cat:$_statusMessageSuffix}]
     [{/if}]
 
-    <h1 class="page-header">[{oxmultilang ident="PAGE_ACCOUNT_WISHLIST_TITLE"}]</h1>
+    <h1 class="page-header">[{oxmultilang ident="MY_GIFT_REGISTRY"}]</h1>
 
     <div class="wishlist-search">
         [{include file="form/wishlist_search.tpl" searchClass="account_wishlist"}]
@@ -31,7 +31,7 @@
         [{include file="widget/product/list.tpl" type="line" listId="wishlistProductList" title="" products=$oView->getWishProductList() removeFunction="towishlist" toBasketFunction="tobasket" owishid=$oxcmp_user->oxuser__oxid->value}]
     [{else}]
         <p class="alert alert-info">
-            [{oxmultilang ident="PAGE_ACCOUNT_WISHLIST_WISHLISTISEMPTY"}]
+            [{oxmultilang ident="GIFT_REGISTRY_EMPTY"}]
         </p>
     [{/if}]
     [{insert name="oxid_tracker" title=$template_title}]

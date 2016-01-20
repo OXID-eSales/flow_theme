@@ -1,8 +1,8 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="template_title" value="PAGE_INFO_NEWS_LATESTNEWSBY"|oxmultilangassign}]
+    [{assign var="template_title" value="LATEST_NEWS_AND_UPDATES_AT"|oxmultilangassign}]
     <div>
     [{assign var="oNews" value=$oView->getNews()}]
-    <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_NEWS_LATESTNEWSBY"}] [{$oxcmp_shop->oxshops__oxname->value}]</h1>
+    <h1 class="page-header">[{oxmultilang ident="LATEST_NEWS_AND_UPDATES_AT"}] [{$oxcmp_shop->oxshops__oxname->value}]</h1>
     <div class="listRefine clear bottomRound">
     </div>
         [{foreach from=$oNews item=oNews}]

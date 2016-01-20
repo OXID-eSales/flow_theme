@@ -24,14 +24,14 @@
                                 [{if $sActiveValue}]
                                     [{$sActiveValue}]
                                 [{else}]
-                                    [{oxmultilang ident="WIDGET_PRODUCT_ATTRIBUTES_PLEASECHOOSE"}]
+                                    [{oxmultilang ident="PLEASE_CHOOSE"}]
                                 [{/if}]
                                 <span class="caret"></span>
                             </button>
                             <input type="hidden" name="attrfilter[[{$sAttrID}]]" value="[{$sActiveValue}]">
                             <ul class="dropdown-menu" role="menu">
                                 [{if $sActiveValue}]
-                                    <li><a data-selection-id="" href="#">[{oxmultilang ident="WIDGET_PRODUCT_ATTRIBUTES_PLEASECHOOSE"}]</a></li>
+                                    <li><a data-selection-id="" href="#">[{oxmultilang ident="PLEASE_CHOOSE"}]</a></li>
                                 [{/if}]
                                 [{foreach from=$oFilterAttr->getValues() item=sValue}]
                                     <li><a data-selection-id="[{$sValue}]" href="#" [{if $sActiveValue == $sValue}]class="selected"[{/if}] >[{$sValue}]</a></li>

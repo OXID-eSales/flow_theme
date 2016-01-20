@@ -16,7 +16,7 @@
                                     <span aria-hidden="true">&times;</span>
                                     <span class="sr-only">[{oxmultilang ident="CLOSE"}]</span>
                                 </button>
-                                <h4 class="modal-title" id="basketModalLabel">[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="WIDGET_MINIBASKET_ITEMS_IN_BASKET"}]</h4>
+                                <h4 class="modal-title" id="basketModalLabel">[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</h4>
                             </div>
                             <div class="modal-body">
                                 [{if $oxcmp_basket->getProductsCount()}]
@@ -89,7 +89,7 @@
             [{else}]
                 [{block name="dd_layout_page_header_icon_menu_minibasket_title"}]
                     <p class="title">
-                        <strong>[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="WIDGET_MINIBASKET_ITEMS_IN_BASKET"}]</strong>
+                        <strong>[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</strong>
                     </p>
                 [{/block}]
 
@@ -115,7 +115,7 @@
                             [{/foreach}]
                             <tr>
                                 <td class="total_label" colspan="2">
-                                    <strong>[{oxmultilang ident="WIDGET_MINIBASKET_TOTAL"}]</strong>
+                                    <strong>[{oxmultilang ident="TOTAL"}]</strong>
                                 </td>
                                 <td class="total_price text-right">
                                     <strong>

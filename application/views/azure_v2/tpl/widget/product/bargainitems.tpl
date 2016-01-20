@@ -1,7 +1,7 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 <div class="bargainitems list-container">
     <h2 class="page-header">
-        [{oxmultilang ident="DD_BARGAINITEMS_PAGE_HEADER"}]
+        [{oxmultilang ident="WEEK_SPECIAL"}]
 
         [{assign var='rsslinks' value=$oView->getRssLinks()}]
         [{if $rsslinks.bargainArticles}]
@@ -64,7 +64,7 @@
                             [{assign var="tprice"     value=$_product->getTPrice()}]
                             [{assign var="price"      value=$_product->getPrice()}]
                             [{if $tprice && $tprice->getPrice() > $price->getPrice()}]
-                                <span>[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_REDUCEDFROM"}] <del>[{$_product->getFTPrice()}] [{$currency->sign}]</del></span>
+                                <span>[{oxmultilang ident="REDUCED_FROM"}] <del>[{$_product->getFTPrice()}] [{$currency->sign}]</del></span>
                             [{/if}]
                             [{if $_product->getFPrice()}]
                                 [{assign var="currency" value=$oView->getActCurrency()}]
@@ -87,13 +87,13 @@
                             <div class="btn-group">
                                 [{if !( $_product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $_product->getSelections(1)) || $_product->getVariants() )}]
                                     [{oxhasrights ident="TOBASKET"}]
-                                        <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="WIDGET_BARGAIN_ITEMS_PRODUCT_ADDTOCART"}]">
+                                        <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="TO_CART"}]">
                                             <i class="fa fa-shopping-cart"></i>
                                         </button>
                                     [{/oxhasrights}]
                                 [{/if}]
 
-                                <a href="[{$_product->getMainLink()}]" class="btn btn-primary">[{oxmultilang ident="WIDGET_PRODUCT_PRODUCT_MOREINFO"}]</a>
+                                <a href="[{$_product->getMainLink()}]" class="btn btn-primary">[{oxmultilang ident="MORE_INFO"}]</a>
                             </div>
                         [{/block}]
                     </div>

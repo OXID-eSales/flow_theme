@@ -11,11 +11,11 @@
     [{/strip}][{/if}]
 
     [{if !$oxcmp_user}]
-        [{assign var="_star_title" value="DETAILS_LOGIN"|oxmultilangassign}]
+        [{assign var="_star_title" value="MESSAGE_LOGIN_TO_RATE"|oxmultilangassign}]
     [{elseif !$oView->canRate()}]
-        [{assign var="_star_title" value="DETAILS_ALREADYRATED"|oxmultilangassign}]
+        [{assign var="_star_title" value="MESSAGE_ALREADY_RATED"|oxmultilangassign}]
     [{else}]
-        [{assign var="_star_title" value="DETAILS_RATETHISARTICLE"|oxmultilangassign}]
+        [{assign var="_star_title" value="MESSAGE_RATE_THIS_ARTICLE"|oxmultilangassign}]
     [{/if}]
 
 
@@ -31,14 +31,14 @@
                     [{if $iRatingValue < 0.3}]
                         <i class="fa fa-star rating-star-empty"></i>
                     [{else}]
-                        <i class="fa fa-star-half rating-star-filled"></i>
+                        <i class="fa fa-star-half-o rating-star-filled"></i>
                     [{/if}]
                     [{assign var="iRatingValue" value=0}]
                 [{elseif $iRatingValue > 0.8}]
                     <i class="fa fa-star rating-star-filled"></i>
                     [{assign var="iRatingValue" value=0}]
                 [{else}]
-                    <i class="fa fa-star-half rating-star-filled"></i>
+                    <i class="fa fa-star-half-o rating-star-filled"></i>
                     [{assign var="iRatingValue" value=0}]
                 [{/if}]
             [{/if}]

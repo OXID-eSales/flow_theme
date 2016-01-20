@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             [{if $oView->getNewsletterStatus() == 4 || !$oView->getNewsletterStatus()}]
-                <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_NEWSLETTER_STAYINFORMED"}]</h1>
+                <h1 class="page-header">[{oxmultilang ident="STAY_INFORMED"}]</h1>
                 <div class="row">
                     <div class="col-lg-7">
                         <article>
@@ -16,19 +16,19 @@
 
                 [{include file="form/newsletter.tpl"}]
             [{elseif $oView->getNewsletterStatus() == 1}]
-                <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_NEWSLETTER_THANKYOU"}]</h1>
+                <h1 class="page-header">[{oxmultilang ident="MESSAGE_THANKYOU_FOR_SUBSCRIBING_NEWSLETTERS"}]</h1>
                 <article>
-                    <p>[{oxmultilang ident="PAGE_INFO_NEWSLETTER_YOUHAVEBEENSENTCONFIRMATION"}]</p>
+                    <p>[{oxmultilang ident="MESSAGE_SENT_CONFIRMATION_EMAIL"}]</p>
                 </article>
             [{elseif $oView->getNewsletterStatus() == 2}]
-                <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_NEWSLETTER_CONGRATULATIONS"}]</h1>
+                <h1 class="page-header">[{oxmultilang ident="MESSAGE_NEWSLETTER_CONGRATULATIONS"}]</h1>
                 <article>
-                    <p>[{oxmultilang ident="PAGE_INFO_NEWSLETTER_SUBSCRIPTIONACTIVATED"}]</p>
+                    <p>[{oxmultilang ident="MESSAGE_NEWSLETTER_SUBSCRIPTION_ACTIVATED"}]</p>
                 </article>
             [{elseif $oView->getNewsletterStatus() == 3}]
-                <h1 class="page-header">[{oxmultilang ident="PAGE_INFO_NEWSLETTER_SUCCESS"}]</h1>
+                <h1 class="page-header">[{oxmultilang ident="SUCCESS"}]</h1>
                 <article>
-                    <p>[{oxmultilang ident="PAGE_INFO_NEWSLETTER_SUBSCRIPTIONCANCELED"}]</p>
+                    <p>[{oxmultilang ident="MESSAGE_NEWSLETTER_SUBSCRIPTION_CANCELED"}]</p>
                 </article>
             [{/if}]
         </div>

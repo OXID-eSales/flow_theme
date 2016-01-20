@@ -3,11 +3,11 @@
 
 <div class="btn-group">
     <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-        <strong>[{oxmultilang ident="WIDGET_PRODUCT_LOCATOR_ARTICLE_PER_PAGE"}]</strong>
+        <strong>[{oxmultilang ident="PRODUCTS_PER_PAGE"}]</strong>
         [{if $oViewConf->getArtPerPageCount()}]
             [{$oViewConf->getArtPerPageCount()}]
         [{else}]
-            [{oxmultilang ident="WIDGET_LOCATOR_CHOOSE"}]
+            [{oxmultilang ident="CHOOSE"}]
         [{/if}]
         <span class="caret"></span>
     </button>

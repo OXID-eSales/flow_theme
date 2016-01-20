@@ -38,5 +38,5 @@
     [{/foreach}]
 --></script>
 <select name="[{$stateSelectName}]" id="[{$stateSelectId}]" [{if $class}]class="[{$class}]"[{/if}]>
-    <option value="">[{oxmultilang ident="FORM_FIELDSET_STATE_PROMTSTRING"}]</option>
+    <option value="">[{oxmultilang ident="PLEASE_SELECT_STATE"}]</option>
 </select>

@@ -25,7 +25,7 @@
                         <ul id="navigation" class="nav navbar-nav">
                             [{block name="dd_widget_header_categorylist_navbar_list"}]
                                 <li [{if $homeSelected == 'true'}]class="active"[{/if}]>
-                                    <a href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="TOP_CATEGORIES_HOME"}]</a>
+                                    <a href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
                                 </li>
 
                                 [{foreach from=$oxcmp_categories item="ocat" key="catkey" name="root"}]

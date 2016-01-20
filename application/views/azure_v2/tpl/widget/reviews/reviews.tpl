@@ -1,8 +1,4 @@
-[{if $oxcmp_shop->oxshops__oxproductive->value}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{else}]
-    [{oxscript include="js/libs/jqBootstrapValidation.js" priority=10}]
-[{/if}]
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 <div id="review">
     <div class="panel-group" id="review_form_accordion">
@@ -10,9 +6,9 @@
             <div class="panel-heading toggle-accordion">
                 <div class="h4 panel-title">
                     [{if $oxcmp_user}]
-                        <i class="fa fa-pencil"></i> <a id="writeNewReview" data-toggle="collapse" data-parent="#review_form_accordion" href="#review_form">[{oxmultilang ident="DETAILS_WRITEREVIEW"}]</a>
+                        <i class="fa fa-pencil"></i> <a id="writeNewReview" data-toggle="collapse" data-parent="#review_form_accordion" href="#review_form">[{oxmultilang ident="WRITE_REVIEW"}]</a>
                     [{else}]
-                        <i class="fa fa-user"></i> <a id="reviewsLogin" rel="nofollow" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl=details"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="DETAILS_LOGINTOWRITEREVIEW"}]</a>
+                        <i class="fa fa-user"></i> <a id="reviewsLogin" rel="nofollow" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl=details"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="MESSAGE_LOGIN_TO_WRITE_REVIEW"}]</a>
                     [{/if}]
                 </div>
             </div>
@@ -48,7 +44,7 @@
                                         <ul id="reviewRating" class="rating list-inline">
                                             [{section name=star start=1 loop=6}]
                                                 <li class="s[{$smarty.section.star.index}]" data-rate-value="[{$smarty.section.star.index}]">
-                                                    <a class="ox-write-review ox-rateindex-[{$smarty.section.star.index}] text-warning" title="[{$smarty.section.star.index}] [{if $smarty.section.star.index==1}][{oxmultilang ident="DETAILS_STAR"}][{else}][{oxmultilang ident="DETAILS_STARS"}][{/if}]">
+                                                    <a class="ox-write-review ox-rateindex-[{$smarty.section.star.index}] text-warning" title="[{$smarty.section.star.index}] [{if $smarty.section.star.index==1}][{oxmultilang ident="STAR"}][{else}][{oxmultilang ident="STARS"}][{/if}]">
                                                         <i class="fa fa-star-o"></i>
                                                     </a>
                                                 </li>
@@ -62,7 +58,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-12">
-                                            <button id="reviewSave" type="submit" class="submitButton btn btn-primary">[{oxmultilang ident="DETAILS_SAVEREVIEW"}]</button>
+                                            <button id="reviewSave" type="submit" class="submitButton btn btn-primary">[{oxmultilang ident="SAVE_RATING_AND_REVIEW"}]</button>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +84,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-md-6 writer">
-                                    <span itemprop="author">[{$review->oxuser__oxfname->value}]</span> [{oxmultilang ident="DETAILS_WRITES"}]
+                                    <span itemprop="author">[{$review->oxuser__oxfname->value}]</span> [{oxmultilang ident="WRITES"}]
                                     <span>
                                         <time itemprop="datePublished" datetime="[{$review->oxreviews__oxcreate->value|date_format:"%Y-%m-%d"}]">[{$review->oxreviews__oxcreate->value|date_format:"%d.%m.%Y"}]</time>
                                     </span>
@@ -121,7 +117,7 @@
         </div>
     [{else}]
         <div class="alert alert-info">
-            [{oxmultilang ident="DETAILS_REVIEWNOTAVAILABLE"}]
+            [{oxmultilang ident="NO_REVIEW_AVAILABLE"}]
         </div>
     [{/if}]
 

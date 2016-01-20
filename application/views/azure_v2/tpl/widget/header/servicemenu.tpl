@@ -16,7 +16,7 @@
             [{if $notificationsCounter > 0}]
                 <span class="badge">[{$notificationsCounter}]</span>
             [{/if}]
-            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down hidden-xs"></i>
         [{/block}]
     </button>
     <ul class="dropdown-menu dropdown-menu-right pull-right" role="menu">
@@ -29,8 +29,8 @@
                             [{if $oxcmp_user}]
                                 <div class="divider"></div>
                                 <div class="text-right">
-                                    <a class="btn btn-danger" role="button" href="[{$oViewConf->getLogoutLink()}]" title="[{oxmultilang ident="WIDGET_LOGINBOX_LOGOUT"}]">
-                                        <i class="fa fa-power-off"></i> [{oxmultilang ident="WIDGET_LOGINBOX_LOGOUT"}]
+                                    <a class="btn btn-danger" role="button" href="[{$oViewConf->getLogoutLink()}]" title="[{oxmultilang ident="LOGOUT"}]">
+                                        <i class="fa fa-power-off"></i> [{oxmultilang ident="LOGOUT"}]
                                     </a>
                                 </div>
                             [{/if}]

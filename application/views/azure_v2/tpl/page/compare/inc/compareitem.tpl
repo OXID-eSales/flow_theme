@@ -20,8 +20,8 @@
     <span class="identifier">
         [{if $product->oxarticles__oxweight->value}]
             <div>
-                <span title="weight">[{oxmultilang ident="PAGE_PRODUCT_INC_PRODUCT_ARTWEIGHT"}]</span>
-                <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="PAGE_PRODUCT_INC_PRODUCT_ARTWEIGHT2"}]</span>
+                <span title="weight">[{oxmultilang ident="WEIGHT"}]</span>
+                <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="KG"}]</span>
             </div>
         [{/if}]
         <small class="text-muted" title="sku">[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}]</small>
@@ -73,7 +73,7 @@
                 [{assign var=price  value=$product->getPrice()}]
                 <p class="oldPrice">
                     [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
-                        <strong>[{oxmultilang ident="DETAILS_REDUCEDFROM"}] <del>[{$product->getFTPrice()}] [{$currency->sign}]</del></strong>
+                        <strong>[{oxmultilang ident="REDUCED_FROM"}] <del>[{$product->getFTPrice()}] [{$currency->sign}]</del></strong>
                     [{else}]
                         &nbsp;
                     [{/if}]
@@ -90,9 +90,9 @@
                 [{if $blShowToBasket}]
                     [{oxhasrights ident="TOBASKET"}]
                         <div class="input-group">
-                            <input type="text" name="am" value="1" size="3" autocomplete="off" class="form-control" title="[{oxmultilang ident="DETAILS_QUANTITY"}]">
+                            <input type="text" name="am" value="1" size="3" autocomplete="off" class="form-control" title="[{oxmultilang ident="QUANTITY"}]">
                             <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="PAGE_PRODUCT_INC_PRODUCT_ADDTOCARD2"}]">
+                                <button type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="TO_CART"}]">
                                     <i class="fa fa-shopping-cart"></i>
                                 </button>
                             </span>
@@ -100,7 +100,7 @@
                     [{/oxhasrights}]
                 [{else}]
                     <span >
-                        <a id="variantMoreInfo_[{$testid}]" class="btn btn-primary btn-block" href="[{$_productLink}]" onclick="oxid.mdVariants.getMdVariantUrl('mdVariant_[{$testid}]'); return false;">[{oxmultilang ident="PAGE_PRODUCT_INC_PRODUCT_VARIANTS_MOREINFO"}]</a>
+                        <a id="variantMoreInfo_[{$testid}]" class="btn btn-primary btn-block" href="[{$_productLink}]" onclick="oxid.mdVariants.getMdVariantUrl('mdVariant_[{$testid}]'); return false;">[{oxmultilang ident="MORE_INFO"}]</a>
                     </span>
                 [{/if}]
             </div>
@@ -117,22 +117,22 @@
                         [{if $product->oxarticles__oxnostocktext->value}]
                             [{$product->oxarticles__oxnostocktext->value}]
                         [{elseif $oViewConf->getStockOffDefaultMessage()}]
-                            <span class="text-danger">[{oxmultilang ident="DETAILS_NOTONSTOCK"}]</span>
+                            <span class="text-danger">[{oxmultilang ident="MESSAGE_NOT_ON_STOCK"}]</span>
                         [{/if}]
                         [{if $product->getDeliveryDate()}]
-                            <span class="text-info">[{oxmultilang ident="DETAILS_AVAILABLEON"}] [{$product->getDeliveryDate()}]</span>
+                            <span class="text-info">[{oxmultilang ident="AVAILABLE_ON"}] [{$product->getDeliveryDate()}]</span>
                         [{/if}]
                     </span>
                 [{elseif $product->getStockStatus() == 1}]
                     <span class="stockFlag lowStock">
-                        <span class="text-warning">[{oxmultilang ident="DETAILS_LOWSTOCK"}]</span>
+                        <span class="text-warning">[{oxmultilang ident="LOW_STOCK"}]</span>
                     </span>
                 [{elseif $product->getStockStatus() == 0}]
                     <span class="stockFlag">
                         [{if $product->oxarticles__oxstocktext->value}]
                             [{$product->oxarticles__oxstocktext->value}]
                         [{elseif $oViewConf->getStockOnDefaultMessage()}]
-                            <span class="text-success">[{oxmultilang ident="DETAILS_READYFORSHIPPING"}]</span>
+                            <span class="text-success">[{oxmultilang ident="READY_FOR_SHIPPING"}]</span>
                         [{/if}]
                     </span>
                 [{/if}]
@@ -155,8 +155,8 @@
             <input type="hidden" name="removecompare" value="1">
         </div>
         [{oxhasrights ident="TOBASKET"}]
-            <button class="btn btn-danger btn-sm" id="remove_cmp_[{$product->oxarticles__oxid->value}]" type="submit" title="[{oxmultilang ident="PAGE_PRODUCT_COMPARE_REMOVE"}]" name="send">
-                <i class="fa fa-trash"></i> [{oxmultilang ident="PAGE_PRODUCT_COMPARE_REMOVE"}]
+            <button class="btn btn-danger btn-sm" id="remove_cmp_[{$product->oxarticles__oxid->value}]" type="submit" title="[{oxmultilang ident="REMOVE"}]" name="send">
+                <i class="fa fa-trash"></i> [{oxmultilang ident="REMOVE"}]
             </button>
         [{/oxhasrights}]
     </form>
