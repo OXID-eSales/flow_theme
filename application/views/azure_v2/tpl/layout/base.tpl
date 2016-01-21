@@ -9,8 +9,9 @@
         [{assign var="_sMetaTitleSuffix" value=$oView->getTitleSuffix()}]
         [{assign var="_sMetaTitlePageSuffix" value=$oView->getTitlePageSuffix()}]
         [{assign var="_sMetaTitle" value=$oView->getTitle()}]
+        [{capture assign="sPageTitle"}][{$_sMetaTitlePrefix}][{if $_sMetaTitlePrefix && $_sMetaTitle}] | [{/if}][{$_sMetaTitle|strip_tags}][{if $_sMetaTitleSuffix && ($_sMetaTitlePrefix || $_sMetaTitle)}] | [{/if}][{$_sMetaTitleSuffix}] [{if $_sMetaTitlePageSuffix}] | [{$_sMetaTitlePageSuffix}][{/if}][{/capture}]
 
-        <title>[{$_sMetaTitlePrefix}][{if $_sMetaTitlePrefix && $_sMetaTitle}] | [{/if}][{$_sMetaTitle|strip_tags}][{if $_sMetaTitleSuffix && ($_sMetaTitlePrefix || $_sMetaTitle)}] | [{/if}][{$_sMetaTitleSuffix}] [{if $_sMetaTitlePageSuffix}] | [{$_sMetaTitlePageSuffix}][{/if}]</title>
+        <title>[{block name="head_title"}][{$sPageTitle}][{/block}]</title>
 
         [{block name="head_meta_robots"}]
             [{if $oView->noIndex() == 1}]
@@ -36,7 +37,7 @@
             [{if $oViewConf->getFbAppId()}]
                 <meta property="og:site_name" content="[{$oViewConf->getBaseDir()}]">
                 <meta property="fb:app_id" content="[{$oViewConf->getFbAppId()}]">
-                <meta property="og:title" content="[{$_sMetaTitlePrefix}][{if $_sMetaTitlePrefix && $_sMetaTitle}] | [{/if}][{$_sMetaTitle|strip_tags}][{if $_sMetaTitleSuffix && ($_sMetaTitlePrefix || $_sMetaTitle)}] | [{/if}][{$_sMetaTitleSuffix}] [{if $_sMetaTitlePageSuffix}] | [{$_sMetaTitlePageSuffix}][{/if}]">
+                <meta property="og:title" content="[{$sPageTitle}]">
                 [{if $oViewConf->getActiveClassName() == 'details'}]
                     <meta property="og:type" content="product">
                     <meta property="og:image" content="[{$oView->getActPicture()}]">
@@ -107,7 +108,7 @@
                 <meta name="msapplication-TileImage" content="[{$oViewConf->getImageUrl("favicons/`$sFavicon512File`")}]">
 
                 <!-- Fluid -->
-                <link rel="fluid-icon" href="[{$oViewConf->getImageUrl("favicons/`$sFavicon512File`")}]" title="[{$_sMetaTitlePrefix}][{if $_sMetaTitlePrefix && $_sMetaTitle}] | [{/if}][{$_sMetaTitle|strip_tags}][{if $_sMetaTitleSuffix && ($_sMetaTitlePrefix || $_sMetaTitle)}] | [{/if}][{$_sMetaTitleSuffix}] [{if $_sMetaTitlePageSuffix}] | [{$_sMetaTitlePageSuffix}][{/if}]" />
+                <link rel="fluid-icon" href="[{$oViewConf->getImageUrl("favicons/`$sFavicon512File`")}]" title="[{$sPageTitle}]" />
             [{/if}]
 
             <!-- Shortcut Icons -->

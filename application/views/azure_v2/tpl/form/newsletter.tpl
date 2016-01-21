@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-lg-2">[{oxmultilang ident="FORM_NEWSLETTER_FIRSTNAME"}]</label>
+        <label class="control-label col-lg-2">[{oxmultilang ident="FIRST_NAME"}]</label>
 
         <div class="col-lg-5">
             <input class="form-control" id="newsletterFname" type="text" name="editval[oxuser__oxfname]" maxlength="40" value="[{if $aRegParams.oxuser__oxfname}][{$aRegParams.oxuser__oxfname}][{/if}]">

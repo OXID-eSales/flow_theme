@@ -42,10 +42,12 @@
                 <input type="hidden" name="blshowshipaddress" value="1">
             </div>
 
-            <div class="well well-sm">
-                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
-                <div class="clearfix"></div>
-            </div>
+            [{block name="user_checkout_registration_next_step_top"}]
+                <div class="well well-sm">
+                    <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                    <div class="clearfix"></div>
+                </div>
+            [{/block}]
 
             <div class="checkoutCollumns clear">
                 <div class="panel panel-default">
@@ -92,11 +94,13 @@
 
             [{oxscript add="$('#showShipAddress').change( function() { $('#shippingAddress').toggle($(this).is(':not(:checked)'));});"}]
 
-            <div class="well well-sm">
-                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepBottom">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
-                <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}]</button>
-                <div class="clearfix"></div>
-            </div>
+            [{block name="user_checkout_registration_next_step_bottom"}]
+                <div class="well well-sm">
+                    <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepBottom">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                    <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}]</button>
+                    <div class="clearfix"></div>
+                </div>
+            [{/block}]
         [{/block}]
     </form>
 [{/block}]

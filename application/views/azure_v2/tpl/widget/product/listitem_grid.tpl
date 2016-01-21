@@ -68,7 +68,7 @@
 
             <div class="price text-center">
                 <div class="content">
-                    [{block name="widget_product_listitem_infogrid_price"}]
+                    [{block name="widget_product_listitem_grid_price"}]
                         [{oxhasrights ident="SHOWARTICLEPRICE"}]
                             [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
                             [{assign var="tprice"     value=$product->getTPrice()}]
@@ -80,7 +80,7 @@
                                 </span>
                             [{/if}]
 
-                            [{block name="widget_product_listitem_infogrid_price_value"}]
+                            [{block name="widget_product_listitem_grid_price_value"}]
                                 [{if $product->getFPrice()}]
                                     <span class="lead text-nowrap">
                                         [{if $product->isRangePrice()}]
@@ -118,7 +118,7 @@
                     [{/block}]
                 </div>
             </div>
-            [{block name="widget_product_listitem_infogrid_tobasket"}]
+            [{block name="widget_product_listitem_grid_tobasket"}]
                 <div class="actions text-center">
                     <div class="btn-group">
                         [{if $blShowToBasket}]

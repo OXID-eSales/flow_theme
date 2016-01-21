@@ -10,9 +10,9 @@
  * @link        http://www.digidesk.de
  */
 
-RoxIVE = RoxIVE || {};
+Azure = Azure || {};
 
-RoxIVE.initDetailsEvents = function()
+Azure.initDetailsEvents = function()
 {
     var $oDetailsWrapper = $( '#details' ),
         $oReviewRating   = $( '#reviewRating'),
@@ -103,7 +103,7 @@ RoxIVE.initDetailsEvents = function()
     }
 };
 
-RoxIVE.setPhotoSwipe = function()
+Azure.setPhotoSwipe = function()
 {
     var obj   = {},
         $oMorePicsContainer = $( '#morePicsContainer' );

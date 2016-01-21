@@ -24,9 +24,9 @@ $( document ).ready( function()
                     var $this    = $( this ),
                         $oParent = $this.parent();
 
-                    $oParent.prevAll().find( 'i' ).removeClass( 'icon-star-o' ).addClass( 'icon-star' );
-                    $oParent.nextAll().find( 'i' ).removeClass( 'icon-star' ).addClass( 'icon-star-o' );
-                    $this.find( 'i' ).removeClass( 'icon-star-o' ).addClass( 'icon-star' );
+                    $oParent.prevAll().find( 'i' ).removeClass( 'fa-star-o' ).addClass( 'fa-star' );
+                    $oParent.nextAll().find( 'i' ).removeClass( 'fa-star' ).addClass( 'fa-star-o' );
+                    $this.find( 'i' ).removeClass( 'fa-star-o' ).addClass( 'fa-star' );
 
                     $oRatingForm.find( '#recommListRating, #productRating' ).val( $oParent.attr( 'data-rate-value' ) );
                 }

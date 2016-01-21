@@ -10,7 +10,46 @@
  * @link        http://www.digidesk.de
  */
 
+@media (max-width: @screen-md-max) {
+    .control-label.col-xs-12 {
+        text-align: left;
+    }
+}
+
+@media ( max-width: @screen-sm-max ) {
+
+    //
+    // Body
+    // --------------------------------------------------
+    body {
+        &.cl- {
+            &details {
+                #zoom1 img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    //
+    // Header
+    // --------------------------------------------------
+    #header .header-box {
+        padding-bottom: 10px;
+    }
+
+}
+
 @media ( max-width: @screen-xs-max ) {
+
+    //
+    // Header
+    // --------------------------------------------------
+    #header .header-box {
+        .menus-col .menu-dropdowns .languages-menu .dropdown-menu {
+            float: right;
+        }
+    }
 
     //
     // Body
@@ -34,8 +73,24 @@
                     width: 100%;
                 }
             }
+
+            &details {
+                #detailsItemsPager {
+                    font-size: 70%;
+
+                    .pager-current-page {
+                        line-height: 24px;
+                    }
+                }
+
+            }
+
+            &account_order .panel-heading {
+                font-size: 70%;
+            }
         }
 
+        &.cl-thankyou,
         &.is-checkout {
             ol.checkoutSteps {
                 height: 20px;
@@ -90,6 +145,24 @@
 
         .footer-box {
             margin-bottom: @grid-gutter-width;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    #header .header-box {
+        .logo-col {
+            .make-xs-column(12);
+            .text-center;
+        }
+        .menus-col {
+            .make-xs-column(12);
+
+            .menu-dropdowns {
+                .text-center;
+                margin: 20px auto;
+                float: none!important;
+            }
         }
     }
 }

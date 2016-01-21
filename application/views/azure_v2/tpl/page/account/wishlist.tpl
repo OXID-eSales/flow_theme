@@ -6,12 +6,11 @@
     [{/if}]
     [{assign var="editval" value=$oView->getEnteredData()}]
     [{if $oView->isWishListEmailSent()}]
-        [{assign var="_statusMessage" value="PAGE_ACCOUNT_WISHLIST_SENDSUCCESSFULLY1"|oxmultilangassign|cat:" "|cat:$editval->rec_email|cat:" "}]
-        [{assign var="_statusMessageSuffix" value="PAGE_ACCOUNT_WISHLIST_SENDSUCCESSFULLY2"|oxmultilangassign}]
-        [{include file="message/notice.tpl" statusMessage=$_statusMessage|cat:$_statusMessageSuffix}]
+        [{assign var="_statusMessage" value="GIFT_REGISTRY_SENT_SUCCESSFULLY"|oxmultilangassign:$editval->rec_email}]
+        [{include file="message/notice.tpl" statusMessage=$_statusMessage}]
     [{/if}]
 
-    <h1 class="page-header">[{oxmultilang ident="MY_GIFT_REGISTRY"}]</h1>
+    <h1 class="page-header">[{$oView->getTitle()}]</h1>
 
     <div class="wishlist-search">
         [{include file="form/wishlist_search.tpl" searchClass="account_wishlist"}]

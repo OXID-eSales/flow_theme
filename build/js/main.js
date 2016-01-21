@@ -25,7 +25,7 @@
     }
 })();
 
-RoxIVE = {};
+Azure = {};
 
 // Short-Handle for document.ready
 $( function ()
@@ -159,7 +159,7 @@ $( function ()
             {
                 var $this = $( this );
 
-                if ( $this.find( '.caret' ).css( 'display' ) == 'none' )
+                if ( $( window ).width() <= 767 )
                 {
                     e.stopPropagation();
                     document.location.href = $this.attr( 'data-href' );
@@ -240,7 +240,7 @@ $( function ()
         /* *********************************
          * Details page
          * *********************************/
-        RoxIVE.initEvents = function ()
+        Azure.initEvents = function ()
         {
             // Lazy Loading für Bilder
             $( "img" ).unveil();
@@ -253,7 +253,7 @@ $( function ()
             // Globale PopOver-Klasse
             $( '.hasPopover' ).popover();
         };
-        RoxIVE.initEvents();
+        Azure.initEvents();
 
         function reRenderMainNav()
         {

@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label class="control-label col-lg-3">[{oxmultilang ident="MESSAGE"}]</label>
                     <div class="col-lg-9">
-                        <textarea rows="6" class="form-control" name="editval[send_message]">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="FORM_WISHLIST_SUGGEST_BUYFORME1"}] [{$oxcmp_shop->oxshops__oxname->value}] [{oxmultilang ident="FORM_WISHLIST_SUGGEST_BUYFORME2"}][{/if}]</textarea>
+                        <textarea rows="6" class="form-control" name="editval[send_message]">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_BUY_FOR_ME" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
                     </div>
                 </div>
                 <div class="form-group">

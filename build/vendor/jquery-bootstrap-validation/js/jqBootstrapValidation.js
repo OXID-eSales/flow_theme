@@ -188,7 +188,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = oRoxIVE.i18n.DD_FORM_VALIDATION_VALIDEMAIL;
+              message = oAzure.i18n.DD_FORM_VALIDATION_VALIDEMAIL;
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {
@@ -796,13 +796,13 @@
 				name: "Validemail",
 				type: "regex",
 				regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_VALIDEMAIL
+				message: oAzure.i18n.DD_FORM_VALIDATION_VALIDEMAIL
 			},
 			passwordagain: {
 				name: "Passwordagain",
 				type: "match",
 				match: "password",
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_PASSWORDAGAIN
+				message: oAzure.i18n.DD_FORM_VALIDATION_PASSWORDAGAIN
 			},
 			positive: {
 				name: "Positive",
@@ -818,36 +818,36 @@
 				name: "Number",
 				type: "regex",
 				regex: "([+-]?\\\d+(\\\.\\\d*)?([eE][+-]?[0-9]+)?)?",
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_NUMBER
+				message: oAzure.i18n.DD_FORM_VALIDATION_NUMBER
 			},
 			integer: {
 				name: "Integer",
 				type: "regex",
 				regex: "[+-]?\\\d+",
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_INTEGER
+				message: oAzure.i18n.DD_FORM_VALIDATION_INTEGER
 			},
 			positivenumber: {
 				name: "Positivenumber",
 				type: "min",
 				min: 0,
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_POSITIVENUMBER
+				message: oAzure.i18n.DD_FORM_VALIDATION_POSITIVENUMBER
 			},
 			negativenumber: {
 				name: "Negativenumber",
 				type: "max",
 				max: 0,
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_NEGATIVENUMBER
+				message: oAzure.i18n.DD_FORM_VALIDATION_NEGATIVENUMBER
 			},
 			required: {
 				name: "Required",
 				type: "required",
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_REQUIRED
+				message: oAzure.i18n.DD_FORM_VALIDATION_REQUIRED
 			},
 			checkone: {
 				name: "Checkone",
 				type: "minchecked",
 				minchecked: 1,
-				message: oRoxIVE.i18n.DD_FORM_VALIDATION_CHECKONE
+				message: oAzure.i18n.DD_FORM_VALIDATION_CHECKONE
 			}
 		}
 	};

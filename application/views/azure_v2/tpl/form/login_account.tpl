@@ -56,7 +56,7 @@
 
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
-                            <a id="forgotPasswordLink" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=forgotpwd"}]" class="textLink">[{oxmultilang ident="FORM_LOGIN_ACCOUNT_FORGOTPWD"}]</a>
+                            <a id="forgotPasswordLink" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=forgotpwd"}]" class="textLink">[{oxmultilang ident="FORGOT_PASSWORD"}]</a>
                         </div>
                     </div>
                 </form>

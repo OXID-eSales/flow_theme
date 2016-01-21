@@ -18,7 +18,7 @@
 
 [{oxmultilang ident="ORDER_NUMBER"}] [{$order->oxorder__oxordernr->value}]
 
-[{block name="email_plain_order_cust_voucherdiscount"}]
+[{block name="email_plain_order_cust_voucherdiscount_top"}]
 [{if $oViewConf->getShowVouchers()}]
 [{foreach from=$order->getVoucherList() item=voucher}]
 [{assign var="voucherseries" value=$voucher->getSerie()}]

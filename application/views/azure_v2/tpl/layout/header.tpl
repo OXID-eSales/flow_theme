@@ -12,7 +12,7 @@
 
                 <div class="row">
                     <div class="col-xs-5 col-sm-6 col-md-4 logo-col">
-                        [{block name="dd_layout_page_header_logo"}]
+                        [{block name="layout_header_logo"}]
                             [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
                             [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
                             [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
@@ -22,7 +22,7 @@
                         [{/block}]
                     </div>
                     <div class="col-xs-7 col-sm-6 col-md-4 col-md-push-4 menus-col">
-                        [{block name="dd_layout_page_header_icon_menu"}]
+                        [{block name="layout_header_top"}]
                             <div class="menu-dropdowns pull-right">
                                 [{block name="dd_layout_page_header_icon_menu_languages"}]
                                     [{* Language Dropdown*}]
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        [{block name="header_navigation"}]
+        [{block name="layout_header_bottom"}]
             [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
         [{/block}]
 

@@ -3,6 +3,12 @@
 [{/foreach}]
 
 [{block name="sidebar"}]
+    [{block name="sidebar_adminbanner"}]
+        [{if $oView->isDemoShop()}]
+            [{include file="widget/sidebar/adminbanner.tpl"}]
+        [{/if}]
+    [{/block}]
+
     [{block name="sidebar_categoriestree"}]
         [{if $oView->getClassName() == 'alist' }]
             <div class="box well well-sm categorytree">
@@ -19,7 +25,7 @@
         [{/if}]
     [{/block}]
 
-    [{block name="sidebar_tagcloud"}]
+    [{block name="sidebar_tags"}]
         [{if $oView->showTags() && $oView->getClassName() != 'start' && $oView->getClassName() != 'tags'}]
             <div class="box well well-sm hidden-xs hidden-sm">
                 <section>

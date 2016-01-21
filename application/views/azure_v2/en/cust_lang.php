@@ -97,7 +97,8 @@ $aLang = array(
     'DD_FILE_ATTRIBUTES_FILENAME'                           => 'File name:',
 
     // Detailseite
-    'OF'                                                    => 'von',
+    'BACK_TO_OVERVIEW'                                      => 'to overview',
+    'OF'                                                    => 'of',
     'DD_PRODUCTMAIN_STOCKSTATUS'                            => 'Stock',
     'DD_RATING_CUSTOMERRATINGS'                             => 'Customer reviews',
     'PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER'          => 'Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel .',
@@ -106,28 +107,28 @@ $aLang = array(
     'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.',
 
     // Modal-Warenkorb
-    'DD_MINIBASKET_MODAL_TABLE_TITLE'               => 'Article',
-    'DD_MINIBASKET_MODAL_TABLE_PRICE'               => 'Total',
-    'DD_MINIBASKET_CONTINUE_SHOPPING'               => 'continue shopping',
+    'DD_MINIBASKET_MODAL_TABLE_TITLE'                       => 'Article',
+    'DD_MINIBASKET_MODAL_TABLE_PRICE'                       => 'Total',
+    'DD_MINIBASKET_CONTINUE_SHOPPING'                       => 'continue shopping',
 
     // Checkout
-    'DD_BASKET_BACK_TO_SHOP'                        => 'back to shop',
+    'DD_BASKET_BACK_TO_SHOP'                                => 'back to shop',
 
     // E-Mails
-    'DD_ORDER_CUST_HEADING'                         => 'Order',
-    'DD_FOOTER_FOLLOW_US'                           => 'Follow us:',
-    'DD_FOOTER_CONTACT_INFO'                        => 'Contact:',
-    'DD_FORGOT_PASSWORD_HEADING'                    => 'Forgot password',
-    'DD_INVITE_HEADING'                             => 'Article recommendation',
-    'DD_INVITE_LINK'                                => 'Link',
-    'DD_NEWSLETTER_OPTIN_HEADING'                   => 'Your newsletter subscription',
-    'DD_ORDERSHIPPED_HEADING'                       => 'Delivery confirmation - Order',
-    'DD_OWNER_REMINDER_HEADING'                     => 'Low stock',
-    'DD_PRICEALARM_HEADING'                         => 'Pricealarm',
-    'DD_REGISTER_HEADING'                           => 'Your registration',
-    'DD_DOWNLOADLINKS_HEADING'                      => 'Your download links - Order',
-    'DD_SUGGEST_HEADING'                            => 'Article recommendation',
-    'DD_WISHLIST_HEADING'                           => 'Wishlist',
+    'DD_ORDER_CUST_HEADING'                                 => 'Order',
+    'DD_FOOTER_FOLLOW_US'                                   => 'Follow us:',
+    'DD_FOOTER_CONTACT_INFO'                                => 'Contact:',
+    'DD_FORGOT_PASSWORD_HEADING'                            => 'Forgot password',
+    'DD_INVITE_HEADING'                                     => 'Article recommendation',
+    'DD_INVITE_LINK'                                        => 'Link',
+    'DD_NEWSLETTER_OPTIN_HEADING'                           => 'Your newsletter subscription',
+    'DD_ORDERSHIPPED_HEADING'                               => 'Delivery confirmation - Order',
+    'DD_OWNER_REMINDER_HEADING'                             => 'Low stock',
+    'DD_PRICEALARM_HEADING'                                 => 'Pricealarm',
+    'DD_REGISTER_HEADING'                                   => 'Your registration',
+    'DD_DOWNLOADLINKS_HEADING'                              => 'Your download links - Order',
+    'DD_SUGGEST_HEADING'                                    => 'Article recommendation',
+    'DD_WISHLIST_HEADING'                                   => 'Wishlist',
 );
 
 /*

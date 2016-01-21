@@ -152,7 +152,7 @@
                             [{/if}]
                             <br>
                             <p>
-                                <b>[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_ARTNOMBER"}] [{$basketproduct->oxarticles__oxartnum->value}]</b>
+                                <b>[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}] [{$basketproduct->oxarticles__oxartnum->value}]</b>
                             </p>
                             [{if $oViewConf->getShowGiftWrapping()}]
                                 [{assign var="oWrapping" value=$basketitem->getWrapping()}]
@@ -215,7 +215,7 @@
         [{if $oViewConf->getViewThemeParam('blEmailsShowProductPictures')}]
             [{assign var="iFooterColspan" value=5}]
         [{/if}]
-        [{block name="email_html_order_cust_voucherdiscount"}]
+        [{block name="email_html_order_cust_voucherdiscount_top"}]
             [{if $oViewConf->getShowVouchers() && $basket->getVoucherDiscValue()}]
                 <tr valign="top" bgcolor="#ebebeb">
                     <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">
@@ -245,10 +245,10 @@
             [{/block}]
             [{block name="email_html_order_cust_nodiscountproductvats"}]
                 <!-- VATs -->
-                [{foreach from=$basket->getProductVats() item=VATitem key=key}]
+                [{foreach from=$basket->getProductVats(false) item=VATitem key=key}]
                     <tr valign="top" bgcolor="#ebebeb">
-                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_PLUSTAX1"}] [{$key}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        <td align="right" class="odd text-right">[{$VATitem}] [{$currency->sign}]</td>
+                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</td>
+                        <td align="right" class="odd text-right">[{oxprice price=$VATitem currency=$currency}]</td>
                     </tr>
                 [{/foreach}]
             [{/block}]
@@ -305,8 +305,8 @@
                 <!-- VATs -->
                 [{foreach from=$basket->getProductVats() item=VATitem key=key}]
                     <tr valign="top" bgcolor="#ebebeb">
-                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_PLUSTAX1"}] [{$key}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        <td align="right" class="odd text-right">[{$VATitem}] [{$currency->sign}]</td>
+                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</td>
+                        <td align="right" class="odd text-right">[{oxprice price=$VATitem currency=$currency}]</td>
                     </tr>
                 [{/foreach}]
             [{/block}]
@@ -334,26 +334,29 @@
 
         [{block name="email_html_order_cust_delcosts"}]
             <!-- delivery costs -->
-            [{if $basket->getDelCostNet()}]
-                <tr valign="top" bgcolor="#ebebeb">
-                    <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGNET"}]</td>
-                    <td align="right" class="odd text-right">[{$basket->getDelCostNet()}] [{$currency->sign}]</td>
-                </tr>
-                [{if $basket->getDelCostVat()}]
+            [{assign var="oDeliveryCost" value=$basket->getDeliveryCost()}]
+            [{if $oDeliveryCost && $oDeliveryCost->getPrice() > 0}]
+                [{if $oViewConf->isFunctionalityEnabled('blShowVATForDelivery')}]
                     <tr valign="top" bgcolor="#ebebeb">
-                        [{if $basket->isProportionalCalculationOn()}]
-                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
-                        [{else}]
-                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getDelCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        [{/if}]
-                        <td align="right" class="odd text-right">[{$basket->getDelCostVat()}] [{$currency->sign}]</td>
+                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="SHIPPING_NET" suffix="COLON"}]</td>
+                        <td align="right" class="odd text-right">[{oxprice price=$oDeliveryCost->getNettoPrice() currency=$currency}]</td>
+                    </tr>
+                    [{if $oDeliveryCost->getVatValue()}]
+                        <tr valign="top" bgcolor="#ebebeb">
+                            [{if $basket->isProportionalCalculationOn()}]
+                                <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT" suffix="COLON"}]</td>
+                            [{else}]
+                                <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$oDeliveryCost->getVat()}]</td>
+                            [{/if}]
+                            <td align="right" class="odd text-right">[{oxprice price=$oDeliveryCost->getVatValue() currency=$currency}]</td>
+                        </tr>
+                    [{/if}]
+                [{else}]
+                    <tr valign="top" bgcolor="#ebebeb">
+                        <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="SHIPPING_COST" suffix="COLON"}]</td>
+                        <td align="right" class="odd text-right">[{oxprice price=$oDeliveryCost->getBruttoPrice() currency=$currency}]</td>
                     </tr>
                 [{/if}]
-            [{elseif $basket->getFDeliveryCosts()}]
-                <tr valign="top" bgcolor="#ebebeb">
-                    <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="SHIPPING_COST"}]:</td>
-                    <td align="right" class="odd text-right">[{$basket->getFDeliveryCosts()}] [{$currency->sign}]</td>
-                </tr>
             [{/if}]
         [{/block}]
 
@@ -509,7 +512,7 @@
     [{/if}]
 [{/block}]
 
-[{block name="email_html_order_cust_paymentinfo"}]
+[{block name="email_html_order_cust_paymentinfo_top"}]
     [{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}]
         <h3 class="underline">[{oxmultilang ident="PAYMENT_METHOD"}]</h3>
         <p>
@@ -527,7 +530,7 @@
 
 [{block name="email_html_order_cust_deliveryinfo"}]
     [{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}]
-        <h3 class="underline">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGCARRIER"}]</h3>
+        <h3 class="underline">[{oxmultilang ident="SELECTED_SHIPPING_CARRIER"}]</h3>
         <p>
             <b>[{$order->oDelSet->oxdeliveryset__oxtitle->value}]</b>
         </p>

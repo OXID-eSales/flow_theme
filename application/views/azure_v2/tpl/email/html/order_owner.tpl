@@ -204,7 +204,7 @@
         [{if $oViewConf->getViewThemeParam('blEmailsShowProductPictures')}]
             [{assign var="iFooterColspan" value=5}]
         [{/if}]
-        [{block name="email_html_order_owner_voucherdiscount"}]
+        [{block name="email_html_order_owner_voucherdiscount_top"}]
             [{if $oViewConf->getShowVouchers()}]
                 [{if $basket->getVoucherDiscValue()}]
                     <tr valign="top" bgcolor="#ebebeb">

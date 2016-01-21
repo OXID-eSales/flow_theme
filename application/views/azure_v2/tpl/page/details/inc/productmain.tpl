@@ -89,7 +89,7 @@
             [{/block}]
         </div>
 
-        <div class="col-xs-12 col-md-5 col-lg-6 details-col-middle">
+        <div class="col-xs-12 col-sm-8 col-md-5 col-lg-6 details-col-middle">
             [{block name="details_productmain_title"}]
                 <h1 id="productTitle" itemprop="name">
                     [{$oDetailsProduct->oxarticles__oxtitle->value}] [{$oDetailsProduct->oxarticles__oxvarselect->value}]
@@ -200,6 +200,8 @@
                             [{/if}]
                         [{/oxhasrights}]
                     [{/block}]
+
+                    [{block name="details_productmain_watchlist"}][{/block}]
 
                     [{block name="details_productmain_price"}]
                         [{oxhasrights ident="SHOWARTICLEPRICE"}]
@@ -330,7 +332,7 @@
         </div>
 
 
-        <div class="col-xs-12 col-md-3 col-lg-2 details-col-right">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 details-col-right">
             [{if $oManufacturer}]
                 <div class="brandLogo">
                     [{block name="details_productmain_manufacturersicon"}]

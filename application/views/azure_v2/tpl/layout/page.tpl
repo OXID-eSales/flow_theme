@@ -3,7 +3,9 @@
         [{include file="rdfa/rdfa.tpl"}]
     [{/if}]
 
-    [{include file="layout/header.tpl"}]
+    [{block name="layout_header"}]
+        [{include file="layout/header.tpl"}]
+    [{/block}]
 
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
@@ -26,7 +28,9 @@
                 <div class="content-box">
 
                     [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
-                        [{include file="widget/breadcrumb.tpl"}]
+                        [{block name="layout_breadcrumb"}]
+                            [{include file="widget/breadcrumb.tpl"}]
+                        [{/block}]
                     [{/if}]
 
                     <div class="row">
@@ -41,11 +45,13 @@
                         <div class="col-xs-12 [{if $sidebar}]col-md-9[{/if}]">
 
                             <div id="content">
-                                [{include file="message/errors.tpl"}]
+                                [{block name="content_main"}]
+                                    [{include file="message/errors.tpl"}]
 
-                                [{foreach from=$oxidBlock_content item="_block"}]
-                                    [{$_block}]
-                                [{/foreach}]
+                                    [{foreach from=$oxidBlock_content item="_block"}]
+                                        [{$_block}]
+                                    [{/foreach}]
+                                [{/block}]
                             </div>
 
                         </div>
@@ -72,15 +78,17 @@
     [{include file="widget/facebook/init.tpl"}]
     [{if $oView->isPriceCalculated()}]
         [{block name="layout_page_vatinclude"}]
-            [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
-                <div id="incVatMessage" class="small">
-                    [{if $oView->isVatIncluded()}]
-                        * <span class="deliveryInfo">[{oxmultilang ident="PLUS_SHIPPING"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
-                    [{else}]
-                        * <span class="deliveryInfo">[{oxmultilang ident="PLUS"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
-                    [{/if}]
-                </div>
-            [{/oxifcontent}]
+            [{block name="footer_deliveryinfo"}]
+                [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
+                    <div id="incVatMessage" class="small">
+                        [{if $oView->isVatIncluded()}]
+                            * <span class="deliveryInfo">[{oxmultilang ident="PLUS_SHIPPING"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
+                        [{else}]
+                            * <span class="deliveryInfo">[{oxmultilang ident="PLUS"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
+                        [{/if}]
+                    </div>
+                [{/oxifcontent}]
+            [{/block}]
         [{/block}]
     [{/if}]
 

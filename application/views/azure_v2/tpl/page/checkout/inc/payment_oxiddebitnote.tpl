@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="req control-label col-lg-3">[{oxmultilang ident="PAGE_CHECKOUT_PAYMENT_ACCOUNTNUMBER"}]</label>
+            <label class="req control-label col-lg-3">[{oxmultilang ident="BANK_ACCOUNT_NUMBER"}]</label>
             <div class="col-lg-9">
                 <input type="text" class="form-control js-oxValidate js-oxValidate_notEmpty" size="20" maxlength="64" name="dynvalue[lsktonr]" value="[{$dynvalue.lsktonr}]" required="required">
             </div>

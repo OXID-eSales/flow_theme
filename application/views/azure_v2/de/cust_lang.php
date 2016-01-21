@@ -97,6 +97,7 @@ $aLang = array(
     'DD_FILE_ATTRIBUTES_FILENAME'                           => 'Dateiname:',
 
     // Detailseite
+    'BACK_TO_OVERVIEW'                                      => 'Zur Übersicht',
     'OF'                                                    => 'von',
     'DD_PRODUCTMAIN_STOCKSTATUS'                            => 'Lagerbestand',
     'DD_RATING_CUSTOMERRATINGS'                             => 'Kundenmeinungen',

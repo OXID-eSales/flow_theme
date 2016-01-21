@@ -66,9 +66,9 @@
 
 [{block name="details_tabs_fbcomments"}]
     [{if $oView->isActive('FbComments') && $oViewConf->getFbAppId()}]
-        [{capture append="tabs"}]<a href="#productFbComments" data-toggle="tab">[{oxmultilang ident="FACEBOOK_COMMENTS"}]</a>[{/capture}]
+        [{capture append="FBtabs"}]<a href="#productFbComments" data-toggle="tab">[{oxmultilang ident="FACEBOOK_COMMENTS"}]</a>[{/capture}]
         [{assign var='_fbScript' value="http://connect.facebook.net/en_US/all.js#appId="|cat:$oViewConf->getFbAppId()|cat:"&amp;xfbml=1"}]
-        [{capture append="tabsContent"}]
+        [{capture append="FBtabsContent"}]
             <div id="productFbComments" class="tab-pane[{if $blFirstTab}] active[{/if}]">[{include file="widget/facebook/enable.tpl" source="widget/facebook/comments.tpl" ident="#productFbComments" script=$_fbScript}]</div>
             [{assign var="blFirstTab" value=false}]
         [{/capture}]
@@ -77,8 +77,8 @@
 
 [{block name="details_tabs_fbinvite"}]
     [{if $oView->isActive('FbInvite') && $oViewConf->getFbAppId()}]
-        [{capture append="tabs"}]<a href="#productFbInvite" data-toggle="tab">[{oxmultilang ident="FACEBOOK_INVITE"}]</a>[{/capture}]
-        [{capture append="tabsContent"}]
+        [{capture append="FBtabs"}]<a href="#productFbInvite" data-toggle="tab">[{oxmultilang ident="FACEBOOK_INVITE"}]</a>[{/capture}]
+        [{capture append="FBtabsContent"}]
             <div id="productFbInvite" class="tab-pane[{if $blFirstTab}] active[{/if}]">
                 <fb:serverfbml width="560px" id="productFbInviteFbml">
                     [{include file="widget/facebook/enable.tpl" source="widget/facebook/invite.tpl" ident="#productFbInviteFbml" type="text"}]
@@ -96,12 +96,20 @@
                 [{foreach from=$tabs item="tab" name="tabs"}]
                     <li[{if $smarty.foreach.tabs.first}] class="active"[{/if}]>[{$tab}]</li>
                 [{/foreach}]
+                [{foreach from=$FBtabs item="FBtab"}]
+                    <li class="fbTab">[{$FBtab}]</li>
+                [{/foreach}]
             </ul>
             <div class="tab-content">
                 [{foreach from=$tabsContent item="tabContent" name="tabsContent"}]
                     [{$tabContent}]
                 [{/foreach}]
+                [{foreach from=$FBtabsContent item="FBtabContent"}]
+                    [{$FBtabContent}]
+                [{/foreach}]
             </div>
         </div>
     [{/if}]
 [{/block}]
+
+[{block name="details_tabs_facebook"}][{/block}]

@@ -10,6 +10,30 @@
  * @link        http://www.digidesk.de
  */
 
+//
+// Global Styles
+// --------------------------------------------------
+
+label {
+    font-weight: normal;
+
+    &.req {
+        font-weight: bold;
+    }
+}
+
+.list-group-item {
+    &.active {
+        &,
+        & a,
+        &:hover,
+        &:focus {
+            color: #FFF;
+        }
+    }
+
+}
+
 .text-secondary {
     color: @brand-secondary;
 }
@@ -66,16 +90,26 @@
     }
 
     .menus-col {
-        .menu-dropdowns > .btn-group {
-            &.open > .dropdown-toggle, > .btn.active, > .btn:active {
-                box-shadow: 0 0 0;
+        .menu-dropdowns {
+            > .btn-group {
+                &.open > .dropdown-toggle, > .btn.active, > .btn:active {
+                    box-shadow: 0 0 0;
+                }
+
+                > .btn {
+                    background-color: transparent;
+                    font-size: 11px;
+                    color: @gray-light;
+                    border: 0;
+                }
             }
 
-            > .btn {
-                background-color: transparent;
-                font-size: 11px;
-                color: @gray-light;
-                border: 0;
+            .service-menu .altLoginBox {
+                margin-top: 10px;
+
+                #loginboxFbConnect {
+                    display: inline-block;
+                }
             }
         }
     }
@@ -298,6 +332,10 @@ body {
             }
         }
 
+        &manufacturerlist .subcatList .panel-body img {
+            margin: 0 auto;
+        }
+
         &details {
             #detailsItemsPager {
                 border-bottom: 1px solid @ox-page-details-items-pager-border-bottom;
@@ -353,7 +391,7 @@ body {
                  margin-bottom: @line-height-computed;
 
                  .fa-star,
-                 .fa-star-half {
+                 .fa-star-half-o {
                      font-size: 22px;
                  }
 
@@ -373,6 +411,11 @@ body {
             .selectorsBox {
                 .selectbox {
                     margin-bottom: 5px;
+
+                    .dropdown-wrapper {
+                        display: inline-block;
+                        position: relative;
+                    }
                 }
             }
 
@@ -566,6 +609,12 @@ body {
             }
         }
 
+        &content {
+            #content {
+                margin-bottom: @line-height-computed;
+            }
+        }
+
         &contact {
             .google-maps {
                 margin-bottom: @line-height-computed / 2;
@@ -594,6 +643,79 @@ body {
 
             .oxEqualized .icon-plus-circle {
                 margin-top: 15px;
+            }
+        }
+
+        &compare {
+            #comparePlayground {
+                position:relative;
+                overflow:hidden;
+                margin-bottom: @line-height-computed;
+
+                #compareLandscape {
+                    @compare-table-heading-width:150px;
+                    @compare-table-item-width:260px;
+
+                    margin-left:@compare-table-heading-width;
+                    overflow-x:scroll;
+                    overflow-y:visible;
+                    -webkit-overflow-scrolling: touch; /* iOS-native Scrolling*/
+                    transition: box-shadow 0.2s;
+
+                    &.shadowed {
+                        box-shadow:inset 3px 0px 7px 1px rgba(0, 0, 0, 0.2);
+                    }
+
+                    table {
+                        width:100%;
+                        *margin-left:-@compare-table-heading-width;/*ie7*/
+                        table-layout:fixed;
+
+                        td, th {
+                            vertical-align:top;
+                            padding:10px;
+                        }
+
+                        th {
+                            border-right:none;
+                            width:@compare-table-heading-width;
+                            position:absolute;
+                            *position:relative; /*ie7*/
+                            left:0;
+                            text-align:right;
+
+                            overflow: hidden;
+                            white-space:nowrap;
+                            text-overflow: ellipsis;
+
+                            &.no-border {
+                                border:none
+                            }
+                        }
+
+                        td {
+                            width:@compare-table-item-width;
+                        }
+
+                        .item-wrapper {
+                            .move-controls {
+                                margin-bottom: 5px;
+                            }
+
+                            .item {
+                                .picture img {
+                                    margin:0 auto
+                                }
+
+                                .title {
+                                    display: block;
+                                    height: @line-height-computed * 2;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -915,6 +1037,11 @@ body {
                 }
             }
         }
+
+        .dropdown-wrapper {
+            display: inline-block;
+            position: relative;
+        }
     }
 }
 
@@ -1048,13 +1175,24 @@ body {
 }
 
 .refineParams {
+    margin-bottom: 15px;
+
     &.bottomParams {
         .text-center;
-        margin-bottom: 15px;
     }
 
     .pagination {
         margin: 0;
+    }
+}
+
+//
+// Sidebar
+// --------------------------------------------------
+
+#sidebar {
+    .box.well .page-header {
+        margin-top: 0;
     }
 }
 
