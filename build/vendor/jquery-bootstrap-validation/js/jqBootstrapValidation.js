@@ -188,7 +188,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = oAzure.i18n.DD_FORM_VALIDATION_VALIDEMAIL;
+              message = oFlow.i18n.DD_FORM_VALIDATION_VALIDEMAIL;
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {
@@ -483,7 +483,7 @@
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                   // Only one? Being strict? Just output it.
-                  $helpBlock.html(errorsFound[0] + 
+                  $helpBlock.html(errorsFound[0] +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.
@@ -796,13 +796,13 @@
 				name: "Validemail",
 				type: "regex",
 				regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
-				message: oAzure.i18n.DD_FORM_VALIDATION_VALIDEMAIL
+				message: oFlow.i18n.DD_FORM_VALIDATION_VALIDEMAIL
 			},
 			passwordagain: {
 				name: "Passwordagain",
 				type: "match",
 				match: "password",
-				message: oAzure.i18n.DD_FORM_VALIDATION_PASSWORDAGAIN
+				message: oFlow.i18n.DD_FORM_VALIDATION_PASSWORDAGAIN
 			},
 			positive: {
 				name: "Positive",
@@ -818,36 +818,36 @@
 				name: "Number",
 				type: "regex",
 				regex: "([+-]?\\\d+(\\\.\\\d*)?([eE][+-]?[0-9]+)?)?",
-				message: oAzure.i18n.DD_FORM_VALIDATION_NUMBER
+				message: oFlow.i18n.DD_FORM_VALIDATION_NUMBER
 			},
 			integer: {
 				name: "Integer",
 				type: "regex",
 				regex: "[+-]?\\\d+",
-				message: oAzure.i18n.DD_FORM_VALIDATION_INTEGER
+				message: oFlow.i18n.DD_FORM_VALIDATION_INTEGER
 			},
 			positivenumber: {
 				name: "Positivenumber",
 				type: "min",
 				min: 0,
-				message: oAzure.i18n.DD_FORM_VALIDATION_POSITIVENUMBER
+				message: oFlow.i18n.DD_FORM_VALIDATION_POSITIVENUMBER
 			},
 			negativenumber: {
 				name: "Negativenumber",
 				type: "max",
 				max: 0,
-				message: oAzure.i18n.DD_FORM_VALIDATION_NEGATIVENUMBER
+				message: oFlow.i18n.DD_FORM_VALIDATION_NEGATIVENUMBER
 			},
 			required: {
 				name: "Required",
 				type: "required",
-				message: oAzure.i18n.DD_FORM_VALIDATION_REQUIRED
+				message: oFlow.i18n.DD_FORM_VALIDATION_REQUIRED
 			},
 			checkone: {
 				name: "Checkone",
 				type: "minchecked",
 				minchecked: 1,
-				message: oAzure.i18n.DD_FORM_VALIDATION_CHECKONE
+				message: oFlow.i18n.DD_FORM_VALIDATION_CHECKONE
 			}
 		}
 	};

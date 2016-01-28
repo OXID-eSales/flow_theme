@@ -25,7 +25,7 @@
     }
 })();
 
-Azure = {};
+Flow = {};
 
 // Short-Handle for document.ready
 $( function ()
@@ -240,7 +240,7 @@ $( function ()
         /* *********************************
          * Details page
          * *********************************/
-        Azure.initEvents = function ()
+        Flow.initEvents = function ()
         {
             // Lazy Loading für Bilder
             $( "img" ).unveil();
@@ -253,7 +253,7 @@ $( function ()
             // Globale PopOver-Klasse
             $( '.hasPopover' ).popover();
         };
-        Azure.initEvents();
+        Flow.initEvents();
 
         function reRenderMainNav()
         {

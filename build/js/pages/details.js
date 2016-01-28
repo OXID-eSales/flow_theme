@@ -10,9 +10,9 @@
  * @link        http://www.digidesk.de
  */
 
-Azure = Azure || {};
+Flow = Flow || {};
 
-Azure.initDetailsEvents = function()
+Flow.initDetailsEvents = function()
 {
     var $oDetailsWrapper = $( '#details' ),
         $oReviewRating   = $( '#reviewRating'),
@@ -103,7 +103,7 @@ Azure.initDetailsEvents = function()
     }
 };
 
-Azure.setPhotoSwipe = function()
+Flow.setPhotoSwipe = function()
 {
     var obj   = {},
         $oMorePicsContainer = $( '#morePicsContainer' );

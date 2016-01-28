@@ -1,6 +1,6 @@
 <script>
-    var oAzure = oAzure || [];
-    oAzure.i18n =
+    var oFlow = oFlow || [];
+    oFlow.i18n =
         {
             DD_FORM_VALIDATION_VALIDEMAIL:     '[{oxmultilang ident="DD_FORM_VALIDATION_VALIDEMAIL"}]',
             DD_FORM_VALIDATION_PASSWORDAGAIN:  '[{oxmultilang ident="DD_FORM_VALIDATION_PASSWORDAGAIN"}]',
