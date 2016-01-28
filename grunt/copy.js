@@ -6,19 +6,19 @@ module.exports = {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/font-awesome/fonts/',
-                dest: 'out/azure_v2/src/fonts/'
+                dest: 'out/flow/src/fonts/'
             },
             {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/jquery-flexslider2/fonts/',
-                dest: 'out/azure_v2/src/fonts/'
+                dest: 'out/flow/src/fonts/'
             },
             {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/photoswipe/img/',
-                dest: 'out/azure_v2/src/bg/'
+                dest: 'out/flow/src/bg/'
             }
         ]
     }

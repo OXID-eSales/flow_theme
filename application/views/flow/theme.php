@@ -17,9 +17,9 @@
  * Theme Information
  */
 $aTheme = array(
-    'id'           => 'azure_v2',
-    'title'        => 'Azure v2',
-    'description'  => 'Azure v2 Beschreibung',
+    'id'           => 'flow',
+    'title'        => 'Flow',
+    'description'  => 'Flow Beschreibung',
     'thumbnail'    => 'theme.jpg',
     'version'      => '1.0.0',
     'author'       => '<a href="http://www.digidesk.de/" title="digidesk - media solutions">digidesk - media solutions</a>',

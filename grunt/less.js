@@ -11,13 +11,13 @@ module.exports = {
 
     theme: {
         files: {
-            "out/azure_v2/src/css/styles.min.css": "build/less/azure_v2.less"
+            "out/flow/src/css/styles.min.css": "build/less/flow.less"
         }
     },
 
     vendor: {
         files: {
-            "out/azure_v2/src/css/libs/jquery.flexslider.min.css": "build/vendor/jquery-flexslider2/less/flexslider.less"
+            "out/flow/src/css/libs/jquery.flexslider.min.css": "build/vendor/jquery-flexslider2/less/flexslider.less"
         }
     }
 

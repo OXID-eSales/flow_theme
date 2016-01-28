@@ -1,11 +1,11 @@
 {
-  "name": "azure_v2",
+  "name": "flow",
   "version": "1.0.0",
   "description": "",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git@lnxdd02.digidesk.local:digidesk-oxid-themes/azure_v2.git"
+    "url": "git@lnxdd02.digidesk.local:digidesk-oxid-themes/flow.git"
   },
   "keywords": [],
   "author": "digidesk - media solutions",
