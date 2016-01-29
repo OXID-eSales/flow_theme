@@ -1,25 +1,22 @@
 <?php
 /**
- *    This file is part of OXID eShop Community Edition.
+ * This file is part of OXID eSales Flow theme.
  *
- *    OXID eShop Community Edition is free software: you can redistribute it and/or modify
- *    it under the terms of the GNU General Public License as published by
- *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *    OXID eShop Community Edition is distributed in the hope that it will be useful,
- *    but WITHOUT ANY WARRANTY; without even the implied warranty of
- *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *    GNU General Public License for more details.
+ * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *    You should have received a copy of the GNU General Public License
- *    along with OXID eShop Community Edition.  If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License
+ * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @link          http://www.oxid-esales.com
- * @package       lang
- * @copyright (C) OXID eSales AG 2003-2013
- * @version       OXID eShop CE
- * @version       SVN: $Id: theme_lang.php 28697 2010-06-29 11:09:58Z vilma $
+ * @link      http://www.oxid-esales.com
+ * @copyright (C) OXID eSales AG 2003-2016
  */
 
 $aLang = array(
@@ -102,18 +99,18 @@ $aLang = array(
     'SHOP_THEME_aNrofCatArticles'                   => 'Number of products which can be shown in a product lists (category pages, search results)<br><br>Attention: A large number of products per page (above 100) can cause performance loss!',
 
     'SHOP_THEME_sFacebookUrl'                       => 'Facebook Page-URL',
-    'HELP_SHOP_THEME_sFacebookUrl'                  => 'E.g.: https://www.facebook.com/digidesk',
+    'HELP_SHOP_THEME_sFacebookUrl'                  => 'E.g.: https://www.facebook.com/oxidesales',
     'SHOP_THEME_sTwitterUrl'                        => 'Twitter Profile-URL',
-    'HELP_SHOP_THEME_sTwitterUrl'                   => 'E.g.: https://twitter.com/digidesk',
+    'HELP_SHOP_THEME_sTwitterUrl'                   => 'E.g.: https://twitter.com/OXID_eSales',
     'SHOP_THEME_sBlogUrl'                           => 'Blog-URL',
-    'HELP_SHOP_THEME_sBlogUrl'                      => 'E.g.: http://www.example.com/blog',
+    'HELP_SHOP_THEME_sBlogUrl'                      => 'E.g.: http://blog.oxid-esales.com',
     'SHOP_THEME_sYouTubeUrl'                        => 'YouTube Channel-URL',
-    'HELP_SHOP_THEME_sYouTubeUrl'                   => 'E.g.: https://www.youtube.com/user/digidesk‎',
+    'HELP_SHOP_THEME_sYouTubeUrl'                   => 'E.g.: https://www.youtube.com/user/oxidesales',
     'SHOP_THEME_sGooglePlusUrl'                     => 'Google+ Page-URL',
-    'HELP_SHOP_THEME_sGooglePlusUrl'                => 'E.g.: https://plus.google.com/+DigideskDe',
+    'HELP_SHOP_THEME_sGooglePlusUrl'                => 'E.g.: https://plus.google.com/114133952363540971062',
 
     'SHOP_THEME_sGoogleMapsAddr'                    => 'Your postal address',
-    'HELP_SHOP_THEME_sGoogleMapsAddr'               => 'E.g.: Digidesk - media solutions, Foo Street 76, 33142 Miami',
+    'HELP_SHOP_THEME_sGoogleMapsAddr'               => 'E.g.: OXID eSales AG, Bertoldstraße 48, 79098 Freiburg‎',
 
     'SHOP_THEME_bl_showManufacturerSlider'          => 'Show manufacturer slider on Start page',
 
