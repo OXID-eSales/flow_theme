@@ -1,7 +1,10 @@
 [{assign var="_oProduct" value=$oView->getProduct()}]
 [{assign var="editval" value=$oView->getSuggestData()}]
-<form class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post">
-    <div>
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
+[{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
+
+<form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" method="post" novalidate="novalidate">
+    <div class="hidden">
         [{$oViewConf->getHiddenSid()}]
         [{$oViewConf->getNavFormParams()}]
         <input type="hidden" name="fnc" value="send">
@@ -10,71 +13,75 @@
         <input type="hidden" name="CustomError" value='suggest'>
         [{assign var="oCaptcha" value=$oView->getCaptcha()}]
         <input type="hidden" name="c_mach" value="[{$oCaptcha->getHash()}]">
-        <h3 class="blockHead">[{oxmultilang ident="CARD_TO"}]</h3>
-        <ul class="form">
-            <li>
-                <label class="req">[{oxmultilang ident="RECIPIENT_NAME"}]</label>
-                <input class="js-oxValidate js-oxValidate_notEmpty" type="text" name="editval[rec_name]" size="73" maxlength="73" value="[{$editval->rec_name}]" >
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                </p>
-            </li>
-            <li>
-                <label class="req">[{oxmultilang ident="RECIPIENT_EMAIL"}]</label>
-                <input class="js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="text" name="editval[rec_email]" size="73" maxlength="73" value="[{$editval->rec_email}]">
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                    <span class="js-oxError_email">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOVALIDEMAIL"}]</span>
-                </p>
-            </li>
-        </ul>
-        <h3 class="blockHead">[{oxmultilang ident="FROM"}]</h3>
-        <ul class="form">
-            <li>
-                <label class="req">[{oxmultilang ident="SENDER_NAME"}]</label>
-                <input class="js-oxValidate js-oxValidate_notEmpty" type="text" name="editval[send_name]" size=73 maxlength=73 value="[{$editval->send_name}]">
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                </p>
-            </li>
-            <li>
-                <label class="req">[{oxmultilang ident="SENDER_EMAIL"}]</label>
-                <input class="js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="text" name="editval[send_email]" size=73 maxlength=73 value="[{$editval->send_email}]" >
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                    <span class="js-oxError_email">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOVALIDEMAIL"}]</span>
-                </p>
-            </li>
-            <li>
-                <label class="req">[{oxmultilang ident="SUBJECT"}]</label>
-                <input class="js-oxValidate js-oxValidate_notEmpty" type="text" name="editval[send_subject]" size=73 maxlength=73 value="[{if $editval->send_subject}][{$editval->send_subject}][{else}][{oxmultilang ident="HAVE_A_LOOK"}] [{$_oProduct->oxarticles__oxtitle->value|strip_tags}][{/if}]">
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                </p>
-            </li>
-            <li>
-                <label class="req">[{oxmultilang ident="YOUR_MESSAGE"}]</label>
-                <textarea cols="70" rows="8" name="editval[send_message]" class="areabox js-oxValidate js-oxValidate_notEmpty">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_MESSAGE" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                </p>
-            </li>
-            <li class="verify">
-                <label class="req">[{oxmultilang ident="VERIFICATION_CODE"}]</label>
-                [{assign var="oCaptcha" value=$oView->getCaptcha()}]
+    </div>
+
+    <h3 class="page-header">[{oxmultilang ident="CARD_TO" suffix="COLON"}]</h3>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="RECIPIENT_NAME" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text" name="editval[rec_name]" size="73" maxlength="73" value="[{$editval->rec_name}]" required="required">
+            <div class="help-block"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="RECIPIENT_EMAIL" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="email" name="editval[rec_email]" size="73" maxlength="73" value="[{$editval->rec_email}]" required="required">
+            <div class="help-block"></div>
+        </div>
+    </div>
+
+    <h3 class="page-header">[{oxmultilang ident="FROM" suffix="COLON"}]</h3>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="SENDER_NAME" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text" name="editval[send_name]" size=73 maxlength=73 value="[{$editval->send_name}]" required="required">
+            <div class="help-block"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="SENDER_EMAIL" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="email" name="editval[send_email]" size=73 maxlength=73 value="[{$editval->send_email}]" required="required">
+            <div class="help-block"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="SUBJECT" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <input class="form-control" type="text" name="editval[send_subject]" size=73 maxlength=73 value="[{if $editval->send_subject}][{$editval->send_subject}][{else}][{oxmultilang ident="HAVE_A_LOOK" suffix="COLON"}] [{$_oProduct->oxarticles__oxtitle->value|strip_tags}][{/if}]" required="required">
+            <div class="help-block"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3 req">[{oxmultilang ident="MESSAGE" suffix="COLON"}]</label>
+        <div class="col-lg-9">
+            <textarea cols="70" rows="8" name="editval[send_message]" class="areabox form-control" required="required">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_MESSAGE" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
+            <div class="help-block"></div>
+        </div>
+    </div>
+    <div class="form-group verify">
+        <label class="req control-label col-lg-2">[{oxmultilang ident="VERIFICATION_CODE" suffix="COLON"}]</label>
+        <div class="col-lg-10 controls">
+            [{assign var="oCaptcha" value=$oView->getCaptcha()}]
+            <div class="input-group">
                 [{if $oCaptcha->isImageVisible()}]
-                    <img src="[{$oCaptcha->getImageUrl()}]" alt="">
+                    <span class="input-group-addon">
+                        <img src="[{$oCaptcha->getImageUrl()}]" alt="">
+                    </span>
                 [{else}]
-                    <span class="verificationCode" id="verifyTextCode">[{$oCaptcha->getText()}]</span>
+                    <span class="input-group-addon verificationCode" id="verifyTextCode">[{$oCaptcha->getText()}]</span>
                 [{/if}]
-                <input class="js-oxValidate js-oxValidate_notEmpty" type="text" data-fieldsize="verify" name="c_mac" value="">
-                <p class="oxValidateError">
-                    <span class="js-oxError_notEmpty">[{oxmultilang ident="ERROR_MESSAGE_INPUT_NOTALLFIELDS"}]</span>
-                </p>
-            </li>
-            <li class="formSubmit">
-                <button class="submitButton largeButton" type="submit">[{oxmultilang ident="SEND"}]</button>
-            </li>
-        </ul>
+                <input type="text" name="c_mac" value="" class="form-control" required="required">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <p class="alert alert-info">[{oxmultilang ident="COMPLETE_MARKED_FIELDS"}]</p>
+            <button class="btn btn-primary" type="submit">
+                <i class="fa fa-envelope"></i> [{oxmultilang ident="SEND"}]
+            </button>
+        </div>
     </div>
 </form>

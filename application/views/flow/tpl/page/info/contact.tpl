@@ -8,11 +8,13 @@
 
     [{assign var="sGoogleMapsAddr" value=$oViewConf->getViewThemeParam('sGoogleMapsAddr')}]
     [{if $sGoogleMapsAddr}]
+        [{oxscript include="js/libs/pages/contact.min.js" priority=10}]
+
         <div class="row">
             <div class="col-xs-12">
                 <div class="google-maps">
                     <figure>
-                        <iframe width="100%" height="400" style="width:100%; pointer-events: none;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.de/maps?t=m&amp;q=[{$sGoogleMapsAddr|urlencode}]&amp;ie=UTF8&amp;hq=[{$sGoogleMapsAddr|urlencode}]&amp;output=embed"></iframe>
+                        <iframe width="100%" height="400" style="width:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.de/maps?t=m&amp;q=[{$sGoogleMapsAddr|urlencode}]&amp;ie=UTF8&amp;hq=[{$sGoogleMapsAddr|urlencode}]&amp;output=embed"></iframe>
                     </figure>
                 </div>
             </div>

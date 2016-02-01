@@ -27,7 +27,6 @@
     [{block name="page_list_listhead"}]
         [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
             <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$actCategory->getThumbUrl()}]" alt="[{$actCategory->oxcategories__oxtitle->value}]" class="categoryPicture img-responsive img-thumbnail">
-            <div class="spacer"></div>
         [{/if}]
 
         <div class="page-header">
