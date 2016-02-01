@@ -27,6 +27,6 @@ $aTheme = array(
     'title'        => 'Flow',
     'description'  => 'Flow Beschreibung',
     'thumbnail'    => 'theme.jpg',
-    'version'      => '1.0.0',
+    'version'      => '1.0.0-beta',
     'author'       => '<a href="http://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
 );
