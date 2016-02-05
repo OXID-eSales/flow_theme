@@ -11,8 +11,6 @@
 
     <div id="wrapper" [{if $sidebar}]class="sidebar[{$sidebar}]"[{/if}]>
 
-        [{$smarty.capture.loginErrors}]
-
         <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
 
             <div class="underdog">
@@ -32,6 +30,8 @@
                             [{include file="widget/breadcrumb.tpl"}]
                         [{/block}]
                     [{/if}]
+
+                    [{$smarty.capture.loginErrors}]
 
                     <div class="row">
                         [{if $sidebar && $sidebar != "Right"}]

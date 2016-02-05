@@ -23,7 +23,6 @@ $sLangName = "Deutsch";
 
 $aLang = array(
     'charset'                                               => 'UTF-8',
-    // 'charset' => 'ISO-8859-15',
 
     // Global
     'DD_SORT_DESC'                                          => 'absteigend',
@@ -108,7 +107,7 @@ $aLang = array(
     'OF'                                                    => 'von',
     'DD_PRODUCTMAIN_STOCKSTATUS'                            => 'Lagerbestand',
     'DD_RATING_CUSTOMERRATINGS'                             => 'Kundenmeinungen',
-    'PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER'          => 'Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel .',
+    'PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER'          => 'Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel.',
     'WIDGET_PRODUCT_RELATED_PRODUCTS_ACCESSORIES_SUBHEADER' => 'Folgende Artikel passen gut zu diesem Artikel.',
     'WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER'     => 'Schauen Sie sich doch auch unsere ähnlichen Artikel an.',
     'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.',

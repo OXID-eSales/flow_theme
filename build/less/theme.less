@@ -164,8 +164,12 @@ label {
 
     // Servicemenu
     .service-menu {
+        &.showLogin .dropdown-menu {
+            min-width: 480px;
+        }
+
         .dropdown-menu {
-            min-width: 420px;
+            min-width: 200px;
             padding: floor( @grid-gutter-width / 2 );
         }
     }
@@ -685,6 +689,7 @@ body {
                         }
 
                         th {
+                            background-color: @gray-lighter;
                             border-right:none;
                             width:@compare-table-heading-width;
                             position:absolute;
@@ -697,7 +702,8 @@ body {
                             text-overflow: ellipsis;
 
                             &.no-border {
-                                border:none
+                                border:none;
+                                background-color: transparent;
                             }
                         }
 

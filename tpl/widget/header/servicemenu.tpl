@@ -12,7 +12,11 @@
 <div class="btn-group service-menu [{if !$oxcmp_user}]showLogin[{/if}]">
     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account"}]">
         [{block name="dd_layout_page_header_icon_menu_account_button"}]
-            <i class="fa fa-user"></i>
+            [{if !$oxcmp_user}]
+                [{oxmultilang ident="LOGIN"}]
+            [{else}]
+                [{oxmultilang ident="MY_ACCOUNT"}]
+            [{/if}]
             [{if $notificationsCounter > 0}]
                 <span class="badge">[{$notificationsCounter}]</span>
             [{/if}]

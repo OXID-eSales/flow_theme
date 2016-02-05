@@ -23,14 +23,13 @@ $sLangName = "English";
 
 $aLang = array(
     'charset'                                               => 'UTF-8',
-    // 'charset' => 'ISO-8859-15',
 
     // Global
     'DD_SORT_DESC'                                          => 'descending',
     'DD_SORT_ASC'                                           => 'ascending',
     'DD_CLOSE_MODAL'                                        => 'close',
 
-    // Form-Validation
+    // Form validation
     'DD_FORM_VALIDATION_VALIDEMAIL'                         => 'Please enter a valid email address.',
     'DD_FORM_VALIDATION_PASSWORDAGAIN'                      => 'Passwords do not match.',
     'DD_FORM_VALIDATION_NUMBER'                             => 'Please enter a number.',
@@ -51,26 +50,26 @@ $aLang = array(
     // Footer
     'FOOTER_NEWSLETTER_INFO'                                => 'Get informed about the latest products and offers per email.',
 
-    // Startseite
-    'MANUFACTURERSLIDER_SUBHEAD'                            => 'Wir präsentieren Ihnen hier unsere sorgsam ausgewählten Marken, deren Produkte Sie in unserem Shop finden.',
-    'START_BARGAIN_SUBHEADER'                               => 'Sparen Sie bares Geld mit unseren aktuellen Schnäppchen!',
-    'START_NEWEST_SUBHEADER'                                => 'Frischer geht es nicht. Gerade noch in der Kiste und nun schon im Shop.',
-    'START_TOP_PRODUCTS_SUBHEADER'                          => 'Nur 2 Produkte, dafür aber die besten, die wir Euch bieten können.',
+    // Home page
+    'MANUFACTURERSLIDER_SUBHEAD'                            => 'We present our carefully selected brands, whose products can be found in our shop.',
+    'START_BARGAIN_SUBHEADER'                               => 'Save money with our current bargains!',
+    'START_NEWEST_SUBHEADER'                                => 'Fresh as it gets. One minute in the box and now already in store.',
+    'START_TOP_PRODUCTS_SUBHEADER'                          => 'Only 2 products, but the best we can offer you.',
 
-    // Kontaktformular
+    // Contact form
     'DD_CONTACT_PAGE_HEADING'                               => 'Contact us!',
     'DD_CONTACT_FORM_HEADING'                               => 'Contact',
     'DD_CONTACT_ADDRESS_HEADING'                            => 'Address',
 
-    // Link-Seite
+    // Link list
     'DD_LINKS_NO_ENTRIES'                                   => 'Unfortunately, there are no links available.',
 
-    // Gästebuch
+    // Guestbook
     'DD_GUESTBOOK_ENTRIES'                                  => 'Entries',
     'DD_GUESTBOOK_ENTRY_FROM'                               => 'by',
     'DD_GUESTBOOK_ENTRY_ON'                                 => 'on',
 
-    // 404-Seite
+    // 404 page
     'DD_ERR_404_START_TEXT'                                 => 'You may find the information you want from our home page:',
     'DD_ERR_404_START_BUTTON'                               => 'Go to home page',
     'DD_ERR_404_CONTACT_TEXT'                               => 'May we assist you?<br>Feel free to call us or write an email:',
@@ -81,20 +80,20 @@ $aLang = array(
     'DD_LOGIN_ACCOUNT_PANEL_CREATE_BODY'                    => 'By creating an account with our store, you will be guided through the checkout process faster. In addition, you can store multiple shipping addresses and track orders in your account.',
     'DD_LOGIN_ACCOUNT_PANEL_LOGIN_TITLE'                    => 'Login',
 
-    // Rechnungsadresse
+    // Billing address
     'DD_USER_BILLING_LABEL_STATE'                           => 'State:',
     'DD_USER_SHIPPING_LABEL_STATE'                          => 'State:',
     'DD_USER_SHIPPING_SELECT_ADDRESS'                       => 'select',
     'DD_USER_SHIPPING_ADD_DELIVERY_ADDRESS'                 => 'add delivery address',
 
-    // Bestellhistorie
+    // Order history
     'DD_ORDER_ORDERDATE'                                    => 'Date:',
 
-    // Listen
+    // List views
     'DD_LISTLOCATOR_FILTER_ATTRIBUTES'                      => 'Filter:',
     'DD_LIST_SHOW_MORE'                                     => 'View products...',
 
-    // Lieblingslisten
+    // Recommendation list
     'DD_RECOMMENDATION_EDIT_BACK_TO_LIST'                   => 'back to overview',
 
     // Downloads
@@ -103,17 +102,17 @@ $aLang = array(
     'DD_FILE_ATTRIBUTES_OCLOCK'                             => 'o\'clock',
     'DD_FILE_ATTRIBUTES_FILENAME'                           => 'File name:',
 
-    // Detailseite
+    // Details page
     'BACK_TO_OVERVIEW'                                      => 'to overview',
     'OF'                                                    => 'of',
     'DD_PRODUCTMAIN_STOCKSTATUS'                            => 'Stock',
     'DD_RATING_CUSTOMERRATINGS'                             => 'Customer reviews',
-    'PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER'          => 'Kunden die sich diesen Artikel gekauft haben, kauften auch folgende Artikel .',
-    'WIDGET_PRODUCT_RELATED_PRODUCTS_ACCESSORIES_SUBHEADER' => 'Folgende Artikel passen gut zu diesem Artikel.',
-    'WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER'     => 'Schauen Sie sich doch auch unsere ähnlichen Artikel an.',
-    'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.',
+    'PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER'          => 'Customers who bought this item also bought one of the following products.',
+    'WIDGET_PRODUCT_RELATED_PRODUCTS_ACCESSORIES_SUBHEADER' => 'The following products fit well to this product.',
+    'WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER'     => 'Take a look at our similar products.',
+    'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Customers who viewed this product also viewed the following products.',
 
-    // Modal-Warenkorb
+    // Modal basket
     'DD_MINIBASKET_MODAL_TABLE_TITLE'                       => 'Article',
     'DD_MINIBASKET_MODAL_TABLE_PRICE'                       => 'Total',
     'DD_MINIBASKET_CONTINUE_SHOPPING'                       => 'continue shopping',

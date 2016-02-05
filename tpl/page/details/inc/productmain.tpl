@@ -1,4 +1,4 @@
-[{oxscript include="js/libs/pages/details.min.js" priority=10}]
+[{oxscript include="js/pages/details.min.js" priority=10}]
 
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
