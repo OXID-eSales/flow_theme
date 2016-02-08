@@ -110,7 +110,7 @@ $aLang = array(
     'HELP_SHOP_THEME_sGooglePlusUrl'                => 'E.g.: https://plus.google.com/114133952363540971062',
 
     'SHOP_THEME_sGoogleMapsAddr'                    => 'Your postal address',
-    'HELP_SHOP_THEME_sGoogleMapsAddr'               => 'E.g.: OXID eSales AG, Bertoldstraße 48, 79098 Freiburg‎',
+    'HELP_SHOP_THEME_sGoogleMapsAddr'               => 'E.g.: OXID eSales AG, Bertoldstraße 48, 79098 Freiburg',
 
     'SHOP_THEME_bl_showManufacturerSlider'          => 'Show manufacturer slider on Start page',
 
