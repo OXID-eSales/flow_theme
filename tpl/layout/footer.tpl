@@ -3,6 +3,10 @@
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
     [{$oView->setShowNewsletter($oViewConf->getViewThemeParam('blFooterShowNewsletterForm'))}]
 
+    [{if $oxcmp_user}]
+        [{assign var="force_sid" value=$oView->getSidForWidget()}]
+    [{/if}]
+
     <footer id="footer">
         <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <div class="row">
@@ -14,7 +18,7 @@
                                     <div class="h4 footer-box-title">[{oxmultilang ident="SERVICES"}]</div>
                                     <div class="footer-box-content">
                                         [{block name="dd_footer_servicelist_inner"}]
-                                            [{oxid_include_widget cl="oxwServiceList" noscript=1 nocookie=1}]
+                                            [{oxid_include_widget cl="oxwServiceList" noscript=1 nocookie=1 force_sid=$force_sid}]
                                         [{/block}]
                                     </div>
                                 </section>
@@ -24,7 +28,7 @@
                                     <div class="h4 footer-box-title">[{oxmultilang ident="INFORMATION"}]</div>
                                     <div class="footer-box-content">
                                         [{block name="dd_footer_information_inner"}]
-                                            [{oxid_include_widget cl="oxwInformation" noscript=1 nocookie=1}]
+                                            [{oxid_include_widget cl="oxwInformation" noscript=1 nocookie=1 force_sid=$force_sid}]
                                         [{/block}]
                                     </div>
                                 </section>

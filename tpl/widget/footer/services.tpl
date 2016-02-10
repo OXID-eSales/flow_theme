@@ -19,7 +19,7 @@
                     <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]">
                         [{oxmultilang ident="CART"}]
                     </a>
-                    [{if $oxcmp_basket->getItemsCount() > 0}] <span class="badge">[{$oxcmp_basket->getItemsCount()}]</span>[{/if}]
+                    [{if $oxcmp_basket && $oxcmp_basket->getItemsCount() > 0}] <span class="badge">[{$oxcmp_basket->getItemsCount()}]</span>[{/if}]
                 </li>
             [{/oxhasrights}]
             <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account"}]">[{oxmultilang ident="ACCOUNT"}]</a></li>
