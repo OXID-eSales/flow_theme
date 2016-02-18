@@ -6,7 +6,7 @@
     [{assign var="articleList" value=$oView->getCompArtList()}]
     [{assign var="atributeList" value=$oView->getAttributeList()}]
 
-    [{oxscript include="js/libs/pages/compare.min.js"}]
+    [{oxscript include="js/pages/compare.min.js"}]
 
     <h1 id="productComparisonHeader" class="page-header">[{$template_title}]</h1>
     [{if $oView->getCompareItemsCnt() >= 1}]
