@@ -1,5 +1,5 @@
 [{capture append="oxidBlock_content"}]
-    [{oxscript include="js/libs/pages/review.min.js" priority=10}]
+    [{oxscript include="js/pages/review.min.js" priority=10}]
 
     [{if $oView->getProduct()}]
         [{assign var="product" value=$oView->getProduct()}]

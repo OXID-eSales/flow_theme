@@ -238,9 +238,6 @@
             [{oxscript include="js/libs/jquery.min.js" priority=1}]
             [{oxscript include="js/libs/jquery-ui.min.js" priority=1}]
             [{oxscript include="js/scripts.min.js" priority=1}]
-
-            [{assign var="sDynamicClassName" value=$oViewConf->getTopActiveClassName()|strtolower}]
-            [{oxscript include="js/pages/`$sDynamicClassName`.min.js" priority=10}]
         [{/block}]
 
         [{if $oViewConf->isTplBlocksDebugMode()}]
@@ -248,7 +245,7 @@
             [{oxscript add="$( 'hr.debugBlocksStart' ).oxBlockDebug();"}]
         [{/if}]
 
-        <!--[if gte IE 9]><style type="text/css"> .gradient { filter: none; } </style><![endif]-->
+        <!--[if gte IE 9]><style type="text/css">.gradient {filter:none;}</style><![endif]-->
         [{oxscript}]
         [{oxid_include_dynamic file="widget/dynscript.tpl"}]
 
