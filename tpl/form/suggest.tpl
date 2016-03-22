@@ -11,8 +11,6 @@
         <input type="hidden" name="cl" value="suggest">
         <input type="hidden" name="anid" value="[{$_oProduct->oxarticles__oxnid->value}]">
         <input type="hidden" name="CustomError" value='suggest'>
-        [{assign var="oCaptcha" value=$oView->getCaptcha()}]
-        <input type="hidden" name="c_mach" value="[{$oCaptcha->getHash()}]">
     </div>
 
     <h3 class="page-header">[{oxmultilang ident="CARD_TO" suffix="COLON"}]</h3>
@@ -60,22 +58,9 @@
             <div class="help-block"></div>
         </div>
     </div>
-    <div class="form-group verify">
-        <label class="req control-label col-lg-2">[{oxmultilang ident="VERIFICATION_CODE" suffix="COLON"}]</label>
-        <div class="col-lg-10 controls">
-            [{assign var="oCaptcha" value=$oView->getCaptcha()}]
-            <div class="input-group">
-                [{if $oCaptcha->isImageVisible()}]
-                    <span class="input-group-addon">
-                        <img src="[{$oCaptcha->getImageUrl()}]" alt="">
-                    </span>
-                [{else}]
-                    <span class="input-group-addon verificationCode" id="verifyTextCode">[{$oCaptcha->getText()}]</span>
-                [{/if}]
-                <input type="text" name="c_mac" value="" class="form-control" required="required">
-            </div>
-        </div>
-    </div>
+
+    [{block name="captcha_form"}][{/block}]
+
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
             <p class="alert alert-info">[{oxmultilang ident="COMPLETE_MARKED_FIELDS"}]</p>

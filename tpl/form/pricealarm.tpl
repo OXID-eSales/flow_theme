@@ -12,8 +12,6 @@
             <input type="hidden" name="anid" value="[{$oDetailsProduct->oxarticles__oxid->value}]">
         [{/if}]
         <input type="hidden" name="fnc" value="addme">
-        [{assign var="oCaptcha" value=$oView->getCaptcha()}]
-        <input type="hidden" name="c_mach" value="[{$oCaptcha->getHash()}]"/>
     </div>
     <div class="form-group">
         <label class="req control-label col-lg-3">[{oxmultilang ident="YOUR_PRICE"}] ([{$currency->sign}]):</label>
@@ -29,22 +27,9 @@
             <div class="help-block"></div>
         </div>
     </div>
-    <div class="form-group">
-        <label class="req control-label col-lg-3">[{oxmultilang ident="VERIFICATION_CODE"}]:</label>
-        <div class="col-lg-9">
-            <div class="input-group">
-                [{if $oCaptcha->isImageVisible()}]
-                    <span class="input-group-addon">
-                        <img class="verificationCode" src="[{$oCaptcha->getImageUrl()}]" alt="[{oxmultilang ident="VERIFICATION_CODE"}]">
-                    </span>
-                [{else}]
-                    <span class="input-group-addon verificationCode" id="verifyTextCode">[{$oCaptcha->getText()}]</span>
-                [{/if}]
-                <input class="form-control" type="text" name="c_mac" value="" required="required">
-            </div>
-            <div class="help-block"></div>
-        </div>
-    </div>
+
+    [{block name="captcha_form"}][{/block}]
+
     <div class="form-group">
         <div class="col-lg-9 col-lg-offset-3">
             <button class="submitButton btn btn-primary" type="submit">[{oxmultilang ident="SEND"}]</button>
