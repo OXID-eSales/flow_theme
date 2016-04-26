@@ -18,10 +18,10 @@ Currently there are two main branches for *Flow*:
 
 Check out the appropriate branch for your OXID eShop version into the shop's ``Application/views`` directory:
 
-	```
-	cd DOCUMENT_ROOT/Application/views/
-	git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
-	```
+```
+cd DOCUMENT_ROOT/Application/views/
+git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
+```
 
 You should now have a new folder ``DOCUMENT_ROOT/Application/views/flow``.
 
