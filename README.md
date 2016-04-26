@@ -8,7 +8,7 @@
 
 Currently we have two main branches for "flow" theme:
 
-* Branch ``b-0.1`` is for 5.3+ (4.10+ in case of CE edition) < x < 6.0 shop.
+* Branch ``b-1.0`` is for 5.3+ (4.10+ in case of CE edition) < x < 6.0 shop.
 * Branch ``master`` is for 6.0+ shop.
 
 
