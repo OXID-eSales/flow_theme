@@ -1,50 +1,72 @@
-# OXID responsive Theme
+# Flow Theme
 
-##General Information
+## General Information
 
-"Flow" is responsive theme for OXID eShop.
-
-##Branches
-
-Currently we have two main branches for "flow" theme:
-
-* Branch ``b-1.0`` is for 5.3+ (4.10+ in case of CE edition) < x < 6.0 shop.
-* Branch ``master`` is for 6.0+ shop.
+*Flow* is a responsive theme for all OXID eShop editions from version 4.10 (Community Edition, Professional Edition) or 5.3 (Enterprise Edition) on. It will become the default theme from OXID eShop version 6 on, and will replace the Azure theme.
 
 
-##﻿Installation
+##Installation
 
-Checkout appropriate "flow" theme repository branch by your shop version to shop's
-``Application/views`` directory and link or copy theme's ``out/flow`` directory to shop's ``out/flow``:
+### Step 1: Select the appropriate branch
 
-* Clone "flow" theme:
+Currently there are two main branches for *Flow*:
 
-	```
-	cd <shopSourceDirectory>
-	git clone -b master https://github.com/OXID-eSales/flow_theme.git Application/views/flow
-	```
+* Branch ``b-0.1`` contains *Flow* for OXID eShop version 4.10/5.3
+* Branch ``master`` contain *Flow* for OXID eShop version 6.0 or higher
 
-* Link theme's ``out`` directory to shop:
+### Step 2: Get the source code
+
+Check out the appropriate branch for your OXID eShop version into the shop's ``Application/views`` directory:
 
 	```
-	cd out
-	ln -s ../Application/views/flow/out/flow flow
+	cd DOCUMENT_ROOT/Application/views/
+	git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
 	```
-	Or copy theme's ``out`` directory to shop:
 
-	```
-	cp -r Application/views/flow/out/flow out/flow
-    ```
+You should now have a new folder ``DOCUMENT_ROOT/Application/views/flow``.
 
-*  Activate theme in shop admin:
+### Step 3: Prepare the ``out`` folder
 
-Go to eShopAdmin->Extensions->Themes->Flow and Press "Activate" button.
+The ``out`` folder can be prepared in two possible ways. The first option is to use symbolic links, the second is to copy. Using a symbolic link is strongly recommended, as otherwise you would have do the copying everytime *Flow* is updated.
 
-##Development
+#### Option 1: Symbolic Linking
 
-All "flow" theme related ``css/javascript`` files can be found in theme's ``build`` directory,
-For regenerating theme's assets, the ``grunt`` tasks should be used. Please install ``grunt`` and
-run ``grunt's`` default task to regenerate all minimized ``css`` and ``js`` files:
+Link the theme's ``out`` directory to the ``out`` directory of the shop:
+
+```
+cd DOCUMENT_ROOT
+ln -s ../Application/views/flow/out/flow out/flow
+```
+
+#### Option 2: Copying
+
+Copy theme's ``out`` directory to shop:
+
+```
+cd DOCUMENT_ROOT
+cp -r Application/views/flow/out/flow out/flow
+```
+
+You now should be able to do ``cd DOCUMENT_ROOT/out/flow``.
+
+### Step 4: Prepare the database
+
+In order to install the theme options, import the ``setup.sql`` into your database.
+
+
+``cd DOCUMENT_ROOT/Application/views/flow``
+
+``mysql -u MYSQL_USER -p SHOP_DATABASE < setup.sql``
+
+Locate the setup.sql file in Flow's 
+
+### Step 3: Activate theme 
+
+Log into the admin panel, go to *Extensions → Themes → Flow* and press the *Activate* button. Clean the cache and off you go, my friend!
+
+## Development
+
+All *Flow* theme related CSS/Javascript files can be found in theme's ``build`` directory. To regenerate the theme's assets, the ``grunt`` tasks should be used. Please install ``grunt`` and run ``grunt's`` default task to regenerate all minimized ``css`` and ``js`` files:
 
 1. To use ``grunt``, ``npm`` is required. Check ``nodejs`` website for installation
 instructions (https://nodejs.org/en/download/package-manager/). Example of
@@ -64,7 +86,7 @@ Installation on ubuntu system:
 3. Go to "flow" theme's directory and install all related ``grunt`` plugins:
 
 	```
-    cd <shopSourceDirectory>/Application/views/flow/
+    cd DOCUMENT_ROOT/Application/views/flow/
     sudo npm install
     ```
 
@@ -75,10 +97,10 @@ task while being in "flow" directory:
 	grunt
 	```
 
-##Contributing
+## Contributing
 
 If you are interested in contributing of some changes, Please read [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
-##License
+## License
 
-Licensing of the software product depends on the shop edition used. The software for OXID eShop Community Edition is published under the GNU General Public License v3. You may distribute and/or modify this software according to the licensing terms published by the Free Software Foundation. Legal licensing terms regarding the distribution of software being subject to GNU GPL can be found under http://www.gnu.org/licenses/gpl.html. The software for OXID eShop Professional Edition and Enterprise Edition is released under commercial license. OXID eSales AG has the sole rights to the software. Decompiling the source code, unauthorized copying as well as distribution to third parties is not permitted. Infringement will be reported to the authorities and prosecuted without exception.
+Licensing of the software product depends on the OXID eShop edition used. The software for OXID eShop Community Edition is published under the GNU General Public License v3. You may distribute and/or modify this software according to the licensing terms published by the Free Software Foundation. Legal licensing terms regarding the distribution of software being subject to GNU GPL can be found under http://www.gnu.org/licenses/gpl.html. The software for OXID eShop Professional Edition and Enterprise Edition is released under commercial license. OXID eSales AG has the sole rights to the software. Decompiling the source code, unauthorized copying as well as distribution to third parties is not permitted. Infringement will be reported to the authorities and prosecuted without exception.
