@@ -58,8 +58,6 @@ In order to install the theme options, import the ``setup.sql`` into your databa
 
 ``mysql -u MYSQL_USER -p SHOP_DATABASE < setup.sql``
 
-Locate the setup.sql file in Flow's 
-
 ### Step 3: Activate theme 
 
 Log into the admin panel, go to *Extensions → Themes → Flow* and press the *Activate* button. Clean the cache and off you go, my friend!
