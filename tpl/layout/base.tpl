@@ -213,7 +213,7 @@
 
         [{* Theme SVG icons *}]
         <div style="display: none;">
-            [{include file="layout/svg/bag.svg" count=$oxcmp_basket->getItemsCount()}]
+            [{include file="layout/svg/shoppingbag.svg" count=$oxcmp_basket->getItemsCount()}]
         </div>
 
         <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
