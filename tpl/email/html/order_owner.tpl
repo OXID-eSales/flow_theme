@@ -145,7 +145,7 @@
                                     ,&nbsp;<em>[{$sVar}] : [{$aParam}]</em>
                                 [{/foreach}]
                             [{/if}]
-                            <br>[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_ARTNOMBER"}] [{$basketproduct->oxarticles__oxartnum->value}]
+                            <br>[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}] [{$basketproduct->oxarticles__oxartnum->value}]
 
                             [{if $oViewConf->getShowGiftWrapping()}]
                                 [{assign var="oWrapping" value=$basketitem->getWrapping()}]
@@ -323,7 +323,7 @@
             <!-- delivery costs -->
             [{if $basket->getDelCostNet()}]
                 <tr valign="top" bgcolor="#ebebeb">
-                    <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGNET"}]</td>
+                    <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="SHIPPING_NET"}]</td>
                     <td align="right" class="odd text-right">[{$basket->getDelCostNet()}] [{$currency->sign}]</td>
                 </tr>
                 [{if $basket->getDelCostVat()}]
@@ -482,7 +482,7 @@
 
 [{block name="email_html_order_owner_deliveryinfo"}]
     [{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}]
-        <h3 class="underline">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGCARRIER"}]</h3>
+        <h3 class="underline">[{oxmultilang ident="SELECTED_SHIPPING_CARRIER"}]</h3>
         <p>[{$oDelSet->oxdeliveryset__oxtitle->value}]</p>
         <br>
     [{/if}]
