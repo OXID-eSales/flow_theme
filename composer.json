@@ -1,0 +1,21 @@
+{
+    "name": "oxid-esales/flow-theme",
+    "description": "This is Flow Theme for OXID eShop.",
+    "type": "oxideshop-theme",
+    "keywords": [
+        "oxid",
+        "themes",
+        "eShop"
+    ],
+    "homepage": "https://www.oxid-esales.com/en/home.html",
+    "license": [
+        "GPL-3.0",
+        "proprietary"
+    ],
+    "extra": {
+        "oxideshop": {
+            "target-directory": "flow",
+            "assets-directory": "out/flow"
+        }
+    }
+}
