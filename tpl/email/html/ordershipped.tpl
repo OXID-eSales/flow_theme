@@ -100,18 +100,4 @@
         [{/if}]
     [{/block}]
 
-    [{block name="email_html_ordershipped_ts"}]
-        [{if $oViewConf->showTs("ORDERCONFEMAIL") && $oViewConf->getTsId()}]
-            [{assign var="sTSRatingImg" value="https://www.trustedshops.com/bewertung/widget/img/bewerten_"|cat:$oViewConf->getActLanguageAbbr()|cat:".gif"}]
-            <h3 class="underline">[{oxmultilang ident="RATE_OUR_SHOP"}]</h3>
-
-            <p>
-                <a href="[{$oViewConf->getTsRatingUrl()}]" target="_blank" title="[{oxmultilang ident="TRUSTED_SHOPS_RATINGS"}]">
-                    <img src="[{$sTSRatingImg}]" border="0" alt="[{oxmultilang ident="WRITE_REVIEW_2"}]" align="middle">
-                </a>
-            </p>
-            <br/>
-        [{/if}]
-    [{/block}]
-
 [{include file="email/html/footer.tpl"}]

@@ -155,14 +155,6 @@
             <div class="legal-box">
                 <div class="row">
                     <section class="col-sm-12">
-                        [{block name="sidebar_trustedshopsratings"}]
-                            [{block name="dd_footer_servicelist_trustedshopsratings"}]
-                                [{if $oViewConf->showTs("WIDGET") }]
-                                    [{include file="widget/trustedshops/ratings.tpl" }]
-                                [{/if}]
-                            [{/block}]
-                        [{/block}]
-
                         [{block name="dd_footer_copyright"}]
                             [{oxifcontent ident="oxstdfooter" object="oCont"}]
                                 [{$oCont->oxcontents__oxcontent->value}]

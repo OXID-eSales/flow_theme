@@ -128,16 +128,6 @@
 [{/if}]
 [{/block}]
 
-[{block name="email_plain_order_ownerts"}]
-[{* Trusted shops protection *}]
-[{if $basket->getTsProtectionCosts()}]
-    [{oxmultilang ident="EMAIL_ORDER_CUST_HTML_TSPROTECTIONCHARGETAX1"}] [{$basket->getTsProtectionVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}] [{$basket->getTsProtectionVat()}] [{$currency->name}]
-    [{if $basket->getTsProtectionVat()}]
-        [{if $basket->isProportionalCalculationOn()}][{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}][{else}] [{oxmultilang ident="PLUS_VAT"}] [{$basket->getTsProtectionVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}][{/if}]
-    [{/if}]
-[{/if}]
-[{/block}]
-
 [{block name="email_plain_order_giftwrapping"}]
 [{* Gift wrapping *}]
 [{if $oViewConf->getShowGiftWrapping()}]

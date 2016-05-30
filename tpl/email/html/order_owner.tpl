@@ -370,26 +370,6 @@
             [{/if}]
         [{/block}]
 
-        [{block name="email_html_order_owner_ts"}]
-            [{if $basket->getTsProtectionCosts()}]
-                <!-- Trusted Shops -->
-                <tr valign="top" bgcolor="#ebebeb">
-                    <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="TRUSTED_SHOP_BUYER_PROTECTION"}]:</td>
-                    <td align="right" class="odd text-right">[{$basket->getTsProtectionNet()}] [{$currency->sign}]</td>
-                </tr>
-                [{if $basket->getTsProtectionVat()}]
-                    <tr valign="top" bgcolor="#ebebeb">
-                        [{if $basket->isProportionalCalculationOn()}]
-                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
-                        [{else}]
-                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getTsProtectionVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        [{/if}]
-                        <td align="right" class="odd text-right">[{$basket->getTsProtectionVat()}]&nbsp;[{$currency->sign}]</td>
-                    </tr>
-                [{/if}]
-            [{/if}]
-        [{/block}]
-
         [{if $oViewConf->getShowGiftWrapping()}]
             [{block name="email_html_order_owner_wrappingcosts"}]
                 <!-- Gift wrapping -->

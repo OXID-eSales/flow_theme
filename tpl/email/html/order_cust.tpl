@@ -386,26 +386,6 @@
             [{/if}]
         [{/block}]
 
-        [{block name="email_html_order_cust_ts"}]
-            [{if $basket->getTsProtectionCosts()}]
-                <!-- Trusted Shops -->
-                <tr valign="top" bgcolor="#ebebeb">
-                    <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="TRUSTED_SHOP_BUYER_PROTECTION"}]:</td>
-                    <td align="right" class="odd text-right">[{$basket->getTsProtectionNet()}] [{$currency->sign}]</td>
-                </tr>
-                [{if $basket->getTsProtectionVat()}]
-                    <tr valign="top" bgcolor="#ebebeb">
-                        [{if $basket->isProportionalCalculationOn()}]
-                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
-                        [{else}]
-                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getTsProtectionVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        [{/if}]
-                        <td align="right" class="odd text-right">[{$basket->getTsProtectionVat()}]&nbsp;[{$currency->sign}]</td>
-                    </tr>
-                [{/if}]
-            [{/if}]
-        [{/block}]
-
         [{if $oViewConf->getShowGiftWrapping()}]
             [{block name="email_html_order_cust_wrappingcosts"}]
                 <!-- Gift wrapping -->
@@ -554,17 +534,6 @@
 
 [{block name="email_html_order_cust_orderemailend"}]
     <p>[{oxcontent ident="oxuserorderemailend"}]</p>
-[{/block}]
-
-[{block name="email_html_order_cust_tsinfo"}]
-    [{if $oViewConf->showTs("ORDEREMAIL") && $oViewConf->getTsId()}]
-        [{assign var="sTSRatingImg" value="https://www.trustedshops.com/bewertung/widget/img/bewerten_"|cat:$oViewConf->getActLanguageAbbr()|cat:".gif"}]
-        <h3 class="underline">[{oxmultilang ident="RATE_OUR_SHOP"}]</h3>
-        <a href="[{$oViewConf->getTsRatingUrl()}]" target="_blank" title="[{oxmultilang ident="TRUSTED_SHOPS_RATINGS"}]">
-            <img src="[{$sTSRatingImg}]" border="0" alt="[{oxmultilang ident="WRITE_REVIEW"}]" align="middle">
-        </a>
-        <br>
-    [{/if}]
 [{/block}]
 
 [{include file="email/html/footer.tpl"}]

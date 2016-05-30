@@ -66,9 +66,7 @@
                 <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_UNAVAILABLE_SHIPPING_METHOD"}]</div>
             [{elseif $iPayError == 5}]
                 <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_AUTHORIZATION_FAILED"}]</div>
-            [{elseif $iPayError == 6}]
-                <div class="alert alert-danger">[{oxmultilang ident="TRUSTED_SHOP_UNAVAILABLE_PROTECTION"}]</div>
-            [{elseif $iPayError > 6}]
+            [{elseif $iPayError >= 6}]
                 <!--Add custom error message here-->
                 <div class="alert alert-danger">[{oxmultilang ident="MESSAGE_PAYMENT_AUTHORIZATION_FAILED"}]</div>
             [{elseif $iPayError == -1}]
@@ -121,9 +119,6 @@
                                 [{/block}]
                             [{/foreach}]
 
-                            [{* TRUSTED SHOPS BEGIN *}]
-                            [{include file="page/checkout/inc/trustedshops.tpl"}]
-                            [{* TRUSTED SHOPS END *}]
                         </div>
                     </div>
 
