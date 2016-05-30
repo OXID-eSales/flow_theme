@@ -110,7 +110,7 @@
 [{block name="email_plain_order_ownerdelcosts"}]
 [{* delivery costs *}]
 [{if $basket->getDelCostNet()}]
-    [{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGNET"}] [{$basket->getDelCostNet()}] [{$currency->sign}]
+    [{oxmultilang ident="SHIPPING_NET" suffix="COLON"}] [{$basket->getDelCostNet()}] [{$currency->sign}]
     [{if $basket->getDelCostVat()}] [{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}] [{else}] [{oxmultilang ident="PLUS_VAT"}] [{$basket->getDelCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}][{/if}] [{$basket->getDelCostVat()}] [{$currency->sign}]
 [{elseif $basket->getFDeliveryCosts()}]
     [{oxmultilang ident="SHIPPING_COST"}] [{$basket->getFDeliveryCosts()}] [{$currency->sign}]
@@ -224,7 +224,7 @@
 [{/block}]
 
 [{block name="email_plain_order_ownerdeliveryinfo"}]
-[{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}][{oxmultilang ident="EMAIL_ORDER_CUST_HTML_SHIPPINGCARRIER"}] [{$order->oDelSet->oxdeliveryset__oxtitle->getRawValue()}]
+[{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}][{oxmultilang ident="SHIPPING_CARRIER" suffix="COLON"}] [{$order->oDelSet->oxdeliveryset__oxtitle->getRawValue()}]
 [{/if}]
 [{/block}]
 

@@ -157,7 +157,7 @@
             <div class="modal-footer">
                 [{block name="checkout_wrapping_submit"}]
                     <button type="button" class="btn btn-default" data-dismiss="modal">[{oxmultilang ident="CANCEL"}]</button>
-                    <button type="submit" class="btn btn-primary" onclick="window.giftoptions_modal_form.submit();return false;">[{oxmultilang ident="APPLAY"}]</button>
+                    <button type="submit" class="btn btn-primary" onclick="window.giftoptions_modal_form.submit();return false;">[{oxmultilang ident="APPLY"}]</button>
                 [{/block}]
             </div>
         </div>

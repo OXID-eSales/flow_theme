@@ -1,4 +1,3 @@
-[{*[{oxscript add="$('a.js-external').attr('target', '_blank');"}]*}]
 <!-- Trusted Shops Siegel -->
 [{if $oView->getTrustedShopId()}]
     [{assign var="tsId" value=$oView->getTrustedShopId()}]
@@ -15,7 +14,7 @@
         </a>
     </div>
     <div id="tsText">
-        <a id="tsProfile" class="js-external" title="[{oxmultilang ident="MORE"}]" href="[{oxmultilang ident="TRUSTED_SHOPS_PROFILE_LINK"}][{$tsId}].html">
+        <a id="tsProfile" class="js-external" title="[{oxmultilang ident="MORE"}]" href="https://www.trustedshops.co.uk/shop/certificate.php?shop_id=[{$tsId}]">
             [{$oxcmp_shop->oxshops__oxname->value}] [{oxmultilang ident="MESSAGE_TRUSTED_SHOPS_SEAL_OF_APPROVAL"}]
         </a>
     </div>
