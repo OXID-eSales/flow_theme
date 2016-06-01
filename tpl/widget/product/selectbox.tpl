@@ -3,15 +3,15 @@
 [{if $oSelections}]
     <div class="selectbox dropDown">
         [{if !$blHideLabel}]
-            <strong>[{$oSelectionList->getLabel()}][{oxmultilang ident="COLON"}]</strong>
+            <p class="variant-label"><strong>[{$oSelectionList->getLabel()}][{oxmultilang ident="COLON"}]</strong></p>
         [{/if}]
         <div class="dropdown-wrapper">
             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                 [{assign var="oActiveSelection" value=$oSelectionList->getActiveSelection()}]
                 [{if $oActiveSelection}]
-                    <span>[{$oActiveSelection->getName()}]</span>
+                    <span class="pull-left">[{$oActiveSelection->getName()}]</span>
                 [{elseif !$blHideDefault}]
-                    <span>
+                    <span class="pull-left">
                         [{if $sFieldName == "sel"}]
                             [{oxmultilang ident="PLEASE_CHOOSE"}]
                         [{else}]
@@ -19,7 +19,8 @@
                         [{/if}]
                     </span>
                 [{/if}]
-                <i class="fa fa-angle-down"></i>
+
+                <i class="fa fa-angle-down pull-right"></i>
             </button>
             [{if $editable !== false}]
                 <input type="hidden" name="[{$sFieldName|default:"varselid"}][[{$iKey}]]" value="[{if $oActiveSelection}][{$oActiveSelection->getValue()}][{/if}]">

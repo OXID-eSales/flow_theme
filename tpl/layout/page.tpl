@@ -78,22 +78,6 @@
     [{block name="layout_init_social"}]
     [{/block}]
 
-    [{if $oView->isPriceCalculated()}]
-        [{block name="layout_page_vatinclude"}]
-            [{block name="footer_deliveryinfo"}]
-                [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
-                    <div id="incVatMessage" class="small">
-                        [{if $oView->isVatIncluded()}]
-                            * <span class="deliveryInfo">[{oxmultilang ident="PLUS_SHIPPING"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
-                        [{else}]
-                            * <span class="deliveryInfo">[{oxmultilang ident="PLUS"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
-                        [{/if}]
-                    </div>
-                [{/oxifcontent}]
-            [{/block}]
-        [{/block}]
-    [{/if}]
-
     <i class="fa fa-chevron-circle-up icon-4x" id="jumptotop"></i>
 [{/capture}]
 [{include file="layout/base.tpl"}]

@@ -12,7 +12,6 @@
 
         [{if $listDisplayType || $sort || $itemsPerPage}]
             <div class="pull-right options">
-                <div class="btn-group">
                     [{if $listDisplayType}]
                         [{include file="widget/locator/listdisplaytype.tpl"}]
                     [{/if}]
@@ -24,7 +23,6 @@
                     [{if $itemsPerPage}]
                         [{include file="widget/locator/itemsperpage.tpl"}]
                     [{/if}]
-                </div>
             </div>
         [{/if}]
         <div class="clearfix"></div>

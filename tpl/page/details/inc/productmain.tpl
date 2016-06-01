@@ -254,9 +254,9 @@
                                 [{if !$oDetailsProduct->isNotBuyable()}]
                                     <div class="input-group">
                                         <input id="amountToBasket" type="text" name="am" value="1" autocomplete="off" class="form-control">
-                                        <span class="input-group-btn">
+                                        <div class="input-group-tweak">
                                             <button id="toBasket" type="submit" [{if !$blCanBuy}]disabled="disabled"[{/if}] class="btn btn-primary submitButton largeButton"><i class="fa fa-shopping-cart"></i> [{oxmultilang ident="TO_CART"}]</button>
-                                        </span>
+                                        </div>
                                     </div>
                                 [{/if}]
                             [{/oxhasrights}]
