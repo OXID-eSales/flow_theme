@@ -16,7 +16,6 @@
                     [{if $oView->getClassName() == 'alist'}]
                         <strong>[{oxmultilang ident="DD_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
                     [{/if}]
-                    <div class="btn-group">
                         [{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
                             [{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]
                             <div class="btn-group">
@@ -40,7 +39,6 @@
                                 </ul>
                             </div>
                         [{/foreach}]
-                    </div>
                     <div class="clearfix"></div>
                 </div>
             </form>

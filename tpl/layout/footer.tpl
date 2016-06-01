@@ -148,6 +148,22 @@
             [{/block}]
             [{* <<ENDE>> Social Links *}]
         </div>
+
+        [{if $oView->isPriceCalculated()}]
+        [{block name="layout_page_vatinclude"}]
+        [{block name="footer_deliveryinfo"}]
+        [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
+        <div id="incVatInfo">
+            [{if $oView->isVatIncluded()}]
+            * <span class="deliveryInfo">[{oxmultilang ident="PLUS_SHIPPING"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
+            [{else}]
+            * <span class="deliveryInfo">[{oxmultilang ident="PLUS"}]<a href="[{$oCont->getLink()}]">[{oxmultilang ident="PLUS_SHIPPING2"}]</a></span>
+            [{/if}]
+        </div>
+        [{/oxifcontent}]
+        [{/block}]
+        [{/block}]
+        [{/if}]
     </footer>
 
     <div class="legal">

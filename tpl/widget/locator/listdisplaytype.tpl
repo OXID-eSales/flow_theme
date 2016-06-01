@@ -3,7 +3,7 @@
 [{assign var="_artPerPage" value=$oViewConf->getArtPerPageCount()}]
 
 [{if $oView->canSelectDisplayType()}]
-    <div class="btn-group">
+    <div class="btn-group hidden-xs">
         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
             <strong>[{oxmultilang ident="LIST_DISPLAY_TYPE"}]</strong> [{oxmultilang ident=$listType}] <span class="caret"></span>
         </button>

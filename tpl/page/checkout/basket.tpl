@@ -17,14 +17,14 @@
         [{if !$oxcmp_basket->getProductsCount()}]
             [{block name="checkout_basket_emptyshippingcart"}]
                 <div class="spacer"></div>
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" id="empty-basket-warning">
+                    <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="btn btn-default"><i class="fa fa-caret-left"></i> [{oxmultilang ident="DD_BASKET_BACK_TO_SHOP"}]</a>
                     [{oxmultilang ident="BASKET_EMPTY"}]
-                    <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="btn btn-default btn-xs pull-right"><i class="fa fa-caret-left"></i> [{oxmultilang ident="DD_BASKET_BACK_TO_SHOP"}]</a>
                 </div>
             [{/block}]
         [{else}]
             [{block name="checkout_basket_next_step_top"}]
-                <div class="well well-sm clear">
+                <div class="well well-sm clear cart-buttons">
                     [{block name="checkout_basket_backtoshop_top"}]
                         [{if $oView->showBackToShop()}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
@@ -66,7 +66,7 @@
             </div>
 
             [{block name="checkout_basket_next_step_bottom"}]
-                <div class="well well-sm clear">
+                <div class="well well-sm clear cart-buttons">
                     [{block name="checkout_basket_loworderprice_bottom"}][{/block}]
 
                     [{block name="checkout_basket_backtoshop_bottom"}]
