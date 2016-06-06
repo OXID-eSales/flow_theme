@@ -75,7 +75,9 @@
 
     [{include file="layout/footer.tpl"}]
 
-    [{include file="widget/facebook/init.tpl"}]
+    [{block name="layout_init_social"}]
+    [{/block}]
+
     [{if $oView->isPriceCalculated()}]
         [{block name="layout_page_vatinclude"}]
             [{block name="footer_deliveryinfo"}]

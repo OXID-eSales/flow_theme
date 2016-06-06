@@ -2,9 +2,7 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 [{assign var="oPictureProduct" value=$oView->getPicturesProduct()}]
 
-[{if $oViewConf->getFbAppId()}]
-    [{oxscript add="$(function(){oxFacebook.initDetailsPagePartial();});"}]
-[{/if}]
+[{block name="productmain_init_details_page"}][{/block}]
 
 [{if $oView->showZoomPics()}]
     [{oxscript add="if( !window.isMobileDevice() ) $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();"}]

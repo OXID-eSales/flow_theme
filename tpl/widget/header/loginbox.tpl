@@ -50,14 +50,8 @@
                 <a class="btn" id="registerLink" role="button" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" title="[{oxmultilang ident="REGISTER"}]">[{oxmultilang ident="REGISTER"}]</a>
             [{/if}]
 
-            [{if $oViewConf->getShowFbConnect()}]
-                <div class="altLoginBox corners clear">
-                    <span>[{oxmultilang ident="LOGIN_WITH"}]</span>
-                    <div id="loginboxFbConnect">
-                        [{include file="widget/facebook/enable.tpl" source="widget/facebook/connect.tpl" ident="#loginboxFbConnect"}]
-                    </div>
-                </div>
-            [{/if}]
+            [{block name="thirdparty_login"}][{/block}]
+
         </div>
     </form>
 [{/if}]

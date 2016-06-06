@@ -73,17 +73,9 @@
                                         </div>
                                     </section>
                                 [{/if}]
-                                [{if ($oView->isActive('FbLike') && $oViewConf->getFbAppId())}]
-                                    <section class="footer-box footer-box-facebook">
-                                        [{block name="footer_fblike"}]
-                                            [{if $oView->isActive('FbLike') && $oViewConf->getFbAppId()}]
-                                                <div class="facebook pull-left" id="footerFbLike">
-                                                    [{include file="widget/facebook/enable.tpl" source="widget/facebook/like.tpl" ident="#footerFbLike" parent="footer"}]
-                                                </div>
-                                            [{/if}]
-                                        [{/block}]
-                                    </section>
-                                [{/if}]
+
+                                [{block name="footer_social"}][{/block}]
+
                             </div>
                         </div>
                     </div>

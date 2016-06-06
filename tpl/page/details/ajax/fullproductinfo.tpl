@@ -2,9 +2,7 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 [{assign var="oPictureProduct" value=$oView->getPicturesProduct()}]
 
-[{if $oViewConf->getFbAppId()}]
-    [{oxscript add="$(function(){oxFacebook.initDetailsPagePartial();});"}]
-[{/if}]
+[{block name="fullproductinfo_init_details_page"}][{/block}]
 
 [{*[{oxscript add="$( '#variants' ).oxArticleVariant();"}]*}]
 [{include file="page/details/inc/fullproductinfo.tpl"}]

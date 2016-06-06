@@ -34,9 +34,6 @@
         [{/block}]
 
         [{block name="head_meta_open_graph"}]
-            [{if $oViewConf->getFbAppId()}]
-                <meta property="fb:app_id" content="[{$oViewConf->getFbAppId()}]">
-            [{/if}]
             <meta property="og:site_name" content="[{$oViewConf->getBaseDir()}]">
             <meta property="og:title" content="[{$sPageTitle}]">
             <meta property="og:description" content="[{$oView->getMetaDescription()}]">
@@ -197,7 +194,7 @@
 [{/if}]
 
 <!DOCTYPE html>
-<html lang="[{$oView->getActiveLangAbbr()}]" [{if $oViewConf->getShowFbConnect()}]xmlns:fb="http://www.facebook.com/2008/fbml"[{/if}]>
+<html lang="[{$oView->getActiveLangAbbr()}]" [{block name="head_html_namespace"}][{/block}]>
     <head>
         [{foreach from=$oxidBlock_pageHead item="_block"}]
             [{$_block}]
