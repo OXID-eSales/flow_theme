@@ -10,7 +10,7 @@
             <li id="list_cartItem_[{$smarty.foreach.basketContents.iteration}]">
 
                 <div class="row">
-                    <div class="col-xs-3">
+                    <div class="col-md-3 col-xs-4">
                         [{block name="checkout_basketcontents_basketitem_image"}]
                             [{* product image *}]
                             [{if $editable}]<a href="[{$basketitem->getLink()}]">[{/if}]
@@ -18,7 +18,7 @@
                             [{if $editable}]</a>[{/if}]
                         [{/block}]
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6 col-xs-8">
                         [{block name="checkout_basketcontents_basketitem_titlenumber"}]
                             [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
                             <b>[{$basketitem->getTitle()}]</b>
@@ -96,7 +96,7 @@
                                 <div class="wrapping">
                                     [{if !$basketitem->getWrappingId()}]
                                         [{if $editable}]
-                                            <a href="#" class="btn btn-default btn-xs" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="ADD"}]</a>
+                                            <a href="#" class="btn btn-default btn-xs" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="WRAPPING"}] [{oxmultilang ident="ADD"}]</a>
                                         [{else}]
                                             <small>[{oxmultilang ident="WRAPPING"}]: [{oxmultilang ident="NONE"}]</small>
                                         [{/if}]
@@ -135,7 +135,7 @@
                             </span>
                         [{/block}]
                     </div>
-                    <div class="col-xs-3">
+                    <div class="col-md-3 col-xs-12">
                         [{if $editable}]
                             <div class="text-right">
                                 <a href="#" class="toggle-actions">

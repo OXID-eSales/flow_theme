@@ -111,6 +111,7 @@
                 <i class="fa fa-off"></i> [{oxmultilang ident="LOGOUT"}]
             </a>
         </div>
+        <p>&nbsp;</p>
     </div>
     [{insert name="oxid_tracker" title=$template_title}]
 [{/capture}]

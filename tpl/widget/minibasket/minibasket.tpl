@@ -22,7 +22,7 @@
                                 [{if $oxcmp_basket->getProductsCount()}]
                                     [{oxhasrights ident="TOBASKET"}]
                                         <div id="[{$_prefix}]basketFlyout" class="basketFlyout">
-                                            <div class="table-responsive">
+                                            <div class="">
                                                 <table class="table table-striped">
                                                     <thead>
                                                         <tr>
@@ -54,19 +54,19 @@
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
-                                                            <td class="text-right" colspan="2">
                                                                 [{block name="widget_minibasket_total"}]
-                                                                    [{oxmultilang ident="TOTAL"}]&nbsp;
-                                                                    <strong class="price">
-                                                                        [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                                                            [{$oxcmp_basket->getProductsNetPrice()}]
-                                                                        [{else}]
-                                                                            [{$oxcmp_basket->getFProductsPrice()}]
-                                                                        [{/if}]
-                                                                        [{$currency->sign}] *
-                                                                    </strong>
+                                                                    <td><strong>[{oxmultilang ident="TOTAL"}]</strong></td>
+                                                                    <td class="text-right">
+                                                                        <strong class="price">
+                                                                            [{if $oxcmp_basket->isPriceViewModeNetto()}]
+                                                                                [{$oxcmp_basket->getProductsNetPrice()}]
+                                                                            [{else}]
+                                                                                [{$oxcmp_basket->getFProductsPrice()}]
+                                                                            [{/if}]
+                                                                            [{$currency->sign}] *
+                                                                        </strong>
+                                                                    </td>
                                                                 [{/block}]
-                                                            </td>
                                                         </tr>
                                                     </tfoot>
                                                 </table>
@@ -78,8 +78,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">[{oxmultilang ident="DD_MINIBASKET_CONTINUE_SHOPPING"}]</button>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary">
-                                    <i class="fa fa-shopping-cart"></i> [{oxmultilang ident="DISPLAY_BASKET"}]
+                                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="[{oxmultilang ident="DISPLAY_BASKET"}]">
+                                    <i class="fa fa-shopping-cart"></i>
                                 </a>
                             </div>
                         </div>

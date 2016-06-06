@@ -401,6 +401,17 @@ $( function ()
                 }
             );
         }
+
+        /* *********************************
+         * Private Sales Login
+         * *********************************/
+        $('#private-sales-login input.agb-check').click(function(){
+            if((this).checked){
+                $('#private-sales-login button.submitButton').removeAttr('disabled');
+            } else {
+                $('#private-sales-login button.submitButton').attr("disabled","disabled");
+            }
+        });
     }
 );
 
