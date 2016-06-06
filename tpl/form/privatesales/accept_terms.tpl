@@ -1,5 +1,6 @@
-<div class="col">
-    <form name="login" class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post">
+<div class="well">
+    <form name="login" class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post" id="private-sales-login">
+
         <div>
             [{$oViewConf->getHiddenSid()}]
             [{$oViewConf->getNavFormParams()}]
@@ -16,16 +17,15 @@
             [{/if}]
             <input type="hidden" name="ord_agb" value="0">
         </div>
-        <ul class="clear">
-            <li>
-                <input id="orderConfirmAgb" type="checkbox" name="ord_agb" value="1">
-                <label id="confirmLabel">[{oxifcontent ident="oxrighttocancellegend" object="oContent"}]
-                    [{$oContent->oxcontents__oxcontent->value}]
-                    [{/oxifcontent}]</label>
-            </li>
-            <li class="formSubmit">
-                <button id="confirmButton" type="submit" class="submitButton largeButton">[{oxmultilang ident="LOGIN"}]</button>
-            </li>
-        </ul>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="ord_agb" value="1" class="agb-check"> [{oxifcontent ident="oxrighttocancellegend" object="oContent"}]
+                [{$oContent->oxcontents__oxcontent->value}]
+                [{/oxifcontent}]
+            </label>
+        </div>
+        <button type="submit" class="submitButton btn btn-default" disabled="disabled">[{oxmultilang ident="LOGIN"}]</button>
+
     </form>
 </div>
