@@ -60,6 +60,8 @@ $aLang = array(
     'DD_CONTACT_PAGE_HEADING'                               => 'Kontaktieren Sie uns!',
     'DD_CONTACT_FORM_HEADING'                               => 'Kontaktformular',
     'DD_CONTACT_ADDRESS_HEADING'                            => 'Adresse',
+    'DD_CONTACT_THANKYOU1'                                  => "Vielen Dank für Ihre Nachricht an",
+    'DD_CONTACT_THANKYOU2'                                  => ".",
 
     // Link-Seite
     'DD_LINKS_NO_ENTRIES'                                   => 'Es sind leider noch keine Links vorhanden.',
@@ -111,6 +113,8 @@ $aLang = array(
     'WIDGET_PRODUCT_RELATED_PRODUCTS_ACCESSORIES_SUBHEADER' => 'Folgende Artikel passen gut zu diesem Artikel.',
     'WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER'     => 'Schauen Sie sich doch auch unsere ähnlichen Artikel an.',
     'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.',
+    'DETAILS_VPE_MESSAGE_1'                                 => 'Dieser Artikel kann nur in Verpackungseinheiten zu je',
+    'DETAILS_VPE_MESSAGE_2'                                 => 'erworben werden.',
 
     // Modal-Warenkorb
     'DD_MINIBASKET_MODAL_TABLE_TITLE'                       => 'Artikel',
