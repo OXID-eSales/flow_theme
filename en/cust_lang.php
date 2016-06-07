@@ -38,6 +38,8 @@ $aLang = array(
     'DD_FORM_VALIDATION_NEGATIVENUMBER'                     => 'Please enter a negative number.',
     'DD_FORM_VALIDATION_REQUIRED'                           => 'Please specify a value for this required field.',
     'DD_FORM_VALIDATION_CHECKONE'                           => 'Please select at least one option.',
+    'DETAILS_VPE_MESSAGE_1'                                 => "This product can only be ordered in packaging units of ",
+    'DETAILS_VPE_MESSAGE_2'                                 => "",
 
     // Header
     'SEARCH_TITLE'                                          => 'Enter a search term...',
@@ -60,6 +62,8 @@ $aLang = array(
     'DD_CONTACT_PAGE_HEADING'                               => 'Contact us!',
     'DD_CONTACT_FORM_HEADING'                               => 'Contact',
     'DD_CONTACT_ADDRESS_HEADING'                            => 'Address',
+    'DD_CONTACT_THANKYOU1'                                  => "Thank you.",
+    'DD_CONTACT_THANKYOU2'                                  => " appreciates your comments.",
 
     // Link list
     'DD_LINKS_NO_ENTRIES'                                   => 'Unfortunately, there are no links available.',
