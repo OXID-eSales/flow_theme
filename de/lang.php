@@ -45,7 +45,6 @@ $aLang = array(
 
     // Sidebar
     'DD_SIDEBAR_CATEGORYTREE'                               => 'Kategorien',
-    'DD_SIDEBAR_TAGCLOUD'                                   => 'Stichwörter',
 
     // Footer
     'FOOTER_NEWSLETTER_INFO'                                => 'Die neuesten Produkte und die besten Angebote per E-Mail, damit Ihr nichts mehr verpasst.',
