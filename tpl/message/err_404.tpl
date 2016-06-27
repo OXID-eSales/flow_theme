@@ -5,9 +5,11 @@
             <div class="col-md-6">
                 <p>
                     [{if $sUrl}]
-                    [{oxmultilang ident="ERROR_404"}] <i><strong>'[{$sUrl|escape}]'</strong></i> [{oxmultilang ident="ERROR_404_POSTURL"}]
+                        [{assign var="sModifiedUrl" value=$sUrl|escape }]
+                        [{assign var="sModifiedUrl" value="<i><strong>'"|cat:$sModifiedUrl|cat:"'</strong></i>"}]
+                        [{ oxmultilang ident="ERROR_404" args=$sModifiedUrl }]
                     [{else}]
-                    [{oxmultilang ident="ERROR_404"}]
+                        [{oxmultilang ident="ERROR_404"}]
                     [{/if}]
                 </p>
 
