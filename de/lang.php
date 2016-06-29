@@ -66,11 +66,6 @@ $aLang = array(
     // Link-Seite
     'DD_LINKS_NO_ENTRIES'                                   => 'Es sind leider noch keine Links vorhanden.',
 
-    // Gästebuch
-    'DD_GUESTBOOK_ENTRIES'                                  => 'Einträge',
-    'DD_GUESTBOOK_ENTRY_FROM'                               => 'von',
-    'DD_GUESTBOOK_ENTRY_ON'                                 => 'am',
-
     // 404-Seite
     'DD_ERR_404_START_TEXT'                                 => 'Vielleicht finden Sie die von Ihnen gewünschten Informationen über unsere Startseite:',
     'DD_ERR_404_START_BUTTON'                               => 'Startseite aufrufen',

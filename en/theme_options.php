@@ -66,7 +66,6 @@ $aLang = array(
 
     'SHOP_THEME_blFooterShowHelp'                   => 'Use help link',
     'SHOP_THEME_blFooterShowLinks'                  => 'Use Links link',
-    'SHOP_THEME_blFooterShowGuestbook'              => 'Use guestbook link',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Use newsletter link',
     'SHOP_THEME_blFooterShowNewsletterForm'         => 'Use newsletter form',
     'SHOP_THEME_blFooterShowNews'                   => 'Use news link',

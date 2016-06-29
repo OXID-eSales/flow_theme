@@ -66,11 +66,6 @@ $aLang = array(
     // Link list
     'DD_LINKS_NO_ENTRIES'                                   => 'Unfortunately, there are no links available.',
 
-    // Guestbook
-    'DD_GUESTBOOK_ENTRIES'                                  => 'Entries',
-    'DD_GUESTBOOK_ENTRY_FROM'                               => 'by',
-    'DD_GUESTBOOK_ENTRY_ON'                                 => 'on',
-
     // 404 page
     'DD_ERR_404_START_TEXT'                                 => 'You may find the information you want from our home page:',
     'DD_ERR_404_START_BUTTON'                               => 'Go to home page',

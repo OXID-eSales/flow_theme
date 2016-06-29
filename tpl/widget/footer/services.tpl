@@ -8,9 +8,6 @@
             [{if $oViewConf->getViewThemeParam('blFooterShowLinks')}]
                 <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=links"}]">[{oxmultilang ident="LINKS"}]</a></li>
             [{/if}]
-            [{if $oViewConf->getViewThemeParam('blFooterShowGuestbook')}]
-                <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=guestbook"}]">[{oxmultilang ident="GUESTBOOK"}]</a></li>
-            [{/if}]
             [{if $oView->isActive('Invitations')}]
                 <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=invite"}]">[{oxmultilang ident="INVITE_YOUR_FRIENDS"}]</a></li>
             [{/if}]
