@@ -2,7 +2,7 @@
     [{assign var="product"         value=$oView->getProduct()}]
     [{assign var="blDisableToCart" value=$oView->getDisableToCart()}]
     [{assign var="iIndex"          value=$oView->getIndex()}]
-    [{assign var="showMainLink"    value=$oView->getShowMainL}]
+    [{assign var="showMainLink"    value=$oView->getShowMainLink()}]
 
     [{assign var="currency" value=$oView->getActCurrency()}]
     [{if $showMainLink}]
