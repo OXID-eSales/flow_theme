@@ -14,17 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @link      http://www.oxid-esales.com
- * @copyright (C) OXID eSales AG 2003-2016
+ * $link      http://www.oxid-esales.com
+ * $copyright (C) OXID eSales AG 2003-2016
  */
 
 // Including 3rd party libs
-@import "../vendor/bootstrap/less/bootstrap";
-@import "../vendor/font-awesome/less/font-awesome";
-@import "../vendor/bootstrap-select/less/bootstrap-select";
-@import "../vendor/photoswipe/less/photoswipe";
+@import "bootstrap-sass/assets/stylesheets/bootstrap.scss";
+@import "font-awesome/scss/font-awesome";
+@import "bootstrap-select/sass/bootstrap-select";
+@import "photoswipe/src/css/main";
+
+// 'node_modules/font-awesome/scss',
+// 'node_modules/bootstrap-select/sass',
 
 // Theme related less files
+@import "variables";
 @import "theme";
 @import "responsive";
-@import "variables";

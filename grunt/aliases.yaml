@@ -1,15 +1,16 @@
 production:
   - "copy:fonts"
   - "jshint:theme"
-  - "less:theme"
-  - "less:vendor"
+  - "sass:theme"
+  - "postcss:theme"
   - "uglify:theme"
   - "uglify:vendor"
   - "uglify:widgets"
 
 development:
   - "jshint:theme"
-  - "less:theme"
+  - "sass:theme"
+  - "postcss:theme"
   - "uglify:theme"
 
 default:
