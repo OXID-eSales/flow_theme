@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @link      http://www.oxid-esales.com
- * @copyright (C) OXID eSales AG 2003-2016
+ * $link      http://www.oxid-esales.com
+ * $copyright (C) OXID eSales AG 2003-2016
  */
 
-@media (max-width: @screen-md-max) {
+@media (max-width: $screen-md-max) {
     .control-label.col-xs-12 {
         text-align: left;
     }
 }
 
-@media ( max-width: @screen-sm-max ) {
+@media ( max-width: $screen-sm-max ) {
 
     //
     // Body
@@ -48,7 +48,7 @@
 
 }
 
-@media ( max-width: @screen-xs-max ) {
+@media ( max-width: $screen-xs-max ) {
 
     //
     // Header
@@ -126,8 +126,8 @@
                 text-align: center;
 
                 .productBox .picture {
-                    border-bottom: 1px dashed @gray-lighter;
-                    margin-bottom: @ox-listitem-grid-picture-padding;
+                    border-bottom: 1px dashed $gray-lighter;
+                    margin-bottom: $ox-listitem-grid-picture-padding;
                 }
             }
 
@@ -152,7 +152,7 @@
         text-align: center;
 
         .footer-box {
-            margin-bottom: @grid-gutter-width;
+            margin-bottom: $grid-gutter-width;
         }
     }
 }
@@ -160,14 +160,14 @@
 @media (max-width: 570px) {
     #header .header-box {
         .logo-col {
-            .make-xs-column(12);
-            .text-center;
+            @include make-xs-column(12);
+            text-align: center;
         }
         .menus-col {
-            .make-xs-column(12);
+            @include make-xs-column(12);
 
             .menu-dropdowns {
-                .text-center;
+                text-align: center;
                 margin: 20px auto;
                 float: none!important;
             }
