@@ -25,7 +25,19 @@ git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
 
 You should now have a new folder ``DOCUMENT_ROOT/Application/views/flow``.
 
-### Step 3: Prepare the ``out`` folder
+### Step 3: Prepare the database
+
+In order to install the theme options, import the ``setup.sql`` into your database.
+
+#### Option 1: Console
+
+``mysql -u MYSQL_USER -p SHOP_DATABASE < flow/setup.sql``
+
+#### Option 2: Shop Admin: Service -> Tools
+
+If you have a local copy of flow files, go to Service -> Tools in Shop Admin, upload flow/setup.sql and click "start update" button
+
+### Step 4: Prepare the ``out`` folder
 
 The ``out`` folder can be prepared in two possible ways. The first option is to use symbolic links, the second is to copy. Using a symbolic link is strongly recommended, as otherwise you would have do the copying everytime *Flow* is updated.
 
@@ -33,30 +45,15 @@ The ``out`` folder can be prepared in two possible ways. The first option is to 
 
 Link the theme's ``out`` directory to the ``out`` directory of the shop:
 
-```
-cd DOCUMENT_ROOT
-ln -s ../Application/views/flow/out/flow out/flow
-```
+``ln -s ../Application/views/flow/out/flow ../../out/flow``
 
 #### Option 2: Copying
 
 Copy theme's ``out`` directory to shop:
 
-```
-cd DOCUMENT_ROOT
-cp -r Application/views/flow/out/flow out/flow
-```
+``cp -r flow/out/flow ../../out/flow``
 
-You now should be able to do ``cd DOCUMENT_ROOT/out/flow``.
-
-### Step 4: Prepare the database
-
-In order to install the theme options, import the ``setup.sql`` into your database.
-
-
-``cd DOCUMENT_ROOT/Application/views/flow``
-
-``mysql -u MYSQL_USER -p SHOP_DATABASE < setup.sql``
+You now should be able to do ``cd ../../out/flow``.
 
 ### Step 5: Activate theme 
 
