@@ -245,7 +245,10 @@
 
         <!--[if gte IE 9]><style type="text/css">.gradient {filter:none;}</style><![endif]-->
         [{oxscript}]
-        [{oxid_include_dynamic file="widget/dynscript.tpl"}]
+
+        [{if !$oView->isDemoShop()}]
+            [{oxid_include_dynamic file="widget/dynscript.tpl"}]
+        [{/if}]
 
         [{foreach from=$oxidBlock_pageScript item="_block"}]
             [{$_block}]
