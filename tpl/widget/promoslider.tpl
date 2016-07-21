@@ -29,7 +29,7 @@
                                         [{if $sBannerLink}]
                                             <a href="[{$sBannerLink}]" title="[{$oBanner->oxactions__oxtitle->value}]">
                                         [{/if}]
-                                        <span class="title">[{$oArticle->oxarticles__oxtitle->value}]</span>[{if $oArticle->oxarticles__oxshortdesc->value|@trim}]<br/><span class="shortdesc">[{$oArticle->oxarticles__oxshortdesc->value|@trim}]</span>[{/if}]
+                                        <span class="title">[{$oArticle->oxarticles__oxtitle->value}]</span>[{if $oArticle->oxarticles__oxshortdesc->value|trim}]<br/><span class="shortdesc">[{$oArticle->oxarticles__oxshortdesc->value|trim}]</span>[{/if}]
                                         [{if $sBannerLink}]
                                             </a>
                                         [{/if}]

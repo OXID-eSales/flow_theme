@@ -200,8 +200,8 @@
                     <span id="gts-o-discounts">[{if $oOrder->oxorder__oxdiscount->value > 0}]-[{/if}][{$oOrder->oxorder__oxdiscount->value}]</span>
                     <span id="gts-o-shipping-total">[{$oOrder->oxorder__oxdelcost->value}]</span>
                     <span id="gts-o-tax-total">[{math equation="x+y" x=$oOrder->oxorder__oxartvatprice1->value y=$oOrder->oxorder__oxartvatprice2->value}]</span>
-                    <span id="gts-o-est-ship-date">[{"Y-m-d"|@date:$sShipDate}]</span>
-                    <span id="gts-o-est-delivery-date">[{"Y-m-d"|@date:$sDeliveryDate}]</span>
+                    <span id="gts-o-est-ship-date">[{$sShipDate|date_format:"%Y-%m-%d"}]</span>
+                    <span id="gts-o-est-delivery-date">[{$sDeliveryDate|date_format:"%Y-%m-%d"}]</span>
                     <span id="gts-o-has-preorder">[{if $blHasPreOrder}]Y[{else}]N[{/if}]</span>
                     <span id="gts-o-has-digital">[{if $oBasket->hasDownloadableProducts()}]Y[{else}]N[{/if}]</span>
 

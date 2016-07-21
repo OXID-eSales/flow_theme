@@ -73,7 +73,7 @@
                     [{/if}]
 
                     <div class="picture text-center">
-                        <a href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="zoom1" data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]">
+                        <a href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="zoom1"[{if $aPictureInfo}] data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]"[{/if}]>
                             <img src="[{$oView->getActPicture()}]" alt="[{$oPictureProduct->oxarticles__oxtitle->value|strip_tags}] [{$oPictureProduct->oxarticles__oxvarselect->value|strip_tags}]" itemprop="image" class="img-responsive">
                         </a>
                     </div>
