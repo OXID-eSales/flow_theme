@@ -28,6 +28,7 @@ $aLang = array(
     'DD_SORT_DESC'                                          => 'descending',
     'DD_SORT_ASC'                                           => 'ascending',
     'DD_CLOSE_MODAL'                                        => 'close',
+    'DD_DEMO_ADMIN_TOOL'                                       => 'Open admin interface',
 
     // Form validation
     'DD_FORM_VALIDATION_VALIDEMAIL'                         => 'Please enter a valid email address.',
@@ -54,6 +55,9 @@ $aLang = array(
 
     // Home page
     'MANUFACTURERSLIDER_SUBHEAD'                            => 'We present our carefully selected brands, whose products can be found in our shop.',
+    'START_BARGAIN_HEADER'                                  => 'Week\'s Special',
+    'START_NEWEST_HEADER'                                   => 'Just arrived',
+    'START_TOP_PRODUCTS_HEADER'                             => 'Top seller',
     'START_BARGAIN_SUBHEADER'                               => 'Save money with our current bargains!',
     'START_NEWEST_SUBHEADER'                                => 'Fresh as it gets. One minute in the box and now already in store.',
     'START_TOP_PRODUCTS_SUBHEADER'                          => 'Only 2 products, but the best we can offer you.',
