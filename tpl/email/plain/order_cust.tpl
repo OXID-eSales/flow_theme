@@ -253,11 +253,4 @@
 [{oxcontent ident="oxuserorderemailendplain"}]
 [{/block}]
 
-[{block name="email_plain_order_cust_tsinfo"}]
-[{if $oViewConf->showTs("ORDEREMAIL") && $oViewConf->getTsId()}]
-[{oxmultilang ident="RATE_OUR_SHOP"}]
-[{$oViewConf->getTsRatingUrl()}]
-[{/if}]
-[{/block}]
-
 [{oxcontent ident="oxemailfooterplain"}]
