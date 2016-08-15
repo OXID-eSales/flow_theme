@@ -28,6 +28,7 @@ $aLang = array(
     'DD_SORT_DESC'                                          => 'absteigend',
     'DD_SORT_ASC'                                           => 'aufsteigend',
     'DD_CLOSE_MODAL'                                        => 'schließen',
+    'DD_DEMO_ADMIN_TOOL'                                    => 'Admin-Tool starten',
 
     // Form-Validation
     'DD_FORM_VALIDATION_VALIDEMAIL'                         => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
@@ -51,6 +52,9 @@ $aLang = array(
 
     // Startseite
     'MANUFACTURERSLIDER_SUBHEAD'                            => 'Wir präsentieren Ihnen hier unsere sorgsam ausgewählten Marken, deren Produkte Sie in unserem Shop finden.',
+    'START_BARGAIN_HEADER'                                  => 'Angebote der Woche',
+    'START_NEWEST_HEADER'                                   => 'Frisch eingetroffen',
+    'START_TOP_PRODUCTS_HEADER'                             => 'Topseller',
     'START_BARGAIN_SUBHEADER'                               => 'Sparen Sie bares Geld mit unseren aktuellen Schnäppchen!',
     'START_NEWEST_SUBHEADER'                                => 'Frischer geht es nicht. Gerade noch in der Kiste und nun schon im Shop.',
     'START_TOP_PRODUCTS_SUBHEADER'                          => 'Nur 2 Produkte, dafür aber die besten, die wir Euch bieten können.',
