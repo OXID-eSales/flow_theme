@@ -84,6 +84,15 @@
 
                         </ul>
 
+                        [{if 1==1 || $oView->isDemoShop()}]
+
+                            <a href="[{$oViewConf->getBaseDir()}]admin/" class="btn btn-sm btn-danger navbar-btn navbar-right visible-lg">
+                                [{oxmultilang ident="DD_DEMO_ADMIN_TOOL"}]
+                                <i class="fa fa-external-link" style="font-size: 80%;"></i>
+                            </a>
+
+                        [{/if}]
+
                     </div>
                 [{/block}]
 
