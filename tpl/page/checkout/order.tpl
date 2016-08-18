@@ -267,9 +267,12 @@
                             </div>
 
                             <div class="well well-sm">
+                                [{block name="checkout_order_btn_submit_bottom"}]
                                 <button type="submit" class="btn btn-lg btn-primary pull-right submitButton nextStep largeButton">
                                     <i class="fa fa-check"></i> [{oxmultilang ident="SUBMIT_ORDER"}]
                                 </button>
+                                [{/block}]
+
                                 <div class="clearfix"></div>
                             </div>
                         </form>
