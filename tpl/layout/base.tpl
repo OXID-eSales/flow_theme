@@ -210,9 +210,11 @@
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
 
         [{* Theme SVG icons *}]
-        <div style="display: none;">
-            [{include file="layout/svg/shoppingbag.svg" count=$oxcmp_basket->getItemsCount()}]
-        </div>
+        [{block name="theme_svg_icons"}]
+            <div style="display: none;">
+                [{include file="layout/svg/shoppingbag.svg" count=$oxcmp_basket->getItemsCount()}]
+            </div>
+        [{/block}]
 
         <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
             <div class="main-row">
