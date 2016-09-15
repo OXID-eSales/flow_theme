@@ -175,14 +175,6 @@
 [{block name="email_plain_order_ownerpaymentinfo"}]
 [{if $payment->oxuserpayments__oxpaymentsid->value != "oxempty"}][{oxmultilang ident="PAYMENT_INFORMATION"}]
 [{oxmultilang ident="PAYMENT_METHOD"}][{$payment->oxpayments__oxdesc->getRawValue()}] [{if $basket->getPaymentCosts()}]([{$basket->getFPaymentCosts()}] [{$currency->sign}])[{/if}]
-[{oxmultilang ident="PAYMENT_INFO_OFF"}]
-[{*
-[{foreach from=$payment->aDynValues item=value}]
-[{assign var="ident" value='EMAIL_ORDER_OWNER_HTML_'|cat:$value->name}]
-[{assign var="ident" value=$ident|oxupper}]
-[{oxmultilang ident=$ident}]: [{$value->value}]
-[{/foreach}]
-*}]
 [{/if}]
 [{/block}]
 

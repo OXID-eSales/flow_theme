@@ -447,8 +447,6 @@
         <h3 class="underline">[{oxmultilang ident="PAYMENT_INFORMATION"}]</h3>
         <p>
             <b>[{oxmultilang ident="PAYMENT_METHOD"}] [{$payment->oxpayments__oxdesc->value}] [{if $basket->getPaymentCosts()}]([{$basket->getFPaymentCosts()}] [{$currency->sign}])[{/if}]</b>
-            <br><br>
-            [{oxmultilang ident="PAYMENT_INFO_OFF"}]
         </p>
         <br>
     [{/if}]
