@@ -127,9 +127,9 @@
                                     <i class="fa fa-shopping-cart"></i>
                                 </button>
                             [{/oxhasrights}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
+                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="DETAILS"}]</a>
                         [{else}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
+                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="DETAILS"}]</a>
                         [{/if}]
                     </div>
                 </div>
