@@ -5,12 +5,7 @@
         <meta name="viewport" id="Viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=[{$oView->getCharSet()}]">
 
-        [{assign var="_sMetaTitlePrefix" value=$oView->getTitlePrefix()}]
-        [{assign var="_sMetaTitleSuffix" value=$oView->getTitleSuffix()}]
-        [{assign var="_sMetaTitlePageSuffix" value=$oView->getTitlePageSuffix()}]
-        [{assign var="_sMetaTitle" value=$oView->getTitle()}]
-        [{capture assign="sPageTitle"}][{$_sMetaTitlePrefix}][{if $_sMetaTitlePrefix && $_sMetaTitle}] | [{/if}][{$_sMetaTitle|strip_tags}][{if $_sMetaTitleSuffix && ($_sMetaTitlePrefix || $_sMetaTitle)}] | [{/if}][{$_sMetaTitleSuffix}] [{if $_sMetaTitlePageSuffix}] | [{$_sMetaTitlePageSuffix}][{/if}][{/capture}]
-
+        [{assign var=sPageTitle value=$oView->getPageTitle()}]
         <title>[{block name="head_title"}][{$sPageTitle}][{/block}]</title>
 
         [{block name="head_meta_robots"}]
