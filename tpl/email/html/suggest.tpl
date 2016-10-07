@@ -41,7 +41,7 @@
 </table>
 <br>
 
-<p>[{oxmultilang ident="EMAIL_SUGGEST_HTML_MENYGREETINGS"}] [{$userInfo->send_name|oxescape}]</p>
+<p>[{oxmultilang ident="MANY_GREETINGS"}] [{$userInfo->send_name|oxescape}]</p>
 <br>
 
 <p class="lead">

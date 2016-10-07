@@ -12,7 +12,7 @@
 
 [{$userinfo->send_message}]
 
-[{oxmultilang ident="EMAIL_SUGGEST_HTML_MENYGREETINGS"}] [{$userinfo->send_name}]
+[{oxmultilang ident="MANY_GREETINGS"}] [{$userinfo->send_name}]
 
 [{oxmultilang ident="RECOMMENDED_PRODUCTS"}]
 

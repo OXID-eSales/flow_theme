@@ -28,7 +28,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
-            <button class="btn btn-primary submitButton" type="submit" name="save" value="[{oxmultilang ident="PAGE_ACCOUNT_FORGOTPWD_UPDATEPASSWORD"}]">[{oxmultilang ident="PAGE_ACCOUNT_FORGOTPWD_UPDATEPASSWORD"}]</button>
+            <button class="btn btn-primary submitButton" type="submit" name="save" value="[{oxmultilang ident="CHANGE_PASSWORD"}]">[{oxmultilang ident="CHANGE_PASSWORD"}]</button>
         </div>
     </div>
 </form>
