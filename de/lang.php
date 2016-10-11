@@ -143,6 +143,8 @@ $aLang = array(
     'DD_DOWNLOADLINKS_HEADING'                              => 'Ihre Downloadlinks - Bestellung',
     'DD_SUGGEST_HEADING'                                    => 'Artikel-Empfehlung',
     'DD_WISHLIST_HEADING'                                   => 'Wunschzettel',
+
+    'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menü',
 );
 
 /*
