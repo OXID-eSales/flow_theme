@@ -18,7 +18,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                            </button><span class="visible-xs-inline">[{oxmultilang ident="ROLES_BEMAIN_UIROOTHEADER"}]</span>
+                            </button><span class="visible-xs-inline">[{oxmultilang ident="DD_ROLES_BEMAIN_UIROOTHEADER"}]</span>
                         [{/block}]
                     </div>
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
