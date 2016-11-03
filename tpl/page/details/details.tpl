@@ -1,13 +1,11 @@
 [{if !$blWorkaroundInclude}]
     [{capture append="oxidBlock_content"}]
-[{/if}]
-[{assign var="oConf" value=$oViewConf->getConfig()}]
-
-[{if !$blWorkaroundInclude}]
-    [{if $oxcmp_user}]
-        [{assign var="force_sid" value=$oView->getSidForWidget()}]
-    [{/if}]
-    [{oxid_include_widget cl="oxwArticleDetails" _parent=$oView->getClassName() nocookie=1 force_sid=$force_sid _navurlparams=$oViewConf->getNavUrlParams() _object=$oView->getProduct() anid=$oViewConf->getActArticleId() iPriceAlarmStatus=$oView->getPriceAlarmStatus() sorting=$oView->getSortingParameters() skipESIforUser=1}]
+        [{if $oxcmp_user}]
+            [{assign var="force_sid" value=$oView->getSidForWidget()}]
+        [{/if}]
+        [{oxid_include_widget cl="oxwArticleDetails" _parent=$oView->getClassName() nocookie=1 force_sid=$force_sid _navurlparams=$oViewConf->getNavUrlParams() _object=$oView->getProduct() anid=$oViewConf->getActArticleId() iPriceAlarmStatus=$oView->getPriceAlarmStatus() sorting=$oView->getSortingParameters() skipESIforUser=1}]
+    [{/capture}]
+    [{include file="layout/page.tpl"}]
 [{else}]
     [{assign var="oDetailsProduct" value=$oView->getProduct()}]
     [{assign var="oPictureProduct" value=$oView->getPicturesProduct()}]
@@ -70,9 +68,4 @@
             </div>
         </div>
     </div>
-[{/if}]
-
-[{if !$blWorkaroundInclude}]
-    [{/capture}]
-    [{include file="layout/page.tpl"}]
 [{/if}]
