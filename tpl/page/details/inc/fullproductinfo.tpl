@@ -12,7 +12,11 @@
                     <div class="spacer"></div>
                     <div class="widgetBox reviews">
                         <div class="h2 page-header">[{oxmultilang ident="WRITE_PRODUCT_REVIEW"}]</div>
-                        [{include file="widget/reviews/reviews.tpl"}]
+                        [{assign var="product" value=$oView->getProduct()}]
+                        [{if $oxcmp_user}]
+                            [{assign var="force_sid" value=$oView->getSidForWidget()}]
+                        [{/if}]
+                        [{oxid_include_widget cl="oxwReview" nocookie=1 force_sid=$force_sid _parent=$oViewConf->getTopActiveClassName() type=oxarticle anid=$product->oxarticles__oxnid->value aid=$product->oxarticles__oxid->value canrate=$oView->canRate() skipESIforUser=1}]
                     </div>
                 [{/if}]
             </div>
