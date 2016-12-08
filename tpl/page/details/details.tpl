@@ -54,7 +54,9 @@
                         [{/if}]
                     </div>
                     <div class="col-xs-3 text-center pager-current-page">
-                        [{oxmultilang ident="PRODUCT"}] [{$actCategory->iProductPos}] [{oxmultilang ident="OF"}] [{$actCategory->iCntOfProd}]
+                        [{if $actCategory->iProductPos}]
+                            [{oxmultilang ident="PRODUCT"}] [{$actCategory->iProductPos}] [{oxmultilang ident="OF"}] [{$actCategory->iCntOfProd}]
+                        [{/if}]
                     </div>
                     <div class="col-xs-3 text-right pager-next">
                         [{if $actCategory->nextProductLink}]
