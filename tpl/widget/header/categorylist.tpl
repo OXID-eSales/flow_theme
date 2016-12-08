@@ -10,7 +10,7 @@
         <nav id="mainnav" class="navbar navbar-default" role="navigation">
             <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
 
-                [{block name="dd_widget_header_categorylist_navbar_list"}]
+                [{block name="dd_widget_header_categorylist_navbar"}]
                     <div class="navbar-header">
                         [{block name="dd_widget_header_categorylist_navbar_header"}]
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
