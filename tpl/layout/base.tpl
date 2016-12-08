@@ -214,9 +214,7 @@
 
         [{* Theme SVG icons *}]
         [{block name="theme_svg_icons"}]
-        <div style="display: none;">
-            [{include file="layout/svg/shoppingbag.svg" count=$oxcmp_basket->getItemsCount()}]
-        </div>
+
         [{/block}]
 
         <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
