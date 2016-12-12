@@ -795,7 +795,7 @@
 			validemail: {
 				name: "Validemail",
 				type: "regex",
-				regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
+				regex: "^(.+?)\@(.+)\.(.+)$",
 				message: oFlow.i18n.DD_FORM_VALIDATION_VALIDEMAIL
 			},
 			passwordagain: {
