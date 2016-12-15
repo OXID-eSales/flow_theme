@@ -25,7 +25,7 @@ git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
 
 You should now have a new folder ``DOCUMENT_ROOT/Application/views/flow``.
 
-### Step 3: Prepare the database
+### Step 3: Prepare the database (< version 6.0 only)
 
 In order to install the theme options, import the ``setup.sql`` into your database.
 
