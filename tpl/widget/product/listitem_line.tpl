@@ -85,7 +85,7 @@
                 [{block name="widget_product_listitem_line_attributes"}]
                     <div class="attributes">
                         [{assign var="oAttributes" value=$product->getAttributes()}]
-                        [{if $oAttributes}]
+                        [{if $oAttributes|@count}]
                             <strong>[{oxmultilang ident="SPECIFICATION"}]</strong>
                             <ul class="list-unstyled attributes small">
                                 [{foreach from=$oAttributes item="oAttr" name="attribute"}]
