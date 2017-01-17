@@ -179,6 +179,9 @@ Flow.setPhotoSwipe = function()
         // Initializes and opens PhotoSwipe
         var gallery = new PhotoSwipe( this.pswp, PhotoSwipeUI_Default, this.items, options );
         gallery.init();
+        gallery.listen('destroy', function() {
+            setTimeout(function() { $('.pswp').removeClass().addClass('pswp'); }, 10);
+        });
     };
 
     return obj;
