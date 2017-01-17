@@ -1,3 +1,8 @@
+
+[{if $oViewConf->getTopActionClassName() == 'details'}]
+   [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassName() nocookie=1}]
+[{/if}]
+
 [{block name="footer_main"}]
     [{assign var="blShowFullFooter" value=$oView->showSearch()}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
