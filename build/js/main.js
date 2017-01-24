@@ -156,7 +156,9 @@ $( function ()
             }
         ).on( 'click', 'li.dropdown', function ( e )
             {
-                if ( $window.width() >= 760 ) e.stopPropagation();
+                if ( $window.width() >= 760 ) {
+                    e.stopPropagation();
+                }
             }
         );
 
