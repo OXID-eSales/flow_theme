@@ -1,5 +1,5 @@
 [{if $oView->isEnabled() && $smarty.cookies.displayedCookiesNotification != '1'}]
-    [{oxscript include="js/libs/cookie/jquery.cookie.min.js"}]
+    [{oxscript include="js/libs/jquery.cookie.min.js"}]
     [{oxscript add="$.cookie('testing', 'yes'); if(!$.cookie('testing')) $('#cookieNote').hide(); else{ $('#cookieNote').show(); $.cookie('testing', null, -1);}"}]
     [{oxscript include="js/widgets/oxcookienote.min.js"}]
     <div id="cookieNote">
