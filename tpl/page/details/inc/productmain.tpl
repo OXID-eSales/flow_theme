@@ -56,7 +56,7 @@
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
                 [{oxscript include="js/libs/photoswipe-ui-default.min.js" priority=8}]
-                [{oxscript add="$( document ).ready( function() { if( !window.isMobileDevice() ) Flow.initDetailsEvents(); });"}]
+                [{oxscript add="\$( document ).ready( function() { Flow.initDetailsEvents(); });"}]
 
                 [{* Wird ausgeführt, wenn es sich um einen AJAX-Request handelt *}]
                 [{if $blWorkaroundInclude}]
