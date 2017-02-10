@@ -12,6 +12,7 @@
         "GPL-3.0",
         "proprietary"
     ],
+    "minimum-stability": "dev",
     "extra": {
         "oxideshop": {
             "target-directory": "flow",
