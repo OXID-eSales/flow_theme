@@ -45,7 +45,7 @@ The ``out`` folder can be prepared in two possible ways. The first option is to 
 
 Link the theme's ``out`` directory to the ``out`` directory of the shop:
 
-``ln -s ../Application/views/flow/out/flow ../../out/flow``
+``ln -s ../application/views/flow/out/flow ../../out/flow``
 
 #### Option 2: Copying
 
