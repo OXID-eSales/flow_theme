@@ -115,8 +115,8 @@
                         [{block name="checkout_basketcontents_basketitem_unitprice"}]
                             [{* product price *}]
                             <span class="unitPrice">
-                                [{if $basketitem->getFUnitPrice()}]
-                                    <small>[{oxmultilang ident="UNIT_PRICE"}]: [{$basketitem->getFUnitPrice()}]&nbsp;[{$currency->sign}]</small>
+                                [{if $basketitem->getUnitPrice()}]
+                                    <small>[{oxmultilang ident="UNIT_PRICE"}]: [{oxprice price=$basketitem->getUnitPrice() currency=$currency}]</small>
                                 [{/if}]
                             </span>
                         [{/block}]
@@ -147,7 +147,7 @@
                         [{block name="checkout_basketcontents_basketitem_totalprice"}]
                             [{* product quantity * price *}]
                             <div class="totalPrice text-right">
-                                <strong>[{$basketitem->getFTotalPrice()}]&nbsp;[{$currency->sign}]</strong>
+                                <strong>[{oxprice price=$basketitem->getPrice() currency=$currency}]</strong>
                             </div>
                         [{/block}]
                     </div>
