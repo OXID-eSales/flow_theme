@@ -204,7 +204,10 @@
     </head>
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
 
-        <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
+    [{* Theme SVG icons block *}]
+    [{block name="theme_svg_icons"}][{/block}]
+
+    <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
             <div class="main-row">
                 [{foreach from=$oxidBlock_pageBody item="_block"}]
                     [{$_block}]
