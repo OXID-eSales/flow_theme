@@ -5,7 +5,7 @@
 *Flow* is a responsive theme for all OXID eShop editions from version 4.10 (Community Edition, Professional Edition) or 5.3 (Enterprise Edition) on. It will become the default theme from OXID eShop version 6 on, and will replace the Azure theme.
 
 
-##Installation
+## Installation
 
 ### Step 1: Select the appropriate branch
 
