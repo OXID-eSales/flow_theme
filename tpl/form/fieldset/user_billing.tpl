@@ -24,11 +24,15 @@
 [{else}]
     [{assign var="iBirthdayYear" value=0}]
 [{/if}]
-
+[{if isset( $invadr.oxuser__oxsal )}]
+    [{assign var="oxuser__oxsal" value=$invadr.oxuser__oxsal}]
+[{else}]
+    [{assign var="oxuser__oxsal" value=$oxcmp_user->oxuser__oxsal->value}]
+[{/if}]
 <div class="form-group">
     <label class="control-label col-lg-3[{if $oView->isFieldRequired(oxuser__oxsal)}] req[{/if}]" for="invadr_oxuser__oxfname">[{oxmultilang ident="TITLE"}]</label>
     <div class="col-lg-9">
-        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxcmp_user->oxuser__oxsal->value class="form-control selectpicker" id="invadr_oxuser__oxfname"}]
+        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxuser__oxsal class="form-control selectpicker" id="invadr_oxuser__oxfname"}]
     </div>
 </div>
 
