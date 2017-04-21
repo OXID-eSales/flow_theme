@@ -57,7 +57,7 @@ $aLang = array(
     'START_TOP_PRODUCTS_HEADER'                             => 'Top seller',
     'START_BARGAIN_SUBHEADER'                               => 'Save money with our current bargains!',
     'START_NEWEST_SUBHEADER'                                => 'Fresh as it gets. One minute in the box and now already in store.',
-    'START_TOP_PRODUCTS_SUBHEADER'                          => 'Only 2 products, but the best we can offer you.',
+    'START_TOP_PRODUCTS_SUBHEADER'                          => 'Only %s products, but the best we can offer you.',
 
     // Contact form
     'DD_CONTACT_PAGE_HEADING'                               => 'Contact us!',
