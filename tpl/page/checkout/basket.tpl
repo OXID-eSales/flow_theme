@@ -24,7 +24,7 @@
             [{/block}]
         [{else}]
             [{block name="checkout_basket_next_step_top"}]
-                <div class="well well-sm clear cart-buttons">
+                <div class="well well-sm cart-buttons">
                     [{block name="checkout_basket_backtoshop_top"}]
                         [{if $oView->showBackToShop()}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
@@ -66,7 +66,7 @@
             </div>
 
             [{block name="checkout_basket_next_step_bottom"}]
-                <div class="well well-sm clear cart-buttons">
+                <div class="well well-sm cart-buttons">
                     [{block name="checkout_basket_loworderprice_bottom"}][{/block}]
 
                     [{block name="checkout_basket_backtoshop_bottom"}]
