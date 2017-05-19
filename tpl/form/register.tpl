@@ -22,7 +22,7 @@
                 <input type="hidden" name="ord_agb" value="0">
                 <div class="checkbox">
                     <label>
-                        <input id="orderConfirmAgbBottom" type="checkbox" class="checkbox" name="ord_agb" value="1">
+                        <input id="orderConfirmAgbBottom" type="checkbox" class="checkbox" name="ord_agb" [{if $smarty.post.ord_agb == 1 }]checked="checked"[{/if}] value="1">
                         [{oxifcontent ident="oxagb" object="oCont"}]
                             [{oxmultilang ident="FORM_REGISTER_IAGREETOTERMS1"}]
                                 <a href="#" data-toggle="modal" data-target="#popup1">[{oxmultilang ident="TERMS_AND_CONDITIONS"}]</a>
