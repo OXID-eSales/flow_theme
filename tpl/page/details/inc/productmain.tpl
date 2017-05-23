@@ -299,11 +299,9 @@
 
                     [{oxhasrights ident="TOBASKET"}]
                         [{if $oDetailsProduct->isBuyable()}]
-                            <span class="deliverytime">
-                                [{block name="details_productmain_deliverytime"}]
-                                    [{include file="page/details/inc/deliverytime.tpl"}]
-                                [{/block}]
-                            </span>
+							[{block name="details_productmain_deliverytime"}]
+								[{include file="page/details/inc/deliverytime.tpl"}]
+							[{/block}]
                         [{/if}]
                     [{/oxhasrights}]
 
