@@ -234,7 +234,7 @@
                 [{foreach from=$basket->getProductVats() item=VATitem key=key}]
                     <tr valign="top" bgcolor="#ebebeb">
                         <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</td>
-                        <td align="right" class="odd text-right">[{oxprice price=$VATitem currency=$currency }]</td>
+                        <td align="right" class="odd text-right">[{ $VATitem }] [{$currency->sign}]</td>
                     </tr>
                 [{/foreach}]
             [{/block}]
