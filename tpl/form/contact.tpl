@@ -20,19 +20,19 @@
     <div class="form-group[{if $aErrors.oxuser__oxfname}] oxInValid[{/if}]">
         <label class="req control-label col-lg-2">[{oxmultilang ident="FIRST_NAME"}]</label>
         <div class="col-lg-10 controls">
-            <input type="text" name="editval[oxuser__oxfname]" size="70" maxlength="40" value="[{$editval.oxuser__oxfname}]" class="form-control" required="required">
+            <input type="text" name="editval[oxuser__oxfname]" size="70" maxlength="255" value="[{$editval.oxuser__oxfname}]" class="form-control" required="required">
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxuser__oxlname}] oxInValid[{/if}]">
         <label class="req control-label col-lg-2">[{oxmultilang ident="LAST_NAME"}]</label>
         <div class="col-lg-10 controls">
-            <input type="text" name="editval[oxuser__oxlname]" size=70 maxlength=40 value="[{$editval.oxuser__oxlname}]" class="form-control" required="required">
+            <input type="text" name="editval[oxuser__oxlname]" size=70 maxlength=255 value="[{$editval.oxuser__oxlname}]" class="form-control" required="required">
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
         <label class="req control-label col-lg-2">[{oxmultilang ident="EMAIL"}]</label>
         <div class="col-lg-10 controls">
-            <input id="contactEmail" type="email" name="editval[oxuser__oxusername]"  size=70 maxlength=40 value="[{$editval.oxuser__oxusername}]" class="form-control" required="required">
+            <input id="contactEmail" type="email" name="editval[oxuser__oxusername]"  size=70 maxlength=255 value="[{$editval.oxuser__oxusername}]" class="form-control" required="required">
         </div>
     </div>
     <div class="form-group[{if $aErrors && !$oView->getContactSubject()}] oxInValid[{/if}]">

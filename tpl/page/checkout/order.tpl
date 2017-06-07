@@ -266,7 +266,7 @@
                                 <input type="hidden" name="oxserviceproductsagreement" value="0">
                             </div>
 
-                            <div class="well well-sm">
+                            <div class="well well-sm cart-buttons">
                                 [{block name="checkout_order_btn_submit_bottom"}]
                                 <button type="submit" class="btn btn-lg btn-primary pull-right submitButton nextStep largeButton">
                                     <i class="fa fa-check"></i> [{oxmultilang ident="SUBMIT_ORDER"}]

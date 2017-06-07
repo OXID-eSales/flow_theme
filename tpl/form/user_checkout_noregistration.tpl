@@ -43,7 +43,7 @@
             </div>
 
             [{block name="user_checkout_noregistration_next_step_top"}]
-                <div class="well well-sm">
+                <div class="well well-sm cart-buttons">
                     <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
                     <div class="clearfix"></div>
                 </div>
@@ -93,7 +93,7 @@
             [{oxscript add="$('#showShipAddress').change( function() { $('#shippingAddress').toggle($(this).is(':not(:checked)'));});"}]
 
             [{block name="user_checkout_noregistration_next_step_bottom"}]
-                <div class="well well-sm">
+                <div class="well well-sm cart-buttons">
                     <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-default pull-left prevStep submitButton largeButton" id="userBackStepBottom">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
                     <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}]</button>
                     <div class="clearfix"></div>

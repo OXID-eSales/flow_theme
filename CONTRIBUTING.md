@@ -1,4 +1,4 @@
-###How to Contribute
+### How to Contribute
 
 Before contributing for the first time, you must <a href="https://gist.github.com/OXID-Admin/6df6ed126d074a54507d">sign the Contributor License Agreement</a>.
 You can find more information about it on the FAQ page OXID Contribution and Contributor Agreement FAQ:
