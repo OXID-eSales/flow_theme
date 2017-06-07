@@ -8,17 +8,19 @@
 
 
     <div class="page-header">
-        <h1 class="pull-left">[{$search_head}]</h1>
-        [{assign var='rsslinks' value=$oView->getRssLinks()}]
-        [{if $rsslinks.searchArticles}]
-            [{assign var="imgUrl" value=$oViewConf->getImageUrl('rss.png')}]
-            <small class="pull-right">
-                <a class="rss" id="rssSearchProducts" target="_blank" href="[{$rsslinks.searchArticles.link}]" title="[{$rsslinks.searchArticles.title}]">
-                    <i class="fa fa-rss"></i> [{$rsslinks.searchArticles.title}]
-                </a>
-            </small>
-        [{/if}]
-        <div class="clearfix"></div>
+        [{block name="search_header"}]
+            <h1 class="pull-left">[{$search_head}]</h1>
+            [{assign var='rsslinks' value=$oView->getRssLinks()}]
+            [{if $rsslinks.searchArticles}]
+                [{assign var="imgUrl" value=$oViewConf->getImageUrl('rss.png')}]
+                <small class="pull-right">
+                    <a class="rss" id="rssSearchProducts" target="_blank" href="[{$rsslinks.searchArticles.link}]" title="[{$rsslinks.searchArticles.title}]">
+                        <i class="fa fa-rss"></i> [{$rsslinks.searchArticles.title}]
+                    </a>
+                </small>
+            [{/if}]
+            <div class="clearfix"></div>
+        [{/block}]
     </div>
     [{block name="search_results"}]
         [{if $oView->getArticleCount()}]
