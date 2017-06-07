@@ -27,7 +27,4 @@
     [{/block}]
 [{/if}]
 
-[{block name="email_html_senddownloadlinks_infofooter"}]
-    [{oxmultilang ident="YOUR_TEAM" args=$shop->oxshops__oxname->value}]
-[{/block}]
-[{include file="email/html/footer.tpl"}]
+[{oxcontent ident="oxemailfooterplain"}]
