@@ -312,7 +312,7 @@ $( function ()
             $oNavItems.each( function ()
                 {
                     var $this = $( this );
-                    iNavItemsWidth += $this.outerWidth();
+                    iNavItemsWidth += $this.outerWidth(true);
 
                     if ( iNavItemsWidth > iMainNavWidth )
                     {
