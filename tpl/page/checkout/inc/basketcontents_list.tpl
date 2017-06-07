@@ -25,11 +25,11 @@
                             [{if $editable}]</a>[{/if}]
                             [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
 
-                            <div class="smallFont">
+                            <div class="small">
                                 [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
                             </div>
 
-                            <div class="smallFont">
+                            <div class="small">
                                 [{assign var=sep value=", "}]
                                 [{assign var=result value=""}]
                                 [{foreach key="oArtAttributes" from=$oAttributes->getArray() item="oAttr" name="attributeContents"}]
