@@ -16,7 +16,10 @@
     "extra": {
         "oxideshop": {
             "target-directory": "flow",
-            "assets-directory": "out/flow"
+            "assets-directory": "out/flow",
+            "blacklist-filter": [
+                "**/*.md"
+            ]
         }
     }
 }
