@@ -17,29 +17,29 @@
 						[{if $oView->getClassName() == 'alist'}]
 							<strong>[{oxmultilang ident="DD_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
 						[{/if}]
-							[{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
-								[{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]
-								<div class="btn-group">
-									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
-										<strong>[{$oFilterAttr->getTitle()}]:</strong>
-										[{if $sActiveValue}]
-											[{$sActiveValue}]
-										[{else}]
-											[{oxmultilang ident="PLEASE_CHOOSE"}]
-										[{/if}]
-										<span class="caret"></span>
-									</button>
-									<input type="hidden" name="attrfilter[[{$sAttrID}]]" value="[{$sActiveValue}]">
-									<ul class="dropdown-menu" role="menu">
-										[{if $sActiveValue}]
-											<li><a data-selection-id="" href="#">[{oxmultilang ident="PLEASE_CHOOSE"}]</a></li>
-										[{/if}]
-										[{foreach from=$oFilterAttr->getValues() item=sValue}]
-											<li><a data-selection-id="[{$sValue}]" href="#" [{if $sActiveValue == $sValue}]class="selected"[{/if}] >[{$sValue}]</a></li>
-										[{/foreach}]
-									</ul>
-								</div>
-							[{/foreach}]
+						[{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
+							[{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]
+							<div class="btn-group">
+								<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+									<strong>[{$oFilterAttr->getTitle()}]:</strong>
+									[{if $sActiveValue}]
+										[{$sActiveValue}]
+									[{else}]
+										[{oxmultilang ident="PLEASE_CHOOSE"}]
+									[{/if}]
+									<span class="caret"></span>
+								</button>
+								<input type="hidden" name="attrfilter[[{$sAttrID}]]" value="[{$sActiveValue}]">
+								<ul class="dropdown-menu" role="menu">
+									[{if $sActiveValue}]
+										<li><a data-selection-id="" href="#">[{oxmultilang ident="PLEASE_CHOOSE"}]</a></li>
+									[{/if}]
+									[{foreach from=$oFilterAttr->getValues() item=sValue}]
+										<li><a data-selection-id="[{$sValue}]" href="#" [{if $sActiveValue == $sValue}]class="selected"[{/if}] >[{$sValue}]</a></li>
+									[{/foreach}]
+								</ul>
+							</div>
+						[{/foreach}]
 					</div>
 				</form>
 			</div>
