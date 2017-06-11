@@ -245,7 +245,7 @@
 
         [{if $oViewConf->isTplBlocksDebugMode()}]
             [{oxscript include="js/widgets/oxblockdebug.min.js"}]
-            [{oxscript add="$( 'hr.debugBlocksStart' ).oxBlockDebug();"}]
+            [{oxscript add="$( 'body' ).oxBlockDebug();"}]
         [{/if}]
 
         <!--[if gte IE 9]><style type="text/css">.gradient {filter:none;}</style><![endif]-->
