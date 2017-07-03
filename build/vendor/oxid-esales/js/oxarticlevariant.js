@@ -53,7 +53,7 @@
                     'iconPosEl' : $("#variants .dropDown"),
                     'additionalData' : aOptions,
                     'onSuccess' : function(r) {
-                        $( contentTarget ).html( r );
+                        $( contentTarget ).parent().html( r );
                         if ( typeof WidgetsHandler !== 'undefined') {
                             WidgetsHandler.reloadWidget('oxwarticledetails');
                             WidgetsHandler.reloadWidget('oxwrating');
