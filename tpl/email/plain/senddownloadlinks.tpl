@@ -27,4 +27,6 @@
     [{/block}]
 [{/if}]
 
-[{oxcontent ident="oxemailfooterplain"}]
+[{block name="email_html_senddownloadlinks_infofooter"}]
+    [{oxcontent ident="oxemailfooterplain"}]
+[{/block}]
