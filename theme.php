@@ -27,7 +27,7 @@ $aTheme = array(
     'title'        => 'Flow',
     'description'  => 'Flow is OXID&apos;s official responsive theme based on the CSS framework Bootstrap 3.',
     'thumbnail'    => 'theme.jpg',
-    'version'      => '1.0.0',
+    'version'      => '1.0.1',
     'author'       => '<a href="http://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
     //Define the following variables for the custom child themes:
     //'parentTheme'    => 'flow',
