@@ -1,3 +1,6 @@
+<div style="display: none;">
+    [{include file="layout/svg/shoppingbag.svg" count=$oxcmp_basket->getItemsCount()}]
+</div>
 <div class="btn-group minibasket-menu">
     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]">
         [{block name="dd_layout_page_header_icon_menu_minibasket_button"}]
