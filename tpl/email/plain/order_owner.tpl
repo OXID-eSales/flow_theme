@@ -55,7 +55,7 @@
 [{block name="email_plain_order_ownernodiscountproductvats"}]
 [{* VATs *}]
 [{foreach from=$basket->getProductVats() item=VATitem key=key}]
-[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_PLUSTAX1"}] [{$key}][{oxmultilang ident="SHIPPING_VAT2"}] [{$VATitem}] [{$currency->name}]
+[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}] [{$VATitem}] [{$currency->name}]
 [{/foreach}]
 [{/block}]
 [{block name="email_plain_order_nodiscountownertotalgross"}]
