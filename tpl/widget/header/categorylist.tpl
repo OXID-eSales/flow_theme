@@ -68,12 +68,7 @@
 
                         <ul class="nav navbar-nav navbar-right fixed-header-actions">
 
-                            <li>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" rel="nofollow">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    [{if $oxcmp_basket->getItemsCount() > 0}][{ $oxcmp_basket->getItemsCount() }][{/if}]
-                                </a>
-                            </li>
+                            [{include file="widget/header/menubasket.tpl"}]
 
                             <li>
                                 <a href="javascript:void(null)" class="search-toggle" rel="nofollow">
