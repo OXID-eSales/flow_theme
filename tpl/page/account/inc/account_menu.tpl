@@ -19,11 +19,11 @@
                 </li>
             [{/if}]
             <li class="list-group-item[{if $active_link == "noticelist"}] active[{/if}]">
-                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_noticelist"}]" title="[{oxmultilang ident="MY_WISH_LIST"}]">[{oxmultilang ident="MY_WISH_LIST"}][{if $oxcmp_user->getNoticeListArtCnt() > 0}] <span class="badge">[{$oxcmp_user->getNoticeListArtCnt()}]</span>[{/if}]</a>
+                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_noticelist"}]" title="[{oxmultilang ident="MY_WISH_LIST"}]">[{oxmultilang ident="MY_WISH_LIST"}][{if $oxcmp_user && $oxcmp_user->getNoticeListArtCnt() > 0}] <span class="badge">[{$oxcmp_user->getNoticeListArtCnt()}]</span>[{/if}]</a>
             </li>
             [{if $oViewConf->getShowWishlist()}]
                 <li class="list-group-item[{if $active_link == "wishlist"}] active[{/if}]">
-                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_wishlist"}]" title="[{oxmultilang ident="MY_GIFT_REGISTRY"}]">[{oxmultilang ident="MY_GIFT_REGISTRY"}][{if $oxcmp_user->getWishListArtCnt() > 0}] <span class="badge">[{$oxcmp_user->getWishListArtCnt()}]</span>[{/if}]</a>
+                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_wishlist"}]" title="[{oxmultilang ident="MY_GIFT_REGISTRY"}]">[{oxmultilang ident="MY_GIFT_REGISTRY"}][{if $oxcmp_user && $oxcmp_user->getWishListArtCnt() > 0}] <span class="badge">[{$oxcmp_user->getWishListArtCnt()}]</span>[{/if}]</a>
                 </li>
             [{/if}]
             [{if $oViewConf->getShowListmania()}]
