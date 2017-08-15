@@ -68,7 +68,9 @@
 
                         <ul class="nav navbar-nav navbar-right fixed-header-actions">
 
-                            [{include file="widget/header/menubasket.tpl"}]
+                            [{block name="categorylist_navbar_minibasket"}]
+                                [{include file="widget/header/menubasket.tpl"}]
+                            [{/block}]
 
                             <li>
                                 <a href="javascript:void(null)" class="search-toggle" rel="nofollow">
