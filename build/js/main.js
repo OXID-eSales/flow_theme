@@ -218,8 +218,8 @@ $( function ()
                     }
                     else
                     {
-                        $this.removeClass( 'fs-caret-up' );
-                        $this.attr( 'class', 'fs-caret-down ' + $this.attr( 'class' ) );
+                        $this.removeClass( 'fa-caret-up' );
+                        $this.attr( 'class', 'fa-caret-down ' + $this.attr( 'class' ) );
                         $oCategoryTreeBox.removeAttr( 'style' );
                     }
                 }
