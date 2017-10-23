@@ -256,7 +256,7 @@ $aTheme = array(
             'group' => 'footer',
             'name'  => 'sBlogUrl',
             'type'  => 'str',
-            'value' => 'http://blog.oxid-esales.com',
+            'value' => 'https://wordpress.org',
         ),
         array(
             'group' => 'images',
@@ -305,7 +305,7 @@ $aTheme = array(
             'group' => 'footer',
             'name'  => 'sFacebookUrl',
             'type'  => 'str',
-            'value' => 'https://www.facebook.com/oxidesales',
+            'value' => 'https://www.facebook.com',
         ),
         array(
             'group' => 'favicons',
@@ -371,7 +371,7 @@ $aTheme = array(
             'group' => 'footer',
             'name'  => 'sGooglePlusUrl',
             'type'  => 'str',
-            'value' => 'https://plus.google.com/114133952363540971062',
+            'value' => 'https://plus.google.com',
         ),
         array(
             'group' => 'googlets',
@@ -462,13 +462,13 @@ $aTheme = array(
             'group' => 'footer',
             'name'  => 'sTwitterUrl',
             'type'  => 'str',
-            'value' => 'https://twitter.com/OXID_eSales',
+            'value' => 'https://twitter.com',
         ),
         array(
             'group' => 'footer',
             'name'  => 'sYouTubeUrl',
             'type'  => 'str',
-            'value' => 'https://www.youtube.com/user/oxidesales',
+            'value' => 'https://www.youtube.com',
         ),
         array(
             'group' => 'images',
