@@ -68,8 +68,8 @@ instructions (https://nodejs.org/en/download/package-manager/). Example of
 Installation on ubuntu system:
 
 	```
-	curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-	sudo apt-get install -y nodejs
+	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+	sudo apt-get install -y nodejs npm nodejs-legacy
 	```
 
 2. Install ``grunt`` globally. Example:
