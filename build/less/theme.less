@@ -274,6 +274,11 @@ body.fixed-header {
             margin-top: (@navbar-height + 2) * -1;
             box-shadow: @ox-mainnav-fixed-shadow;
 
+            &.fullviewlayout {
+                left: 0;
+                right: 0;
+            }
+
             &.fadeIn {
                 background-color: fade( @navbar-default-bg, 95% );
                 margin-top: 0;
