@@ -139,12 +139,6 @@ $aLang = array(
     'DD_WISHLIST_HEADING'                                   => 'Wunschzettel',
 
     'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menü',
-
-    // Preisalarm
-    'PAGE_DETAILS_THANKYOUMESSAGE1'                         => "Vielen Dank für Ihre Nachricht an",
-    'PAGE_DETAILS_THANKYOUMESSAGE2'                         => ".",
-    'PAGE_DETAILS_THANKYOUMESSAGE3'                         => "Sie bekommen eine Nachricht von uns sobald der Preis unter",
-    'PAGE_DETAILS_THANKYOUMESSAGE4'                         => "fällt.",
 );
 
 /*

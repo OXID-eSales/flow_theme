@@ -139,12 +139,6 @@ $aLang = array(
     'DD_WISHLIST_HEADING'                                   => 'Wishlist',
 
     'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menu',
-
-    // Price alert
-    'PAGE_DETAILS_THANKYOUMESSAGE1'                         => "Thank you.",
-    'PAGE_DETAILS_THANKYOUMESSAGE2'                         => " appreciates your comments.",
-    'PAGE_DETAILS_THANKYOUMESSAGE3'                         => "We will inform you as soon as the price falls below",
-    'PAGE_DETAILS_THANKYOUMESSAGE4'                         => ".",
 );
 
 /*
