@@ -111,12 +111,6 @@ $aTheme = array(
         ),
         array(
             'group' => 'footer',
-            'name'  => 'blFooterShowGuestbook',
-            'type'  => 'bool',
-            'value' => 1,
-        ),
-        array(
-            'group' => 'footer',
             'name'  => 'blFooterShowHelp',
             'type'  => 'bool',
             'value' => 1,
