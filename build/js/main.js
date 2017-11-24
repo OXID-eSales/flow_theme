@@ -227,7 +227,7 @@ $( function ()
         /* *********************************
          * Variant selection in lists
          * *********************************/
-        var $oSelectionLists = $( '.selectorsBox' );
+        var $oSelectionLists = $( '.listDetails .selectorsBox' );
 
         if ( $oSelectionLists.length )
         {
