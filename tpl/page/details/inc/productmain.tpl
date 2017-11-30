@@ -124,6 +124,7 @@
                 <div class="productMainInfo[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]">
 
                     [{* additional info *}]
+                    [{oxhasrights ident="SHOWARTICLEPRICE"}]
                     <div class="additionalInfo clearfix">
                         [{assign var="oUnitPrice" value=$oDetailsProduct->getUnitPrice()}]
                         [{block name="details_productmain_priceperunit"}]
@@ -132,6 +133,7 @@
                             [{/if}]
                         [{/block}]
                     </div>
+                    [{/oxhasrights}]
 
                     [{if $oDetailsProduct->oxarticles__oxweight->value}]
                         <div class="weight">
