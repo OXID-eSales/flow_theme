@@ -56,6 +56,7 @@
                             </div>
                             <div class="panel-body">
                                 <strong>[{oxmultilang ident="CART"}]</strong>
+                                [{block name="account_order_history_cart_items"}]
                                 <ol class="list-unstyled">
                                     [{foreach from=$order->getOrderArticles(true) item=orderitem name=testOrderItem}]
                                         [{assign var=sArticleId value=$orderitem->oxorderarticles__oxartid->value}]
@@ -87,6 +88,7 @@
                                         </li>
                                     [{/foreach}]
                                 </ol>
+                                [{/block}]
                             </div>
                         </div>
                     </li>
