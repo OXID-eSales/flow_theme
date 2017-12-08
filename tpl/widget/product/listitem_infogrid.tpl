@@ -104,7 +104,7 @@
 
                                     [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
                                         <span class="oldPrice text-muted">
-                                            <del>[{$product->getFTPrice()}] [{$currency->sign}]</del>
+                                            <del>[{oxprice price=$tprice currency=$currency}]</del>
                                         </span>
                                     [{/if}]
 
@@ -114,18 +114,18 @@
                                             [{if $product->isRangePrice()}]
                                                 [{oxmultilang ident="PRICE_FROM"}]
                                                 [{if !$product->isParentNotBuyable()}]
-                                                    [{$product->getFMinPrice()}]
+                                                    [{assign var=dPrice value=$product->getFMinPrice()}]
                                                 [{else}]
-                                                    [{$product->getFVarMinPrice()}]
+                                                    [{assign var=dPrice value=$product->getFVarMinPrice()}]
                                                 [{/if}]
                                             [{else}]
                                                 [{if !$product->isParentNotBuyable()}]
-                                                    [{$product->getFPrice()}]
+                                                    [{assign var=dPrice value=$product->getFPrice()}]
                                                 [{else}]
-                                                    [{$product->getFVarMinPrice()}]
+                                                    [{assign var=dPrice value=$product->getFVarMinPrice()}]
                                                 [{/if}]
                                             [{/if}]
-                                            [{$currency->sign}]
+                                            [{oxprice price=$dPrice currency=$currency}]
                                             [{if $oView->isVatIncluded()}]
                                                 [{if !($product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $product->getSelections(1)) || $product->getVariants())}]*[{/if}]
                                             [{/if}]
