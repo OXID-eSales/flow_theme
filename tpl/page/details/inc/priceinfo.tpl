@@ -18,7 +18,10 @@
                             [{if $priceItem->oxprice2article__oxaddperc->value}]
                                 [{$priceItem->oxprice2article__oxaddperc->value}]% [{oxmultilang ident="DISCOUNT"}]
                             [{else}]
-                                [{$priceItem->fbrutprice}] [{$currency->sign}]
+                                <strong>[{$priceItem->fbrutprice}] [{$currency->sign}]</strong>
+                                [{if $oDetailsProduct->getUnitName()}]
+                                    &nbsp;([{$priceItem->fbrutamountprice}] [{$currency->sign}] / [{$oDetailsProduct->getUnitName()}])
+                                [{/if}]
                             [{/if}]
                         </dd>
                     [{/foreach}]
