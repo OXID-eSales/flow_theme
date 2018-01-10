@@ -9,10 +9,11 @@
 
 ### Step 1: Select the appropriate branch
 
-Currently there are two main branches for *Flow*:
+Currently there are three main branches for *Flow*:
 
 * Branch ``b-1.0`` contains *Flow* for OXID eShop version 4.10/5.3
-* Branch ``master`` contain *Flow* for OXID eShop version 6.0 or higher
+* Branch ``b-2.x`` contains *Flow* for OXID eShop version 6.0.0
+* Branch ``master`` contain *Flow* for OXID eShop master (latest development) version
 
 ### Step 2: Get the source code
 
