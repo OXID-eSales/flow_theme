@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 
 ### Fixed
+- Cover unit price with rights to see check [0006687](https://bugs.oxid-esales.com/view.php?id=6687)
 
 ### Security
 
