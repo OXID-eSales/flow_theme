@@ -13,7 +13,7 @@ Currently there are three main branches for *Flow*:
 
 * Branch ``b-1.0`` contains *Flow* for OXID eShop version 4.10/5.3
 * Branch ``b-2.x`` contains *Flow* for OXID eShop version 6.0.0
-* Branch ``master`` contain *Flow* for OXID eShop master (latest development) version
+* Branch ``master`` contain *Flow* for OXID eShop b-6.x branch latest development
 
 ### Step 2: Get the source code
 
