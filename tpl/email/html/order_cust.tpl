@@ -373,7 +373,8 @@
                         [{if $basket->isProportionalCalculationOn()}]
                             <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
                         [{else}]
-                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getPayCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
+                            [{assign var="iPayCostVatPercent" value=$basket->getPayCostVatPercent()}]
+                            <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$iPayCostVatPercent}]</td>
                         [{/if}]
                         <td align="right" class="odd text-right">[{$basket->getPayCostVat()}] [{$currency->sign}]</td>
                     </tr>
@@ -420,7 +421,8 @@
                             [{if $basket->isProportionalCalculationOn()}]
                                 <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
                             [{else}]
-                                <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getGiftCardCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]:</td>
+                                [{assign var="iGiftCardCostVatPercent" value=$basket->getGiftCardCostVatPercent()}]
+                                <td align="right" colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$iGiftCardCostVatPercent}]</td>
                             [{/if}]
                             <td align="right" class="odd text-right">[{$basket->getGiftCardCostVat()}] [{$currency->sign}]</td>
                         </tr>
