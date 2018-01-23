@@ -233,8 +233,8 @@
                 <!-- VATs -->
                 [{foreach from=$basket->getProductVats() item=VATitem key=key}]
                     <tr valign="top" bgcolor="#ebebeb">
-                        <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_PLUSTAX1"}] [{$key}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
-                        <td align="right" class="odd text-right">[{$VATitem}] [{$currency->sign}]</td>
+                        <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</td>
+                        <td align="right" class="odd text-right">[{ $VATitem }] [{$currency->sign}]</td>
                     </tr>
                 [{/foreach}]
             [{/block}]
@@ -292,7 +292,7 @@
                 <!-- VATs -->
                 [{foreach from=$basket->getProductVats() item=VATitem key=key}]
                     <tr valign="top" bgcolor="#ebebeb">
-                        <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="EMAIL_ORDER_CUST_HTML_PLUSTAX1"}] [{$key}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
+                        <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</td>
                         <td align="right" class="odd text-right">[{$VATitem}] [{$currency->sign}]</td>
                     </tr>
                 [{/foreach}]
@@ -331,7 +331,7 @@
                         [{if $basket->isProportionalCalculationOn()}]
                             <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
                         [{else}]
-                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getDelCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
+                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$basket->getDelCostVatPercent()}]</td>
                         [{/if}]
                         <td align="right" class="odd text-right">[{$basket->getDelCostVat()}] [{$currency->sign}]</td>
                     </tr>
@@ -357,7 +357,7 @@
                         [{if $basket->isProportionalCalculationOn()}]
                             <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
                         [{else}]
-                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getPayCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
+                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$basket->getPayCostVatPercent()}]</td>
                         [{/if}]
                         <td align="right" class="odd text-right">[{$basket->getPayCostVat()}] [{$currency->sign}]</td>
                     </tr>
@@ -404,7 +404,7 @@
                         [{if $basket->isProportionalCalculationOn()}]
                             <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT"}]:</td>
                         [{else}]
-                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="PLUS_VAT"}] [{$basket->getGiftCardCostVatPercent()}][{oxmultilang ident="SHIPPING_VAT2"}]</td>
+                            <td colspan="[{$iFooterColspan}]" class="odd text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$basket->getGiftCardCostVatPercent()}]</td>
                         [{/if}]
                         <td align="right" class="odd text-right">[{$basket->getGiftCardCostVat()}] [{$currency->sign}]</td>
                     </tr>
