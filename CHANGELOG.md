@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.3.4] - Unreleased
 
 ### Added
+- New block:
+    - ``account_order_history_cart_items`` in page/account/order.tpl
 
 ### Changed
 
