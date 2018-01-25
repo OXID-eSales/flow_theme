@@ -44,6 +44,7 @@ $aLang = array(
     // Header
     'SEARCH_TITLE'                                          => 'Enter a search term...',
     'SEARCH_SUBMIT'                                         => 'Search',
+    'COOKIE_NOTE_CLOSE'                                     => 'Close',
 
     // Sidebar
     'DD_SIDEBAR_CATEGORYTREE'                               => 'Categories',
