@@ -30,6 +30,6 @@
             </ul>
       </form>
     [{else}]
-        [{oxmultilang ident="NO_LISTMANIA_LIST"}] <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_recommlist"}]">[{oxmultilang ident="ADD_RECOMM_ADDRECOMMLINK2"}]</a>.
+        [{oxmultilang ident="NO_LISTMANIA_LIST"}] <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_recommlist"}]">[{oxmultilang ident="CLICK_HERE"}]</a>
     [{/if}]
 [{/if}]
