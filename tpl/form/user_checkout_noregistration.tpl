@@ -101,4 +101,5 @@
             [{/block}]
         [{/block}]
     </form>
+    [{include file="form/fieldset/delete_shipping_address_modal.tpl"}]
 [{/block}]

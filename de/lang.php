@@ -29,6 +29,7 @@ $aLang = array(
     'DD_SORT_ASC'                                           => 'aufsteigend',
     'DD_CLOSE_MODAL'                                        => 'schließen',
     'DD_DEMO_ADMIN_TOOL'                                    => 'Admin-Tool starten',
+    'DD_DELETE'                                             => 'Löschen',
 
     // Form-Validation
     'DD_FORM_VALIDATION_VALIDEMAIL'                         => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
@@ -85,6 +86,7 @@ $aLang = array(
     'DD_USER_SHIPPING_LABEL_STATE'                          => 'Bundesland:',
     'DD_USER_SHIPPING_SELECT_ADDRESS'                       => 'auswählen',
     'DD_USER_SHIPPING_ADD_DELIVERY_ADDRESS'                 => 'neue Adresse hinzufügen',
+    'DD_DELETE_SHIPPING_ADDRESS'                            => 'Lieferadresse löschen',
 
     // Bestellhistorie
     'DD_ORDER_ORDERDATE'                                    => 'Datum:',

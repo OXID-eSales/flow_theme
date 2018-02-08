@@ -7,17 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.0.0] - Unreleased
 
 ### Added
-- New template:
+- Template:
     - `page/account/delete_my_account_confirmation.tpl`
-    
-- New block:
-    - ``account_order_history_cart_items`` in page/account/order.tpl
-    - ``account_dashboard_delete_my_account`` in page/account/dashboard.tpl
-    - ``account_delete_my_account_confirmation`` in page/account/delete_my_account_confirmation.tpl
-    - ``account_delete_my_account_confirmation_header_message`` in page/account/delete_my_account_confirmation.tpl
-    - ``account_delete_my_account_confirmation_warning_message`` in page/account/delete_my_account_confirmation.tpl
-    - ``account_delete_my_account_confirmation_form`` in page/account/delete_my_account_confirmation.tpl
-    - ``account_delete_my_account_confirmation_form_button_set`` in page/account/delete_my_account_confirmation.tpl
+    - `form/fieldset/delete_shipping_address_modal.tpl`    
+- Block:
+    - `account_order_history_cart_items` in page/account/order.tpl
+    - `account_dashboard_delete_my_account` in page/account/dashboard.tpl
+    - `account_delete_my_account_confirmation` in page/account/delete_my_account_confirmation.tpl
+    - `account_delete_my_account_confirmation_header_message` in page/account/delete_my_account_confirmation.tpl
+    - `account_delete_my_account_confirmation_warning_message` in page/account/delete_my_account_confirmation.tpl
+    - `account_delete_my_account_confirmation_form` in page/account/delete_my_account_confirmation.tpl
+    - `account_delete_my_account_confirmation_form_button_set` in page/account/delete_my_account_confirmation.tpl
+- Multilang string: 
+    - `DELETE`   
+    - `DELETE_SHIPPING_ADDRESS`
+- Feature: a user has the possibility to delete a shipping address
 
 
 ### Changed
@@ -39,6 +43,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/eb928b5b...HEAD
-[2.3.4]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.3...b-2.x
+[3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...HEAD
 [2.3.3]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.2...v2.3.3

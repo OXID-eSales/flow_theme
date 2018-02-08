@@ -29,6 +29,7 @@ $aLang = array(
     'DD_SORT_ASC'                                           => 'ascending',
     'DD_CLOSE_MODAL'                                        => 'close',
     'DD_DEMO_ADMIN_TOOL'                                    => 'Open admin interface',
+    'DD_DELETE'                                             => 'Delete',
 
     // Form validation
     'DD_FORM_VALIDATION_VALIDEMAIL'                         => 'Please enter a valid email address.',
@@ -85,6 +86,7 @@ $aLang = array(
     'DD_USER_SHIPPING_LABEL_STATE'                          => 'State:',
     'DD_USER_SHIPPING_SELECT_ADDRESS'                       => 'select',
     'DD_USER_SHIPPING_ADD_DELIVERY_ADDRESS'                 => 'add delivery address',
+    'DD_DELETE_SHIPPING_ADDRESS'                            => 'Delete shipping address',
 
     // Order history
     'DD_ORDER_ORDERDATE'                                    => 'Date:',
