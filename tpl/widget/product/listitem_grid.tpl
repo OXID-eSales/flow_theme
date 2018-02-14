@@ -76,7 +76,7 @@
 
                             [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
                                 <span class="oldPrice text-muted">
-                                    <del>[{oxprice price=$tprice currency=$currency}]</del>
+                                    <del>[{$product->getFTPrice()}] [{$currency->sign}]</del>
                                 </span>
                             [{/if}]
 
@@ -86,18 +86,18 @@
                                         [{if $product->isRangePrice()}]
                                             [{oxmultilang ident="PRICE_FROM"}]
                                             [{if !$product->isParentNotBuyable()}]
-                                                [{assign var=dPrice value=$product->getFMinPrice()}]
+                                                [{$product->getFMinPrice()}]
                                             [{else}]
-                                                [{assign var=dPrice value=$product->getFVarMinPrice()}]
+                                                [{$product->getFVarMinPrice()}]
                                             [{/if}]
                                         [{else}]
                                             [{if !$product->isParentNotBuyable()}]
-                                                [{assign var=dPrice value=$product->getFPrice()}]
+                                                [{$product->getFPrice()}]
                                             [{else}]
-                                                [{assign var=dPrice value=$product->getFVarMinPrice()}]
+                                                [{$product->getFVarMinPrice()}]
                                             [{/if}]
                                         [{/if}]
-                                        [{oxprice price=$dPrice currency=$currency}]
+                                        [{$currency->sign}]
                                         [{if $oView->isVatIncluded()}]
                                              [{if !($product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $product->getSelections(1)) || $product->getVariants())}]*[{/if}]
                                         [{/if}]
