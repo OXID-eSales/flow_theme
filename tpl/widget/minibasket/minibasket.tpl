@@ -59,11 +59,11 @@
                                                                     <td class="text-right">
                                                                         <strong class="price">
                                                                             [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                                                                [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
+                                                                                [{$oxcmp_basket->getProductsNetPrice()}]
                                                                             [{else}]
-                                                                                [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}]
+                                                                                [{$oxcmp_basket->getFProductsPrice()}]
                                                                             [{/if}]
-                                                                            *
+                                                                            [{$currency->sign}] *
                                                                         </strong>
                                                                     </td>
                                                                 [{/block}]
@@ -120,10 +120,11 @@
                                 <td class="total_price text-right">
                                     <strong>
                                         [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                            [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
+                                            [{$oxcmp_basket->getProductsNetPrice()}]
                                         [{else}]
-                                            [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}]
+                                            [{$oxcmp_basket->getFProductsPrice()}]
                                         [{/if}]
+                                        &nbsp;[{$currency->sign}]
                                     </strong>
                                 </td>
                             </tr>
