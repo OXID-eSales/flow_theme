@@ -9,7 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Template:
     - `page/account/delete_my_account_confirmation.tpl`
-    - `form/fieldset/delete_shipping_address_modal.tpl`    
+    - `page/account/reviews.tpl` 
+    - `page/account/delete_review_confirmation.tpl`
+    - `form/fieldset/delete_shipping_address_modal.tpl`
+      
 - Block:
     - `account_order_history_cart_items` in page/account/order.tpl
     - `account_dashboard_delete_my_account` in page/account/dashboard.tpl
@@ -18,12 +21,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `account_delete_my_account_confirmation_warning_message` in page/account/delete_my_account_confirmation.tpl
     - `account_delete_my_account_confirmation_form` in page/account/delete_my_account_confirmation.tpl
     - `account_delete_my_account_confirmation_form_button_set` in page/account/delete_my_account_confirmation.tpl
+    - `account_reviewlist_header` in page/account/reviews.tpl
+    - `account_reviewlist_locator` in page/account/reviews.tpl
+    - `account_reviewlist_list` in page/account/reviews.tpl
+    - `account_reviewlist_item` in page/account/reviews.tpl
+    - `account_reviewlist_item_action` in page/account/reviews.tpl
+    - `account_reviewlist_no_reviews_available` in page/account/reviews.tpl    
+    - `delete_review_confirmation_modal` in page/account/delete_review_confirmation.tpl
+    - `delete_review_confirmation_modal_header` in page/account/delete_review_confirmation.tpl
+    - `delete_review_confirmation_modal_body` in page/account/delete_review_confirmation.tpl
+    - `delete_review_confirmation_modal_form` in page/account/delete_review_confirmation.tpl
+    - `delete_review_confirmation_modal_buttons_set` in page/account/delete_review_confirmation.tpl
     - `details_productmain_price` in page/details/inc/priceinfo.tpl
 - Multilang string: 
+    - `DD_DELETE_REVIEW_AND_RATING`
+    - `DD_DELETE_REVIEW_CONFIRMATION_QUESTION`
+    - `DD_REVIEWS_NOT_AVAILABLE`
+    - `DELETE`   
+    - `DELETE_SHIPPING_ADDRESS`  
     - `DD_DELETE`   
     - `DD_DELETE_SHIPPING_ADDRESS`
+
 - Feature: a user has the possibility to delete a shipping address
 - Feature: a user has the possibility to disable product recommendations
+- Feature: a user has the possibility to delete own reviews and ratings, if this option is enabled in the shop
 - Feature: show unit price near the product full price [PR-116](https://github.com/OXID-eSales/flow_theme/pull/116)
 - Additional information added to Google Tracking id hint
     - The shop owner is responsible for the legal use of this function. An adaptation of the privacy policy is mandatory.

@@ -146,6 +146,11 @@ $aLang = array(
     'DD_DELETE_MY_ACCOUNT_WARNING'                          => 'This action cannot be undone. This will permanently delete your personal data.',
     'DD_DELETE_MY_ACCOUNT'                                  => 'Delete account',
     'DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION'            => 'Are you sure you want to delete your account?',
+
+    // Account -> My product reviews
+    'DD_DELETE_REVIEW_AND_RATING'                           => 'Delete review and star rating',
+    'DD_REVIEWS_NOT_AVAILABLE'                              => 'No reviews available',
+    'DD_DELETE_REVIEW_CONFIRMATION_QUESTION'                => 'Are you sure you want to delete the review?',
 );
 
 /*
