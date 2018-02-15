@@ -139,6 +139,10 @@ $aLang = array(
     'DD_WISHLIST_HEADING'                                   => 'Wishlist',
 
     'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menu',
+
+    'DD_DELETE_MY_ACCOUNT_WARNING'                          => 'This action cannot be undone. This will permanently delete your personal data.',
+    'DD_DELETE_MY_ACCOUNT'                                  => 'Delete account',
+    'DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION'            => 'Are you sure you want to delete your account?',
 );
 
 /*

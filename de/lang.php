@@ -139,6 +139,10 @@ $aLang = array(
     'DD_WISHLIST_HEADING'                                   => 'Wunschzettel',
 
     'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menü',
+
+    'DD_DELETE_MY_ACCOUNT_WARNING'                          => 'Dieser Vorgang kann nicht rückgängig gemacht werden. Alle persönlichen Daten werden dauerhaft gelöscht.',
+    'DD_DELETE_MY_ACCOUNT'                                  => 'Konto löschen',
+    'DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION'            => 'Sind Sie sicher, dass Sie Ihr Konto löschen wollen?',
 );
 
 /*
