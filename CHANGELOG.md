@@ -7,22 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.0.0] - Unreleased
 
 ### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
-## [2.3.4] - Unreleased
-
-### Added
+- New template:
+    - `page/account/delete_my_account_confirmation.tpl`
+    
 - New block:
     - ``account_order_history_cart_items`` in page/account/order.tpl
+    - ``account_dashboard_delete_my_account`` in page/account/dashboard.tpl
+    - ``account_delete_my_account_confirmation`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_header_message`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_warning_message`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_form`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_form_button_set`` in page/account/delete_my_account_confirmation.tpl
+
 
 ### Changed
 
