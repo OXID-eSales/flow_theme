@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `DD_DELETE`   
     - `DD_DELETE_SHIPPING_ADDRESS`
 - Feature: a user has the possibility to delete a shipping address
-
+- Feature: a user has the possibility to disable product recommendations
 
 ### Changed
 

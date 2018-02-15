@@ -341,7 +341,9 @@
                             [{/if}]
                         </li>
                         <li>
-                            <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
+                            [{if $oViewConf->getShowSuggest()}]
+                                <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
+                            [{/if}]
                         </li>
                         <li>
                             [{if $oViewConf->getShowListmania()}]
