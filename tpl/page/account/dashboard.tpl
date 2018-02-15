@@ -106,8 +106,23 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 text-right">
-            <a href="[{$oViewConf->getLogoutLink()}]" class="btn btn-danger" role="getLogoutLink">
+        [{block name="account_dashboard_delete_my_account"}]
+            <div class="col-xs-6">
+                [{if $oView->isUserAllowedToDeleteOwnAccount()}]
+                <button
+                        class="btn btn-danger"
+                        data-toggle="modal"
+                        data-target="#delete_my_account_confirmation"
+                >
+                    <i class="fa fa-trash"></i>
+                    [{oxmultilang ident="DD_DELETE_MY_ACCOUNT"}]
+                </button>
+                [{include file="page/account/delete_my_account_confirmation.tpl"}]
+                [{/if}]
+            </div>
+        [{/block}]
+        <div class="col-xs-6 text-right">
+            <a href="[{$oViewConf->getLogoutLink()}]" class="btn btn-warning" role="getLogoutLink">
                 <i class="fa fa-off"></i> [{oxmultilang ident="LOGOUT"}]
             </a>
         </div>
