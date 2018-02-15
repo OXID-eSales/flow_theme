@@ -4,11 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [3.0.0] - Unreleased
 
 ### Added
+- New template:
+    - `page/account/delete_my_account_confirmation.tpl`
+    
 - New block:
     - ``account_order_history_cart_items`` in page/account/order.tpl
+    - ``account_dashboard_delete_my_account`` in page/account/dashboard.tpl
+    - ``account_delete_my_account_confirmation`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_header_message`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_warning_message`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_form`` in page/account/delete_my_account_confirmation.tpl
+    - ``account_delete_my_account_confirmation_form_button_set`` in page/account/delete_my_account_confirmation.tpl
+
 
 ### Changed
 
@@ -28,3 +38,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
+
+[3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...HEAD
+[2.3.3]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.2...v2.3.3
