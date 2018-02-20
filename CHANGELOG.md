@@ -19,8 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `account_delete_my_account_confirmation_form` in page/account/delete_my_account_confirmation.tpl
     - `account_delete_my_account_confirmation_form_button_set` in page/account/delete_my_account_confirmation.tpl
 - Multilang string: 
-    - `DELETE`   
-    - `DELETE_SHIPPING_ADDRESS`
+    - `DD_DELETE`   
+    - `DD_DELETE_SHIPPING_ADDRESS`
 - Feature: a user has the possibility to delete a shipping address
 
 
