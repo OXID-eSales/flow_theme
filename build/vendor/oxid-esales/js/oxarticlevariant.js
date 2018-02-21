@@ -58,8 +58,6 @@
                             WidgetsHandler.reloadWidget('oxwarticledetails');
                             WidgetsHandler.reloadWidget('oxwrating');
                             WidgetsHandler.reloadWidget('oxwreview');
-                        } else {
-                            oxAjax.evalScripts(contentTarget);
                         }
                     }
                 }
