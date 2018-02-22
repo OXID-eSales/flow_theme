@@ -159,6 +159,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundPosHorizontal_right'     => 'right',
     'SHOP_THEME_sBackgroundPosHorizontal_center'    => 'centered',
     'SHOP_THEME_sBackgroundPosVertical'             => 'Vertical position of the background-image',
+    'SHOP_THEME_sBackgroundPosVertical_left'        => 'left',
     'SHOP_THEME_sBackgroundPosVertical_top'         => 'top',
     'SHOP_THEME_sBackgroundPosVertical_bottom'      => 'bottom',
     'SHOP_THEME_sBackgroundPosVertical_center'      => 'centered',
