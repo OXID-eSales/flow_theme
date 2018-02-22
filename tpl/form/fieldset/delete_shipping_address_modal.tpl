@@ -27,7 +27,7 @@
                                           method="post">
                                         <div class="hidden">
                                             [{$oViewConf->getHiddenSid()}]
-                                            <input type="hidden" name="cl" value="user">
+                                            <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                                             <input type="hidden" name="fnc" value="deleteShippingAddress">
                                             <input type="hidden" name="oxaddressid"
                                                    value="[{$shippingAddress->oxaddress__oxid->value}]">
