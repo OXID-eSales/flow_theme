@@ -18,11 +18,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `account_delete_my_account_confirmation_warning_message` in page/account/delete_my_account_confirmation.tpl
     - `account_delete_my_account_confirmation_form` in page/account/delete_my_account_confirmation.tpl
     - `account_delete_my_account_confirmation_form_button_set` in page/account/delete_my_account_confirmation.tpl
+    - `details_productmain_price` in page/details/inc/priceinfo.tpl
 - Multilang string: 
     - `DD_DELETE`   
     - `DD_DELETE_SHIPPING_ADDRESS`
 - Feature: a user has the possibility to delete a shipping address
 - Feature: a user has the possibility to disable product recommendations
+- Feature: show unit price near the product full price [PR-116](https://github.com/OXID-eSales/flow_theme/pull/116)
 
 ### Changed
 
