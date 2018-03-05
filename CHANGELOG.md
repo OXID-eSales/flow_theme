@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: a user has the possibility to delete a shipping address
 - Feature: a user has the possibility to disable product recommendations
 - Feature: show unit price near the product full price [PR-116](https://github.com/OXID-eSales/flow_theme/pull/116)
+- Additional information added to Google Tracking id hint
+    - The shop owner is responsible for the legal use of this function. An adaptation of the privacy policy is mandatory.
 
 ### Changed
 
