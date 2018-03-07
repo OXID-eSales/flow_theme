@@ -118,7 +118,7 @@ $aLang = array(
     'SHOP_THEME_blUseGAEcommerceTracking'           => 'Google Analytics Ecommerce Tracking benutzen',
     'HELP_SHOP_THEME_blUseGAEcommerceTracking'      => 'Bitte beachten Sie, dass diese Option zusätzlich in Ihrem Google Analytics Konto aktiviert sein muss. Anleitung: <a href="https://support.google.com/analytics/answer/1009612?hl=de&ref_topic=1037061" target="_blank">Link</a>',
     'SHOP_THEME_sGATrackingId'                      => 'Google Analytics Tracking-ID',
-    'HELP_SHOP_THEME_sGATrackingId'                 => 'Bsp.: UA-XXXXXXXX-1',
+    'HELP_SHOP_THEME_sGATrackingId'                 => 'Bsp.: UA-XXXXXXXX-1<br><br>Für die rechtskonforme Nutzung dieser Funktion ist der Shopbetreiber selbst verantwortlich. Eine Anpassung der Datenschutzerklärung ist obligatorisch.',
     'SHOP_THEME_blGAAnonymizeIPs'                   => 'IP-Adressen anonymisieren (in DE Pflicht!)',
 
     'SHOP_THEME_sLogoFile'                          => 'Dateiname des Logos im Header',
