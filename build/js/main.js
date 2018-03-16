@@ -44,7 +44,8 @@ $( function ()
             $oChangeEmail = $( 'input.oxValidate_enterPass' ),
             $oSearchInput = $( '#searchParam' ),
             iHeaderWrapperHeight = parseInt( $oHeader.height() ),
-            blIsCheckout = $oBody.hasClass( 'is-checkout' );
+            blIsCheckout = $oBody.hasClass( 'is-checkout' ),
+            $oContentWrapper = $("#content");
 
         // Mobile detection
         window.isMobileDevice = function ()
@@ -376,6 +377,17 @@ $( function ()
                 }
             );
         }
+
+        // Auswahllisten im Warenkorb
+        $( '.basketItemDesc .selectorsBox .dropdown-menu li a', $oContentWrapper ).click( function( e )
+            {
+                e.preventDefault();
+                var $this = $( this );
+                $this.closest( '.selectbox' ).removeClass( 'open' );
+                $this.parent().parent().prev().val( $this.attr( 'data-selection-id' ) );
+                $this.parent().parent().prev().siblings( 'button' ).find( 'span' ).first().text( $this.text() );
+            }
+        );
 
         /* *********************************
          * Mein Konto
