@@ -146,6 +146,9 @@ $aLang = array(
     'DD_DELETE_MY_ACCOUNT_WARNING'                          => 'Dieser Vorgang kann nicht rückgängig gemacht werden. Alle persönlichen Daten werden dauerhaft gelöscht.',
     'DD_DELETE_MY_ACCOUNT'                                  => 'Konto löschen',
     'DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION'            => 'Sind Sie sicher, dass Sie Ihr Konto löschen wollen?',
+    'DD_DELETE_MY_ACCOUNT_CANCEL'                           => 'Abbrechen',
+    'DD_DELETE_MY_ACCOUNT_SUCCESS'                          => 'Ihr Konto wurde gelöscht',
+    'DD_DELETE_MY_ACCOUNT_ERROR'                            => 'Das Konto konnte nicht gelöscht werden',
 
     // Account -> My product reviews
     'DD_DELETE_REVIEW_AND_RATING'                           => 'Bewertung und Sterne-Rating löschen',

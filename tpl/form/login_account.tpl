@@ -1,5 +1,11 @@
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
+
+[{if $oView->getAccountDeletionStatus() == true}]
+    [{assign var="statusMessage" value="DD_DELETE_MY_ACCOUNT_SUCCESS"|oxmultilangassign}]
+    [{include file="message/success.tpl" statusMessage=$statusMessage}]
+[{/if}]
+
 <div class="row">
     <div class="col-xs-12 col-md-6 pull-right">
         <div class="panel panel-default">

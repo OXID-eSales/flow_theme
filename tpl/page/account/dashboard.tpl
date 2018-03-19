@@ -4,6 +4,11 @@
         <h1 id="accountMain" class="page-header">[{oxmultilang ident="MY_ACCOUNT"}]
             "[{$oxcmp_user->oxuser__oxusername->value}]"</h1>
 
+        [{if $oView->getAccountDeletionStatus() === false}]
+            [{assign var="statusMessage" value="DD_DELETE_MY_ACCOUNT_ERROR"|oxmultilangassign}]
+            [{include file="message/error.tpl" statusMessage=$statusMessage}]
+        [{/if}]
+
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 [{block name="account_dashboard_col1"}]

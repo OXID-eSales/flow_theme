@@ -36,7 +36,7 @@
                                             [{oxmultilang ident="DD_DELETE_MY_ACCOUNT"}]
                                         </button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">
-                                            [{oxmultilang ident="CANCEL"}]
+                                            [{oxmultilang ident="DD_DELETE_MY_ACCOUNT_CANCEL"}]
                                         </button>
                                     [{/block}]
                                 </form>
