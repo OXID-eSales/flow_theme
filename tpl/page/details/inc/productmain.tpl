@@ -28,8 +28,8 @@
         <input type="hidden" name="cnid" value="[{$oView->getCategoryId()}]">
         <input type="hidden" name="anid" value="[{if !$oDetailsProduct->oxarticles__oxparentid->value}][{$oDetailsProduct->oxarticles__oxid->value}][{else}][{$oDetailsProduct->oxarticles__oxparentid->value}][{/if}]">
         <input type="hidden" name="actcontrol" value="[{$oViewConf->getTopActiveClassName()}]">
-        [{if $oConf->getRequestParameter('preview')}]
-            <input type="hidden" name="preview" value="[{$oConf->getRequestParameter('preview')}]">
+        [{if $oConfig->getRequestParameter('preview')}]
+            <input type="hidden" name="preview" value="[{$oConfig->getRequestParameter('preview')}]">
         [{/if}]
     </form>
 [{/if}]
