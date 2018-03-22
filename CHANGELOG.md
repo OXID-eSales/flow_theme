@@ -44,6 +44,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix double evaluation of Javascript on details page [PR-118](https://github.com/OXID-eSales/flow_theme/pull/118)
 - Fix not working selection lists in checkout (cart) [PR-121](https://github.com/OXID-eSales/flow_theme/pull/121)
 - Fix variant switching in preview mode [PR-120](https://github.com/OXID-eSales/flow_theme/pull/120)
+- Fix missing blDebugTemplateBlocks option related script [PR-100](https://github.com/OXID-eSales/flow_theme/pull/100)
+- Fix recursive blDebugTemplateBlocks option related script initialization [PR-106](https://github.com/OXID-eSales/flow_theme/pull/106)
 
 ### Security
 
