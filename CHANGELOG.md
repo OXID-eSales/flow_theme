@@ -37,6 +37,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `delete_review_confirmation_modal_form` in page/account/delete_review_confirmation.tpl
     - `delete_review_confirmation_modal_buttons_set` in page/account/delete_review_confirmation.tpl
     - `details_productmain_price` in page/details/inc/priceinfo.tpl
+    - `contact_form_fields` in form/contact.tpl
+    - `contact_form_buttons` in form/contact.tpl
+    - `widget_reviews_form_rating` in widget/reviews/reviews.tpl
+    - `widget_reviews_form_fields` in widget/reviews/reviews.tpl
+    - `widget_reviews_form_buttons` in widget/reviews/reviews.tpl
+    
 - Multilang string: 
     - `DD_DELETE_REVIEW_AND_RATING`
     - `DD_DELETE_REVIEW_CONFIRMATION_QUESTION`

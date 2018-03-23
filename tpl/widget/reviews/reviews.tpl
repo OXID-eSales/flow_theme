@@ -40,27 +40,36 @@
                                             <input type="hidden" name="reviewuserhash" value="[{$sReviewUserHash}]">
                                         [{/if}]
                                     </div>
-                                    [{if $oView->canRate()}]
-                                        <ul id="reviewRating" class="rating list-inline">
-                                            [{section name=star start=1 loop=6}]
-                                                <li class="s[{$smarty.section.star.index}]" data-rate-value="[{$smarty.section.star.index}]">
-                                                    <a class="ox-write-review ox-rateindex-[{$smarty.section.star.index}] text-warning" title="[{$smarty.section.star.index}] [{if $smarty.section.star.index==1}][{oxmultilang ident="STAR"}][{else}][{oxmultilang ident="STARS"}][{/if}]">
-                                                        <i class="fa fa-star-o"></i>
-                                                    </a>
-                                                </li>
-                                            [{/section}]
-                                        </ul>
-                                    [{/if}]
-                                    <div class="form-group">
-                                        <div class="col-xs-12">
-                                            <textarea  rows="15" name="rvw_txt" class="form-control"></textarea>
+
+                                    [{block name="widget_reviews_form_rating"}]
+                                        [{if $oView->canRate()}]
+                                            <ul id="reviewRating" class="rating list-inline">
+                                                [{section name=star start=1 loop=6}]
+                                                    <li class="s[{$smarty.section.star.index}]" data-rate-value="[{$smarty.section.star.index}]">
+                                                        <a class="ox-write-review ox-rateindex-[{$smarty.section.star.index}] text-warning" title="[{$smarty.section.star.index}] [{if $smarty.section.star.index==1}][{oxmultilang ident="STAR"}][{else}][{oxmultilang ident="STARS"}][{/if}]">
+                                                            <i class="fa fa-star-o"></i>
+                                                        </a>
+                                                    </li>
+                                                [{/section}]
+                                            </ul>
+                                        [{/if}]
+                                    [{/block}]
+
+                                    [{block name="widget_reviews_form_fields"}]
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <textarea  rows="15" name="rvw_txt" class="form-control"></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-xs-12">
-                                            <button id="reviewSave" type="submit" class="submitButton btn btn-primary">[{oxmultilang ident="SAVE_RATING_AND_REVIEW"}]</button>
+                                    [{/block}]
+
+                                    [{block name="widget_reviews_form_buttons"}]
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <button id="reviewSave" type="submit" class="submitButton btn btn-primary">[{oxmultilang ident="SAVE_RATING_AND_REVIEW"}]</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    [{/block}]
                                 </div>
                             </form>
                         [{/block}]
