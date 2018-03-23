@@ -123,13 +123,19 @@
 
     [{block name="page_list_listbody"}]
         [{if $oView->getArticleList()|@count > 0}]
-            <div class="listRefine">
-                [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedTop() attributes=$oView->getAttributes() listDisplayType=true itemsPerPage=true sort=true}]
-            </div>
+            [{block name="page_list_upperlocator"}]
+                <div class="listRefine">
+                    [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedTop() attributes=$oView->getAttributes() listDisplayType=true itemsPerPage=true sort=true}]
+                </div>
+            [{/block}]
 
             [{* List types: grid|line|infogrid *}]
-            [{include file="widget/product/list.tpl" type=$oView->getListDisplayType() listId="productList" products=$oView->getArticleList()}]
-            [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedBottom() place="bottom"}]
+            [{block name="page_list_productlist"}]
+                [{include file="widget/product/list.tpl" type=$oView->getListDisplayType() listId="productList" products=$oView->getArticleList()}]
+            [{/block}]
+            [{block name="page_list_bottomlocator"}]
+                [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedBottom() place="bottom"}]
+            [{/block}]
         [{/if}]
     [{/block}]
     [{insert name="oxid_tracker"}]

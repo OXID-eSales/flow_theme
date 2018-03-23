@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `form/fieldset/delete_shipping_address_modal.tpl`
       
 - Block:
+    - `page_list_upperlocator` in page/list/list.tpl
+    - `page_list_upperlocator` in page/list/list.tpl
+    - `page_list_productlist` in page/list/list.tpl
+    - `details_relatedproducts_also_bought` in page/details/inc/related_products.tpl
     - `account_order_history_cart_items` in page/account/order.tpl
     - `account_dashboard_delete_my_account` in page/account/dashboard.tpl
     - `account_delete_my_account_confirmation` in page/account/delete_my_account_confirmation.tpl

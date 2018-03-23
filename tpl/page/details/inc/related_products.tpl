@@ -1,6 +1,8 @@
-[{if $oView->getAlsoBoughtTheseProducts()}]
-    [{include file="widget/product/list.tpl" type="grid" listId="alsoBought" head="CUSTOMERS_ALSO_BOUGHT"|oxmultilangassign subhead="PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER"|oxmultilangassign products=$oView->getAlsoBoughtTheseProducts()}]
-[{/if}]
+[{block name="details_relatedproducts_also_bought"}]
+    [{if $oView->getAlsoBoughtTheseProducts()}]
+        [{include file="widget/product/list.tpl" type="grid" listId="alsoBought" head="CUSTOMERS_ALSO_BOUGHT"|oxmultilangassign subhead="PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER"|oxmultilangassign products=$oView->getAlsoBoughtTheseProducts()}]
+    [{/if}]
+[{/block}]
 
 [{block name="details_relatedproducts_accessoires"}]
     [{if $oView->getAccessoires()|count}]
