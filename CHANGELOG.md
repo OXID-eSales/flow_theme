@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.0] - Unreleased
+## [3.0.0] - 27-03-2018
 
 ### Added
 - Template:
@@ -59,12 +59,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Additional information added to Google Tracking id hint
     - The shop owner is responsible for the legal use of this function. An adaptation of the privacy policy is mandatory.
 
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
 - Cover unit price with rights to see check [0006687](https://bugs.oxid-esales.com/view.php?id=6687)
 - Fix zoom picture if allow_url_fopen disabled [PR-111](https://github.com/OXID-eSales/flow_theme/pull/111)
@@ -78,12 +72,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix missing blDebugTemplateBlocks option related script [PR-100](https://github.com/OXID-eSales/flow_theme/pull/100)
 - Fix recursive blDebugTemplateBlocks option related script initialization [PR-106](https://github.com/OXID-eSales/flow_theme/pull/106)
 
-### Security
-
 ## [2.3.3] - 30-11-2017
 
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.3...v3.0.0
 [2.3.3]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.2...v2.3.3
