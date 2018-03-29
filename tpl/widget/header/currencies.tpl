@@ -15,7 +15,7 @@
                             <a href="[{$_cur->link|oxaddparams:$oView->getDynUrlParams()}]" title="[{$_cur->name}]"><span>[{$_cur->name}]</span></a>
                         [{/capture}]
                     [{/if}]
-                    <li[{if $_cur->selected}] class="active"[{/if}]><a href="[{$_cur->link|oxaddparams:$oView->getDynUrlParams()}]" title="[{$_cur->name}]">[{$_cur->name}]</a>
+                    <li[{if $_cur->selected}] class="active"[{/if}]><a href="[{$_cur->link|oxaddparams:$oView->getDynUrlParams()}]" title="[{$_cur->name}]">[{$_cur->name}]</a></li>
                 [{/foreach}]
             [{/block}]
         </ul>
