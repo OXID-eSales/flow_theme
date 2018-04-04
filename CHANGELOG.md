@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1] - Unreleased
+
+### Added
+- Block:
+    - `widget_minibasket_modal_header` in widget/minibasket/minibasket.tpl
+    - `widget_minibasket_modal_content` in widget/minibasket/minibasket.tpl
+    - `widget_minibasket_modal_footer` in widget/minibasket/minibasket.tpl
+
 ## [3.0.0] - 27-03-2018
 
 ### Added
@@ -15,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
       
 - Block:
     - `page_list_upperlocator` in page/list/list.tpl
-    - `page_list_upperlocator` in page/list/list.tpl
+    - `page_list_bottomlocator` in page/list/list.tpl
     - `page_list_productlist` in page/list/list.tpl
     - `details_relatedproducts_also_bought` in page/details/inc/related_products.tpl
     - `account_order_history_cart_items` in page/account/order.tpl

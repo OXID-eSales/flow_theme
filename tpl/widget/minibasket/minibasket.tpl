@@ -11,6 +11,7 @@
                 <div class="modal fade basketFlyout" id="basketModal" tabindex="-1" role="dialog" aria-labelledby="basketModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
+                            [{block name="widget_minibasket_modal_header"}]
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">
                                     <span aria-hidden="true">&times;</span>
@@ -18,6 +19,8 @@
                                 </button>
                                 <h4 class="modal-title" id="basketModalLabel">[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</h4>
                             </div>
+                            [{/block}]
+                            [{block name="widget_minibasket_modal_content"}]
                             <div class="modal-body">
                                 [{if $oxcmp_basket->getProductsCount()}]
                                     [{oxhasrights ident="TOBASKET"}]
@@ -76,12 +79,15 @@
                                     [{/oxhasrights}]
                                 [{/if}]
                             </div>
+                            [{/block}]
+                            [{block name="widget_minibasket_modal_footer"}]
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">[{oxmultilang ident="DD_MINIBASKET_CONTINUE_SHOPPING"}]</button>
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="[{oxmultilang ident="DISPLAY_BASKET"}]">
                                     <i class="fa fa-shopping-cart"></i>
                                 </a>
                             </div>
+                            [{/block}]
                         </div>
                     </div>
                 </div>
