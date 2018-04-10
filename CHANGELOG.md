@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `widget_minibasket_modal_header` in widget/minibasket/minibasket.tpl
     - `widget_minibasket_modal_content` in widget/minibasket/minibasket.tpl
     - `widget_minibasket_modal_footer` in widget/minibasket/minibasket.tpl
+    
+### Fixed
+- Fix alignment for payment desciption [PR-95](https://github.com/OXID-eSales/flow_theme/pull/95)
+
 
 ## [3.0.0] - 27-03-2018
 
