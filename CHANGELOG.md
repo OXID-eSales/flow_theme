@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fix alignment for payment desciption [PR-95](https://github.com/OXID-eSales/flow_theme/pull/95)
 - Show deliverytime wrapper only if deliverytime is available [PR-102](https://github.com/OXID-eSales/flow_theme/pull/102)
+- Add missing twbs col wrapper for grid alignment [PR-105](https://github.com/OXID-eSales/flow_theme/pull/105)
 
 
 ## [3.0.0] - 27-03-2018
