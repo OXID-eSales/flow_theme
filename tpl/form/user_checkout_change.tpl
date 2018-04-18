@@ -60,6 +60,9 @@
                     <div class="panel-body">
                         [{block name="user_checkout_billing_form"}]
                             <div [{if !$aErrors|@count }]style="display: none;"[{/if}] id="addressForm">
+                                [{if not $oxcmp_user->oxuser__oxpassword->value}]
+                                    [{include file="form/fieldset/user_email.tpl"}]
+                                [{/if}]
                                 [{include file="form/fieldset/user_billing.tpl" noFormSubmit=true blSubscribeNews=true blOrderRemark=true}]
                             </div>
                         [{/block}]
