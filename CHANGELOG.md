@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add missing twbs col wrapper for grid alignment [PR-105](https://github.com/OXID-eSales/flow_theme/pull/105)
 - Remove not working swipe code for mobile device [PR-81](https://github.com/OXID-eSales/flow_theme/pull/81)
 - Init swipe on mobile device [PR-82](https://github.com/OXID-eSales/flow_theme/pull/82)
+- Show private sales login error messages [PR-79](https://github.com/OXID-eSales/flow_theme/pull/79)
 
 ## [3.0.0] - 27-03-2018
 
