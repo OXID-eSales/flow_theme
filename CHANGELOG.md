@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Remove not working swipe code for mobile device [PR-81](https://github.com/OXID-eSales/flow_theme/pull/81)
 - Init swipe on mobile device [PR-82](https://github.com/OXID-eSales/flow_theme/pull/82)
 - Show private sales login error messages [PR-79](https://github.com/OXID-eSales/flow_theme/pull/79)
+- Showing error messages with destination 'popup' [PR-54](https://github.com/OXID-eSales/flow_theme/pull/54)
 
 ## [3.0.0] - 27-03-2018
 
