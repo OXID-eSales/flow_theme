@@ -81,7 +81,7 @@
                                 [{/block}]
                             </div>
                             [{block name="user_shipping_address_form"}]
-                                <div id="shippingAddress" class="spacer" [{if !$oView->showShipAddress()}] style="display: none;" [{/if}]>
+                                <div id="shippingAddress" [{if !$oView->showShipAddress()}] style="display: none;" [{/if}]>
                                     [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
                                 </div>
                             [{/block}]
