@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Init swipe on mobile device [PR-82](https://github.com/OXID-eSales/flow_theme/pull/82)
 - Show private sales login error messages [PR-79](https://github.com/OXID-eSales/flow_theme/pull/79)
 - Showing error messages with destination 'popup' [PR-54](https://github.com/OXID-eSales/flow_theme/pull/54)
+- Shipping address form overlaps footer area [PR-125](https://github.com/OXID-eSales/flow_theme/pull/125)
 
 ## [3.0.0] - 27-03-2018
 
