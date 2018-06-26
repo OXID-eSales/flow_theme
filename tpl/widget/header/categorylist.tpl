@@ -31,7 +31,7 @@
                                 [{foreach from=$oxcmp_categories item="ocat" key="catkey" name="root"}]
                                     [{if $ocat->getIsVisible()}]
                                         [{foreach from=$ocat->getContentCats() item="oTopCont" name="MoreTopCms"}]
-                                            <li [{if $oContent->oxcontents__oxloadid->value===$oTopCont->oxcontents__oxloadid->value}]class="active"[{/if}]>
+                                            <li[{if $oContent->oxcontents__oxloadid->value === $oTopCont->oxcontents__oxloadid->value}] class="active"[{/if}]>
                                                 <a href="[{$oTopCont->getLink()}]">[{$oTopCont->oxcontents__oxtitle->value}]</a>
                                             </li>
                                         [{/foreach}]
