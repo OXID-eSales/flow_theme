@@ -123,7 +123,7 @@
                     <div class="btn-group">
                         [{if $blShowToBasket}]
                             [{oxhasrights ident="TOBASKET"}]
-                                <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="TO_CART"}]">
+                                <button type="submit" class="btn btn-default hasTooltip" data-placement="bottom" title="[{oxmultilang ident="TO_CART"}]" data-container="body">
                                     <i class="fa fa-shopping-cart"></i>
                                 </button>
                             [{/oxhasrights}]

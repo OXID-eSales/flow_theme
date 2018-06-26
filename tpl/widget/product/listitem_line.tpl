@@ -180,7 +180,7 @@
                                     <div class="input-group">
                                         <input id="amountToBasket_[{$testid}]" type="text" name="am" value="1" size="3" autocomplete="off" class="form-control amount">
                                         <span class="input-group-btn">
-                                            <button id="toBasket_[{$testid}]" type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="TO_CART"}]">
+                                            <button id="toBasket_[{$testid}]" type="submit" class="btn btn-primary hasTooltip" title="[{oxmultilang ident="TO_CART"}]" data-container="body">
                                                 <i class="fa fa-shopping-cart"></i>
                                             </button>
                                             [{if $removeFunction && (($owishid && ($owishid==$oxcmp_user->oxuser__oxid->value)) || (($wishid==$oxcmp_user->oxuser__oxid->value)) || $recommid)}]
