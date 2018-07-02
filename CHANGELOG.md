@@ -21,6 +21,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Show private sales login error messages [PR-79](https://github.com/OXID-eSales/flow_theme/pull/79)
 - Showing error messages with destination 'popup' [PR-54](https://github.com/OXID-eSales/flow_theme/pull/54)
 - Shipping address form overlaps footer area [PR-125](https://github.com/OXID-eSales/flow_theme/pull/125)
+- Add missing li end-tag [PR-122](https://github.com/OXID-eSales/flow_theme/pull/122)
+- Don't show empty <li> tag on product detail actions [PR-103](https://github.com/OXID-eSales/flow_theme/pull/103)
+- Add missing template err_accessdenied.tpl [PR-101](https://github.com/OXID-eSales/flow_theme/pull/101)
+- Add possibility for not logged in user to change email in checkout second step (OXDEV-29).
+- Remove unused code from inputvalidation.tpl [PR-124](https://github.com/OXID-eSales/flow_theme/pull/124)
 
 ## [3.0.0] - 27-03-2018
 
