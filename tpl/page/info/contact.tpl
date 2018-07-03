@@ -8,7 +8,7 @@
 
     [{assign var="sGoogleMapsAddr" value=$oViewConf->getViewThemeParam('sGoogleMapsAddr')}]
     [{if $sGoogleMapsAddr}]
-        [{oxscript include="js/libs/pages/contact.min.js" priority=10}]
+        [{*oxscript include="js/libs/pages/contact.min.js" priority=10*}]
 
         <div class="row">
             <div class="col-xs-12">
