@@ -67,6 +67,7 @@ $aLang = array(
     'DD_CONTACT_ADDRESS_HEADING'                            => 'Address',
     'DD_CONTACT_THANKYOU1'                                  => "Thank you.",
     'DD_CONTACT_THANKYOU2'                                  => " appreciates your comments.",
+    'DD_CONTACT_SELECT_SALUTATION'                          => 'Please choose ...',
 
     // Link list
     'DD_LINKS_NO_ENTRIES'                                   => 'Unfortunately, there are no links available.',
