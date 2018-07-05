@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.0.2] - Unreleased
 
 ### Added
+- Add ids to form fields in `form/contact.tpl`
+- Add "for" attribute to labels in `form/contact.tpl`
+- Add empty select option in `form/fieldset/salutation.tpl`
+- Commented out inclusion of non-existing file in `page/info/contact.tpl`
 
 ### Fixed
 
