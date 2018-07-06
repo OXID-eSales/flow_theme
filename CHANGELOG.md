@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.2] - Unreleased
+## [3.0.3] - unreleased
+
+### Added
+
+### Fixed
+
+## [3.0.2] - 2018-07-06
 
 ### Added
 - Add ids to form fields in `form/contact.tpl`
