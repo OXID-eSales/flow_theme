@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
+### Changed
+- Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
+
 ## [3.0.2] - 2018-07-06
 
 ### Added
