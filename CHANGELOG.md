@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 ### Fixed
+- Fix mouseover on cart in lists flickering [PR-127](https://github.com/OXID-eSales/flow_theme/pull/127)
 
 ### Changed
 - Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
