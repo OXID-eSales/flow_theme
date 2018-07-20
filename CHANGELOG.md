@@ -116,6 +116,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[3.0.3]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...HEAD
+[3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.3...v3.0.0
 [2.3.3]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.2...v2.3.3
