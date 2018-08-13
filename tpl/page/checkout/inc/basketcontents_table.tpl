@@ -19,7 +19,7 @@
             <th>[{oxmultilang ident="QUANTITY"}]</th>
             <th class="unitPrice">[{oxmultilang ident="UNIT_PRICE"}]</th>
             <th class="vatPercent">[{oxmultilang ident="VAT"}]</th>
-            <th>[{oxmultilang ident="TOTAL"}]</th>
+            <th class="totalPrice">[{oxmultilang ident="TOTAL"}]</th>
         </tr>
     </thead>
 
@@ -256,7 +256,7 @@
                         <td id="orderCardPrice">[{$oCard->getFPrice()}]&nbsp;[{$currency->sign}]</td>
                         <td>
                             [{if $oxcmp_basket->isProportionalCalculationOn()}]
-                                [{oxmultilang ident="PROPORTIONALLY_CALCULATED"}]</th>
+                                [{oxmultilang ident="PROPORTIONALLY_CALCULATED"}]
                             [{else}]
                                 [{if $oxcmp_basket->getGiftCardCostVat()}][{$oxcmp_basket->getGiftCardCostVatPercent()}]%[{/if}]
                             [{/if}]

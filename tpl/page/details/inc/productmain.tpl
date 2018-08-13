@@ -212,17 +212,16 @@
                                 [{if $oDetailsProduct->getFPrice()}]
                                     <label id="productPrice" class="price">
                                         [{assign var="sFrom" value=""}]
-                                        [{assign var="fPrice" value=$oDetailsProduct->getFPrice()}]
+                                        [{assign var="oPrice" value=$oDetailsProduct->getPrice()}]
                                         [{if $oDetailsProduct->isParentNotBuyable()}]
-                                            [{assign var="fPrice" value=$oDetailsProduct->getFVarMinPrice()}]
+                                            [{assign var="oPrice" value=$oDetailsProduct->getVarMinPrice()}]
                                             [{if $oDetailsProduct->isRangePrice()}]
                                                 [{assign var="sFrom" value="PRICE_FROM"|oxmultilangassign}]
                                             [{/if}]
                                         [{/if}]
                                         <span[{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}] class="text-danger"[{/if}]>
                                             <span class="price-from">[{$sFrom}]</span>
-                                            <span class="price">[{$fPrice}]</span>
-                                            <span class="currency">[{$currency->sign}]</span>
+                                            <span class="price">[{oxprice price=$oPrice currency=$currency}]</span>
                                             [{if $oView->isVatIncluded()}]
                                                 <span class="price-markup">*</span>
                                             [{/if}]
