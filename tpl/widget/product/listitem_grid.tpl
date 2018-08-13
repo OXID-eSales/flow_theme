@@ -70,13 +70,10 @@
                 <div class="content">
                     [{block name="widget_product_listitem_grid_price"}]
                         [{oxhasrights ident="SHOWARTICLEPRICE"}]
-                            [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
-                            [{assign var="tprice"     value=$product->getTPrice()}]
-                            [{assign var="price"      value=$product->getPrice()}]
 
-                            [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
+                            [{if $product->getTPrice()}]
                                 <span class="oldPrice text-muted">
-                                    <del>[{$product->getFTPrice()}] [{$currency->sign}]</del>
+                                    <del>[{oxprice price=$product->getTPrice() currency=$oView->getActCurrency()}]</del>
                                 </span>
                             [{/if}]
 
@@ -86,24 +83,26 @@
                                         [{if $product->isRangePrice()}]
                                             [{oxmultilang ident="PRICE_FROM"}]
                                             [{if !$product->isParentNotBuyable()}]
-                                                [{$product->getFMinPrice()}]
+                                                [{assign var="oPrice" value=$product->getMinPrice()}]
                                             [{else}]
-                                                [{$product->getFVarMinPrice()}]
+                                                [{assign var="oPrice" value=$product->getVarMinPrice()}]
                                             [{/if}]
                                         [{else}]
                                             [{if !$product->isParentNotBuyable()}]
-                                                [{$product->getFPrice()}]
+                                                [{assign var="oPrice" value=$product->getPrice()}]
                                             [{else}]
-                                                [{$product->getFVarMinPrice()}]
+                                                [{assign var="oPrice" value=$product->getVarMinPrice()}]
                                             [{/if}]
                                         [{/if}]
-                                        [{$currency->sign}]
+                                        [{oxprice price=$oPrice currency=$oView->getActCurrency()}]
                                         [{if $oView->isVatIncluded()}]
                                              [{if !($product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $product->getSelections(1)) || $product->getVariants())}]*[{/if}]
                                         [{/if}]
                                     </span>
                                 [{/if}]
                             [{/block}]
+
+                            [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
                             [{if $oUnitPrice}]
                                 <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit">
                                     [{$product->oxarticles__oxunitquantity->value}] [{$product->getUnitName()}] | [{oxprice price=$oUnitPrice currency=$currency}]/[{$product->getUnitName()}]

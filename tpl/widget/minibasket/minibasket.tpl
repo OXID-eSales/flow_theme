@@ -57,19 +57,18 @@
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
-                                                                [{block name="widget_minibasket_total"}]
-                                                                    <td><strong>[{oxmultilang ident="TOTAL"}]</strong></td>
-                                                                    <td class="text-right">
-                                                                        <strong class="price">
-                                                                            [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                                                                [{$oxcmp_basket->getProductsNetPrice()}]
-                                                                            [{else}]
-                                                                                [{$oxcmp_basket->getFProductsPrice()}]
-                                                                            [{/if}]
-                                                                            [{$currency->sign}] *
-                                                                        </strong>
-                                                                    </td>
-                                                                [{/block}]
+                                                            [{block name="widget_minibasket_total"}]
+                                                                <td><strong>[{oxmultilang ident="TOTAL"}]</strong></td>
+                                                                <td class="text-right">
+                                                                    <strong class="price">
+                                                                        [{if $oxcmp_basket->isPriceViewModeNetto()}]
+                                                                            [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
+                                                                        [{else}]
+                                                                            [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}] *
+                                                                        [{/if}]
+                                                                    </strong>
+                                                                </td>
+                                                            [{/block}]
                                                         </tr>
                                                     </tfoot>
                                                 </table>
@@ -126,11 +125,10 @@
                                 <td class="total_price text-right">
                                     <strong>
                                         [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                            [{$oxcmp_basket->getProductsNetPrice()}]
+                                            [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
                                         [{else}]
-                                            [{$oxcmp_basket->getFProductsPrice()}]
+                                            [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}]
                                         [{/if}]
-                                        &nbsp;[{$currency->sign}]
                                     </strong>
                                 </td>
                             </tr>
