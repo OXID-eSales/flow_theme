@@ -103,15 +103,10 @@
                 <div class="functions text-right">
                     [{block name="widget_product_listitem_line_price"}]
                         [{oxhasrights ident="SHOWARTICLEPRICE"}]
-                        [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
-                        [{assign var="tprice"     value=$product->getTPrice()}]
-                        [{assign var="price"      value=$product->getPrice()}]
-
-                        [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
+                        [{if $product->getTPrice()}]
                             <span class="oldPrice text-muted">
-                                <del>[{$product->getFTPrice()}] [{$currency->sign}]</del>
+                                <del>[{oxprice price=$product->getTPrice() currency=$oView->getActCurrency()}]</del>
                             </span>
-                            <br/>
                         [{/if}]
 
                         [{block name="widget_product_listitem_line_price_value"}]
@@ -137,6 +132,7 @@
                             </span><br/>
                         [{/block}]
 
+                        [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
                         [{if $oUnitPrice}]
                             <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit text-nowrap">[{$product->oxarticles__oxunitquantity->value}] [{$product->getUnitName()}] | [{oxprice price=$oUnitPrice currency=$currency}]/[{$product->getUnitName()}]</span>
                         [{elseif $product->oxarticles__oxweight->value }]

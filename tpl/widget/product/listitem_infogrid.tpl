@@ -98,13 +98,10 @@
                         <div class="content">
                             [{block name="widget_product_listitem_infogrid_price"}]
                                 [{oxhasrights ident="SHOWARTICLEPRICE"}]
-                                    [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
-                                    [{assign var="tprice"     value=$product->getTPrice()}]
-                                    [{assign var="price"      value=$product->getPrice()}]
 
-                                    [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
+                                    [{if $product->getTPrice()}]
                                         <span class="oldPrice text-muted">
-                                            <del>[{$product->getFTPrice()}] [{$currency->sign}]</del>
+                                            <del>[{oxprice price=$product->getTPrice() currency=$oView->getActCurrency()}]</del>
                                         </span>
                                     [{/if}]
 
@@ -132,6 +129,8 @@
                                             </span>
                                         [{/if}]
                                     [{/block}]
+
+                                    [{assign var="oUnitPrice" value=$product->getUnitPrice()}]
                                     [{if $oUnitPrice}]
                                         <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit">
                                             [{$product->oxarticles__oxunitquantity->value}] [{$product->getUnitName()}] | [{oxprice price=$oUnitPrice currency=$currency}]/[{$product->getUnitName()}]
