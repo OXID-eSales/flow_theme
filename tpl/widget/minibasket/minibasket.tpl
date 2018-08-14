@@ -62,9 +62,9 @@
                                                                 <td class="text-right">
                                                                     <strong class="price">
                                                                         [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                                                            [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
+                                                                            [{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]
                                                                         [{else}]
-                                                                            [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}] *
+                                                                            [{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}] *
                                                                         [{/if}]
                                                                     </strong>
                                                                 </td>
@@ -125,9 +125,9 @@
                                 <td class="total_price text-right">
                                     <strong>
                                         [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                            [{oxprice price=$oxcmp_basket->getProductsNetPrice() currency=$currency}]
+                                            [{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]
                                         [{else}]
-                                            [{oxprice price=$oxcmp_basket->getFProductsPrice() currency=$currency}]
+                                            [{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]
                                         [{/if}]
                                     </strong>
                                 </td>
