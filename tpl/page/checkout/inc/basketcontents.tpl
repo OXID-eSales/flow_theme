@@ -73,7 +73,7 @@
                 [{/block}]
 
                 [{block name="checkout_basketcontents_nodiscountproductvats"}]
-                    [{foreach from=$oxcmp_basket->getProductVats() item=VATitem key=key}]
+                    [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
                         <tr>
                             <th>[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
                             <td>[{oxprice price=$VATitem currency=$currency}]</td>
@@ -128,7 +128,7 @@
                 [{/if}]
 
                 [{block name="checkout_basketcontents_productvats"}]
-                    [{foreach from=$oxcmp_basket->getProductVats() item=VATitem key=key}]
+                    [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
                         <tr>
                             <th>[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
                             <td>[{oxprice price=$VATitem currency=$currency}]</td>
