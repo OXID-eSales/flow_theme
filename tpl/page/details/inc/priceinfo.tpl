@@ -19,9 +19,9 @@
                                 [{$priceItem->oxprice2article__oxaddperc->value}]% [{oxmultilang ident="DISCOUNT"}]
                             [{else}]
                                 [{block name="details_productmain_price"}]
-                                    <strong>[{oxprice price=$priceItem->fbrutprice currency=$currency}]</strong>
+                                    <strong>[{$priceItem->fbrutprice}] [{$currency->sign}]</strong>
                                     [{if $oDetailsProduct->getUnitName() and $priceItem->fbrutamountprice}]
-                                        &nbsp;([{oxprice price=$priceItem->fbrutamountprice currency=$currency}] / [{$oDetailsProduct->getUnitName()}])
+                                        &nbsp;([{$priceItem->fbrutamountprice}] [{$currency->sign}] / [{$oDetailsProduct->getUnitName()}])
                                     [{/if}]
                                 [{/block}]
                             [{/if}]
