@@ -528,6 +528,30 @@ body {
                     padding: @nav-link-padding;
                 }
             }
+            
+            .fullwidth-container {
+                #detailsItemsPager,
+                .detailsInfo > .row {
+                    border-bottom: 0;
+                }
+
+                #detailsItemsPager {
+                    margin-bottom: 0;
+
+                    ~ hr {
+                        margin-top: 0;
+                    }
+                }
+
+                .detailsInfo > .row {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+
+                    ~ hr {
+                        margin-top: 0;
+                    }
+                }
+            }
         }
 
         &basket {
