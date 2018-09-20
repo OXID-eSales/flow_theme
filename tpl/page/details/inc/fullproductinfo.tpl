@@ -1,3 +1,5 @@
+[{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
+
 <div id="detailsMain">
     [{include file="page/details/inc/productmain.tpl"}]
 </div>
@@ -20,7 +22,13 @@
     </div>
 
     <div class="row">
-        <hr>
+        [{if $blFullwidth}]
+            <div class="col-xs-12">
+        [{/if}]
+                <hr>
+        [{if $blFullwidth}]
+            </div>
+        [{/if}]
     </div>
 
     [{include file="page/details/inc/related_products.tpl"}]
