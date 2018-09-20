@@ -1,6 +1,7 @@
 [{capture append="oxidBlock_content"}]
     [{assign var="oConfig" value=$oViewConf->getConfig()}]
     [{assign var='rsslinks' value=$oView->getRssLinks()}]
+    [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
     [{oxscript include="js/pages/start.min.js"}]
 
     [{block name="start_welcome_text"}]
@@ -33,7 +34,13 @@
 
     [{if $oNewestArticles && $oNewestArticles->count() && $oTopArticles && $oTopArticles->count()}]
         <div class="row">
-            <hr>
+            [{if $blFullwidth}]
+                <div class="col-xs-12">
+            [{/if}]
+                    <hr>
+            [{if $blFullwidth}]
+                </div>
+            [{/if}]
         </div>
     [{/if}]
 
