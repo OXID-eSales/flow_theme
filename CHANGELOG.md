@@ -4,7 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.1] - Unreleased
+## [3.1.0] - unreleased
+
+### Added
+- Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
+
+### Fixed
+- Fix mouseover on cart in lists flickering [PR-127](https://github.com/OXID-eSales/flow_theme/pull/127)
+- Table structure health fix in basketcontents_table.tpl [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
+
+### Changed
+- Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
+- In category page, use getTitle from model and not from controller [PR-98](https://github.com/OXID-eSales/flow_theme/pull/98)
+- Specify "container" for tooltip plugin [PR-130](https://github.com/OXID-eSales/flow_theme/pull/130)
+- Use oxprice for formatting the currency in basket and details page [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
+
+## [3.0.2] - 2018-07-06
+
+### Added
+- Add ids to form fields in `form/contact.tpl`
+- Add "for" attribute to labels in `form/contact.tpl`
+- Add empty select option in `form/fieldset/salutation.tpl`
+- Commented out inclusion of non-existing file in `page/info/contact.tpl`
+
+### Fixed
+
+## [3.0.1] - 2018-07-03
 
 ### Added
 - Block:
@@ -21,6 +46,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Show private sales login error messages [PR-79](https://github.com/OXID-eSales/flow_theme/pull/79)
 - Showing error messages with destination 'popup' [PR-54](https://github.com/OXID-eSales/flow_theme/pull/54)
 - Shipping address form overlaps footer area [PR-125](https://github.com/OXID-eSales/flow_theme/pull/125)
+- Add missing li end-tag [PR-122](https://github.com/OXID-eSales/flow_theme/pull/122)
+- Don't show empty <li> tag on product detail actions [PR-103](https://github.com/OXID-eSales/flow_theme/pull/103)
+- Add missing template err_accessdenied.tpl [PR-101](https://github.com/OXID-eSales/flow_theme/pull/101)
+- Add possibility for not logged in user to change email in checkout second step (OXDEV-29).
+- Remove unused code from inputvalidation.tpl [PR-124](https://github.com/OXID-eSales/flow_theme/pull/124)
 
 ## [3.0.0] - 27-03-2018
 
@@ -95,5 +125,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[3.0.3]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...HEAD
+[3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
+[3.0.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.3...v3.0.0
 [2.3.3]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.2...v2.3.3

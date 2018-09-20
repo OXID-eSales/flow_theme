@@ -31,7 +31,7 @@
 
         [{block name="checkout_payment_longdesc"}]
             [{if $paymentmethod->oxpayments__oxlongdesc->value|strip_tags|trim}]
-                <div class="alert alert-info col-lg-offset-3 desc">
+                <div class="desc">
                     [{$paymentmethod->oxpayments__oxlongdesc->getRawValue()}]
                 </div>
             [{/if}]
