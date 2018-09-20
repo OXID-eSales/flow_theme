@@ -1,10 +1,15 @@
 [{block name="dd_widget_promoslider"}]
     [{assign var="oBanners" value=$oView->getBanners()}]
     [{assign var="currency" value=$oView->getActCurrency()}]
+    [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
     [{if $oBanners|@count}]
         [{oxscript include="js/libs/jquery.flexslider.min.js" priority=2}]
         [{oxstyle include="css/libs/jquery.flexslider.min.css"}]
+
+        [{if $blFullwidth}]
+            <div class="col-xs-12">
+        [{/if}]
 
         <div id="promo-carousel" class="flexslider">
             <ul class="slides">
@@ -41,5 +46,9 @@
                 [{/block}]
             </ul>
         </div>
+
+        [{if $blFullwidth}]
+            </div>
+        [{/if}]
     [{/if}]
 [{/block}]

@@ -22,6 +22,11 @@
 // Global Styles
 // --------------------------------------------------
 
+textarea {
+    min-height: @input-height-base;
+    resize: vertical;
+}
+
 label {
     font-weight: normal;
 
@@ -526,6 +531,30 @@ body {
                     border-bottom: 1px solid @nav-tabs-border-color;
                     border-left: 1px solid @nav-tabs-border-color;
                     padding: @nav-link-padding;
+                }
+            }
+            
+            .fullwidth-container {
+                #detailsItemsPager,
+                .detailsInfo > .row {
+                    border-bottom: 0;
+                }
+
+                #detailsItemsPager {
+                    margin-bottom: 0;
+
+                    ~ hr {
+                        margin-top: 0;
+                    }
+                }
+
+                .detailsInfo > .row {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+
+                    ~ hr {
+                        margin-top: 0;
+                    }
                 }
             }
         }
