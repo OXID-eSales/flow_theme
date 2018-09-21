@@ -35,11 +35,9 @@
     [{if $oNewestArticles && $oNewestArticles->count() && $oTopArticles && $oTopArticles->count()}]
         <div class="row">
             [{if $blFullwidth}]
-                <div class="col-xs-12">
-            [{/if}]
-                    <hr>
-            [{if $blFullwidth}]
-                </div>
+                <div class="col-xs-12"><hr></div>
+            [{else}]
+                <hr>
             [{/if}]
         </div>
     [{/if}]

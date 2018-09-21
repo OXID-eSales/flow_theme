@@ -23,13 +23,11 @@
 
     <div class="row">
         [{if $blFullwidth}]
-            <div class="col-xs-12">
+            <div class="col-xs-12"><hr></div>
+        [{else}]
+            <hr>
         [{/if}]
-                <hr>
-        [{if $blFullwidth}]
-            </div>
-        [{/if}]
-    </div>
+</div>
 
-    [{include file="page/details/inc/related_products.tpl"}]
+[{include file="page/details/inc/related_products.tpl"}]
 </div>
