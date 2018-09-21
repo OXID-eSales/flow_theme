@@ -11,6 +11,7 @@
     [{assign var="oPictureProduct" value=$oView->getPicturesProduct()}]
     [{assign var="currency" value=$oView->getActCurrency()}]
     [{assign var="sPageHeadTitle" value=$oDetailsProduct->oxarticles__oxtitle->value|cat:' '|cat:$oDetailsProduct->oxarticles__oxvarselect->value}]
+    [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
     [{if $oView->getPriceAlarmStatus() == 1}]
         [{assign var="_statusMessage1" value="PAGE_DETAILS_THANKYOUMESSAGE1"|oxmultilangassign|cat:" "|cat:$oxcmp_shop->oxshops__oxname->value}]
@@ -62,6 +63,9 @@
                         [{/if}]
                     </div>
                 </div>
+                [{if $blFullwidth}]
+                    <hr>
+                [{/if}]
             </div>
 
             [{* RDFa offering*}]

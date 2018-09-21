@@ -3,6 +3,7 @@
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
 [{assign var="aVariantSelections" value=$oView->getVariantSelections()}]
+[{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
 [{if $aVariantSelections && $aVariantSelections.rawselections}]
     [{assign var="_sSelectionHashCollection" value=""}]
@@ -376,6 +377,9 @@
             [{/block}]
         </div>
     </div>
+    [{if $blFullwidth}]
+        <hr>
+    [{/if}]
 </div>
 
 [{oxhasrights ident="TOBASKET"}]

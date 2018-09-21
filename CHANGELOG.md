@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fix mouseover on cart in lists flickering [PR-127](https://github.com/OXID-eSales/flow_theme/pull/127)
 - Table structure health fix in basketcontents_table.tpl [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
+- Fix fullwidth theme option incompatabilities [PR-131](https://github.com/OXID-eSales/flow_theme/pull/131)
+  - New item in basket message width
+  - Start page container alignments
+  - Details page blocks alignments
+  - Border bottom was changes to customizable HR tag
+  - Allow textarea to be resized only vertically
 
 ### Changed
 - Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
