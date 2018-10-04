@@ -1,7 +1,7 @@
 [{capture append="oxidBlock_content"}]
     [{assign var="template_title" value="MY_DOWNLOADS"|oxmultilangassign}]
     <div class="errorBox">
-          [{if count($Errors)>0 && count($Errors.default) > 0}]
+        [{if $Errors|is_array && $Errors.default|is_array && !empty($Errors.default)}]
           <div class="status error corners">
               [{foreach from=$Errors.default item=oEr key=key}]
                   <p>[{$oEr->getOxMessage()}]</p>

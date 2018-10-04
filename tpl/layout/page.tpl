@@ -17,7 +17,7 @@
 
                 <div class="row">
 
-                    [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0}]
+                    [{if $oView->getClassName()=='start' && $oView->getBanners()|is_array && !empty($oView->getBanners())}]
                         [{include file="widget/promoslider.tpl"}]
                     [{/if}]
 

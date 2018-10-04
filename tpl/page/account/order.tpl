@@ -5,7 +5,7 @@
     [{assign var=oOrders value=$oView->getOrderList()}]
 
     [{block name="account_order_history"}]
-        [{if count($oOrders) > 0}]
+        [{if $oOrders && !empty($oOrders)}]
             [{assign var=oArticleList value=$oView->getOrderArticleList()}]
             <ol class="list-unstyled">
                 [{foreach from=$oOrders item=order}]

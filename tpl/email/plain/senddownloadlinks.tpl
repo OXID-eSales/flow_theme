@@ -12,7 +12,7 @@
     [{oxmultilang ident="ORDER_NUMBER" suffix="COLON"}] [{$order->oxorder__oxordernr->value}]
 [{/block}]
 
-[{if $oOrderFileList and $oOrderFileList|count}]
+[{if $oOrderFileList}]
     [{block name="email_html_senddownloadlinks_download_header"}]
         [{oxmultilang ident="MY_DOWNLOADS_DESC"}]
     [{/block}]

@@ -122,7 +122,8 @@
     [{/block}]
 
     [{block name="page_list_listbody"}]
-        [{if $oView->getArticleList()|@count > 0}]
+        [{if $oView->getArticleList()}]
+        [{if $oView->getArticleList()|count}]
             [{block name="page_list_upperlocator"}]
                 <div class="listRefine">
                     [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedTop() attributes=$oView->getAttributes() listDisplayType=true itemsPerPage=true sort=true}]
@@ -136,6 +137,7 @@
             [{block name="page_list_bottomlocator"}]
                 [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedBottom() place="bottom"}]
             [{/block}]
+        [{/if}]
         [{/if}]
     [{/block}]
     [{insert name="oxid_tracker"}]

@@ -42,8 +42,8 @@
         [{/if}]
     [{/if}]
 
-    [{assign var="productsCount" value=$products|@count}]
-    [{if $productsCount gt 0}]
+    [{if $products && !empty($products)}]
+        [{assign var="productsCount" value=$products|count}]
         [{math equation="x / y" x=12 y=$iProductsPerLine assign="iColIdent"}]
 
         <div class="list-container" id="[{$listId}]">

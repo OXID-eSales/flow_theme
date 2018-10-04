@@ -39,8 +39,10 @@
     [{/block}]
 
     [{block name="sidebar_news"}]
-        [{if $oxcmp_news|count}]
-            [{include file="widget/sidebar/news.tpl" oNews=$oxcmp_news}]
+        [{if $oxcmp_news}]
+            [{if $oxcmp_news|count}]
+                [{include file="widget/sidebar/news.tpl" oNews=$oxcmp_news}]
+            [{/if}]
         [{/if}]
     [{/block}]
 

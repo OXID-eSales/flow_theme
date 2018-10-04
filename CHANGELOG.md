@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - In category page, use getTitle from model and not from controller [PR-98](https://github.com/OXID-eSales/flow_theme/pull/98)
 - Specify "container" for tooltip plugin [PR-130](https://github.com/OXID-eSales/flow_theme/pull/130)
 - Use oxprice for formatting the currency in basket and details page [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
+- PHP 7.2 support: count(): Parameter must be an array or an object that implements Countable
 
 ## [3.0.2] - 2018-07-06
 
