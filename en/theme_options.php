@@ -36,7 +36,7 @@ $aLang = array(
     'SHOP_THEME_GROUP_googlets'                     => 'Google Trusted Stores',
     'SHOP_THEME_GROUP_background'                   => 'Background-image',
     'SHOP_THEME_GROUP_econda'                       => 'econda Web Shop Controlling',
-    'SHOP_THEME_GROUP_emails'                       => 'E-Mails',
+    'SHOP_THEME_GROUP_emails'                       => 'E-mails',
 
     'SHOP_THEME_sIconsize'                          => 'Icon size (width*height)', //SHOP_CONFIG_ICONSIZE
     'HELP_SHOP_THEME_sIconsize'                     => 'Icons are the smallest pictures of a product. They are used: <br>' .
@@ -153,7 +153,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundRepeat_no-repeat'        => 'No',
     'SHOP_THEME_sBackgroundRepeat_repeat-x'         => 'Yes, horizontal',
     'SHOP_THEME_sBackgroundRepeat_repeat-y'         => 'Yes, vertical',
-    'SHOP_THEME_sBackgroundRepeat_repeat'           => 'Yes, horizontal und vertical',
+    'SHOP_THEME_sBackgroundRepeat_repeat'           => 'Yes, horizontal and vertical',
     'SHOP_THEME_sBackgroundPosHorizontal'           => 'Horizontal position of the background-image',
     'SHOP_THEME_sBackgroundPosHorizontal_left'      => 'left',
     'SHOP_THEME_sBackgroundPosHorizontal_right'     => 'right',
@@ -177,7 +177,7 @@ $aLang = array(
     'HELP_SHOP_THEME_sPageLanguage'                 => 'The locale should be in the format of &lt;language&gt;_&lt;country&gt;<br><br>&lt;Language&gt; is a two-letter language code defined in ISO 639-1, and &lt;country&gt; is a two-letter country code defined in ISO 3166-1 alpha-2. Usually &lt;country&gt; should be all capitalized, and &lt;language&gt; should be in lowercase. e.g. en_US, en_GB, en_AU, fr_FR, de_DE, or ja_JP.',
     'SHOP_THEME_sShoppingCountry'                   => 'Google Shopping-Feed Country (optional)',
     'HELP_SHOP_THEME_sShoppingCountry'              => 'Provide this field only if you submit feeds for Google Shopping.<br><br>Account country from Google Shopping. This value should match the account country you use to submit your <a href="https://support.google.com/merchants/answer/188494#US" target="_blank">product data feed to Google Shopping</a>.<br><br>The value of the country parameter should be a <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2" target="_blank">two-letter ISO 3166 country code</a>.<br><br>For example, values could be US, GB, AU, FR, DE, JP.',
-    'SHOP_THEME_sShoppingLanguage'                  => 'Google Shopping-Feed Sprache (optional)',
+    'SHOP_THEME_sShoppingLanguage'                  => 'Google Shopping-Feed Language (optional)',
     'HELP_SHOP_THEME_sShoppingLanguage'             => 'Provide this field only if you submit feeds for Google Shopping.<br><br>Account language from Google Shopping. This value should match the account language you use to submit your <a href="https://support.google.com/merchants/answer/188494#US" target="_blank">product data feed to Google Shopping</a>.<br><br>The value of the language parameter should be a <a href="http://en.wikipedia.org/wiki/ISO_639-1" target="_blank">two-letter ISO 639-1 language code</a>.<br><br>For example, values could be en, fr, de, ja.',
     'SHOP_THEME_sShippingDaysOnStock'               => 'Amount of days till shipping of an order that has all articles in stock.',
     'HELP_SHOP_THEME_sShippingDaysOnStock'          => 'The estimated date on which you will ship the order; this is different from the estimated delivery date.<br><br>If the order contains multiple items, select the latest estimated ship date.<br><br>If you message to your customers a range of days, please include the later end of the range. (e.g., 7 days if your shipping range is 5-7 days).<br><br>The date provided here will be provided to the customer via email.<br><br>The customer will receive a post purchase survey after the Estimated Ship Date has passed.',
@@ -202,7 +202,7 @@ $aLang = array(
     'SHOP_THEME_blEcondaRecommendationsBasket'      => 'Show recommendations in basket',
     'SHOP_THEME_sEcondaWidgetIdBasket'              => 'Recommendation-Widget-ID für Warenkorb',
 
-    'SHOP_THEME_blFullwidthLayout'                      => 'Activate full with layout',
+    'SHOP_THEME_blFullwidthLayout'                  => 'Activate full width layout',
 
     'SHOP_THEME_blEmailsShowProductPictures'        => 'Show product pictures in emails',
 );
