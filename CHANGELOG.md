@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - Details page blocks alignments
   - Border bottom was changes to customizable HR tag
   - Allow textarea to be resized only vertically
+- Fix errors in translations [PR-132](https://github.com/OXID-eSales/flow_theme/pull/132) [0006909](https://bugs.oxid-esales.com/view.php?id=6909)
 
 ### Changed
 - Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
