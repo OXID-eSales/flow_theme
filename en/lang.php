@@ -155,6 +155,8 @@ $aLang = array(
     'DD_DELETE_REVIEW_AND_RATING'                           => 'Delete review and star rating',
     'DD_REVIEWS_NOT_AVAILABLE'                              => 'No reviews available',
     'DD_DELETE_REVIEW_CONFIRMATION_QUESTION'                => 'Are you sure you want to delete the review?',
+
+    'DD_CATEGORY_RESET_BUTTON'                              => 'Reset',
 );
 
 /*
