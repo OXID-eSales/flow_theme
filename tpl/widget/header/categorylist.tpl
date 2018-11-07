@@ -46,8 +46,8 @@
                                                     [{foreach from=$ocat->getSubCats() item="osubcat" key="subcatkey" name="SubCat"}]
                                                         [{if $osubcat->getIsVisible()}]
                                                             [{foreach from=$osubcat->getContentCats() item=ocont name=MoreCms}]
-                                                                <li>
-                                                                    <a href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
+                                                                <li[{if $oViewConf->getContentId() == $ocont->oxcontents__oxid->value}] class="active"[{/if}]>
+                                                                    <a [{if $oViewConf->getContentId() == $ocont->oxcontents__oxid->value}]class="current" [{/if}]href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
                                                                 </li>
                                                             [{/foreach}]
 
