@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
+- Add active class to cms content pages in submenus [PR-133](https://github.com/OXID-eSales/flow_theme/pull/133)
 
 ### Fixed
 - Fix mouseover on cart in lists flickering [PR-127](https://github.com/OXID-eSales/flow_theme/pull/127)
