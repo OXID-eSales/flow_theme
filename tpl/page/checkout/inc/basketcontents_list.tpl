@@ -20,24 +20,30 @@
                     </div>
                     <div class="col-md-6 col-xs-8">
                         [{block name="checkout_basketcontents_basketitem_titlenumber"}]
-                            [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
-                            <b>[{$basketitem->getTitle()}]</b>
-                            [{if $editable}]</a>[{/if}]
-                            [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
+                            [{block name="checkout_basketcontents_basketitem_title"}]
+                                [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
+                                <b>[{$basketitem->getTitle()}]</b>
+                                [{if $editable}]</a>[{/if}]
+                                [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
+                            [{/block}]
 
-                            <div class="small">
-                                [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
-                            </div>
+                            [{block name="checkout_basketcontents_basketitem_artnum"}]
+                                <div class="small">
+                                    [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
+                                </div>
+                            [{/block}]
 
-                            <div class="small">
-                                [{assign var=sep value=", "}]
-                                [{assign var=result value=""}]
-                                [{foreach key="oArtAttributes" from=$oAttributes->getArray() item="oAttr" name="attributeContents"}]
-                                    [{assign var=temp value=$oAttr->oxattribute__oxvalue->value}]
-                                    [{assign var=result value=$result|cat:$temp|cat:$sep}]
-                                [{/foreach}]
-                                <small>[{$result|trim:$sep}]</small>
-                            </div>
+                            [{block name="checkout_basketcontents_basketitem_attributes"}]
+                                <div class="small">
+                                    [{assign var=sep value=", "}]
+                                    [{assign var=result value=""}]
+                                    [{foreach key="oArtAttributes" from=$oAttributes->getArray() item="oAttr" name="attributeContents"}]
+                                        [{assign var=temp value=$oAttr->oxattribute__oxvalue->value}]
+                                        [{assign var=result value=$result|cat:$temp|cat:$sep}]
+                                    [{/foreach}]
+                                    <small>[{$result|trim:$sep}]</small>
+                                </div>
+                            [{/block}]
 
                             [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
                                 [{assign var="oSelections" value=$basketproduct->getSelections(null,$basketitem->getSelList())}]
@@ -58,36 +64,38 @@
                                 [{/if}]
                             [{/if}]
 
-                            [{if !$editable}]
-                                <p class="persparamBox">
-                                    <small>
-                                        [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
-                                            [{if !$smarty.foreach.persparams.first}]<br />[{/if}]
-                                            [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
-                                                [{oxmultilang ident="LABEL"}]
-                                            [{else}]
-                                                [{$sVar}] :
-                                            [{/if}]
-                                            [{$aParam}]
-                                        [{/foreach}]
-                                    </small>
-                                </p>
-                            [{else}]
-                                [{if $basketproduct->oxarticles__oxisconfigurable->value}]
-                                    [{if $basketitem->getPersParams()}]
-                                        <br />
-                                        [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
+                            [{block name="checkout_basketcontents_basketitem_persparams"}]
+                                [{if !$editable}]
+                                    <p class="persparamBox">
+                                        <small>
+                                            [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
+                                                [{if !$smarty.foreach.persparams.first}]<br />[{/if}]
+                                                [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
+                                                    [{oxmultilang ident="LABEL"}]
+                                                [{else}]
+                                                    [{$sVar}] :
+                                                [{/if}]
+                                                [{$aParam}]
+                                            [{/foreach}]
+                                        </small>
+                                    </p>
+                                [{else}]
+                                    [{if $basketproduct->oxarticles__oxisconfigurable->value}]
+                                        [{if $basketitem->getPersParams()}]
+                                            <br />
+                                            [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
+                                                <p>
+                                                    <input class="textbox persParam form-control" type="text" name="aproducts[[{$basketindex}]][persparam][[{$sVar}]]" value="[{$aParam}]" placeholder="[{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}][{oxmultilang ident="LABEL"}][{else}][{$sVar}][{/if}]">
+                                                </p>
+                                            [{/foreach}]
+                                        [{else}]
                                             <p>
-                                                <input class="textbox persParam form-control" type="text" name="aproducts[[{$basketindex}]][persparam][[{$sVar}]]" value="[{$aParam}]" placeholder="[{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}][{oxmultilang ident="LABEL"}][{else}][{$sVar}][{/if}]">
+                                                <input class="textbox persParam form-control" type="text" name="aproducts[[{$basketindex}]][persparam][details]" value="" placeholder="[{oxmultilang ident="LABEL"}]">
                                             </p>
-                                        [{/foreach}]
-                                    [{else}]
-                                        <p>
-                                            <input class="textbox persParam form-control" type="text" name="aproducts[[{$basketindex}]][persparam][details]" value="" placeholder="[{oxmultilang ident="LABEL"}]">
-                                        </p>
+                                        [{/if}]
                                     [{/if}]
                                 [{/if}]
-                            [{/if}]
+                            [{/block}]
                         [{/block}]
 
                         [{block name="checkout_basketcontents_basketitem_wrapping"}]
