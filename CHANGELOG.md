@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
 - Add active class to cms content pages in submenus [PR-133](https://github.com/OXID-eSales/flow_theme/pull/133)
 - Introduce new feature - reset category filter [0002046](https://bugs.oxid-esales.com/view.php?id=2046)
+- New blocks:
+  - `page/checkout/inc/basketcontents_table.tpl`
+    - checkout_basketcontents_basketitem_title [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
+    - checkout_basketcontents_basketitem_artnum [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
+    - checkout_basketcontents_basketitem_attributes [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
+    - checkout_basketcontents_basketitem_selectlists
+    - checkout_basketcontents_basketitem_persparams [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
+  - `page/checkout/inc/basketcontents_list.tpl`
+    - checkout_basketcontents_basketitem_title [PR-135](https://github.com/OXID-eSales/flow_theme/pull/135)
+    - checkout_basketcontents_basketitem_artnum [PR-135](https://github.com/OXID-eSales/flow_theme/pull/135)
+    - checkout_basketcontents_basketitem_attributes [PR-135](https://github.com/OXID-eSales/flow_theme/pull/135)
+    - checkout_basketcontents_basketitem_selectlists
+    - checkout_basketcontents_basketitem_persparams [PR-135](https://github.com/OXID-eSales/flow_theme/pull/135)
 
 ### Fixed
 - Fix mouseover on cart in lists flickering [PR-127](https://github.com/OXID-eSales/flow_theme/pull/127)

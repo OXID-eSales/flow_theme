@@ -55,76 +55,86 @@
                             [{/block}]
                             <div class="basketItemDesc">
                                 [{block name="dd_checkout_inc_basketcontents_table_item_desc"}]
-                                    [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
+                                    [{block name="checkout_basketcontents_basketitem_title"}]
+                                        [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
                                         <b>[{$basketitem->getTitle()}]</b>
                                         [{if $editable}]</a>[{/if}]
-                                    [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
-                                    <div class="small">
-                                        [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
-                                    </div>
-                                    <div class="small">
-                                        [{assign var=sep value=", "}]
-                                        [{assign var=result value=""}]
-                                        [{foreach key=oArtAttributes from=$oAttributes->getArray() item=oAttr name=attributeContents}]
-                                            [{assign var=temp value=$oAttr->oxattribute__oxvalue->value}]
-                                            [{assign var=result value=$result$temp$sep}]
-                                        [{/foreach}]
-                                        [{$result|trim:$sep}]
-                                    </div>
-
-                                    [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
-                                        [{assign var="oSelections" value=$basketproduct->getSelections(null,$basketitem->getSelList())}]
-                                        [{if $oSelections}]
-                                            <div class="selectorsBox clear" id="cartItemSelections_[{$smarty.foreach.basketContents.iteration}]">
-                                                [{foreach from=$oSelections item=oList name=selections}]
-                                                    [{if $oViewConf->showSelectListsInList()}]
-                                                        [{include file="widget/product/selectbox.tpl" oSelectionList=$oList sFieldName="aproducts[`$basketindex`][sel]" iKey=$smarty.foreach.selections.index blHideDefault=true sSelType="seldrop"}]
-                                                    [{else}]
-                                                        [{assign var="oActiveSelection" value=$oList->getActiveSelection()}]
-                                                        [{if $oActiveSelection}]
-                                                            <input type="hidden" name="aproducts[[{$basketindex}]][sel][[{$smarty.foreach.selections.index}]]" value="[{$oActiveSelection->getValue()}]">
-                                                            <div>[{$oList->getLabel()}]: [{$oActiveSelection->getName()}]</div>
-                                                        [{/if}]
-                                                    [{/if}]
-                                                [{/foreach}]
-                                            </div>
-                                        [{/if}]
-                                    [{/if}]
-
-                                    [{if !$editable}]
-                                        <p class="persparamBox">
-                                            [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
-                                                [{if !$smarty.foreach.persparams.first}]<br />[{/if}]
-                                                <strong>
-                                                    [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
-                                                        [{oxmultilang ident="LABEL"}]
-                                                    [{else}]
-                                                        [{$sVar}] :
-                                                    [{/if}]
-                                                </strong> [{$aParam}]
+                                        [{if $basketitem->isSkipDiscount()}] <sup><a href="#SkipDiscounts_link" >**</a></sup>[{/if}]
+                                    [{/block}]
+                                    [{block name="checkout_basketcontents_basketitem_artnum"}]
+                                        <div class="small">
+                                            [{oxmultilang ident="PRODUCT_NO"}] [{$basketproduct->oxarticles__oxartnum->value}]
+                                        </div>
+                                    [{/block}]
+                                    [{block name="checkout_basketcontents_basketitem_attributes"}]
+                                        <div class="small">
+                                            [{assign var=sep value=", "}]
+                                            [{assign var=result value=""}]
+                                            [{foreach key=oArtAttributes from=$oAttributes->getArray() item=oAttr name=attributeContents}]
+                                                [{assign var=temp value=$oAttr->oxattribute__oxvalue->value}]
+                                                [{assign var=result value=$result$temp$sep}]
                                             [{/foreach}]
-                                        </p>
-                                    [{else}]
-                                        [{if $basketproduct->oxarticles__oxisconfigurable->value}]
-                                            [{if $basketitem->getPersParams()}]
-                                                <br />
-                                                [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
-                                                    <p>
-                                                        <label class="persParamLabel">
-                                                            [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
-                                                                [{oxmultilang ident="LABEL"}]
-                                                            [{else}]
-                                                                [{$sVar}]:
+                                            [{$result|trim:$sep}]
+                                        </div>
+                                    [{/block}]
+
+                                    [{block name="checkout_basketcontents_basketitem_selectlists"}]
+                                        [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
+                                            [{assign var="oSelections" value=$basketproduct->getSelections(null,$basketitem->getSelList())}]
+                                            [{if $oSelections}]
+                                                <div class="selectorsBox clear" id="cartItemSelections_[{$smarty.foreach.basketContents.iteration}]">
+                                                    [{foreach from=$oSelections item=oList name=selections}]
+                                                        [{if $oViewConf->showSelectListsInList()}]
+                                                            [{include file="widget/product/selectbox.tpl" oSelectionList=$oList sFieldName="aproducts[`$basketindex`][sel]" iKey=$smarty.foreach.selections.index blHideDefault=true sSelType="seldrop"}]
+                                                        [{else}]
+                                                            [{assign var="oActiveSelection" value=$oList->getActiveSelection()}]
+                                                            [{if $oActiveSelection}]
+                                                                <input type="hidden" name="aproducts[[{$basketindex}]][sel][[{$smarty.foreach.selections.index}]]" value="[{$oActiveSelection->getValue()}]">
+                                                                <div>[{$oList->getLabel()}]: [{$oActiveSelection->getName()}]</div>
                                                             [{/if}]
-                                                        </label>
-                                                        <input class="textbox persParam" type="text" name="aproducts[[{$basketindex}]][persparam][[{$sVar}]]" value="[{$aParam}]">
-                                                    </p>
-                                                [{/foreach}]
-                                            [{else}]
-                                                <p>[{oxmultilang ident="LABEL"}] <input class="textbox persParam" type="text" name="aproducts[[{$basketindex}]][persparam][details]" value=""></p>
+                                                        [{/if}]
+                                                    [{/foreach}]
+                                                </div>
                                             [{/if}]
                                         [{/if}]
-                                    [{/if}]
+                                    [{/block}]
+
+                                    [{block name="checkout_basketcontents_basketitem_persparams"}]
+                                        [{if !$editable}]
+                                            <p class="persparamBox">
+                                                [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
+                                                    [{if !$smarty.foreach.persparams.first}]<br />[{/if}]
+                                                    <strong>
+                                                        [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
+                                                            [{oxmultilang ident="LABEL"}]
+                                                        [{else}]
+                                                            [{$sVar}] :
+                                                        [{/if}]
+                                                    </strong> [{$aParam}]
+                                                [{/foreach}]
+                                            </p>
+                                        [{else}]
+                                            [{if $basketproduct->oxarticles__oxisconfigurable->value}]
+                                                [{if $basketitem->getPersParams()}]
+                                                    <br />
+                                                    [{foreach key=sVar from=$basketitem->getPersParams() item=aParam name=persparams}]
+                                                        <p>
+                                                            <label class="persParamLabel">
+                                                                [{if $smarty.foreach.persparams.first && $smarty.foreach.persparams.last}]
+                                                                    [{oxmultilang ident="LABEL"}]
+                                                                [{else}]
+                                                                    [{$sVar}]:
+                                                                [{/if}]
+                                                            </label>
+                                                            <input class="textbox persParam" type="text" name="aproducts[[{$basketindex}]][persparam][[{$sVar}]]" value="[{$aParam}]">
+                                                        </p>
+                                                    [{/foreach}]
+                                                [{else}]
+                                                    <p>[{oxmultilang ident="LABEL"}] <input class="textbox persParam" type="text" name="aproducts[[{$basketindex}]][persparam][details]" value=""></p>
+                                                [{/if}]
+                                            [{/if}]
+                                        [{/if}]
+                                    [{/block}]
                                 [{/block}]
                             </div>
                         </td>
