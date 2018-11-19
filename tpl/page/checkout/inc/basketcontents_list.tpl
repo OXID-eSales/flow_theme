@@ -45,24 +45,26 @@
                                 </div>
                             [{/block}]
 
-                            [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
-                                [{assign var="oSelections" value=$basketproduct->getSelections(null,$basketitem->getSelList())}]
-                                [{if $oSelections}]
-                                    <div class="selectorsBox clear" id="cartItemSelections_[{$smarty.foreach.basketContents.iteration}]">
-                                        [{foreach from=$oSelections item=oList name=selections}]
-                                            [{if $oViewConf->showSelectListsInList()}]
-                                                [{include file="widget/product/selectbox.tpl" oSelectionList=$oList sFieldName="aproducts[`$basketindex`][sel]" iKey=$smarty.foreach.selections.index blHideDefault=true sSelType="seldrop"}]
-                                            [{else}]
-                                                [{assign var="oActiveSelection" value=$oList->getActiveSelection()}]
-                                                [{if $oActiveSelection}]
-                                                    <input type="hidden" name="aproducts[[{$basketindex}]][sel][[{$smarty.foreach.selections.index}]]" value="[{$oActiveSelection->getValue()}]">
-                                                    <div>[{$oList->getLabel()}]: [{$oActiveSelection->getName()}]</div>
+                            [{block name="checkout_basketcontents_basketitem_selectlists"}]
+                                [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
+                                    [{assign var="oSelections" value=$basketproduct->getSelections(null,$basketitem->getSelList())}]
+                                    [{if $oSelections}]
+                                        <div class="selectorsBox clear" id="cartItemSelections_[{$smarty.foreach.basketContents.iteration}]">
+                                            [{foreach from=$oSelections item=oList name=selections}]
+                                                [{if $oViewConf->showSelectListsInList()}]
+                                                    [{include file="widget/product/selectbox.tpl" oSelectionList=$oList sFieldName="aproducts[`$basketindex`][sel]" iKey=$smarty.foreach.selections.index blHideDefault=true sSelType="seldrop"}]
+                                                [{else}]
+                                                    [{assign var="oActiveSelection" value=$oList->getActiveSelection()}]
+                                                    [{if $oActiveSelection}]
+                                                        <input type="hidden" name="aproducts[[{$basketindex}]][sel][[{$smarty.foreach.selections.index}]]" value="[{$oActiveSelection->getValue()}]">
+                                                        <div>[{$oList->getLabel()}]: [{$oActiveSelection->getName()}]</div>
+                                                    [{/if}]
                                                 [{/if}]
-                                            [{/if}]
-                                        [{/foreach}]
-                                    </div>
+                                            [{/foreach}]
+                                        </div>
+                                    [{/if}]
                                 [{/if}]
-                            [{/if}]
+                            [{/block}]
 
                             [{block name="checkout_basketcontents_basketitem_persparams"}]
                                 [{if !$editable}]
