@@ -16,7 +16,18 @@
     "extra": {
         "oxideshop": {
             "target-directory": "flow",
-            "assets-directory": "out/flow"
+            "assets-directory": "out/flow",
+            "blacklist-filter": [
+                "build/**/*",
+                "grunt/**/*",
+                ".gitattributes",
+                ".gitignore",
+                "CHANGELOG.md",
+                "composer.json",
+                "CONTRIBUTING.md",
+                "Gruntfile.js",
+                "package.json"
+            ]
         }
     }
 }
