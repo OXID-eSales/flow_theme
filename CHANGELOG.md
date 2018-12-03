@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.0] - unreleased
+## [3.1.1] - unreleased
+
+### Added
+
+### Fixed
+
+### Changed
+
+
+## [3.1.0] - 2018-12-03
 
 ### Added
 - Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
@@ -41,6 +50,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Specify "container" for tooltip plugin [PR-130](https://github.com/OXID-eSales/flow_theme/pull/130)
 - Use oxprice for formatting the currency in basket and details page [PR-129](https://github.com/OXID-eSales/flow_theme/pull/129)
 - PHP 7.2 support: count(): Parameter must be an array or an object that implements Countable
+- Exclude non-essential files from dist package [PR-136](https://github.com/OXID-eSales/flow_theme/pull/136)
+- Filter non-essential files during theme installation [PR-137](https://github.com/OXID-eSales/flow_theme/pull/137)
 
 ## [3.0.2] - 2018-07-06
 
@@ -148,7 +159,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.0.3]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...HEAD
+[3.1.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...v3.1.0
 [3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v2.3.3...v3.0.0
