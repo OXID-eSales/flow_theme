@@ -810,6 +810,7 @@
     </style>
 </head>
 <body bgcolor="#ffffff">
+    [{block name="email_html_header"}][{/block}]
     [{assign var="oConfig" value=$oViewConf->getConfig()}]
     <table class="body">
         <tr>
