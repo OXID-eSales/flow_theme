@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.1.1] - unreleased
 
 ### Added
+- New blocks:
+  - `email/html/header.tpl`
+    - email_html_header [PR-140](https://github.com/OXID-eSales/flow_theme/pull/140)
 
 ### Fixed
 
