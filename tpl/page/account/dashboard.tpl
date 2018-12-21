@@ -139,7 +139,7 @@
         [{/block}]
         <div class="col-xs-6 text-right">
             <a href="[{$oViewConf->getLogoutLink()}]" class="btn btn-warning" role="getLogoutLink">
-                <i class="fa fa-off"></i> [{oxmultilang ident="LOGOUT"}]
+                <i class="fa fa-power-off"></i> [{oxmultilang ident="LOGOUT"}]
             </a>
         </div>
         <p>&nbsp;</p>
