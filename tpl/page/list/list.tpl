@@ -32,7 +32,7 @@
         <div class="page-header">
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             <h1>
-                [{$actCategory->getTitle()}]
+                [{$oView->getTitle()}]
                 [{if $rsslinks.activeCategory}]
                     <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
                         <i class="fa fa-rss"></i>
