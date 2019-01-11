@@ -4,26 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.2.0] - unreleased
-
-### Added
-- New blocks:
-  - `email/html/header.tpl`
-    - email_html_header [PR-140](https://github.com/OXID-eSales/flow_theme/pull/140)
-
-### Fixed
-- Fix the Icon on the account dashboard button [PR-139](https://github.com/OXID-eSales/flow_theme/pull/139)
-
-### Changed
-
-
-## [3.1.0] - 2018-12-03
+## [3.1.0] - unreleased
 
 ### Added
 - Add active class to cms content pages in mainnavbar [PR-126](https://github.com/OXID-eSales/flow_theme/pull/126)
 - Add active class to cms content pages in submenus [PR-133](https://github.com/OXID-eSales/flow_theme/pull/133)
 - Introduce new feature - reset category filter [0002046](https://bugs.oxid-esales.com/view.php?id=2046)
 - New blocks:
+  - `email/html/header.tpl`
+    - email_html_header [PR-140](https://github.com/OXID-eSales/flow_theme/pull/140)
   - `page/checkout/inc/basketcontents_table.tpl`
     - checkout_basketcontents_basketitem_title [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
     - checkout_basketcontents_basketitem_artnum [PR-134](https://github.com/OXID-eSales/flow_theme/pull/134)
@@ -47,6 +36,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - Border bottom was changes to customizable HR tag
   - Allow textarea to be resized only vertically
 - Fix errors in translations [PR-132](https://github.com/OXID-eSales/flow_theme/pull/132) [0006909](https://bugs.oxid-esales.com/view.php?id=6909)
+- Fix the Icon on the account dashboard button [PR-139](https://github.com/OXID-eSales/flow_theme/pull/139)
 
 ### Changed
 - Alert and offset class removed from default payment description template [PR-128](https://github.com/OXID-eSales/flow_theme/pull/128)
