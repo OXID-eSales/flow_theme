@@ -10,7 +10,7 @@
         [{if $oView->getWishList()}]
             [{assign var="wishuser" value=$oView->getWishUser()}]
             <p class="wishlistUser">
-            [{oxmultilang ident="PAGE_WISHLIST_PRODUCTS_PRODUCTS1"}] [{$wishuser->oxuser__oxfname->value}] [{$wishuser->oxuser__oxlname->value}][{oxmultilang ident="PAGE_WISHLIST_PRODUCTS_PRODUCTS2"}]
+            [{oxmultilang ident="WISHLIST_PRODUCTS" args=$wishuser->oxuser__oxfname->value|cat:' '|cat:$wishuser->oxuser__oxlname->value}]
             </p>
         [{/if}]
     </div>
