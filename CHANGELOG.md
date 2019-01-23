@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.1.1] - unreleased
+## [3.2.0] - unreleased
 
 ### Added
+- New blocks:
+  - `page/search/search.tpl`
+    - search_bottom_listlocator [PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
 
 ### Fixed
 
