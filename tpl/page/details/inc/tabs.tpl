@@ -9,7 +9,7 @@
                 <div id="description" class="tab-pane[{if $blFirstTab}] active[{/if}]" itemprop="description">
                     [{oxeval var=$oLongdesc}]
                     [{if $oDetailsProduct->oxarticles__oxexturl->value}]
-                        <a id="productExturl" class="js-external" href="http://[{$oDetailsProduct->oxarticles__oxexturl->value}]">
+                        <a id="productExturl" class="js-external" href="[{$oDetailsProduct->oxarticles__oxexturl->value}]">
                         [{if $oDetailsProduct->oxarticles__oxurldesc->value}]
                             [{$oDetailsProduct->oxarticles__oxurldesc->value}]
                         [{else}]
