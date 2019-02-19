@@ -83,7 +83,7 @@ Installation on ubuntu system:
 
 	```
     cd DOCUMENT_ROOT/Application/views/flow/
-    sudo npm install
+    npm install
     ```
 
 4. Now its possible to regenerate "flow" theme assets by running ``grunt`` default
