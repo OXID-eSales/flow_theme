@@ -76,14 +76,14 @@ Installation on ubuntu system:
 2. Install ``grunt`` globally. Example:
 
 	```
-    sudo npm install -g grunt-cli
+    npm install -g grunt-cli
     ```
 
 3. Go to "flow" theme's directory and install all related ``grunt`` plugins:
 
 	```
     cd DOCUMENT_ROOT/Application/views/flow/
-    sudo npm install
+    npm install
     ```
 
 4. Now its possible to regenerate "flow" theme assets by running ``grunt`` default
