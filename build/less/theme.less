@@ -1265,7 +1265,7 @@ body {
 }
 
 .refineParams {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 
     &.bottomParams {
         .text-center;
@@ -1273,6 +1273,18 @@ body {
 
     .pagination {
         margin: 0;
+    }
+
+    .options .btn-group {
+        @media (max-width: @screen-sm-min) {
+            width: 100%;
+        }
+
+        button {
+            @media (max-width: @screen-sm-min) {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -1486,23 +1498,6 @@ body {
     -moz-border-radius-bottomleft: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-  }
-}
-
-.refineParams {
-
-  margin-bottom: 0;
-
-  .options .btn-group {
-      @media (max-width: @screen-sm-min) {
-        width: 100%;
-      }
-
-      button {
-        @media (max-width: @screen-sm-min) {
-          width: 100%;
-        }
-      }
   }
 }
 
