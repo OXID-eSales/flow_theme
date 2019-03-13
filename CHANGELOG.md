@@ -12,7 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - search_bottom_listlocator [PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
 
 ### Fixed
-
+- Several CSS improvements:
+  - Remove the unsupported font-smooth property [PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
+  - Remove empty CSS rules [PR-145](https://github.com/OXID-eSales/flow_theme/pull/145)
+  - Merge duplicate CSS selector [PR-146](https://github.com/OXID-eSales/flow_theme/pull/146)
+  
 ### Changed
 - Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
 
