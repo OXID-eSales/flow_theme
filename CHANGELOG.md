@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - Remove the unsupported font-smooth property [PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
   - Remove empty CSS rules [PR-145](https://github.com/OXID-eSales/flow_theme/pull/145)
   - Merge duplicate CSS selector [PR-146](https://github.com/OXID-eSales/flow_theme/pull/146)
+- [0006958](https://bugs.oxid-esales.com/view.php?id=6958) Remove unnecessary closing "strong" tags [PR-147](https://github.com/OXID-eSales/flow_theme/pull/147)
   
 ### Changed
 - Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
