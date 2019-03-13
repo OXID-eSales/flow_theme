@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - New blocks:
   - `page/search/search.tpl`
     - search_bottom_listlocator [PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
+  - `page/checkout/inc/basketcontents.tpl`
+    - checkout_basketcontents_summary_table_inner [PR-148](https://github.com/OXID-eSales/flow_theme/pull/148)
 
 ### Fixed
 - Several CSS improvements:
