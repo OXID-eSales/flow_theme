@@ -5,13 +5,13 @@
             [{if $oView->isConfirmAGBActive()}]
                 [{oxifcontent ident="oxrighttocancellegend" object="oContent"}]
                     <div class="panel-heading">
-                        <h3 class="panel-title">[{$oContent->oxcontents__oxtitle->value}]</strong></h3>
+                        <h3 class="panel-title">[{$oContent->oxcontents__oxtitle->value}]</h3>
                     </div>
                 [{/oxifcontent}]
             [{else}]
                 [{oxifcontent ident="oxrighttocancellegend2" object="oContent"}]
                     <div class="panel-heading">
-                        <h3 class="panel-title">[{$oContent->oxcontents__oxtitle->value}]</strong></h3>
+                        <h3 class="panel-title">[{$oContent->oxcontents__oxtitle->value}]</h3>
                     </div>
                 [{/oxifcontent}]
             [{/if}]
