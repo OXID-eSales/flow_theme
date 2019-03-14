@@ -54,6 +54,9 @@
                     'additionalData' : aOptions,
                     'onSuccess' : function(r) {
                         $( contentTarget ).parent().html( r );
+                        try {
+                            ajaxExecuteTemplateScripts($, activator, highlightTargets, contentTarget, aOptions);
+                        } catch(e) {}
                         if ( typeof WidgetsHandler !== 'undefined') {
                             WidgetsHandler.reloadWidget('oxwarticledetails');
                             WidgetsHandler.reloadWidget('oxwrating');
