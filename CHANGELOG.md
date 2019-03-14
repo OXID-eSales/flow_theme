@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   
 ### Changed
 - Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
+- Wrap product count in minibasket in "badge" div [PR-138](https://github.com/OXID-eSales/flow_theme/pull/138)
 
 ## [3.1.0] - 2019-01-18
 
