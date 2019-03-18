@@ -73,10 +73,10 @@ Installation on ubuntu system:
 	sudo apt-get install -y nodejs
 	```
 
-2. Install ``grunt`` globally. Example:
+2. Install ``grunt`` globally and update npm. Example:
 
 	```
-    sudo npm install -g grunt-cli
+    sudo npm install -g npm grunt-cli 
     ```
 
 3. Go to "flow" theme's directory and install all related ``grunt`` plugins:
