@@ -54,9 +54,16 @@
                     'additionalData' : aOptions,
                     'onSuccess' : function(r) {
                         $( contentTarget ).parent().html( r );
-                        try {
-                            ajaxExecuteTemplateScripts($, activator, highlightTargets, contentTarget, aOptions);
-                        } catch(e) {}
+                        if(oxTemplateCallbacks !== undefined && oxTemplateCallbacks.length) {
+                            for(var i in oxTemplateCallbacks) {
+                                if(typeof oxTemplateCallbacks[i] === 'function') {
+                                    try {
+                                        oxTemplateCallbacks[i]($, activator, highlightTargets, contentTarget, aOptions);
+                                    } catch(e) {}
+                                }
+                            }
+                            oxTemplateCallbacks = [];
+                        }
                         if ( typeof WidgetsHandler !== 'undefined') {
                             WidgetsHandler.reloadWidget('oxwarticledetails');
                             WidgetsHandler.reloadWidget('oxwrating');
