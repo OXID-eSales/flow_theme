@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.2.1] - Unreleased
+
+### Added
+
+### Fixed
+  
+### Changed
+
 ## [3.2.0] - 2019-04-11
 
 ### Added
@@ -172,6 +180,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[3.2.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.2.0...HEAD
 [3.2.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...v3.2.0
 [3.1.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...v3.1.0
 [3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
