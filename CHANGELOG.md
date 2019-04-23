@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 ### Fixed
+- Fix "sBackgroundPosVertical" config variable constraints [Wave PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
   
 ### Changed
 

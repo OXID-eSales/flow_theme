@@ -230,7 +230,7 @@ $aTheme = array(
             'name'        => 'sBackgroundPosVertical',
             'type'        => 'select',
             'value'       => 'top',
-            'constraints' => 'left|right|center',
+            'constraints' => 'top|bottom|center',
         ),
         array(
             'group'       => 'background',
