@@ -12,12 +12,14 @@
                 <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=invite"}]">[{oxmultilang ident="INVITE_YOUR_FRIENDS"}]</a></li>
             [{/if}]
             [{oxhasrights ident="TOBASKET"}]
+            [{block name="footer_services_cart"}]
                 <li>
                     <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]">
                         [{oxmultilang ident="CART"}]
                     </a>
                     [{if $oxcmp_basket && $oxcmp_basket->getItemsCount() > 0}] <span class="badge">[{$oxcmp_basket->getItemsCount()}]</span>[{/if}]
                 </li>
+            [{/block}]
             [{/oxhasrights}]
             <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account"}]">[{oxmultilang ident="ACCOUNT"}]</a></li>
             <li>
