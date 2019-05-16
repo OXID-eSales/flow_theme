@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.2.1] - Unreleased
 
 ### Added
+- New blocks:
+  - `widget/footer/services.tpl`
+    - footer_services_cart
 
 ### Fixed
 - Fix "sBackgroundPosVertical" config variable constraints [Wave PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
