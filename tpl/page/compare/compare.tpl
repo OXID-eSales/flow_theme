@@ -23,13 +23,13 @@
                                 <td class="item-wrapper text-center">
                                     <div class="move-controls btn-group">
                                         [{if !$product->hidePrev}]
-                                            <a id="compareLeft_[{$product->oxarticles__oxid->value}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getActiveClassName() params="fnc=moveleft&amp;aid=`$product->oxarticles__oxnid->value`&amp;pgNr="|cat:$oView->getActPage()}]" class="btn btn-default movePrev">&laquo;</a>
+                                            <a id="compareLeft_[{$product->oxarticles__oxid->value}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getActiveClassName() params="fnc=moveleft&amp;aid=`$product->oxarticles__oxnid->value`&amp;pgNr="|cat:$oView->getActPage()|cat:"&amp;stoken="|cat:$oViewConf->getSessionChallengeToken()}]" class="btn btn-default movePrev">&laquo;</a>
                                         [{/if}]
 
                                         <a href="javascript:;" class="btn btn-default disabled">[{oxmultilang ident="MOVE"}]</a>
 
                                         [{if !$product->hideNext}]
-                                            <a id="compareRight_[{$product->oxarticles__oxid->value}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getActiveClassName() params="fnc=moveright&amp;aid=`$product->oxarticles__oxnid->value`&amp;pgNr="|cat:$oView->getActPage()}]" class="btn btn-default moveNext">&raquo;</a>
+                                            <a id="compareRight_[{$product->oxarticles__oxid->value}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getActiveClassName() params="fnc=moveright&amp;aid=`$product->oxarticles__oxnid->value`&amp;pgNr="|cat:$oView->getActPage()|cat:"&amp;stoken="|cat:$oViewConf->getSessionChallengeToken()}]" class="btn btn-default moveNext">&raquo;</a>
                                         [{/if}]
                                     </div>
                                     [{include file="page/compare/inc/compareitem.tpl" product=$product testid=$smarty.foreach.comparelist.iteration}]

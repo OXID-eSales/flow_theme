@@ -10,7 +10,7 @@
                             [{if $blEdit}]
                                 [{assign var="editclass" value="account_recommlist&amp;fnc=editList"}]
                             [{/if}]
-                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=`$editclass`" params="recommid=`$recommlist->oxrecommlists__oxid->value`&amp;searchrecomm=`$searchrecomm`"}]" class="lead" title="[{$recommlist->oxrecommlists__oxtitle->value}]">[{$recommlist->oxrecommlists__oxtitle->value}]</a>
+                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=`$editclass`" params="recommid=`$recommlist->oxrecommlists__oxid->value`&amp;searchrecomm=`$searchrecomm`"|cat:"&amp;stoken="|cat:$oViewConf->getSessionChallengeToken()}]" class="lead" title="[{$recommlist->oxrecommlists__oxtitle->value}]">[{$recommlist->oxrecommlists__oxtitle->value}]</a>
                             <small class="text-muted">[{oxmultilang ident="LIST_BY"}] <strong>[{$recommlist->oxrecommlists__oxauthor->value}]</strong></small>
 
                             [{if $blEdit}]
