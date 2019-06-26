@@ -4,12 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.2.1] - Unreleased
+## [3.3.0] - Unreleased
 
 ### Added
 - New blocks:
   - `widget/footer/services.tpl`
     - footer_services_cart
+  - `form/fieldset/user_shipping.tpl`  
+    - form_user_shipping_address_actions
+    - form_user_shipping_address_edit_action
+    - form_user_shipping_address_delete_action
 
 ### Fixed
 - Fix "sBackgroundPosVertical" config variable constraints [Wave PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
