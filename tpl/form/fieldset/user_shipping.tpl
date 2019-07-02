@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxaddress__oxfname}] oxInValid[{/if}]">
-        <label class="control-label col-lg-3[{if $oView->isFieldRequired(oxaddress__oxfname)}] req"[{/if}]">[{oxmultilang ident="FIRST_NAME"}]</label>
+        <label class="control-label col-lg-3[{if $oView->isFieldRequired(oxaddress__oxfname)}] req[{/if}]">[{oxmultilang ident="FIRST_NAME"}]</label>
         <div class="col-lg-9">
             <input class="form-control[{if $oView->isFieldRequired(oxaddress__oxfname)}] js-oxValidate js-oxValidate_notEmpty[{/if}]" type="text" maxlength="255" name="deladr[oxaddress__oxfname]" value="[{if isset( $deladr.oxaddress__oxfname )}][{$deladr.oxaddress__oxfname}][{else}][{$delivadr->oxaddress__oxfname->value}][{/if}]"[{if $oView->isFieldRequired(oxaddress__oxfname)}] required=""[{/if}]>
             [{if $oView->isFieldRequired(oxaddress__oxfname)}]
