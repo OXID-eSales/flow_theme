@@ -20,7 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix "sBackgroundPosVertical" config variable constraints [Wave PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
 - Do not use deprecated getSession of Base class
 - Fix HTML syntax error in oxaddress__oxfname req [Wave PR-41](https://github.com/OXID-eSales/wave-theme/pull/41)
-  
+- Fix wrong icon in offline page [WAVE PR-38](https://github.com/OXID-eSales/wave-theme/pull/38)
+
 ### Changed
 
 ## [3.2.0] - 2019-04-11
