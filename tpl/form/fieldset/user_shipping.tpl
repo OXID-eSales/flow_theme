@@ -30,11 +30,15 @@
                         <div class="col-xs-12 col-md-6 col-lg-4">
                             <div class="panel panel-default">
                                 <div class="panel-body">
+                                    [{block name="form_user_shipping_address_actions"}]
                                     [{if $address->isSelected()}]
+                                        [{block name="form_user_shipping_address_edit_action"}]
                                         <button class="btn btn-warning btn-xs hasTooltip pull-right dd-edit-shipping-address" title="[{oxmultilang ident="CHANGE"}]">
                                             <i class="fa fa-pencil"></i>
                                         </button>
+                                        [{/block}]
                                     [{/if}]
+                                    [{/block}]
                                     [{include file="widget/address/shipping_address.tpl" delivadr=$address}]
                                 </div>
                                 <div class="panel-footer" >

@@ -18,7 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - ``account_delete_my_account_confirmation_warning_message`` in page/account/delete_my_account_confirmation.tpl
     - ``account_delete_my_account_confirmation_form`` in page/account/delete_my_account_confirmation.tpl
     - ``account_delete_my_account_confirmation_form_button_set`` in page/account/delete_my_account_confirmation.tpl
-
+    - ``form_user_shipping_address_actions`` in form/fieldset/user_shipping.tpl
+    - ``form_user_shipping_address_edit_action`` in form/fieldset/user_shipping.tpl
 
 ### Changed
 
