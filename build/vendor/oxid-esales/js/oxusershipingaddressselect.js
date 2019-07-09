@@ -39,7 +39,8 @@
                 }
                 if (selectValue !== '-1') {
                     $( ".js-oxValidate" ).unbind('submit');
-                    $('#shippingAddressForm').remove();
+                    $('#shippingAddressForm').hide();
+                    $('#shippingAddressForm input, #shippingAddressForm select').prop('disabled', true);
                     self.submitForm();
                 } else {
                     self.emptyInputFields();
@@ -57,6 +58,7 @@
             $("input:text").filter(function() {
                 return this.name.match(/address__/);
             }).val("");
+            $('#shippingAddressForm input, #shippingAddressForm select').prop('disabled', false);
             $('#shippingAddressForm').show();
             $('#shippingAddressText').hide();
             $("select[name='deladr[oxaddress__oxcountryid]']").children("option").prop("selected", null);
