@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.3.0] - Unreleased
+## [3.3.1] - Unreleased
+
+### Added
+
+### Fixed
+
+### Changed
+
+## [3.3.0] - 2019-07-12
 
 ### Added
 - New blocks:
@@ -21,8 +29,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Do not use deprecated getSession of Base class
 - Fix HTML syntax error in oxaddress__oxfname req [Wave PR-41](https://github.com/OXID-eSales/wave-theme/pull/41)
 - Fix wrong icon in offline page [WAVE PR-38](https://github.com/OXID-eSales/wave-theme/pull/38)
-
-### Changed
 
 ## [3.2.0] - 2019-04-11
 
@@ -192,7 +198,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.2.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.2.0...HEAD
+[3.3.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.3.0...HEAD
+[3.3.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.2.0...v3.3.0
 [3.2.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...v3.2.0
 [3.1.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.2...v3.1.0
 [3.0.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.0.1...v3.0.2
