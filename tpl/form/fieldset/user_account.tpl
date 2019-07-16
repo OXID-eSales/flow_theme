@@ -26,8 +26,8 @@
         </div>
     [{/block}]
 </div>
-<div class="form-group">
-    [{block name="user_account_newsletter"}]
+[{block name="user_account_newsletter"}]
+    <div class="form-group">
         <div class="col-lg-9 col-lg-offset-3">
             <input type="hidden" name="blnewssubscribed" value="0">
             <div class="checkbox">
@@ -37,5 +37,5 @@
             </div>
             <span class="help-block">[{oxmultilang ident="MESSAGE_NEWSLETTER_SUBSCRIPTION"}]</span>
         </div>
-    [{/block}]
-</div>
+    </div>
+[{/block}]

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Use sStartPageListDisplayType setting in Top seller start page block [Wave PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
 
 ### Changed
+- Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group
 
 ## [3.3.0] - 2019-07-12
 
