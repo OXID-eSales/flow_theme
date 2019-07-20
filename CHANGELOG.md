@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+### Removed
+- Remove outdated econda keys from en translations [Wave PR-52](https://github.com/OXID-eSales/wave-theme/pull/52)
+
 ### Fixed
 - Use sStartPageListDisplayType setting in Top seller start page block [Wave PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
 

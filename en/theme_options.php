@@ -191,8 +191,6 @@ $aLang = array(
     'SHOP_THEME_blSliderShowImageCaption'           => 'Activate captions for slider on home page',
     'HELP_SHOP_THEME_blSliderShowImageCaption'      => 'A caption is visible, when the active slide has an assigned product.',
 
-    'SHOP_THEME_sEcondaAccountId'                   => 'econda-ID',
-    'HELP_SHOP_THEME_sEcondaAccountId'              => 'Please enter your econda ID.<br>Format: XXXXXXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX-X.<br>Please keep in mind to activate the econda Webshop Controlling in your shop.',
     'SHOP_THEME_blEcondaRecommendationsStart'       => 'Show recommendations on home page',
     'SHOP_THEME_sEcondaWidgetIdStart'               => 'Recommendation-Widget-ID für Startseite',
     'SHOP_THEME_blEcondaRecommendationsList'        => 'Show recommendations in listings',
