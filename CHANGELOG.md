@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 ### Fixed
+- Use sStartPageListDisplayType setting in Top seller start page block [Wave PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
 
 ### Changed
 
