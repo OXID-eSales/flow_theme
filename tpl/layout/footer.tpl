@@ -158,22 +158,22 @@
         [{/if}]
     </footer>
 
-    <div class="legal">
-        <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
-            <div class="legal-box">
-                <div class="row">
-                    <section class="col-sm-12">
-                        [{block name="dd_footer_copyright"}]
-                            [{oxifcontent ident="oxstdfooter" object="oCont"}]
+    [{oxifcontent ident="oxstdfooter" object="oCont"}]
+        <div class="legal">
+            <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
+                <div class="legal-box">
+                    <div class="row">
+                        <section class="col-sm-12">
+                            [{block name="dd_footer_copyright"}]
                                 [{$oCont->oxcontents__oxcontent->value}]
-                            [{/oxifcontent}]
-                        [{/block}]
-                    </section>
+                            [{/block}]
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
+    [{/oxifcontent}]
 
-    </div>
 [{/block}]
 
 [{if $oView->isRootCatChanged()}]
