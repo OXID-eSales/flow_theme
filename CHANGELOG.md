@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Use sStartPageListDisplayType setting in Top seller start page block [Wave PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
 - Fix compare list remove link on details page [Wave PR-59](https://github.com/OXID-eSales/wave-theme/pull/59)
+- Fix first error field message disappearing right after validation [Wave PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
 
 ### Changed
 - Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group
