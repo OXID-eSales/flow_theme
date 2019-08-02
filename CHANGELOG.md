@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix compare list remove link on details page [Wave PR-59](https://github.com/OXID-eSales/wave-theme/pull/59)
 - Fix first error field message disappearing right after validation [Wave PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
 - Ensure that variables are assigned for widget product list and listitems.
+- Add missing help-block elements for several billing/shipping address edit form fields [Wave PR-64](https://github.com/OXID-eSales/wave-theme/pull/64)
 
 ### Changed
 - Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group

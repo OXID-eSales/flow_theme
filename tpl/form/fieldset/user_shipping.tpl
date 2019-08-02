@@ -115,8 +115,8 @@
             <input class="form-control[{if $oView->isFieldRequired(oxaddress__oxcompany)}] js-oxValidate js-oxValidate_notEmpty[{/if}]" type="text" size="37" maxlength="255" name="deladr[oxaddress__oxcompany]" value="[{if isset( $deladr.oxaddress__oxcompany )}][{$deladr.oxaddress__oxcompany}][{else}][{$delivadr->oxaddress__oxcompany->value}][{/if}]"[{if $oView->isFieldRequired(oxaddress__oxcompany)}] required=""[{/if}]>
             [{if $oView->isFieldRequired(oxaddress__oxcompany)}]
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxaddress__oxcompany}]
-                <div class="help-block"></div>
             [{/if}]
+            <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxaddress__oxaddinfo}] oxInValid[{/if}]">
@@ -126,8 +126,8 @@
             <input class="form-control[{if $oView->isFieldRequired(oxaddress__oxaddinfo)}] js-oxValidate js-oxValidate_notEmpty[{/if}]" type="text" size="37" maxlength="255" name="deladr[oxaddress__oxaddinfo]" value="[{if isset( $deladr.oxaddress__oxaddinfo )}][{$deladr.oxaddress__oxaddinfo}][{else}][{$delivadr->oxaddress__oxaddinfo->value}][{/if}]"[{if $oView->isFieldRequired(oxaddress__oxaddinfo)}] required=""[{/if}]>
             [{if $oView->isFieldRequired(oxaddress__oxaddinfo)}]
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxaddress__oxaddinfo}]
-                <div class="help-block"></div>
             [{/if}]
+            <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxaddress__oxstreet}] oxInValid[{/if}]">
@@ -197,6 +197,7 @@
                     selectedStateIdPrim=$deladr.oxaddress__oxstateid
                     selectedStateId=$delivadr->oxaddress__oxstateid->value
                     class="form-control selectpicker"}]
+                <div class="help-block"></div>
             </div>
         </div>
     [{/block}]
@@ -206,8 +207,8 @@
             <input class="form-control[{if $oView->isFieldRequired(oxaddress__oxfon)}] js-oxValidate js-oxValidate_notEmpty[{/if}]" type="text" size="37" maxlength="128" name="deladr[oxaddress__oxfon]" value="[{if isset( $deladr.oxaddress__oxfon )}][{$deladr.oxaddress__oxfon}][{else}][{$delivadr->oxaddress__oxfon->value}][{/if}]"[{if $oView->isFieldRequired(oxaddress__oxfon)}] required=""[{/if}]>
             [{if $oView->isFieldRequired(oxaddress__oxfon)}]
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxaddress__oxfon}]
-                <div class="help-block"></div>
             [{/if}]
+            <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxaddress__oxfax}] oxInValid[{/if}]">
@@ -216,8 +217,8 @@
             <input class="form-control[{if $oView->isFieldRequired(oxaddress__oxfax)}] js-oxValidate js-oxValidate_notEmpty[{/if}]" type="text" size="37" maxlength="128" name="deladr[oxaddress__oxfax]" value="[{if isset( $deladr.oxaddress__oxfax )}][{$deladr.oxaddress__oxfax}][{else}][{$delivadr->oxaddress__oxfax->value}][{/if}]"[{if $oView->isFieldRequired(oxaddress__oxfax)}] required=""[{/if}]>
             [{if $oView->isFieldRequired(oxaddress__oxfax)}]
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxaddress__oxfax}]
-                <div class="help-block"></div>
             [{/if}]
+            <div class="help-block"></div>
         </div>
     </div>
 </div>
