@@ -16,6 +16,13 @@
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
 
+    [{if !$testid }]
+        [{assign var=testid value=$oView->getViewParameter('testid')}]
+    [{/if}]
+    [{if !$listId }]
+         [{assign var=listId value=$oView->getViewParameter('listId')}]
+    [{/if}]
+
     [{oxscript include="js/widgets/oxlistremovebutton.min.js" priority=10}]
     [{oxscript add="$('button.removeButton').oxListRemoveButton();"}]
 

@@ -14,6 +14,13 @@
     [{assign var="iProductsPerLine" value=1}]
 [{/if}]
 
+[{if !$testid }]
+    [{assign var=testid value=$oView->getViewParameter('testid')}]
+[{/if}]
+[{if !$listId }]
+    [{assign var=listId value=$oView->getViewParameter('listId')}]
+[{/if}]
+
 <div class="boxwrapper" id="boxwrapper_[{$listId}]">
     [{if $head}]
         [{if $header == "light"}]

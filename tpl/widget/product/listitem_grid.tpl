@@ -16,6 +16,13 @@
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
 
+    [{if !$testid }]
+        [{assign var=testid value=$oView->getViewParameter('testid')}]
+    [{/if}]
+    [{if !$listId }]
+        [{assign var=listId value=$oView->getViewParameter('listId')}]
+    [{/if}]
+
     <form name="tobasket[{$testid}]" [{if $blShowToBasket}]action="[{$oViewConf->getSelfActionLink()}]" method="post"[{else}]action="[{$_productLink}]" method="get"[{/if}]>
         <div class="hidden">
             [{$oViewConf->getNavFormParams()}]
