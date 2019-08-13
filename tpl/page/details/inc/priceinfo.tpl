@@ -19,9 +19,16 @@
                                 [{$priceItem->oxprice2article__oxaddperc->value}]% [{oxmultilang ident="DISCOUNT"}]
                             [{else}]
                                 [{block name="details_productmain_price"}]
-                                    <strong>[{$priceItem->fbrutprice}] [{$currency->sign}]</strong>
-                                    [{if $oDetailsProduct->getUnitName() and $priceItem->fbrutamountprice}]
-                                        &nbsp;([{$priceItem->fbrutamountprice}] [{$currency->sign}] / [{$oDetailsProduct->getUnitName()}])
+                                    [{if $oView->isVatIncluded()}]
+                                        <strong>[{$priceItem->fbrutprice}] [{$currency->sign}]</strong>
+                                        [{if $oDetailsProduct->getUnitName() and $priceItem->fbrutamountprice}]
+                                            &nbsp;([{$priceItem->fbrutamountprice}] [{$currency->sign}] / [{$oDetailsProduct->getUnitName()}])
+                                        [{/if}]
+                                    [{else}]
+                                        <strong>[{$priceItem->fnetprice}] [{$currency->sign}]</strong>
+                                        [{if $oDetailsProduct->getUnitName() and $priceItem->fnetamountprice}]
+                                            &nbsp;([{$priceItem->fnetamountprice}] [{$currency->sign}] / [{$oDetailsProduct->getUnitName()}])
+                                        [{/if}]
                                     [{/if}]
                                 [{/block}]
                             [{/if}]
