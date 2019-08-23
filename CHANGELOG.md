@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix first error field message disappearing right after validation [Wave PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
 - Ensure that variables are assigned for widget product list and listitems.
 - Add missing help-block elements for several billing/shipping address edit form fields [Wave PR-64](https://github.com/OXID-eSales/wave-theme/pull/64)
+- Display netto prices in netto mode in quantity block [#0006811](https://bugs.oxid-esales.com/view.php?id=6811) [PR-151](https://github.com/OXID-eSales/flow_theme/pull/151)
 
 ### Changed
 - Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group
