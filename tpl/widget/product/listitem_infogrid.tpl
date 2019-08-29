@@ -16,7 +16,7 @@
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
 
-    [[{if !$testid }]
+    [{if !$testid }]
        [{assign var=testid value=$oView->getViewParameter('testid')}]
     [{/if}]
     [{if !$listId }]
