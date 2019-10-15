@@ -4,9 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.4.0] - Unreleased
-
-### Added
+## [3.4.0] - 2019-10-15
 
 ### Removed
 - Remove outdated econda keys from en translations [Wave PR-52](https://github.com/OXID-eSales/wave-theme/pull/52)
