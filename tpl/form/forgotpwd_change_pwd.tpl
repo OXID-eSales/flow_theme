@@ -13,11 +13,13 @@
     </div>
 
     <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+        [{block name="user_account_password"}]
         <label class="control-label col-sm-3">[{oxmultilang ident="NEW_PASSWORD"}]</label>
         <div class="col-md-9">
             <input type="password" name="password_new" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox">
         </div>
         <p class="help-block"></p>
+        [{/block}]
     </div>
     <div class="form-group [{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
         <label class="control-label col-md-3">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
