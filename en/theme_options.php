@@ -64,6 +64,9 @@ $aLang = array(
     'SHOP_THEME_sCatPromotionsize'                  => 'Category picture size for promotion on startpage (width*height)',
     'HELP_SHOP_THEME_sCatPromotionsize'             => 'Category promotion on start page needs special size for category pictures. Define size of those pictures here.',
 
+    'SHOP_THEME_stickyHeader'                       => 'Use sticky header',
+    'HELP_SHOP_THEME_stickyHeader'                  => 'The header sticks on the top when scrolling down the page.',
+
     'SHOP_THEME_blFooterShowHelp'                   => 'Use help link',
     'SHOP_THEME_blFooterShowLinks'                  => 'Use Links link',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Use newsletter link',

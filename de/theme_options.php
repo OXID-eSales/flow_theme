@@ -63,6 +63,9 @@ $aLang = array(
     'SHOP_THEME_sCatPromotionsize'                  => 'Größe des Kategoriebildes für die Startseite in Pixeln (Breite*Höhe)',
     'HELP_SHOP_THEME_sCatPromotionsize'             => 'Kategorien, die auf der Startseite beworben werden, benötigen eine eigens dafür vorgesehene Größgenangabe. Stellen Sie diese hier ein.',
 
+    'SHOP_THEME_stickyHeader'                       => 'Sticky Header verwenden',
+    'HELP_SHOP_THEME_stickyHeader'                  => 'Der Header bleibt oben fix positioniert, wenn auf der Seite nach unten gescrollt wird.',
+
     'SHOP_THEME_blFooterShowHelp'                   => 'Hilfe-Link aktivieren',
     'SHOP_THEME_blFooterShowLinks'                  => 'Links-Link aktivieren',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Newsletter-Link aktivieren',
