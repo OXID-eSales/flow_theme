@@ -110,6 +110,12 @@ $aTheme = array(
             'value' => 0,
         ),
         array(
+            'group' => 'header',
+            'name'  => 'stickyHeader',
+            'type'  => 'bool',
+            'value' => 1,
+        ),
+        array(
             'group' => 'footer',
             'name'  => 'blFooterShowHelp',
             'type'  => 'bool',

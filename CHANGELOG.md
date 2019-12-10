@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [4.0.0] - Unreleased
 
+### Added
+- Add theme option to make category menu in header fixed or not
+
 ### Changed
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``

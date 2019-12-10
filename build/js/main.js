@@ -67,7 +67,7 @@ $( function ()
                 var $this = $( this );
                 var $mainNav = $( '#mainnav' );
 
-                if ( !blIsCheckout && !( isMobileDevice() && $oSearchInput.is( ':focus' ) ) )
+                if ( !blIsCheckout && !( isMobileDevice() && $oSearchInput.is( ':focus' ) ) && !$oBody.hasClass( 'static-header' ))
                 {
                     if ( $this.scrollTop() > iHeaderWrapperHeight )
                     {

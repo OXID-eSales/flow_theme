@@ -159,6 +159,7 @@
 
 [{assign var="blIsCheckout"     value=$oView->getIsOrderStep()}]
 [{assign var="blFullwidth"      value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
+[{assign var="stickyHeader"     value=$oViewConf->getViewThemeParam('stickyHeader')}]
 [{assign var="sBackgroundColor" value=$oViewConf->getViewThemeParam('sBackgroundColor')}]
 
 [{* Fullpage Background *}]
@@ -202,7 +203,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
+    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}][{if !$stickyHeader}] static-header[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
 
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
