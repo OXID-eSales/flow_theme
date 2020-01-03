@@ -86,7 +86,7 @@
 
             [{* <<START>> Social Links *}]
             [{block name="dd_footer_social_links"}]
-                [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
+                [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
                     <div class="social-links">
                         <div class="row">
                             <section class="col-xs-12">
@@ -98,13 +98,6 @@
                                                     <li>
                                                         <a target="_blank" href="[{$oViewConf->getViewThemeParam('sFacebookUrl')}]">
                                                             <i class="fa fa-facebook"></i> <span>Facebook</span>
-                                                        </a>
-                                                    </li>
-                                                [{/if}]
-                                                [{if $oViewConf->getViewThemeParam('sGooglePlusUrl')}]
-                                                    <li>
-                                                        <a target="_blank" href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]">
-                                                            <i class="fa fa-google-plus-square"></i> <span>Google+</span>
                                                         </a>
                                                     </li>
                                                 [{/if}]
