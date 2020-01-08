@@ -108,8 +108,6 @@
                                     <div class="well well-sm">
                                         [{if $sPaymentID == "oxidcashondel"}]
                                             [{include file="page/checkout/inc/payment_oxidcashondel.tpl"}]
-                                        [{elseif $sPaymentID == "oxidcreditcard"}]
-                                            [{include file="page/checkout/inc/payment_oxidcreditcard.tpl"}]
                                         [{elseif $sPaymentID == "oxiddebitnote"}]
                                             [{include file="page/checkout/inc/payment_oxiddebitnote.tpl"}]
                                         [{else}]
