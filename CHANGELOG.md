@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 
+## [3.4.1] - Unreleased
+
+### Fixed
+- Translate hard coded string 'Mehr' [PR-156](https://github.com/OXID-eSales/flow_theme/pull/156) [#0006521](https://bugs.oxid-esales.com/view.php?id=6521)
+
 ## [3.4.0] - 2019-10-15
 
 ### Removed
@@ -216,7 +221,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...HEAD
+[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-4.x
+[3.4.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-3.x
 [3.4.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.3.0...v3.4.0
 [3.3.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.2.0...v3.3.0
 [3.2.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.1.0...v3.2.0

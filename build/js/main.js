@@ -290,7 +290,7 @@ $( function ()
                 oMoreLinkElem.className = 'dropdown moreLinks';
 
                 oMoreLinkAElem.className = 'dropdown-toggle';
-                oMoreLinkAElem.innerHTML = 'Mehr <span class="caret"></span>';
+                oMoreLinkAElem.innerHTML = oFlow.i18n.DD_NAVIGATION_MORE + ' <span class="caret"></span>';
                 oMoreLinkAElem.setAttribute( 'data-toggle', 'dropdown' );
 
                 oMoreLinkUlElem.className = 'dropdown-menu';

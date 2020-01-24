@@ -157,6 +157,8 @@ $aLang = array(
     'DD_DELETE_REVIEW_CONFIRMATION_QUESTION'                => 'Are you sure you want to delete the review?',
 
     'DD_CATEGORY_RESET_BUTTON'                              => 'Reset',
+
+    'DD_NAVIGATION_MORE'                                    => 'More',
 );
 
 /*
