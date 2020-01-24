@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Add theme option to make category menu in header fixed or not
+- New blocks:
+  - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+  - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
 
 ### Changed
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
