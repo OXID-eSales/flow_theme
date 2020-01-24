@@ -22,12 +22,14 @@
             </div>
         </div>
         <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+            [{block name="user_account_password"}]
             <label class="control-label col-lg-3" for="passwordNew">[{oxmultilang ident="NEW_PASSWORD"}]</label>
             <div class="col-lg-5">
                 <input type="password" id="passwordNew" name="password_new" class="js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match form-control" required="">
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxpassword}]
                 <div class="help-block"></div>
             </div>
+            [{/block}]
         </div>
         <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
             <label class="control-label col-lg-3" for="passwordNewConfirm">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
