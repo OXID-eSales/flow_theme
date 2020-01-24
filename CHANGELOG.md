@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.4.1] - Unreleased
+
+### Fixed
+- Translate hard coded string 'Mehr' [PR-156](https://github.com/OXID-eSales/flow_theme/pull/156) [#0006521](https://bugs.oxid-esales.com/view.php?id=6521)
+
 ## [3.4.0] - 2019-10-15
 
 ### Removed
