@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [master] - Unreleased
+
+### Removed
+- Remove credit card related blocks in payment method selection
+
 ## [4.0.0] - Unreleased
 
 ### Added
