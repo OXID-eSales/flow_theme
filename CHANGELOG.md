@@ -21,6 +21,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 
+### Removed
+- Google+ related settings together with frontend and email template blocks [PR-155](https://github.com/OXID-eSales/flow_theme/pull/155)
+
 ## [3.4.1] - Unreleased
 
 ### Fixed

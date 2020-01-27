@@ -368,12 +368,6 @@ $aTheme = array(
             'value' => 'OXID eSales AG, Bertoldstraße 48, 79098 Freiburg',
         ),
         array(
-            'group' => 'footer',
-            'name'  => 'sGooglePlusUrl',
-            'type'  => 'str',
-            'value' => 'https://plus.google.com',
-        ),
-        array(
             'group' => 'googlets',
             'name'  => 'sGoogleShoppingAccountId',
             'type'  => 'str',
