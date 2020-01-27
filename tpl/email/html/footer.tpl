@@ -11,7 +11,7 @@
                                                     </tr>
                                                 </table>
                                             </td>
-                                            [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
+                                            [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
                                                 <td class="wrapper last">
                                                     <table class="six columns">
                                                         <tr>
@@ -35,17 +35,6 @@
                                                                         <tr>
                                                                             <td>
                                                                                 <a href="[{$oViewConf->getViewThemeParam('sTwitterUrl')}]" target="_blank">Twitter</a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </table>
-                                                                    <br>
-                                                                [{/if}]
-
-                                                                [{if $oViewConf->getViewThemeParam('sGooglePlusUrl')}]
-                                                                    <table class="tiny-button google-plus">
-                                                                        <tr>
-                                                                            <td>
-                                                                                <a href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]" target="_blank">Google+</a>
                                                                             </td>
                                                                         </tr>
                                                                     </table>
