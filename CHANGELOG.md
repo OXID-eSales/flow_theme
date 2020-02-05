@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.4.1] - Unreleased
 
+### Added
+- New blocks:
+  - `page/list/list.tpl`
+    - page_list_listhead_title
+
 ### Fixed
 - Translate hard coded string 'Mehr' [PR-156](https://github.com/OXID-eSales/flow_theme/pull/156) [#0006521](https://bugs.oxid-esales.com/view.php?id=6521)
 

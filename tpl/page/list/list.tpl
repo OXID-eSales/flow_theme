@@ -25,21 +25,24 @@
 
 [{capture append="oxidBlock_content"}]
     [{block name="page_list_listhead"}]
-        [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
-            <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$actCategory->getThumbUrl()}]" alt="[{$actCategory->oxcategories__oxtitle->value}]" class="categoryPicture img-responsive img-thumbnail">
-        [{/if}]
+        [{block name="page_list_listhead_title"}]
+            [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
+                <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$actCategory->getThumbUrl()}]" alt="[{$actCategory->oxcategories__oxtitle->value}]" class="categoryPicture img-responsive img-thumbnail">
+            [{/if}]
 
-        <div class="page-header">
-            [{assign var='rsslinks' value=$oView->getRssLinks()}]
-            <h1>
-                [{$oView->getTitle()}]
-                [{if $rsslinks.activeCategory}]
-                    <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
-                        <i class="fa fa-rss"></i>
-                    </a>
-                [{/if}]
-            </h1>
-        </div>
+            <div class="page-header" style="margin-bottom: -1rem; border-bottom: none;">
+                [{assign var='rsslinks' value=$oView->getRssLinks()}]
+                <h1>
+                    [{$oView->getTitle()}]
+                    [{if $rsslinks.activeCategory}]
+                        <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    [{/if}]
+                </h1>
+            </div>
+        [{/block}]
+        <hr/>
 
         [{assign var="oPageNavigation" value=$oView->getPageNavigation()}]
         [{if $actCategory && $actCategory->getShortDescription() && $oPageNavigation->actPage == 1}]
