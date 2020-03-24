@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Remove credit card related blocks in payment method selection
+- Remove Betanote
 
 ## [4.0.0] - Unreleased
 
