@@ -4,12 +4,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [master] - Unreleased
-
-### Removed
-- Remove credit card related blocks in payment method selection
-- Remove Betanote
-
 ## [4.0.0] - Unreleased
 
 ### Added
@@ -25,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-155](https://github.com/OXID-eSales/flow_theme/pull/155)
+- Remove credit card related blocks in payment method selection
+- Remove Betanote
 
 ## [3.4.1] - Unreleased
 
