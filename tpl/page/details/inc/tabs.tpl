@@ -34,15 +34,17 @@
     [{/if}]
 [{/block}]
 
-[{block name="details_tabs_pricealarm"}]
-    [{if $oView->isPriceAlarm() && !$oDetailsProduct->isParentNotBuyable()}]
-        [{capture append="tabs"}]<a href="#pricealarm" data-toggle="tab">[{oxmultilang ident="PRICE_ALERT"}]</a>[{/capture}]
-        [{capture append="tabsContent"}]
-            <div id="pricealarm" class="tab-pane[{if $blFirstTab}] active[{/if}]">[{include file="form/pricealarm.tpl"}]</div>
-            [{assign var="blFirstTab" value=false}]
-        [{/capture}]
-    [{/if}]
-[{/block}]
+[{if $oViewConf->getViewThemeParam('bl_showPriceAlarm')}]
+    [{block name="details_tabs_pricealarm"}]
+        [{if $oView->isPriceAlarm() && !$oDetailsProduct->isParentNotBuyable()}]
+            [{capture append="tabs"}]<a href="#pricealarm" data-toggle="tab">[{oxmultilang ident="PRICE_ALERT"}]</a>[{/capture}]
+            [{capture append="tabsContent"}]
+                <div id="pricealarm" class="tab-pane[{if $blFirstTab}] active[{/if}]">[{include file="form/pricealarm.tpl"}]</div>
+                [{assign var="blFirstTab" value=false}]
+            [{/capture}]
+        [{/if}]
+    [{/block}]
+[{/if}]
 
 [{block name="details_tabs_tags"}]
 [{/block}]

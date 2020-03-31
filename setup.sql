@@ -82,6 +82,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 ('5e49cc06e3e5c35f6f5ec74612c264ea', 'theme:flow', 'bl_showWishlist', 'features', '', 8, NOW()),
 ('9599dbc6486a7a239131100a7c142d23', 'theme:flow', 'bl_showVouchers', 'features', '', 9, NOW()),
 ('842c098286d1d1ebcc7b68a25b858512', 'theme:flow', 'bl_showGiftWrapping', 'features', '', 10, NOW()),
+(uuid(),                             'theme:flow', 'bl_showPriceAlarm', 'features', '', 11, NOW()),
 ('f3d46784c4d2a7b3b40050d2d7031ee8', 'theme:flow', 'blShowBirthdayFields', 'display', '', 14, NOW()),
 ('bf0fa8a27731fed993b7b8069229ae76', 'theme:flow', 'blShowFinalStep', 'display', '', 16, NOW()),
 ('51e09817c2edba9d92d694bc6b986595', 'theme:flow', 'sManufacturerIconsize', 'images', '', 6, NOW()),

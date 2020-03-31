@@ -165,6 +165,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundSize_contain'            => 'deckend (volle Breite)',
     'SHOP_THEME_sBackgroundSize_normal'             => 'Originalgröße behalten',
     'SHOP_THEME_blBackgroundAttachment'             => 'Soll das Hintergrundbild beim Scrollen stehen bleiben?',
+    'SHOP_THEME_bl_showPriceAlarm'                  => 'Preisalarm aktivieren',
 
     'SHOP_THEME_blUseGoogleTS'                      => 'Google Zertifizierte Händler benutzen',
     'SHOP_THEME_sGoogleVendorId'                    => 'Google Store-ID (Erforderlich)',
