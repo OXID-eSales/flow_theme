@@ -41,6 +41,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:flow',	'blUseGAPageTracker',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:flow',	'blShowBirthdayFields',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:flow',	'bl_showGiftWrapping',	'bool',	'1', NOW()),
+(uuid(),  1,  'theme:flow', 'bl_showPriceAlarm', 'bool', '1', NOW()),
 (uuid(),	1,	'theme:flow',	'blFooterShowNewsletterForm',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:flow',	'sGoogleVendorId',	'str',	'', NOW()),
 (uuid(),	1,	'theme:flow',	'sGATrackingId',	'str',	'', NOW()),
