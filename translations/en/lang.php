@@ -139,7 +139,6 @@ $aLang = array(
     'DD_PRICEALARM_HEADING'                                 => 'Pricealarm',
     'DD_REGISTER_HEADING'                                   => 'Your registration',
     'DD_DOWNLOADLINKS_HEADING'                              => 'Your download links - Order',
-    'DD_SUGGEST_HEADING'                                    => 'Article recommendation',
     'DD_WISHLIST_HEADING'                                   => 'Wishlist',
 
     'DD_ROLES_BEMAIN_UIROOTHEADER'                          => 'Menu',

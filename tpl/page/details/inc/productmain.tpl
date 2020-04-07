@@ -335,12 +335,6 @@
                                 [{oxid_include_dynamic file="page/details/inc/compare_links.tpl" testid="" type="compare" aid=$oDetailsProduct->oxarticles__oxid->value anid=$oDetailsProduct->oxarticles__oxnid->value in_list=$oDetailsProduct->isOnComparisonList() page=$oView->getActPage() text_to_id="COMPARE" text_from_id="REMOVE_FROM_COMPARE_LIST"}]
 							</li>
 						[{/if}]
-                        <li>
-                            [{if $oViewConf->getShowSuggest()}]
-                                <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
-                            [{/if}]
-                        </li>
-
 						[{if $oViewConf->getShowListmania()}]
 							<li>
 								[{if $oxcmp_user}]

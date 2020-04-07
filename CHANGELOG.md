@@ -21,6 +21,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Google+ related settings together with frontend and email template blocks [PR-155](https://github.com/OXID-eSales/flow_theme/pull/155)
 - Remove credit card related blocks in payment method selection
 - Remove Betanote
+- Suggest (Recommend Product) feature:
+    - Templates:
+        - `email/html/suggest.tpl`
+        - `email/plain/suggest.tpl`
+        - `form/suggest.tpl`
+        - `page/info/suggest.tpl`
+    - Link in: `page/details/inc/productmania.tpl`
+    - Language Constant: `DD_SUGGEST_HEADING`
 
 ## [3.5.0] - Unreleased
 
