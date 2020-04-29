@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added the checkbox to enable/disable pricealarm tab in product id [Wave PR-71](https://github.com/OXID-eSales/wave-theme/pull/71)
+- Add theme option to make category menu in header fixed or not
 
 ### Fixed
 - Use schema.org specification for breadcrumbs [Wave PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
