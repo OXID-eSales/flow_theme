@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [4.0.0] - Unreleased
 
 ### Added
-- Add theme option to make category menu in header fixed or not
 - New blocks:
   - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
