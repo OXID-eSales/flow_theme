@@ -24,8 +24,5 @@
         [{if $oViewConf->getViewThemeParam('blFooterShowNewsletter')}]
             <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=newsletter"}]">[{oxmultilang ident="NEWSLETTER"}]</a></li>
         [{/if}]
-        [{if $oViewConf->getViewThemeParam('blFooterShowNews')}]
-            <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=news"}]">[{oxmultilang ident="NEWS"}]</a></li>
-        [{/if}]
     </ul>
 [{/block}]

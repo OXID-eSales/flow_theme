@@ -60,7 +60,6 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:flow',	'sLogoFile',	'str',	'logo_oxid.png', NOW()),
 (uuid(),	1,	'theme:flow',	'sBackgroundRepeat',	'select',	'no-repeat', NOW()),
 (uuid(),	1,	'theme:flow',	'sLogoWidth',	'str',	'200', NOW()),
-(uuid(),	1,	'theme:flow',	'blFooterShowNews',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:flow',	'sFaviconFile',	'str',	'favicon.ico', NOW()),
 (uuid(),	1,	'theme:flow',	'sLogoHeight',	'str',	'38', NOW()),
 (uuid(),	1,	'theme:flow',	'sFavicon48File',	'str',	'favicon_48x48.png', NOW()),
@@ -142,5 +141,4 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:flow', 'blFooterShowLinks', 'footer', '', 2, NOW()),
 (uuid(), 'theme:flow', 'blFooterShowNewsletter', 'footer', '', 4, NOW()),
 (uuid(), 'theme:flow', 'blFooterShowNewsletterForm', 'footer', '', 5, NOW()),
-(uuid(), 'theme:flow', 'blEmailsShowProductPictures', 'emails', '', 1, NOW()),
-(uuid(), 'theme:flow', 'blFooterShowNews', 'footer', '', 6, NOW());
+(uuid(), 'theme:flow', 'blEmailsShowProductPictures', 'emails', '', 1, NOW());

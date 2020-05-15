@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `page/info/suggest.tpl`
     - Link in: `page/details/inc/productmania.tpl`
     - Language Constant: `DD_SUGGEST_HEADING`
+- News feature
 
 ## [3.5.0] - Unreleased
 

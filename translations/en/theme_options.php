@@ -71,7 +71,6 @@ $aLang = array(
     'SHOP_THEME_blFooterShowLinks'                  => 'Use Links link',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Use newsletter link',
     'SHOP_THEME_blFooterShowNewsletterForm'         => 'Use newsletter form',
-    'SHOP_THEME_blFooterShowNews'                   => 'Use news link',
     'SHOP_THEME_bl_showGiftWrapping'                => 'Use gift wrapping', //SHOP_CONFIG_SHOWGIFTWRAPPING
     'SHOP_THEME_bl_showVouchers'                    => 'Use vouchers', //SHOP_CONFIG_SHOWVOUCHERS
     'SHOP_THEME_bl_showWishlist'                    => 'Use gift registry', //SHOP_CONFIG_SHOWWISHLIST
