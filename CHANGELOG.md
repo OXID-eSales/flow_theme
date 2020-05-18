@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Use schema.org specification for breadcrumbs [Wave PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 
+### Renamed
+- Changed price alert to wished price
+
 ## [3.4.1] - 2020-03-16
 
 ### Fixed
