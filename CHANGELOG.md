@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 - Move translations to ``translations/`` directory
+- In admin settings 'Email logo' to display group 'Emails' [Wave PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
+
+### Fixed
+- Improved readability of setup.sql and theme.php [Wave PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-155](https://github.com/OXID-eSales/flow_theme/pull/155)
