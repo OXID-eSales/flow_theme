@@ -69,7 +69,7 @@
                                 </div>
                             [{/foreach}]
                         [{/if}]
-                        [{if $iSubCategoriesCount%4 == 0}]
+                        [{if $iSubCategoriesCount%4 == 0 and $iSubCategoriesCount neq 0}]
                             </div><div class="row">
                         [{/if}]
                         [{if $category->getIsVisible()}]

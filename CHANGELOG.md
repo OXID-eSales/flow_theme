@@ -42,6 +42,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Use schema.org specification for breadcrumbs [Wave PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
+- Avoid empty row before subcategories list [Wave PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)
+- Fix align of text in basket delivery tax row [Wave PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
 
 ### Renamed
 - Changed price alert to wished price
