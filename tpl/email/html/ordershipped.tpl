@@ -10,6 +10,7 @@
         border: 1px solid #d4d4d4;
         font-size: 13px;
         padding:5px;
+        white-space: nowrap;
     }
 
     table.orderarticles {
