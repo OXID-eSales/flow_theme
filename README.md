@@ -65,6 +65,8 @@ Log into the admin panel, go to *Extensions → Themes → Flow* and press the *
 
 All *Flow* theme related CSS/Javascript files can be found in theme's ``build`` directory. To regenerate the theme's assets, the ``grunt`` tasks should be used. Please install ``grunt`` and run ``grunt's`` default task to regenerate all minimized ``css`` and ``js`` files:
 
+To get the development files you need to [clone the repository](#step-2-get-the-source-code).
+
 1. To use ``grunt``, ``npm`` is required. Check ``nodejs`` website for installation
 instructions (https://nodejs.org/en/download/package-manager/). Example of
 Installation on ubuntu system:
