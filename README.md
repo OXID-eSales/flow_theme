@@ -11,7 +11,6 @@
 
 Currently there are 3 main branches for *Flow*:
 
-* Branch ``b-1.0`` contains *Flow* for OXID eShop version 4.10/5.3
 * Branch ``b-2.x`` contains *Flow* for OXID eShop version 6.0.0
 * Branch ``b-3.x`` contains *Flow* for OXID eShop compilation 6.1 and 6.2
 * Branch ``master`` contain *Flow* for OXID eShop master branch latest commits
@@ -27,19 +26,7 @@ git clone -b BRANCH_NAME https://github.com/OXID-eSales/flow_theme.git flow
 
 You should now have a new folder ``DOCUMENT_ROOT/Application/views/flow``.
 
-### Step 3: Prepare the database (< version 6.0 only)
-
-In order to install the theme options, import the ``setup.sql`` into your database.
-
-#### Option 1: Console
-
-``mysql -u MYSQL_USER -p SHOP_DATABASE < flow/setup.sql``
-
-#### Option 2: Shop Admin: Service -> Tools
-
-If you have a local copy of flow files, go to Service -> Tools in Shop Admin, upload flow/setup.sql and click "start update" button
-
-### Step 4: Prepare the ``out`` folder
+### Step 3: Prepare the ``out`` folder
 
 The ``out`` folder can be prepared in two possible ways. The first option is to use symbolic links, the second is to copy. Using a symbolic link is strongly recommended, as otherwise you would have do the copying everytime *Flow* is updated.
 
@@ -57,7 +44,7 @@ Copy theme's ``out`` directory to shop:
 
 You now should be able to do ``cd ../../out/flow``.
 
-### Step 5: Activate theme 
+### Step 4: Activate theme 
 
 Log into the admin panel, go to *Extensions → Themes → Flow* and press the *Activate* button. Clean the cache and off you go, my friend!
 
