@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Link in: `page/details/inc/productmania.tpl`
     - Language Constant: `DD_SUGGEST_HEADING`
 - News feature
+- `setup.sql` file support and file itself
 
 ## [3.5.0] - 2020-07-08
 
