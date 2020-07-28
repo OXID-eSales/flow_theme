@@ -87,6 +87,10 @@ task while being in "flow" directory:
 
 If you are interested in contributing of some changes, Please read [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
+## Distribution notice
+The Flow Theme will not be shipped with the next major release of OXID eShop (>6) as it is using older components!
+Please consider to use the [Wave Theme](https://github.com/OXID-eSales/wave-theme).
+
 ## Issues
 
 Please forward all issues to https://bugs.oxid-esales.com/ for the project **Flow Theme**.
