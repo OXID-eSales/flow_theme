@@ -17,26 +17,31 @@
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
  */
-$( document ).ready( function()
-    {
-        var $oReviewRating = $( '#reviewRating' );
+$(document).ready(function() {
+  const $oReviewRating = $('#reviewRating');
 
-        if( $oReviewRating.length )
-        {
-            var $oRatingForm = $( '#rating' );
+  if ($oReviewRating.length) {
+    const $oRatingForm = $('#rating');
 
-            $oReviewRating.find( '.ox-write-review' ).on( 'click mouseenter touch', function()
-                {
-                    var $this    = $( this ),
-                        $oParent = $this.parent();
+    $oReviewRating.find('.ox-write-review').
+        on('click mouseenter touch', function() {
+          const $this = $(this);
+          const $oParent = $this.parent();
 
-                    $oParent.prevAll().find( 'i' ).removeClass( 'fa-star-o' ).addClass( 'fa-star' );
-                    $oParent.nextAll().find( 'i' ).removeClass( 'fa-star' ).addClass( 'fa-star-o' );
-                    $this.find( 'i' ).removeClass( 'fa-star-o' ).addClass( 'fa-star' );
+          $oParent.prevAll().
+              find('i').
+              removeClass('fa-star-o').
+              addClass('fa-star');
+          $oParent.nextAll().
+              find('i').
+              removeClass('fa-star').
+              addClass('fa-star-o');
+          $this.find('i').removeClass('fa-star-o').addClass('fa-star');
 
-                    $oRatingForm.find( '#recommListRating, #productRating' ).val( $oParent.attr( 'data-rate-value' ) );
-                }
-            );
-        }
-    }
+          $oRatingForm.find('#recommListRating, #productRating').
+              val($oParent.attr('data-rate-value'));
+        },
+        );
+  }
+},
 );
