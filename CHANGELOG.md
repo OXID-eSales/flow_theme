@@ -35,6 +35,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 
+## [3.5.1] - 2020-08-31
+
+### Changed
+- Update minified JavaScript and CSS
+
 ## [3.5.0] - 2020-07-08
 
 ### Added
@@ -259,6 +264,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
 [4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-4.x
+[3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
 [3.4.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...v3.4.1
 [3.4.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.3.0...v3.4.0
