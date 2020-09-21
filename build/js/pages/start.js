@@ -17,42 +17,38 @@
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
  */
-$( window ).load( function()
-{
-    var $window = $( this ),
-        $oManufacturerSlider = $( '#manufacturerSlider .flexslider' ),
-        flexslider;
+$(window).load(function() {
+  const $window = $(this);
+  const $oManufacturerSlider = $('#manufacturerSlider .flexslider');
+  let flexslider;
 
-    function getGridSize()
-    {
-        return ( $oManufacturerSlider.width() < 600 ) ? 3 :
-               ( $oManufacturerSlider.width() < 900 ) ? 5 : 7;
-    }
+  function getGridSize() {
+    return ($oManufacturerSlider.width() < 600) ? 3 :
+        ($oManufacturerSlider.width() < 900) ? 5 : 7;
+  }
 
+  $('#promo-carousel').flexslider(
+      {
+        animation: 'slide',
+      },
+  );
 
-    $( '#promo-carousel' ).flexslider(
-        {
-            animation: "slide"
-        }
-    );
+  flexslider = $oManufacturerSlider.flexslider(
+      {
+        animation: 'slide',
+        itemWidth: 100,
+        itemMargin: 10,
+        minItems: getGridSize(), // use function to pull in initial value
+        maxItems: getGridSize(), // use function to pull in initial value
+      },
+  );
 
-    flexslider = $oManufacturerSlider.flexslider(
-        {
-            animation: "slide",
-            itemWidth: 100,
-            itemMargin: 10,
-            minItems: getGridSize(), // use function to pull in initial value
-            maxItems: getGridSize() // use function to pull in initial value
-        }
-    );
+  // check grid size on resize event
+  $window.resize(function() {
+    const gridSize = getGridSize();
 
-    // check grid size on resize event
-    $window.resize( function()
-        {
-            var gridSize = getGridSize();
-
-            flexslider.data().flexslider.vars.minItems = gridSize;
-            flexslider.data().flexslider.vars.maxItems = gridSize;
-        }
-    );
-} );
+    flexslider.data().flexslider.vars.minItems = gridSize;
+    flexslider.data().flexslider.vars.maxItems = gridSize;
+  },
+  );
+});
