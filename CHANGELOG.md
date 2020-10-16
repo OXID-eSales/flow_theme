@@ -35,6 +35,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 
+## [3.5.2] - Unreleased
+
+### Fixed
+- Variantselector doesn't work in List View listitem_line in wave and flow [#0007163](https://bugs.oxid-esales.com/view.php?id=7163) [PR-162](https://github.com/OXID-eSales/flow_theme/pull/162)
+
 ## [3.5.1] - 2020-08-31
 
 ### Changed
@@ -264,6 +269,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
 [4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-4.x
+[3.5.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...b-3.x
 [3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
 [3.4.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...v3.4.1
