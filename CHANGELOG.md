@@ -6,11 +6,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [4.0.0] - Unreleased
 
-### Added
-- New blocks:
-  - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
-  - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
-
 ### Changed
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
