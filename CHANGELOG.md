@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 - Move translations to ``translations/`` directory
 - In admin settings 'Email logo' to display group 'Emails' [Wave PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
+- Modernized the JavaScript to es6 and updated grunt components [PR-161](https://github.com/OXID-eSales/flow_theme/pull/161)
 
 ### Fixed
 - Improved readability of setup.sql and theme.php [Wave PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
