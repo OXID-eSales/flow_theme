@@ -1,6 +1,7 @@
 module.exports = {
 
     options: {
+        esversion: 8,
         curly: true,
         eqeqeq: false,
         eqnull: true,
