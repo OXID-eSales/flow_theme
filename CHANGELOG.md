@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.6.0] - Unreleased
+## [3.6.0] - 2020-11-12
 
 ### Added
 - New blocks:
@@ -242,7 +242,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...b-3.x
+[3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
 [3.4.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...v3.4.1
