@@ -49,6 +49,9 @@
             </label>
         </div>
     </div>
+
+    [{block name="captcha_form"}][{/block}]
+
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-5">
             <p class="alert alert-info">[{oxmultilang ident="COMPLETE_MARKED_FIELDS"}]</p>

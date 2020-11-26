@@ -23,6 +23,9 @@
             <p class="help-block"></p>
         </div>
     </div>
+
+    [{block name="captcha_form"}][{/block}]
+
     <div class="form-group">
         <div class="col-md-9 col-md-offset-3">
             <button class="btn btn-primary submitButton" type="submit">[{oxmultilang ident="REQUEST_PASSWORD"}]</button>
