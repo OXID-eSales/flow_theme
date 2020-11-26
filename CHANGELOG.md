@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.7.0] - Unreleased
+
+### Added
+- New blocks:
+  - ``captcha_form`` in ``tpl/form/forgotpwd_email.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - ``captcha_form`` in ``tpl/form/newsletter.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+
 ## [3.6.0] - 2020-11-12
 
 ### Added
@@ -242,6 +249,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...b-3.x
 [3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
