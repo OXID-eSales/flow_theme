@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - New blocks:
   - ``captcha_form`` in ``tpl/form/forgotpwd_email.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
   - ``captcha_form`` in ``tpl/form/newsletter.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - ``salutation_options`` in ``tpl/form/fieldset/salutation.tpl`` [PR-164](https://github.com/OXID-eSales/flow_theme/pull/164)
 
 ## [3.6.0] - 2020-11-12
 
