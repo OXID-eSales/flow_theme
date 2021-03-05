@@ -1,3 +1,5 @@
+[{if !isset($value2)}][{assign var="value2" value=null}][{/if}]
+
 <select name="[{$name}]"
         [{if $class}]class="[{$class}]"[{/if}]
         [{if $id}]id="[{$id}]"[{/if}]

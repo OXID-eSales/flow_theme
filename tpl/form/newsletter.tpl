@@ -14,28 +14,29 @@
         <label class="control-label col-lg-2">[{oxmultilang ident="TITLE"}]</label>
 
         <div class="col-lg-5">
-            [{include file="form/fieldset/salutation.tpl" name="editval[oxuser__oxsal]" value=$aRegParams.oxuser__oxsal class="form-control selectpicker show-tick"}]
+            [{if isset($aRegParams.oxuser__oxsal)}][{assign var="userSalutation" value=$aRegParams.oxuser__oxsal)}][{else}][{assign var="userSalutation" value=null}][{/if}]
+            [{include file="form/fieldset/salutation.tpl" name="editval[oxuser__oxsal]" value=$userSalutation class="form-control selectpicker show-tick"}]
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-2">[{oxmultilang ident="FIRST_NAME"}]</label>
 
         <div class="col-lg-5">
-            <input class="form-control" id="newsletterFname" type="text" name="editval[oxuser__oxfname]" maxlength="40" value="[{if $aRegParams.oxuser__oxfname}][{$aRegParams.oxuser__oxfname}][{/if}]">
+            <input class="form-control" id="newsletterFname" type="text" name="editval[oxuser__oxfname]" maxlength="40" value="[{if isset($aRegParams.oxuser__oxfname)}][{$aRegParams.oxuser__oxfname}][{/if}]">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-2">[{oxmultilang ident="LAST_NAME"}]</label>
 
         <div class="col-lg-5">
-            <input class="form-control" id="newsletterLname" type="text" name="editval[oxuser__oxlname]" maxlength="40" value="[{if $aRegParams.oxuser__oxlname}][{$aRegParams.oxuser__oxlname}][{/if}]">
+            <input class="form-control" id="newsletterLname" type="text" name="editval[oxuser__oxlname]" maxlength="40" value="[{if isset($aRegParams.oxuser__oxlname)}][{$aRegParams.oxuser__oxlname}][{/if}]">
         </div>
     </div>
-    <div class="form-group[{if $aErrors}] oxInValid[{/if}]">
+    <div class="form-group[{if isset($aErrors) && $aErrors}] oxInValid[{/if}]">
         <label class="req control-label col-lg-2">[{oxmultilang ident="EMAIL"}]</label>
 
         <div class="col-lg-5">
-            <input id="newsletterUserName" type="email" class="form-control" name="editval[oxuser__oxusername]" maxlength="40" value="[{if $aRegParams.oxuser__oxusername}][{$aRegParams.oxuser__oxusername}][{/if}]" required="required">
+            <input id="newsletterUserName" type="email" class="form-control" name="editval[oxuser__oxusername]" maxlength="40" value="[{if isset($aRegParams.oxuser__oxusername)}][{$aRegParams.oxuser__oxusername}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>

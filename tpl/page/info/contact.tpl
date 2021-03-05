@@ -1,3 +1,5 @@
+[{if !isset($template_title)}][{assign var="template_title" value=null}][{/if}]
+
 [{capture append="oxidBlock_content"}]
     [{if $oView->getContactSendStatus()}]
         [{assign var="_statusMessage" value="DD_CONTACT_THANKYOU1"|oxmultilangassign|cat:" "|cat:$oxcmp_shop->oxshops__oxname->value}]

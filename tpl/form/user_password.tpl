@@ -13,30 +13,31 @@
         <input type="hidden" id="passwordLength" value="[{$oViewConf->getPasswordLength()}]">
     </div>
 
-        <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+    [{if isset($aErrors.oxuser__oxpassword)}][{assign var="userPasswordErrors" value=$aErrors.oxuser__oxpassword}][{else}][{assign var="userPasswordErrors" value=null}][{/if}]
+    <div class="form-group[{if $userPasswordErrors}] oxInValid[{/if}]">
             <label class="control-label col-lg-3" for="passwordOld">[{oxmultilang ident="OLD_PASSWORD"}]</label>
             <div class="col-lg-5">
                 <input type="password" id="passwordOld" name="password_old" class="js-oxValidate js-oxValidate_notEmpty form-control" required="">
-                [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxpassword}]
+                [{include file="message/inputvalidation.tpl" aErrors=$userPasswordErrors}]
                 <div class="help-block"></div>
             </div>
         </div>
-        <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+        <div class="form-group[{if $userPasswordErrors}] oxInValid[{/if}]">
             [{block name="user_account_password"}]
             <label class="control-label col-lg-3" for="passwordNew">[{oxmultilang ident="NEW_PASSWORD"}]</label>
             <div class="col-lg-5">
                 <input type="password" id="passwordNew" name="password_new" class="js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match form-control" required="">
-                [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxpassword}]
+                [{include file="message/inputvalidation.tpl" aErrors=$userPasswordErrors}]
                 <div class="help-block"></div>
             </div>
             [{/block}]
         </div>
-        <div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+        <div class="form-group[{if $userPasswordErrors}] oxInValid[{/if}]">
             <label class="control-label col-lg-3" for="passwordNewConfirm">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
             <div class="col-lg-5">
                 <input type="password" id="passwordNewConfirm" name="password_new_confirm" class="js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match form-control" required="" data-validation-matches-match="password_new" data-validation-matches-message="[{oxmultilang ident="ERROR_MESSAGE_PASSWORD_DO_NOT_MATCH"}]">
                 <div class="help-block"></div>
-                [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxpassword}]
+                [{include file="message/inputvalidation.tpl" aErrors=$userPasswordErrors}]
             </div>
         </div>
         <div class="form-group">

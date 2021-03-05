@@ -1,3 +1,5 @@
+[{if !isset($active_link)}][{assign var="active_link" value=null}][{/if}]
+
 <nav id="account_menu">
     <ul class="list-group">
         [{block name="account_menu"}]

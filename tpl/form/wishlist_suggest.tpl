@@ -1,6 +1,6 @@
 <div class="wishlistSuggest clear">
     [{if $oView->getWishList() && $oView->showSuggest()}]
-        [{if $Errors.account_whishlist|is_array && !empty($Errors.account_whishlist)}]
+        [{if !empty($Errors.account_whishlist) && $Errors.account_whishlist|is_array}]
             [{foreach from=$Errors.account_whishlist item=oEr key=key}]
                 <p class="alert alert-danger">[{$oEr->getOxMessage()}]</p>
             [{/foreach}]
@@ -20,19 +20,19 @@
                 <div class="form-group">
                     <label class="control-label col-lg-3">[{oxmultilang ident="RECIPIENT_NAME"}]</label>
                     <div class="col-lg-9">
-                        <input type="text" name="editval[rec_name]" class="form-control" maxlength="70" value="[{$editval->rec_name}]">
+                        <input type="text" name="editval[rec_name]" class="form-control" maxlength="70" value="[{if isset($editval->rec_name)}][{$editval->rec_name}][{/if}]">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3">[{oxmultilang ident="RECIPIENT_EMAIL"}]</label>
                     <div class="col-lg-9">
-                        <input type="email" name="editval[rec_email]" class="form-control" maxlength="70" value="[{$editval->rec_email}]">
+                        <input type="email" name="editval[rec_email]" class="form-control" maxlength="70" value="[{if isset($editval->rec_email)}][{$editval->rec_email}][{/if}]">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-3">[{oxmultilang ident="MESSAGE"}]</label>
                     <div class="col-lg-9">
-                        <textarea rows="6" class="form-control" name="editval[send_message]">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_BUY_FOR_ME" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
+                        <textarea rows="6" class="form-control" name="editval[send_message]">[{if isset($editval->send_message) && $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_BUY_FOR_ME" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
                     </div>
                 </div>
                 <div class="form-group">

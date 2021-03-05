@@ -1,3 +1,10 @@
+[{if !isset($showMainLink)}][{assign var="showMainLink" value=null}][{/if}]
+[{if !isset($size)}][{assign var="size" value=null}][{/if}]
+[{if !isset($owishid)}][{assign var="owishid" value=null}][{/if}]
+[{if !isset($toBasketFunction)}][{assign var="toBasketFunction" value=null}][{/if}]
+[{if !isset($altproduct)}][{assign var="altproduct" value=null}][{/if}]
+[{if !isset($recommid)}][{assign var="recommid" value=null}][{/if}]
+
 <div class="item">
     [{assign var="currency" value=$oView->getActCurrency()}]
     [{if $showMainLink}]

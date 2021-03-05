@@ -1,11 +1,13 @@
 [{assign var="bIsError" value=0}]
 [{capture name="loginErrors"}]
+    [{if isset($Errors.loginBoxErrors)}]
     [{foreach from=$Errors.loginBoxErrors item=oEr key=key}]
         <p id="errorBadLogin" class="alert alert-danger">[{$oEr->getOxMessage()}]</p>
         [{assign var="bIsError" value=1}]
     [{/foreach}]
+    [{/if}]
 [{/capture}]
-[{if !$oxcmp_user->oxuser__oxpassword->value}]
+[{if !isset($oxcmp_user->oxuser__oxpassword) || !$oxcmp_user->oxuser__oxpassword->value}]
     <form class="form" id="login" name="login" action="[{$oViewConf->getSslSelfLink()}]" method="post">
         <div id="loginBox" class="loginBox" [{if $bIsError}]style="display: block;"[{/if}]>
             [{$oViewConf->getHiddenSid()}]

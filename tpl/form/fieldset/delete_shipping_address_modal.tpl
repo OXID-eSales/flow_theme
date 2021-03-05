@@ -1,3 +1,5 @@
+[{if !isset($userAddresses)}][{assign var="userAddresses" value=null}][{/if}]
+
 [{block name="delete_shipping_address_modal"}]
     [{if $oxcmp_user}]
         [{assign var="userAddresses" value=$oxcmp_user->getUserAddresses()}]

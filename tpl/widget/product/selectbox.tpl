@@ -1,3 +1,8 @@
+[{if !isset($blHideDefault)}][{assign var="blHideDefault" value=null}] [{/if}]
+[{if !isset($sFieldName)}][{assign var="sFieldName" value=null}] [{/if}]
+[{if !isset($editable)}][{assign var="editable" value=null}] [{/if}]
+[{if !isset($sJsAction)}][{assign var="sJsAction" value=null}] [{/if}]
+
 [{assign var="oSelections" value=$oSelectionList->getSelections()}]
 
 [{if $oSelections}]

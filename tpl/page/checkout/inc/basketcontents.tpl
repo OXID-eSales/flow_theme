@@ -1,4 +1,6 @@
 [{* basket contents *}]
+[{if !isset($basketindex)}][{assign var="basketindex" value=null}][{/if}]
+
 [{oxscript include="js/widgets/oxbasketchecks.min.js" priority=10}]
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('#checkAll, #basketRemoveAll').oxBasketChecks();"}]
@@ -44,7 +46,7 @@
                         <div class="help-block"></div>
                     </div>
 
-
+                    [{if isset($Errors) && isset($Errors.basket)}]
                     [{foreach from=$Errors.basket item=oEr key=key}]
                         [{if $oEr->getErrorClassType() == 'oxVoucherException'}]
                             <div class="alert alert-danger">
@@ -54,6 +56,7 @@
                             </div>
                         [{/if}]
                     [{/foreach}]
+                    [{/if}]
                 </div>
             </form>
         </div>

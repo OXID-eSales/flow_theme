@@ -1,3 +1,5 @@
+[{if !isset($template_title)}][{assign var="template_title" value=null}][{/if}]
+
 [{capture append="oxidBlock_content"}]
     <h1 class="page-header">[{$oView->getTitle()}]</h1>
 

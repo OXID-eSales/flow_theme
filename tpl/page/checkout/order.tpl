@@ -1,3 +1,6 @@
+[{if !isset($template_title)}][{assign var="template_title" value=null}][{/if}]
+[{if !isset($challenge)}][{assign var="challenge" value=null}][{/if}]
+
 [{capture append="oxidBlock_content"}]
 
     [{block name="checkout_order_errors"}]
@@ -43,6 +46,7 @@
                 [{block name="checkout_order_vouchers"}]
                     [{if $oViewConf->getShowVouchers() && $oxcmp_basket->getVouchers()}]
                         [{oxmultilang ident="USED_COUPONS"}]
+                        [{if isset($Errors) && isset($Errors.basket)}]
                         [{foreach from=$Errors.basket item=oEr key=key}]
                             [{if $oEr->getErrorClassType() == 'oxVoucherException'}]
                                 <div class="alert alert-danger">
@@ -52,6 +56,7 @@
                                 </div>
                             [{/if}]
                         [{/foreach}]
+                        [{/if}]
                         <div class="alert alert-info">
                             [{foreach from=$oxcmp_basket->getVouchers() item=sVoucher key=key name=aVouchers}]
                                 [{$sVoucher->sVoucherNr}]<br>

@@ -1,3 +1,5 @@
+[{if !isset($oxidBlock_sidebar)}][{assign var="oxidBlock_sidebar" value=null}] [{/if}]
+
 [{foreach from=$oxidBlock_sidebar item="_block"}]
     [{$_block}]
 [{/foreach}]

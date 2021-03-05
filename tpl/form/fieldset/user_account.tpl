@@ -1,4 +1,8 @@
-<div class="form-group[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
+[{if !isset($aErrors)}][{assign var="aErrors" value=null}][{/if}]
+[{if !isset($lgn_pwd)}][{assign var="lgn_pwd" value=null}][{/if}]
+[{if !isset($lgn_pwd2)}][{assign var="lgn_pwd2" value=null}][{/if}]
+
+<div class="form-group[{if $aErrors && $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
     [{block name="user_account_username"}]
         <label class="control-label col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
         <div class="col-lg-9">
@@ -7,7 +11,7 @@
         </div>
     [{/block}]
 </div>
-<div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+<div class="form-group[{if $aErrors && $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
     [{block name="user_account_password"}]
         <label class="control-label col-lg-3 req" for="userPassword">[{oxmultilang ident="PASSWORD"}]</label>
         <input type="hidden" id="passwordLength" value="[{$oViewConf->getPasswordLength()}]">
@@ -17,7 +21,7 @@
         </div>
     [{/block}]
 </div>
-<div class="form-group[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
+<div class="form-group[{if $aErrors && $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
     [{block name="user_account_confirmpwd"}]
         <label class="control-label col-lg-3 req">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
         <div class="col-lg-9">

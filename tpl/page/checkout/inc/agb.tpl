@@ -1,3 +1,5 @@
+[{if !isset($hideButtons)}][{assign var="hideButtons" value=null}][{/if}]
+
 <div class="agb panel panel-default">
     [{if !$hideButtons}]
 

@@ -32,7 +32,8 @@
                                             <a id="compareRight_[{$product->oxarticles__oxid->value}]" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getActiveClassName() params="fnc=moveright&amp;aid=`$product->oxarticles__oxnid->value`&amp;pgNr="|cat:$oView->getActPage()}]" class="btn btn-default moveNext">&raquo;</a>
                                         [{/if}]
                                     </div>
-                                    [{include file="page/compare/inc/compareitem.tpl" product=$product testid=$smarty.foreach.comparelist.iteration}]
+                                    [{if isset($smarty.foreach.comparelist.iteration)}][{assign var="testId" value=$smarty.foreach.comparelist.iteration}][{else}][{assign var="testId" value=null}][{/if}]
+                                    [{include file="page/compare/inc/compareitem.tpl" product=$product testid=$testId}]
                                 </td>
                             [{/foreach}]
                         </tr>
@@ -42,7 +43,7 @@
 
                                 [{foreach from=$articleList key="iProdNr" item="product" name="compareArticles"}]
                                     <td class="attrib-text">
-                                        [{if $oAttrib->aProd.$iProdNr && $oAttrib->aProd.$iProdNr->value}]
+                                        [{if isset($oAttrib->aProd.$iProdNr) && $oAttrib->aProd.$iProdNr->value}]
                                             [{$oAttrib->aProd.$iProdNr->value}]
                                         [{else}]
                                             -

@@ -2,6 +2,8 @@
     <ol class="checkoutSteps">
         [{if $oxcmp_basket->getProductsCount()}]
             [{assign var=showStepLinks value=true}]
+        [{else}]
+            [{assign var=showStepLinks value=false}]
         [{/if}]
 
         [{block name="checkout_steps_basket"}]

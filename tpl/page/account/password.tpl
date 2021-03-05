@@ -6,7 +6,7 @@
             [{oxmultilang ident="MESSAGE_PASSWORD_CHANGED"}]
         </div>
     [{/if}]
-    [{if $Errors|is_array && $Errors.user|is_array && !empty($Errors.user)}]
+    [{if isset($Errors) && $Errors|is_array && !empty($Errors.user) && $Errors.user|is_array}]
         <div class="alert alert-danger">
             [{foreach from=$Errors.user item=oEr key=key}]
                 <p>[{$oEr->getOxMessage()}]</p>

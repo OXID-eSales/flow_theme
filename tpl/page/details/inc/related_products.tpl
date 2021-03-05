@@ -1,3 +1,5 @@
+[{if !isset($oxidBlock_productbar)}][{assign var="oxidBlock_productbar" value=null}] [{/if}]
+
 [{block name="details_relatedproducts_also_bought"}]
     [{if $oView->getAlsoBoughtTheseProducts()}]
         [{include file="widget/product/list.tpl" type="grid" listId="alsoBought" head="CUSTOMERS_ALSO_BOUGHT"|oxmultilangassign subhead="PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER"|oxmultilangassign products=$oView->getAlsoBoughtTheseProducts()}]

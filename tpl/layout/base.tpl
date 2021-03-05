@@ -1,3 +1,8 @@
+[{if !isset($oxidBlock_head)}][{assign var="oxidBlock_head" value=null}][{/if}]
+[{if !isset($oxidBlock_pagePopup)}][{assign var="oxidBlock_pagePopup" value=null}][{/if}]
+[{if !isset($oxidBlock_pageScript)}][{assign var="oxidBlock_pageScript" value=null}][{/if}]
+[{if !isset($sStyle)}][{assign var="sStyle" value=null}][{/if}]
+
 [{* Important ! render page head and body to collect scripts and styles *}]
 [{capture append="oxidBlock_pageHead"}]
     [{strip}]
@@ -203,7 +208,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}][{if !$stickyHeader}] static-header[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
+    <body class="cl-[{$oView->getClassName()}][{if isset($smarty.get.plain) && $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}][{if !$stickyHeader}] static-header[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
 
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]

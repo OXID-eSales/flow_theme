@@ -1,3 +1,5 @@
+[{if !isset($actvrecommlist)}][{assign var="actvrecommlist" value=null}][{/if}]
+
 <form action="[{$oViewConf->getSelfActionLink()}]" name="saverecommlist" method="post" class="form-horizontal">
     <div class="hidden">
         [{$oViewConf->getHiddenSid()}]
@@ -12,19 +14,19 @@
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="TITLE"}]</label>
         <div class="col-lg-9">
-            <input type="text" name="recomm_title" class="form-control" maxlength="73" value="[{$actvrecommlist->oxrecommlists__oxtitle->value}]">
+            <input type="text" name="recomm_title" class="form-control" maxlength="73" value="[{if isset($actvrecommlist->oxrecommlists__oxtitle->value)}][{$actvrecommlist->oxrecommlists__oxtitle->value}][{/if}]">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3">[{oxmultilang ident="AUTHOR"}]</label>
         <div class="col-lg-9">
-            <input type="text" name="recomm_author" class="form-control" maxlength="73" value="[{if $actvrecommlist->oxrecommlists__oxauthor->value}][{$actvrecommlist->oxrecommlists__oxauthor->value}][{elseif !$actvrecommlist}][{$oxcmp_user->oxuser__oxfname->value}] [{$oxcmp_user->oxuser__oxlname->value}][{/if}]">
+            <input type="text" name="recomm_author" class="form-control" maxlength="73" value="[{if isset($actvrecommlist->oxrecommlists__oxauthor->value) && $actvrecommlist->oxrecommlists__oxauthor->value}][{$actvrecommlist->oxrecommlists__oxauthor->value}][{elseif !$actvrecommlist}][{$oxcmp_user->oxuser__oxfname->value}] [{$oxcmp_user->oxuser__oxlname->value}][{/if}]">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3">[{oxmultilang ident="INTRODUCTION"}]</label>
         <div class="col-lg-9">
-            <textarea class="form-control" rows="8" name="recomm_desc">[{$actvrecommlist->oxrecommlists__oxdesc->value}]</textarea>
+            <textarea class="form-control" rows="8" name="recomm_desc">[{if isset($actvrecommlist->oxrecommlists__oxdesc->value)}][{$actvrecommlist->oxrecommlists__oxdesc->value}][{/if}]</textarea>
         </div>
     </div>
     <div class="form-group">

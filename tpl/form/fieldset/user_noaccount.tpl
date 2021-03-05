@@ -1,10 +1,11 @@
-<div class="form-group [{if $aErrors.oxuser__oxusername}]oxInValid[{/if}]">
+[{if isset($aErrors.oxuser__oxusername)}][{assign var="userUserNameErrors" value=$aErrors.oxuser__oxusername}] [{else}][{assign var="userUserNameErrors" value=null}][{/if}]
+<div class="form-group [{if $userUserNameErrors}]oxInValid[{/if}]">
     [{block name="user_noaccount_email"}]
         <label class="control-label col-lg-3 req">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
         <div class="col-lg-9">
             <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]">
             <div class="help-block">
-                [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxusername}]
+                [{include file="message/inputvalidation.tpl" aErrors=$userUserNameErrors}]
             </div>
         </div>
     [{/block}]

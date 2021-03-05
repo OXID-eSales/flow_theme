@@ -1,3 +1,12 @@
+[{if !isset($sidebar)}][{assign var="sidebar" value=null}][{/if}]
+[{if !isset($oxidBlock_head)}][{assign var="oxidBlock_head" value=null}][{/if}]
+[{if !isset($force_sid)}][{assign var="force_sid" value=null}][{/if}]
+[{if !isset($Errors)}][{assign var="Errors" value=null}][{/if}]
+[{if !isset($oxidBlock_pageScript)}][{assign var="oxidBlock_pageScript" value=null}][{/if}]
+[{if !isset($oxidBlock_pagePopup)}][{assign var="oxidBlock_pagePopup" value=null}][{/if}]
+[{if !isset($blWorkaroundInclude)}][{assign var="blWorkaroundInclude" value=null}][{/if}]
+[{if !isset($blHideBreadcrumb)}][{assign var="blHideBreadcrumb" value=null}][{/if}]
+
 [{capture append="oxidBlock_pageBody"}]
     [{if $oView->showRDFa()}]
         [{include file="rdfa/rdfa.tpl"}]
@@ -31,7 +40,9 @@
                         [{/block}]
                     [{/if}]
 
-                    [{$smarty.capture.loginErrors}]
+                    [{if isset($smarty.capture.loginErrors)}]
+                        [{$smarty.capture.loginErrors}]
+                    [{/if}]
 
                     <div class="row">
                         [{if $sidebar && $sidebar != "Right"}]

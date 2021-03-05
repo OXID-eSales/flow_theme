@@ -1,3 +1,5 @@
+[{if !isset($product)}][{assign var="product" value=null}][{/if}]
+
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 

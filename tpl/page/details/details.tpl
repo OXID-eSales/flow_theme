@@ -1,3 +1,6 @@
+[{if !isset($blWorkaroundInclude)}][{assign var="blWorkaroundInclude" value=null}][{/if}]
+[{if !isset($force_sid)}][{assign var="force_sid" value=null}][{/if}]
+
 [{if !$blWorkaroundInclude}]
     [{capture append="oxidBlock_content"}]
         [{if $oxcmp_user}]

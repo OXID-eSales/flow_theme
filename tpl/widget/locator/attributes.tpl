@@ -1,3 +1,6 @@
+[{if !isset($attributes)}][{assign var="attributes" value=null}][{/if}]
+[{if !isset($hasActiveValue)}][{assign var="hasActiveValue" value=null}][{/if}]
+
 [{block name="widget_locator_attributes"}]
 	[{if $attributes}]
 	<div class="row">

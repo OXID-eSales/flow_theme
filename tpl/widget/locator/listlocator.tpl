@@ -1,3 +1,8 @@
+[{if !isset($listDisplayType)}][{assign var="listDisplayType" value=null}] [{/if}]
+[{if !isset($sort)}][{assign var="sort" value=null}] [{/if}]
+[{if !isset($place)}][{assign var="place" value=null}] [{/if}]
+[{if !isset($itemsPerPage)}][{assign var="itemsPerPage" value=null}] [{/if}]
+
 <div class="refineParams row clear[{if $place == "bottom"}] bottomParams[{/if}]">
     <div class="col-xs-12 pagination-options">
         [{if $locator}]

@@ -1,3 +1,5 @@
+[{if !isset($currCountry)}][{assign var="currCountry" value=null}][{/if}]
+
 [{if $selectedStateIdPrim}]
   [{assign var="selectedStateId" value=$selectedStateIdPrim}]
 [{/if}]

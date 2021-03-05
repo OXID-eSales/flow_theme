@@ -1,5 +1,9 @@
+[{if !isset($_prefix)}][{assign var="_prefix" value=null}][{/if}]
+
 [{if $oxcmp_basket->getProductsCount() gte 5}]
     [{assign var="blScrollable" value=true}]
+[{else}]
+    [{assign var="blScrollable" value=false}]
 [{/if}]
 
 [{block name="widget_minibasket"}]

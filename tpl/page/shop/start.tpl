@@ -15,7 +15,8 @@
     [{block name="start_bargain_articles"}]
         [{assign var="oBargainArticles" value=$oView->getBargainArticleList()}]
         [{if $oBargainArticles && $oBargainArticles->count()}]
-            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="START_BARGAIN_HEADER"|oxmultilangassign subhead="START_BARGAIN_SUBHEADER"|oxmultilangassign listId="bargainItems" products=$oBargainArticles rsslink=$rsslinks.bargainArticles rssId="rssBargainProducts" showMainLink=true iProductsPerLine=4}]
+            [{if isset($rsslinks.bargainArticles)}][{assign var="bargainArticles" value=$rsslinks.bargainArticles}][{else}][{assign var="bargainArticles" value=null}][{/if}]
+            [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="START_BARGAIN_HEADER"|oxmultilangassign subhead="START_BARGAIN_SUBHEADER"|oxmultilangassign listId="bargainItems" products=$oBargainArticles rsslink=$bargainArticles rssId="rssBargainProducts" showMainLink=true iProductsPerLine=4}]
         [{/if}]
     [{/block}]
 

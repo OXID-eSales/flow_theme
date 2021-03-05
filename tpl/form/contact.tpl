@@ -9,7 +9,10 @@
         <input type="hidden" name="cl" value="contact"/>
     </div>
 
-    [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxfname}]
+    [{if isset($aErrors.oxuser__oxfname)}][{assign var="userFirstNameErrors" value=$aErrors.oxuser__oxfname}][{else}][{assign var="userFirstNameErrors" value=null}][{/if}]
+    [{if isset($editval.oxuser__oxsal)}][{assign var="userSalutation" value=$editval.oxuser__oxsal}][{else}][{assign var="userSalutation" value=null}][{/if}]
+    [{if isset($editval.oxuser__oxfname)}][{assign var="userFirstName" value=$editval.oxuser__oxfname}][{else}][{assign var="userFirstName" value=null}][{/if}]
+    [{include file="message/inputvalidation.tpl" aErrors=$userFirstNameErrors}]
 
     [{block name="contact_form_fields"}]
     <div class="form-group">
@@ -20,13 +23,13 @@
             [{include
             file="form/fieldset/salutation.tpl"
             name="editval[oxuser__oxsal]"
-            value=$editval.oxuser__oxsal
+            value=$userSalutation
             class="form-control selectpicker show-tick "
             required=$contactFormFields.salutation.isRequired
             }]
         </div>
     </div>
-    <div class="form-group[{if $aErrors.oxuser__oxfname}] oxInValid[{/if}]">
+    <div class="form-group[{if $userFirstNameErrors}] oxInValid[{/if}]">
         <label class="[{if $contactFormFields.firstName.isRequired}]req[{/if}] control-label col-lg-2"
                for="editval[oxuser__oxfname]">
             [{oxmultilang ident="FIRST_NAME"}]
@@ -37,12 +40,14 @@
                    id="editval[oxuser__oxfname]"
                    size="70"
                    maxlength="255"
-                   value="[{$editval.oxuser__oxfname}]"
+                   value="[{$userFirstName}]"
                    class="form-control"
                    [{if $contactFormFields.firstName.isRequired}]required="required"[{/if}] >
         </div>
     </div>
-    <div class="form-group[{if $aErrors.oxuser__oxlname}] oxInValid[{/if}]">
+    [{if isset($aErrors.oxuser__oxlname)}][{assign var="userLastNameErrors" value=$aErrors.oxuser__oxlname}][{else}][{assign var="userLastNameErrors" value=null}][{/if}]
+    [{if isset($editval.oxuser__oxlname)}][{assign var="userLastName" value=$editval.oxuser__oxlname}][{else}][{assign var="userLastName" value=null}][{/if}]
+    <div class="form-group[{if $userLastNameErrors}] oxInValid[{/if}]">
         <label class="[{if $contactFormFields.lastName.isRequired}]req[{/if}] control-label col-lg-2"
                for="editval[oxuser__oxlname]">
             [{oxmultilang ident="LAST_NAME"}]
@@ -53,12 +58,14 @@
                    id="editval[oxuser__oxlname]"
                    size=70
                    maxlength=255
-                   value="[{$editval.oxuser__oxlname}]"
+                   value="[{$userLastName}]"
                    class="form-control"
                    [{if $contactFormFields.lastName.isRequired}]required="required"[{/if}]>
         </div>
     </div>
-    <div class="form-group[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
+    [{if isset($aErrors.oxuser__oxusername)}][{assign var="userNameErrors" value=$aErrors.oxuser__oxusername}][{else}][{assign var="userNameErrors" value=null}][{/if}]
+    [{if isset($editval.oxuser__oxusername)}][{assign var="userName" value=$editval.oxuser__oxusername}][{else}][{assign var="userName" value=null}][{/if}]
+    <div class="form-group[{if $userNameErrors}] oxInValid[{/if}]">
         <label class="[{if $contactFormFields.email.isRequired}]req[{/if}] control-label col-lg-2"
                for="contactEmail">
             [{oxmultilang ident="EMAIL"}]
@@ -69,12 +76,12 @@
                    name="editval[oxuser__oxusername]"
                    size=70
                    maxlength=255
-                   value="[{$editval.oxuser__oxusername}]"
+                   value="[{$userName}]"
                    class="form-control"
                    [{if $contactFormFields.email.isRequired}]required="required"[{/if}]>
         </div>
     </div>
-    <div class="form-group[{if $aErrors && !$oView->getContactSubject()}] oxInValid[{/if}]">
+    <div class="form-group[{if isset($aErrors) && $aErrors && !$oView->getContactSubject()}] oxInValid[{/if}]">
         <label class="[{if $contactFormFields.subject.isRequired}]req[{/if}] control-label col-lg-2"
                for="c_subject">
             [{oxmultilang ident="SUBJECT"}]

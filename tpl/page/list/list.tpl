@@ -25,7 +25,7 @@
 
 [{capture append="oxidBlock_content"}]
     [{block name="page_list_listhead"}]
-        [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
+        [{if isset($actCategory->oxcategories__oxthumb->value) && $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
             <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$actCategory->getThumbUrl()}]" alt="[{$actCategory->oxcategories__oxtitle->value}]" class="categoryPicture img-responsive img-thumbnail">
         [{/if}]
 
@@ -33,7 +33,7 @@
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             <h1>
                 [{$oView->getTitle()}]
-                [{if $rsslinks.activeCategory}]
+                [{if isset($rsslinks.activeCategory) && $rsslinks.activeCategory}]
                     <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
                         <i class="fa fa-rss"></i>
                     </a>
@@ -48,7 +48,7 @@
             </p>
         [{/if}]
 
-        [{if $actCategory->oxcategories__oxlongdesc->value && $oPageNavigation->actPage == 1}]
+        [{if isset($actCategory->oxcategories__oxlongdesc->value) && $actCategory->oxcategories__oxlongdesc->value && $oPageNavigation->actPage == 1}]
             <div id="catLongDescLocator" class="categoryDescription">[{oxeval var=$actCategory->oxcategories__oxlongdesc}]</div>
             <hr/>
         [{/if}]

@@ -1,3 +1,5 @@
+[{if !isset($template_title)}][{assign var="template_title" value=null}][{/if}]
+
 [{capture append="oxidBlock_content"}]
     [{* ordering steps *}]
     [{include file="page/checkout/inc/steps.tpl" active=3}]

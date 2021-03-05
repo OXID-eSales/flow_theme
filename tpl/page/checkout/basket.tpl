@@ -1,3 +1,5 @@
+[{if !isset($template_title)}][{assign var="template_title" value=null}][{/if}]
+
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{capture append="oxidBlock_content"}]
 

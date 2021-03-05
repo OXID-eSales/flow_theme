@@ -1,3 +1,5 @@
+[{if !isset($blEdit)}][{assign var="blEdit" value=null}][{/if}]
+
 [{assign var="searchrecomm" value=$oView->getRecommSearch()}]
 [{if $oView->getRecommLists()|@count gt 0}]
     <ul class="list-unstyled" id="recommendationsLists">

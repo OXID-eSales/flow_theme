@@ -220,6 +220,7 @@
             [{* packing unit *}]
 
             [{block name="checkout_basketcontents_itemerror"}]
+                [{if isset($Errors) && isset($Errors.basket)}]
                 [{foreach from=$Errors.basket item=oEr key=key}]
                     [{if $oEr->getErrorClassType() == 'oxOutOfStockException'}]
                         [{* display only the exceptions for the current article *}]
@@ -247,6 +248,7 @@
                         [{/if}]
                     [{/if}]
                 [{/foreach}]
+                [{/if}]
             [{/block}]
             [{*  basket items end  *}]
         [{/foreach}]

@@ -34,7 +34,7 @@
                                 [{/block}]
 
                                 [{block name="dd_layout_page_header_icon_menu_account"}]
-                                    [{if $oxcmp_user || $oView->getCompareItemCount() || $Errors.loginBoxErrors}]
+                                    [{if $oxcmp_user || $oView->getCompareItemCount() || (isset($Errors.loginBoxErrors) && $Errors.loginBoxErrors)}]
                                         [{assign var="blAnon" value=0}]
                                         [{assign var="force_sid" value=$oViewConf->getSessionId()}]
                                     [{else}]

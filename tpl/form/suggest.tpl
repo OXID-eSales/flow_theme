@@ -17,14 +17,14 @@
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="RECIPIENT_NAME" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <input class="form-control" type="text" name="editval[rec_name]" size="73" maxlength="73" value="[{$editval->rec_name}]" required="required">
+            <input class="form-control" type="text" name="editval[rec_name]" size="73" maxlength="73" value="[{if isset($editval->rec_name)}][{$editval->rec_name}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="RECIPIENT_EMAIL" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <input class="form-control" type="email" name="editval[rec_email]" size="73" maxlength="73" value="[{$editval->rec_email}]" required="required">
+            <input class="form-control" type="email" name="editval[rec_email]" size="73" maxlength="73" value="[{if isset($editval->rec_email)}][{$editval->rec_email}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>
@@ -33,28 +33,28 @@
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="SENDER_NAME" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <input class="form-control" type="text" name="editval[send_name]" size=73 maxlength=73 value="[{$editval->send_name}]" required="required">
+            <input class="form-control" type="text" name="editval[send_name]" size=73 maxlength=73 value="[{if isset($editval->send_name)}][{$editval->send_name}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="SENDER_EMAIL" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <input class="form-control" type="email" name="editval[send_email]" size=73 maxlength=73 value="[{$editval->send_email}]" required="required">
+            <input class="form-control" type="email" name="editval[send_email]" size=73 maxlength=73 value="[{if isset($editval->send_email)}][{$editval->send_email}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="SUBJECT" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <input class="form-control" type="text" name="editval[send_subject]" size=73 maxlength=73 value="[{if $editval->send_subject}][{$editval->send_subject}][{else}][{oxmultilang ident="HAVE_A_LOOK" suffix="COLON"}] [{$_oProduct->oxarticles__oxtitle->value|strip_tags}][{/if}]" required="required">
+            <input class="form-control" type="text" name="editval[send_subject]" size=73 maxlength=73 value="[{if isset($editval->send_subject) && $editval->send_subject}][{$editval->send_subject}][{else}][{oxmultilang ident="HAVE_A_LOOK" suffix="COLON"}] [{$_oProduct->oxarticles__oxtitle->value|strip_tags}][{/if}]" required="required">
             <div class="help-block"></div>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="MESSAGE" suffix="COLON"}]</label>
         <div class="col-lg-9">
-            <textarea cols="70" rows="8" name="editval[send_message]" class="areabox form-control" required="required">[{if $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_MESSAGE" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
+            <textarea cols="70" rows="8" name="editval[send_message]" class="areabox form-control" required="required">[{if isset($editval->send_message) && $editval->send_message}][{$editval->send_message}][{else}][{oxmultilang ident="SHOP_SUGGEST_MESSAGE" args=$oxcmp_shop->oxshops__oxname->value}][{/if}]</textarea>
             <div class="help-block"></div>
         </div>
     </div>

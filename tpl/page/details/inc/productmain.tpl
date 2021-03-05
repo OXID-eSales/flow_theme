@@ -1,3 +1,6 @@
+[{if !isset($blHasActiveSelections)}][{assign var="blHasActiveSelections" value=null}][{/if}]
+[{if !isset($blHideLabel)}][{assign var="blHideLabel" value=null}][{/if}]
+
 [{oxscript include="js/pages/details.min.js" priority=10}]
 
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
@@ -123,7 +126,7 @@
 
             [{* article main info block *}]
             <div class="information" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <div class="productMainInfo[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]">
+                <div class="productMainInfo[{if isset($oManufacturer->oxmanufacturers__oxicon->value) && $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]">
 
                     [{* additional info *}]
                     [{oxhasrights ident="SHOWARTICLEPRICE"}]
