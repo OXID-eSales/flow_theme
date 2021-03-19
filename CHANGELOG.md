@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.7.1] - Unreleased
+
+### Fixed
+- Add missing actions.tpl for Actions widget [Wave PR-121](https://github.com/OXID-eSales/wave-theme/pull/121)
+
 ## [3.7.0] - 2021-03-12
 
 ### Added
