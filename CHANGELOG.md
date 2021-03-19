@@ -30,7 +30,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 
-## [3.7.0] - Unreleased
+## [3.7.1] - Unreleased
+
+### Fixed
+- Add missing actions.tpl for Actions widget [Wave PR-121](https://github.com/OXID-eSales/wave-theme/pull/121)
+
+## [3.7.0] - 2021-03-12
 
 ### Added
 - New blocks:
@@ -277,7 +282,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
 [4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-4.x
-[3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...b-3.x
+[3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...v3.7.0
 [3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
