@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Add missing actions.tpl for Actions widget [Wave PR-121](https://github.com/OXID-eSales/wave-theme/pull/121)
+- Improve jQuery security
 
 ## [3.7.0] - 2021-03-12
 
