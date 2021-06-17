@@ -9,7 +9,7 @@
             <div class="row lineView newItems">
                 [{block name="widget_product_listitem_line_picturebox"}]
                     <div class="productData col-xs-12 productBox">
-                        [{oxid_include_widget cl="oxwArticleBox" _parent=$oView->getClassName() nocookie=1 iLinkType=$product->getLinkType() _object=$product anid=$product->getId() sWidgetType="product" sListType="listitem_line" iIndex="list_1" blDisableToCart=true isVatIncluded=$oView->isVatIncluded() showMainLink=true toBasketFunction=false removeFunction=false skipESIforUser=1}]
+                        [{oxid_include_widget cl="oxwArticleBox" _parent=$oView->getClassKey() nocookie=1 iLinkType=$product->getLinkType() _object=$product anid=$product->getId() sWidgetType="product" sListType="listitem_line" iIndex="list_1" blDisableToCart=true isVatIncluded=$oView->isVatIncluded() showMainLink=true toBasketFunction=false removeFunction=false skipESIforUser=1}]
                     </div>
                 [{/block}]
             </div>

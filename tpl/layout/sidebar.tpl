@@ -4,7 +4,7 @@
 
 [{block name="sidebar"}]
     [{block name="sidebar_categoriestree"}]
-        [{if $oView->getClassName() == 'alist' }]
+        [{if $oView->getClassKey() == 'alist' }]
             <div class="box well well-sm categorytree">
                 <section>
                     <div class="page-header h3">
@@ -23,7 +23,7 @@
     [{/block}]
 
     [{block name="sidebar_partners"}]
-        [{if $oView->getClassName() eq "start"}]
+        [{if $oView->getClassKey() eq "start"}]
             [{include file="widget/sidebar/partners.tpl"}]
         [{/if}]
     [{/block}]
@@ -34,7 +34,7 @@
         [{if $oViewConf->getShowListmania() && $oView->getSimilarRecommListIds()}]
             [{oxid_include_widget nocookie=1 cl="oxwRecommendation" aArticleIds=$oView->getSimilarRecommListIds() searchrecomm=$oView->getRecommSearch()}]
         [{elseif $oViewConf->getShowListmania() && $oView->getRecommSearch()}]
-            [{oxid_include_widget nocookie=1 cl="oxwRecommendation" _parent=$oView->getClassName() searchrecomm=$oView->getRecommSearch()}]
+            [{oxid_include_widget nocookie=1 cl="oxwRecommendation" _parent=$oView->getClassKey() searchrecomm=$oView->getRecommSearch()}]
         [{/if}]
     [{/block}]
 
@@ -42,7 +42,7 @@
     [{/block}]
 
     [{block name="sidebar_shopluperatings"}]
-        [{if $oView->getClassName() eq "start"}]
+        [{if $oView->getClassKey() eq "start"}]
            [{include file="widget/shoplupe/ratings.tpl"}]
         [{/if}]
     [{/block}]

@@ -1,6 +1,6 @@
 [{capture append="oxidBlock_pageBody"}]
     [{if $oView->isEnabledPrivateSales()}]
-        [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassName() nocookie=1}]
+        [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassKey() nocookie=1}]
     [{/if}]
 [{/capture}]
 

@@ -22,7 +22,7 @@
     <form class="js-oxWidgetReload" action="[{$oView->getWidgetLink()}]" method="get">
         [{$oViewConf->getHiddenSid()}]
         [{$oViewConf->getNavFormParams()}]
-        <input type="hidden" name="cl" value="[{$oView->getClassName()}]">
+        <input type="hidden" name="cl" value="[{$oView->getClassKey()}]">
         <input type="hidden" name="oxwparent" value="[{$oViewConf->getTopActiveClassName()}]">
         <input type="hidden" name="listtype" value="[{$oView->getListType()}]">
         <input type="hidden" name="nocookie" value="1">

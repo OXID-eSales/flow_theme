@@ -39,7 +39,7 @@
                                         <div class="h4 footer-box-title">[{oxmultilang ident="OUR_BRANDS"}]</div>
                                         <div class="footer-box-content">
                                             [{block name="dd_footer_manufacturerlist_inner"}]
-                                                [{oxid_include_widget cl="oxwManufacturerList" _parent=$oView->getClassName() noscript=1 nocookie=1}]
+                                                [{oxid_include_widget cl="oxwManufacturerList" _parent=$oView->getClassKey() noscript=1 nocookie=1}]
                                             [{/block}]
                                         </div>
                                     </section>
@@ -49,7 +49,7 @@
                                         <div class="h4 footer-box-title">[{oxmultilang ident="CATEGORIES"}]</div>
                                         <div class="footer-box-content">
                                             [{block name="dd_footer_categorytree_inner"}]
-                                                [{oxid_include_widget cl="oxwCategoryTree" _parent=$oView->getClassName() sWidgetType="footer" noscript=1 nocookie=1}]
+                                                [{oxid_include_widget cl="oxwCategoryTree" _parent=$oView->getClassKey() sWidgetType="footer" noscript=1 nocookie=1}]
                                             [{/block}]
                                         </div>
                                     </section>

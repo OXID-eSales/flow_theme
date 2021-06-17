@@ -17,7 +17,7 @@
 
                 <div class="row">
 
-                    [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
+                    [{if $oView->getClassKey()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
                         [{include file="widget/promoslider.tpl"}]
                     [{/if}]
 
@@ -25,7 +25,7 @@
 
                 <div class="content-box">
 
-                    [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
+                    [{if $oView->getClassKey() != "start" && !$blHideBreadcrumb}]
                         [{block name="layout_breadcrumb"}]
                             [{include file="widget/breadcrumb.tpl"}]
                         [{/block}]
@@ -35,7 +35,7 @@
 
                     <div class="row">
                         [{if $sidebar && $sidebar != "Right"}]
-                            <div class="col-xs-12 col-md-3 [{$oView->getClassName()}]">
+                            <div class="col-xs-12 col-md-3 [{$oView->getClassKey()}]">
                                 <div id="sidebar">
                                     [{include file="layout/sidebar.tpl"}]
                                 </div>
@@ -57,7 +57,7 @@
                         </div>
 
                         [{if $sidebar && $sidebar == "Right"}]
-                            <div class="col-xs-12 col-md-3 [{$oView->getClassName()}]">
+                            <div class="col-xs-12 col-md-3 [{$oView->getClassKey()}]">
                                 <div id="sidebar">
                                     [{include file="layout/sidebar.tpl"}]
                                 </div>
