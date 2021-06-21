@@ -1,6 +1,5 @@
 [{assign var="shop"           value=$oEmailView->getShop()}]
 [{assign var="oViewConf"      value=$oEmailView->getViewConfig()}]
-[{assign var="oConf"          value=$oViewConf->getConfig()}]
 [{assign var="currency"       value=$oEmailView->getCurrency()}]
 [{assign var="user"           value=$oEmailView->getUser()}]
 [{assign var="oDelSet"        value=$order->getDelSet()}]
@@ -169,7 +168,7 @@
 
                             [{if $blShowReviewLink}]
                                 <p>
-                                    <a href="[{$oConf->getShopURL()}]index.php?shp=[{$shop->oxshops__oxid->value}]&amp;anid=[{$basketitem->getProductId()}]&amp;cl=review&amp;reviewuserhash=[{$user->getReviewUserHash($user->getId())}]" style="" target="_blank">[{oxmultilang ident="PRODUCT_REVIEW"}]</a>
+                                    <a href="[{$shopUrl}]index.php?shp=[{$shop->oxshops__oxid->value}]&amp;anid=[{$basketitem->getProductId()}]&amp;cl=review&amp;reviewuserhash=[{$user->getReviewUserHash($user->getId())}]" style="" target="_blank">[{oxmultilang ident="PRODUCT_REVIEW"}]</a>
                                 </p>
                             [{/if}]
                         </p>

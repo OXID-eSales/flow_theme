@@ -1,5 +1,4 @@
 [{capture append="oxidBlock_content"}]
-    [{assign var="oConfig" value=$oViewConf->getConfig()}]
     [{assign var='rsslinks' value=$oView->getRssLinks()}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
     [{oxscript include="js/pages/start.min.js"}]

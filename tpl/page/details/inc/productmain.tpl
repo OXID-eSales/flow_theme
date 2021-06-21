@@ -1,6 +1,5 @@
 [{oxscript include="js/pages/details.min.js" priority=10}]
 
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
 [{assign var="aVariantSelections" value=$oView->getVariantSelections()}]
 [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
@@ -29,8 +28,8 @@
         <input type="hidden" name="cnid" value="[{$oView->getCategoryId()}]">
         <input type="hidden" name="anid" value="[{if !$oDetailsProduct->oxarticles__oxparentid->value}][{$oDetailsProduct->oxarticles__oxid->value}][{else}][{$oDetailsProduct->oxarticles__oxparentid->value}][{/if}]">
         <input type="hidden" name="actcontrol" value="[{$oViewConf->getTopActiveClassName()}]">
-        [{if $oConfig->getRequestParameter('preview')}]
-            <input type="hidden" name="preview" value="[{$oConfig->getRequestParameter('preview')}]">
+        [{if $config->getRequestParameter('preview')}]
+            <input type="hidden" name="preview" value="[{$config->getRequestParameter('preview')}]">
         [{/if}]
     </form>
 [{/if}]
@@ -67,11 +66,11 @@
 
                 [{if $oView->showZoomPics()}]
                     [{* ToDo: This logical part should be ported into a core function. *}]
-                    [{if $oConfig->getConfigParam('sAltImageUrl') || $oConfig->getConfigParam('sSSLAltImageUrl')}]
+                    [{if $config->getConfigParam('sAltImageUrl') || $config->getConfigParam('sSSLAltImageUrl')}]
                         [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
                     [{else}]
                         [{assign var="sPictureName" value=$oPictureProduct->oxarticles__oxpic1->value}]
-                        [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
+                        [{assign var="aPictureInfo" value=$config->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
                     [{/if}]
 
                     <div class="picture text-center">
