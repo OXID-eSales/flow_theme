@@ -828,7 +828,7 @@
                                                         <tr>
                                                             <td class="six sub-columns text-pad-left">
                                                                 [{assign var="sEmailLogo" value=$oViewConf->getViewThemeParam('sEmailLogo')}]
-                                                                <a href="[{$shopUrl}]" title="[{$shop->oxshops__oxtitleprefix->value}]">
+                                                                <a href="[{$shopUrlWithLangAndSubshop}]" title="[{$shop->oxshops__oxtitleprefix->value}]">
                                                                     <img src="[{$oViewConf->getImageUrl($sEmailLogo, false)}]" border="0" hspace="0" vspace="0" alt="[{$shop->oxshops__oxname->value}]" align="texttop">
                                                                 </a>
                                                             </td>
