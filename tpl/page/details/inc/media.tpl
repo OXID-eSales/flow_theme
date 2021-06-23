@@ -1,5 +1,5 @@
 [{if $oDetailsProduct->oxarticles__oxfile->value}]
-    <a id="productFile" href="[{$config->getPictureUrl('media/')}][{$oDetailsProduct->oxarticles__oxfile->value}]">[{$oDetailsProduct->oxarticles__oxfile->value}]</a>
+    <a id="productFile" href="[{$oViewConf->getMediaPictureUrl()}][{$oDetailsProduct->oxarticles__oxfile->value}]">[{$oDetailsProduct->oxarticles__oxfile->value}]</a>
 [{/if}]
 
 [{if $oView->getMediaFiles()}]

@@ -28,8 +28,8 @@
         <input type="hidden" name="cnid" value="[{$oView->getCategoryId()}]">
         <input type="hidden" name="anid" value="[{if !$oDetailsProduct->oxarticles__oxparentid->value}][{$oDetailsProduct->oxarticles__oxid->value}][{else}][{$oDetailsProduct->oxarticles__oxparentid->value}][{/if}]">
         <input type="hidden" name="actcontrol" value="[{$oViewConf->getTopActiveClassName()}]">
-        [{if $config->getRequestParameter('preview')}]
-            <input type="hidden" name="preview" value="[{$config->getRequestParameter('preview')}]">
+        [{if $preview}]
+            <input type="hidden" name="preview" value="[{$preview}]">
         [{/if}]
     </form>
 [{/if}]
@@ -66,11 +66,11 @@
 
                 [{if $oView->showZoomPics()}]
                     [{* ToDo: This logical part should be ported into a core function. *}]
-                    [{if $config->getConfigParam('sAltImageUrl') || $config->getConfigParam('sSSLAltImageUrl')}]
+                    [{if $altImageUrl || $SSLAltImageUrl}]
                         [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
                     [{else}]
                         [{assign var="sPictureName" value=$oPictureProduct->oxarticles__oxpic1->value}]
-                        [{assign var="aPictureInfo" value=$config->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
+                        [{assign var="aPictureInfo" value=$oPictureProduct->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
                     [{/if}]
 
                     <div class="picture text-center">
