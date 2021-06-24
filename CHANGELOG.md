@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Language Constant: `DD_SUGGEST_HEADING`
 - News feature
 - `setup.sql` file support and file itself
+- Remove `ajax_econda_recommendations.tpl` use econda module instead
 
 ## [3.7.1] - Unreleased
 

@@ -40,7 +40,6 @@ $( function ()
             $oHeader = $( '#header' ),
             $oBasketList = $( '#basket_list' ),
             $oToTop = $( '#jumptotop' ),
-            $oRecommendations = $( '#econdaRecommendations' ),
             $oChangeEmail = $( 'input.oxValidate_enterPass' ),
             $oSearchInput = $( '#searchParam' ),
             iHeaderWrapperHeight = parseInt( $oHeader.height() ),
@@ -175,16 +174,6 @@ $( function ()
             }
         );
 
-
-        if ( $oRecommendations.length )
-        {
-            $.get( window.sBaseUrl + 'cl=tpl&tpl=ajax_econda_recommendations.tpl&actcl=' + sActCl + '', function ( oData, sStatus, oXhr )
-                {
-                    $oRecommendations.html( oData );
-                    $oRecommendations.find( 'img' ).unveil();
-                }
-            );
-        }
 
         /* *********************************
          * List filter
