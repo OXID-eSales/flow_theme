@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [4.0.0] - Unreleased
+## [4.0.0] - 2021-07-06
 
 ### Changed
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
@@ -283,6 +283,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.1...v4.0.0
 [3.7.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.0...v3.7.1
 [3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...v3.7.0
 [3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
