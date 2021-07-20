@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.7.2] - 2021-07-20
+
+### Fixed
+- Improve jQuery security
+
 ## [3.7.1] - 2021-07-06
 
 ### Fixed
 - Add missing actions.tpl for Actions widget [Wave PR-121](https://github.com/OXID-eSales/wave-theme/pull/121)
-- Improve jQuery security
 
 ## [3.7.0] - 2021-03-12
 
@@ -256,6 +260,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
+[3.7.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.1...v3.7.2
 [3.7.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.0...v3.7.1
 [3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...v3.7.0
 [3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
