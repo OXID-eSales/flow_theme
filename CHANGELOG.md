@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.7.3] - Unreleased
+
+### Fixed
+- Template content is not updated with dynamic caching enabled [#0005354](https://bugs.oxid-esales.com/view.php?id=5354)
+
 ## [3.7.2] - 2021-07-20
 
 ### Fixed
