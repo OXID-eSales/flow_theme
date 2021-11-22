@@ -31,6 +31,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `setup.sql` file support and file itself
 - Remove `ajax_econda_recommendations.tpl` use econda module instead
 
+## [3.7.3] - Unreleased
+
+### Fixed
+- Template content is not updated with dynamic caching enabled [#0005354](https://bugs.oxid-esales.com/view.php?id=5354)
+
 ## [3.7.2] - 2021-07-20
 
 ### Fixed
