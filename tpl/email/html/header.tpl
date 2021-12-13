@@ -811,7 +811,6 @@
 </head>
 <body bgcolor="#ffffff">
     [{block name="email_html_header"}][{/block}]
-    [{assign var="oConfig" value=$oViewConf->getConfig()}]
     <table class="body">
         <tr>
             <td class="center" align="center" valign="top">
@@ -829,7 +828,7 @@
                                                         <tr>
                                                             <td class="six sub-columns text-pad-left">
                                                                 [{assign var="sEmailLogo" value=$oViewConf->getViewThemeParam('sEmailLogo')}]
-                                                                <a href="[{$oConfig->getShopUrl(null,false)}]" title="[{$shop->oxshops__oxtitleprefix->value}]">
+                                                                <a href="[{$shopUrlWithLangAndSubshop}]" title="[{$shop->oxshops__oxtitleprefix->value}]">
                                                                     <img src="[{$oViewConf->getImageUrl($sEmailLogo, false)}]" border="0" hspace="0" vspace="0" alt="[{$shop->oxshops__oxname->value}]" align="texttop">
                                                                 </a>
                                                             </td>

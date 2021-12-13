@@ -1,4 +1,3 @@
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{capture append="oxidBlock_content"}]
 
     [{* ordering steps *}]

@@ -1,5 +1,5 @@
 [{if $oViewConf->getTopActionClassName() != 'clearcookies' && $oViewConf->getTopActionClassName() != 'mallstart'}]
-    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassName() nocookie=1}]
+    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassKey() nocookie=1}]
 [{/if}]
 [{block name="header_main"}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
@@ -26,29 +26,29 @@
                             <div class="menu-dropdowns pull-right">
                                 [{block name="dd_layout_page_header_icon_menu_languages"}]
                                     [{* Language Dropdown*}]
-                                    [{oxid_include_widget cl="oxwLanguageList" lang=$oViewConf->getActLanguageId() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+                                    [{oxid_include_widget cl="oxwLanguageList" lang=$oViewConf->getActLanguageId() _parent=$oView->getClassKey() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
                                 [{block name="dd_layout_page_header_icon_menu_currencies"}]
                                     [{* Currency Dropdown*}]
-                                    [{oxid_include_widget cl="oxwCurrencyList" cur=$oViewConf->getActCurrency() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+                                    [{oxid_include_widget cl="oxwCurrencyList" cur=$oViewConf->getActCurrency() _parent=$oView->getClassKey() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
 
                                 [{block name="dd_layout_page_header_icon_menu_account"}]
                                     [{if $oxcmp_user || $oView->getCompareItemCount() || $Errors.loginBoxErrors}]
                                         [{assign var="blAnon" value=0}]
-                                        [{assign var="force_sid" value=$oViewConf->getSessionId()}]
+                                        [{assign var="force_sid" value=$oView->getSidForWidget()}]
                                     [{else}]
                                         [{assign var="blAnon" value=1}]
                                     [{/if}]
                                     [{* Account Dropdown *}]
-                                    [{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassName() force_sid=$force_sid nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+                                    [{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassKey() force_sid=$force_sid nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
 
                                 [{block name="dd_layout_page_header_icon_menu_minibasket"}]
                                     [{* Minibasket Dropdown *}]
                                     [{if $oxcmp_basket->getProductsCount()}]
                                         [{assign var="blAnon" value=0}]
-                                        [{assign var="force_sid" value=$oViewConf->getSessionId()}]
+                                        [{assign var="force_sid" value=$oView->getSidForWidget()}]
                                     [{else}]
                                         [{assign var="blAnon" value=1}]
                                     [{/if}]
@@ -66,7 +66,7 @@
         </div>
 
         [{block name="layout_header_bottom"}]
-            [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+            [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassKey() nocookie=1}]
         [{/block}]
 
     </header>

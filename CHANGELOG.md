@@ -4,12 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [4.0.0] - Unreleased
-
-### Added
-- New blocks:
-  - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
-  - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+## [4.0.0] - 2021-07-06
 
 ### Changed
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-153](https://github.com/OXID-eSales/flow_theme/pull/153)
@@ -26,15 +21,49 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Remove credit card related blocks in payment method selection
 - Remove Betanote
 - Suggest (Recommend Product) feature:
-    - Templates:
-        - `email/html/suggest.tpl`
-        - `email/plain/suggest.tpl`
-        - `form/suggest.tpl`
-        - `page/info/suggest.tpl`
-    - Link in: `page/details/inc/productmania.tpl`
-    - Language Constant: `DD_SUGGEST_HEADING`
+  - Templates:
+    - `email/html/suggest.tpl`
+    - `email/plain/suggest.tpl`
+    - `form/suggest.tpl`
+    - `page/info/suggest.tpl`
+  - Link in: `page/details/inc/productmania.tpl`
+  - Language Constant: `DD_SUGGEST_HEADING`
 - News feature
 - `setup.sql` file support and file itself
+- Remove `ajax_econda_recommendations.tpl` use econda module instead
+
+## [3.7.3] - Unreleased
+
+### Fixed
+- Template content is not updated with dynamic caching enabled [#0005354](https://bugs.oxid-esales.com/view.php?id=5354)
+
+## [3.7.2] - 2021-07-20
+
+### Fixed
+- Improve jQuery security
+
+## [3.7.1] - 2021-07-06
+
+### Fixed
+- Add missing actions.tpl for Actions widget [Wave PR-121](https://github.com/OXID-eSales/wave-theme/pull/121)
+
+## [3.7.0] - 2021-03-12
+
+### Added
+- New blocks:
+  - ``captcha_form`` in ``tpl/form/forgotpwd_email.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - ``captcha_form`` in ``tpl/form/newsletter.tpl`` [PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - ``salutation_options`` in ``tpl/form/fieldset/salutation.tpl`` [PR-164](https://github.com/OXID-eSales/flow_theme/pull/164)
+
+## [3.6.0] - 2020-11-12
+
+### Added
+- New blocks:
+  - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+  - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+
+### Fixed
+- Variantselector doesn't work in List View listitem_line in wave and flow [#0007163](https://bugs.oxid-esales.com/view.php?id=7163) [PR-162](https://github.com/OXID-eSales/flow_theme/pull/162)
 
 ## [3.5.1] - 2020-08-31
 
@@ -264,7 +293,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...b-4.x
+[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.1...v4.0.0
+[3.7.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.1...v3.7.2
+[3.7.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.0...v3.7.1
+[3.7.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.6.0...v3.7.0
+[3.6.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.1...v3.6.0
 [3.5.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.1...v3.5.0
 [3.4.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.4.0...v3.4.1

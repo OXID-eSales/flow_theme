@@ -2,11 +2,6 @@
     [{assign var="delivadr" value=$oxcmp_user->getSelectedAddress()}]
 [{/if}]
 
-[{if !$deladr}]
-    [{assign var="oConfig" value=$oView->getConfig()}]
-    [{assign var="deladr"  value=$oConfig->getRequestParameter('deladr')}]
-[{/if}]
-
 [{if $oxcmp_user}]
     [{assign var="aUserAddresses" value=$oxcmp_user->getUserAddresses()}]
 

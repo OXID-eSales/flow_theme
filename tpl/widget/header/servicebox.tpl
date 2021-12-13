@@ -9,7 +9,8 @@
                     </li>
                     [{if $oViewConf->getShowCompareList()}]
                         <li>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=compare"}]">[{oxmultilang ident="MY_PRODUCT_COMPARISON"}]</a> [{if $oView->getCompareItemsCnt()}]<span class="badge">[{$oView->getCompareItemsCnt()}]</span>[{/if}]
+                            <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=compare"}]">[{oxmultilang ident="MY_PRODUCT_COMPARISON"}]</a>
+                            [{oxid_include_dynamic file="widget/header/compareitemscounter.tpl"}]
                         </li>
                     [{/if}]
                     <li>

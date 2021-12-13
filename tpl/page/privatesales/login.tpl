@@ -1,5 +1,5 @@
 [{capture append="oxidBlock_pageBody"}]
-    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassName() nocookie=1}]
+    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassKey() nocookie=1}]
 [{/capture}]
 [{capture append="oxidBlock_content"}]
     <div class="accountLoginView" style="margin-top: 25px;">

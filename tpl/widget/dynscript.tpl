@@ -1,7 +1,5 @@
 [{oxscript}]
 
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
-
 <script type="text/javascript">[{strip}]
     var sBaseUrl = '[{$oViewConf->getSelfActionLink()}]';
     var sActCl = '[{$oViewConf->getTopActiveClassName()}]';
@@ -138,8 +136,7 @@
                     [{assign var="oOrder" value=$oView->getOrder()}]
                 [{/if}]
 
-                [{assign var="sShopURL"      value=$oConfig->getConfigParam('sShopURL')}]
-                [{assign var="aShopDomain"   value=$sShopURL|@parse_url}]
+                [{assign var="aShopDomain"   value=$shopURLParam|@parse_url}]
                 [{assign var="blHasPreOrder" value=false}]
                 [{assign var="oBasket"       value=$oView->getBasket()}]
                 [{assign var="oCountry"      value="oxCountry"|@oxNew}]

@@ -1,6 +1,5 @@
 [{oxscript include="js/pages/details.min.js" priority=10}]
 
-[{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
 [{assign var="aVariantSelections" value=$oView->getVariantSelections()}]
 [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
@@ -22,15 +21,15 @@
     <form class="js-oxWidgetReload" action="[{$oView->getWidgetLink()}]" method="get">
         [{$oViewConf->getHiddenSid()}]
         [{$oViewConf->getNavFormParams()}]
-        <input type="hidden" name="cl" value="[{$oView->getClassName()}]">
+        <input type="hidden" name="cl" value="[{$oView->getClassKey()}]">
         <input type="hidden" name="oxwparent" value="[{$oViewConf->getTopActiveClassName()}]">
         <input type="hidden" name="listtype" value="[{$oView->getListType()}]">
         <input type="hidden" name="nocookie" value="1">
         <input type="hidden" name="cnid" value="[{$oView->getCategoryId()}]">
         <input type="hidden" name="anid" value="[{if !$oDetailsProduct->oxarticles__oxparentid->value}][{$oDetailsProduct->oxarticles__oxid->value}][{else}][{$oDetailsProduct->oxarticles__oxparentid->value}][{/if}]">
         <input type="hidden" name="actcontrol" value="[{$oViewConf->getTopActiveClassName()}]">
-        [{if $oConfig->getRequestParameter('preview')}]
-            <input type="hidden" name="preview" value="[{$oConfig->getRequestParameter('preview')}]">
+        [{if $preview}]
+            <input type="hidden" name="preview" value="[{$preview}]">
         [{/if}]
     </form>
 [{/if}]
@@ -67,11 +66,11 @@
 
                 [{if $oView->showZoomPics()}]
                     [{* ToDo: This logical part should be ported into a core function. *}]
-                    [{if $oConfig->getConfigParam('sAltImageUrl') || $oConfig->getConfigParam('sSSLAltImageUrl')}]
+                    [{if $altImageUrl || $SSLAltImageUrl}]
                         [{assign var="aPictureInfo" value=$oPictureProduct->getMasterZoomPictureUrl(1)|@getimagesize}]
                     [{else}]
                         [{assign var="sPictureName" value=$oPictureProduct->oxarticles__oxpic1->value}]
-                        [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
+                        [{assign var="aPictureInfo" value=$oPictureProduct->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
                     [{/if}]
 
                     <div class="picture text-center">

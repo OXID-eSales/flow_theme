@@ -175,7 +175,7 @@
 
                                 [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
                                     <p>
-                                        <input id="am_[{$smarty.foreach.basketContents.iteration}]" type="number" class="textbox" name="aproducts[[{$basketindex}]][am]" value="[{$basketitem->getAmount()}]" size="3" min="0"[{if $oConfig->getConfigParam('blAllowUnevenAmounts')}] step="any"[{/if}]>
+                                        <input id="am_[{$smarty.foreach.basketContents.iteration}]" type="number" class="textbox" name="aproducts[[{$basketindex}]][am]" value="[{$basketitem->getAmount()}]" size="3" min="0"[{if $allowUnevenAmounts}] step="any"[{/if}]>
                                     </p>
                                 [{/if}]
                             [{else}]

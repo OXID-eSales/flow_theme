@@ -14,7 +14,7 @@
 						<input type="hidden" name="fname" value="">
 					</div>
 
-					[{if $oView->getClassName() == 'alist'}]
+					[{if $oView->getClassKey() == 'alist'}]
 						<strong>[{oxmultilang ident="DD_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
 					[{/if}]
 					[{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]

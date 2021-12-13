@@ -11,4 +11,4 @@
 [{oxscript add="$( '#variants' ).oxArticleVariant();"}]
 [{include file="page/details/inc/productmain.tpl"}]
 
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]
