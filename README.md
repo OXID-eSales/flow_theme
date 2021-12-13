@@ -9,10 +9,8 @@
 
 ### Step 1: Select the appropriate branch
 
-* Branch ``b-1.0`` contains *Flow* for OXID eShop version 4.10/5.3
-* Branch ``b-2.x`` contains *Flow* for OXID eShop version 6.0.0
-* Branch ``b-3.x`` contains *Flow* for OXID eShop compilation 6.1, 6.2 and 6.3
-* Branch ``master`` contain *Flow* for OXID eShop master branch latest commits
+* Branch ``b-3.x`` contains *Flow* for OXID eShop compilation 6.3 and 6.4
+* Branch ``master`` contains *Flow* for OXID eShop master branch's latest commits
 
 ### Step 2: Get the source code
 
