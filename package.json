@@ -20,5 +20,8 @@
     "less-plugin-autoprefix": "^2.0.0",
     "load-grunt-config": "^3.0.1",
     "time-grunt": "^2.0.0"
+  },
+  "scripts": {
+    "start": "grunt"
   }
 }
