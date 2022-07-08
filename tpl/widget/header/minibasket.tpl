@@ -4,7 +4,7 @@
             <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
             [{if $oxcmp_basket->getItemsCount() > 0}]
                 <span class="badge">
-                    [{ $oxcmp_basket->getItemsCount() }]
+                    [{$oxcmp_basket->getItemsCount()}]
                 </span>
             [{/if}]
         [{/block}]

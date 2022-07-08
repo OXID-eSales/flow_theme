@@ -144,7 +144,7 @@
             selectedStateIdPrim=$invadr.oxuser__oxstateid
             selectedStateId=$oxcmp_user->oxuser__oxstateid->value
             class="form-control selectpicker"
-            }]
+           }]
             <div class="help-block"></div>
         </div>
     </div>

@@ -19,7 +19,7 @@
         [{/if}]
 
         [{block name="checkout_order_details"}]
-            [{if !$oxcmp_basket->getProductsCount() }]
+            [{if !$oxcmp_basket->getProductsCount()}]
                 [{block name="checkout_order_emptyshippingcart"}]
                     <div class="alert alert-danger">[{oxmultilang ident="BASKET_EMPTY"}]</div>
                 [{/block}]

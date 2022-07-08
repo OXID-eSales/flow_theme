@@ -72,7 +72,7 @@
                                             [{assign var=result value=""}]
                                             [{foreach key=oArtAttributes from=$oAttributes->getArray() item=oAttr name=attributeContents}]
                                                 [{assign var=temp value=$oAttr->oxattribute__oxvalue->value}]
-                                                [{assign var=result value=$result$temp$sep}]
+                                                [{assign var=result value="$result$temp$sep"}]
                                             [{/foreach}]
                                             [{$result|trim:$sep}]
                                         </div>

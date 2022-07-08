@@ -59,4 +59,3 @@
 [{else}]
     [{include file="layout/page.tpl"}]
 [{/if}]
-

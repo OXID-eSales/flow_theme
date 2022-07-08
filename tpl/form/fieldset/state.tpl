@@ -2,8 +2,8 @@
   [{assign var="selectedStateId" value=$selectedStateIdPrim}]
 [{/if}]
 
-[{assign var="divId" value=oxStateDiv_$stateSelectName}]
-[{assign var="stateSelectId" value=oxStateSelect_$stateSelectName}]
+[{assign var="divId" value="oxStateDiv_$stateSelectName"}]
+[{assign var="stateSelectId" value="oxStateSelect_$stateSelectName"}]
 
 [{if $currCountry}]
   [{assign var=showDiv value='true'}]

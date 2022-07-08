@@ -8,7 +8,7 @@
             <input type="hidden" name="recommid" value="[{$actvrecommlist->getId()}]">
         [{/if}]
     </div>
-    
+
     <div class="form-group">
         <label class="control-label col-lg-3 req">[{oxmultilang ident="TITLE"}]</label>
         <div class="col-lg-9">

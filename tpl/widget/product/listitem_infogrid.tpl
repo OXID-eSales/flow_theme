@@ -16,10 +16,10 @@
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
 
-    [{if !$testid }]
+    [{if !$testid}]
        [{assign var=testid value=$oView->getViewParameter('testid')}]
     [{/if}]
-    [{if !$listId }]
+    [{if !$listId}]
         [{assign var=listId value=$oView->getViewParameter('listId')}]
     [{/if}]
 
@@ -83,7 +83,7 @@
                     [{/block}]
 
                     [{block name="widget_product_listitem_infogrid_selections"}]
-                        [{if $aVariantSelections && $aVariantSelections.selections }]
+                        [{if $aVariantSelections && $aVariantSelections.selections}]
                             <div id="variantselector_[{$iIndex}]" class="selectorsBox js-fnSubmit clear">
                                 [{foreach from=$aVariantSelections.selections item=oSelectionList key=iKey}]
                                     [{include file="widget/product/selectbox.tpl" oSelectionList=$oSelectionList sJsAction="js-fnSubmit" blHideLabel=true}]
@@ -143,7 +143,7 @@
                                         <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit">
                                             [{$product->oxarticles__oxunitquantity->value}] [{$product->getUnitName()}] | [{oxprice price=$oUnitPrice currency=$currency}]/[{$product->getUnitName()}]
                                         </span>
-                                    [{elseif $product->oxarticles__oxweight->value }]
+                                    [{elseif $product->oxarticles__oxweight->value}]
                                         <span id="productPricePerUnit_[{$testid}]" class="pricePerUnit">
                                             <span title="weight">[{oxmultilang ident="WEIGHT"}]</span>
                                             <span class="value">[{$product->oxarticles__oxweight->value}] [{oxmultilang ident="KG"}]</span>

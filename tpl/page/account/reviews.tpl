@@ -9,7 +9,7 @@
 
     [{block name="account_reviewlist_list"}]
         <div id="review">
-            [{if $oView->getReviewAndRatingItemsCount() }]
+            [{if $oView->getReviewAndRatingItemsCount()}]
                 <div class="spacer"></div>
                 <div class="reviews-landscape">
                     [{foreach from=$oView->getReviewList() item=review name=ReviewsCounter}]
@@ -68,7 +68,7 @@
                             reviewId=$review->getReviewId()
                             ratingId=$review->getRatingId()
                             reviewCounterIteration=$smarty.foreach.ReviewsCounter.iteration
-                        }]
+                       }]
                     [{/foreach}]
                 </div>
             [{else}]

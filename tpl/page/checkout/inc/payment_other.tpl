@@ -5,8 +5,8 @@
     </dt>
     <dd class="[{if $oView->getCheckedPaymentId() == $paymentmethod->oxpayments__oxid->value}]activePayment[{/if}]">
         [{if $paymentmethod->getPrice()}]
-            [{assign var="oPaymentPrice" value=$paymentmethod->getPrice() }]
-            [{if $oViewConf->isFunctionalityEnabled('blShowVATForPayCharge') }]
+            [{assign var="oPaymentPrice" value=$paymentmethod->getPrice()}]
+            [{if $oViewConf->isFunctionalityEnabled('blShowVATForPayCharge')}]
                 [{strip}]
                     ([{oxprice price=$oPaymentPrice->getNettoPrice() currency=$currency}]
                     [{if $oPaymentPrice->getVatValue() > 0}]

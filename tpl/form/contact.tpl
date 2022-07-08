@@ -23,7 +23,7 @@
             value=$editval.oxuser__oxsal
             class="form-control selectpicker show-tick "
             required=$contactFormFields.salutation.isRequired
-            }]
+           }]
         </div>
     </div>
     <div class="form-group[{if $aErrors.oxuser__oxfname}] oxInValid[{/if}]">

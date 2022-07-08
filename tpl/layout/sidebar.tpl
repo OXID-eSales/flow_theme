@@ -4,7 +4,7 @@
 
 [{block name="sidebar"}]
     [{block name="sidebar_categoriestree"}]
-        [{if $oView->getClassKey() == 'alist' }]
+        [{if $oView->getClassKey() == 'alist'}]
             <div class="box well well-sm categorytree">
                 <section>
                     <div class="page-header h3">
@@ -47,4 +47,3 @@
         [{/if}]
     [{/block}]
 [{/block}]
-

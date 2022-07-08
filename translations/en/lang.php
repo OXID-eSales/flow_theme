@@ -159,7 +159,3 @@ $aLang = array(
 
     'DD_NAVIGATION_MORE'                                    => 'More',
 );
-
-/*
-[{ oxmultilang ident="GENERAL_YOUWANTTODELETE"}]
-*/

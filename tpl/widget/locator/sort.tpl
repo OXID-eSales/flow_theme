@@ -10,7 +10,7 @@
             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                 <strong>[{oxmultilang ident="SORT_BY"}]:</strong>
                 [{if $oView->getListOrderBy()}]
-                    [{oxmultilang ident=$oView->getListOrderBy()|upper }]
+                    [{oxmultilang ident=$oView->getListOrderBy()|upper}]
                 [{else}]
                     [{oxmultilang ident="CHOOSE"}]
                 [{/if}]

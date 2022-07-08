@@ -24,4 +24,3 @@
         <button class="submitButton" type="submit">[{oxmultilang ident="CONTINUE_SHOPPING"}]</button>
     </div>
 </form>
-

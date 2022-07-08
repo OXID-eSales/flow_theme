@@ -37,7 +37,7 @@
 
                             [{assign var="oDeliveryCostPrice" value=$oxcmp_basket->getDeliveryCost()}]
                             [{if $oDeliveryCostPrice && $oDeliveryCostPrice->getPrice() > 0}]
-                                [{if $oViewConf->isFunctionalityEnabled('blShowVATForDelivery') }]
+                                [{if $oViewConf->isFunctionalityEnabled('blShowVATForDelivery')}]
                                     <div id="shipSetCost">
                                         <b>[{oxmultilang ident="CHARGES" suffix="COLON"}] [{oxprice price=$oDeliveryCostPrice->getNettoPrice() currency=$currency}]
                                             ([{oxmultilang ident="PLUS_VAT"}] [{oxprice price=$oDeliveryCostPrice->getVatValue() currency=$currency}])
