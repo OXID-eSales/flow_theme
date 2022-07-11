@@ -3,7 +3,7 @@
 [{assign var="user"      value=$oEmailView->getUser()}]
 
 
-[{oxmultilang ident="GIFT_REGISTRY_OF"}] [{$shop->oxshops__oxname->getRawValue()}]
+[{oxmultilang ident="GIFT_REGISTRY_OF"}] [{$shop->oxshops__oxname nofilter}]
 
 [{$userinfo->send_message}]
 

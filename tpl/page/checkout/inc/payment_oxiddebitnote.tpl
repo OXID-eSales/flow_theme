@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-lg-9 col-lg-offset-3">
 						<div class="alert alert-info desc">
-							[{$paymentmethod->oxpayments__oxlongdesc->getRawValue()}]
+							[{$paymentmethod->oxpayments__oxlongdesc nofilter}]
 						</div>
 					</div>
                 </div>

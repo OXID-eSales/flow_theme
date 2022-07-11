@@ -32,7 +32,7 @@
         [{block name="checkout_payment_longdesc"}]
             [{if $paymentmethod->oxpayments__oxlongdesc->value|strip_tags|trim}]
                 <div class="desc">
-                    [{$paymentmethod->oxpayments__oxlongdesc->getRawValue()}]
+                    [{$paymentmethod->oxpayments__oxlongdesc nofilter}]
                 </div>
             [{/if}]
         [{/block}]
