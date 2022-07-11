@@ -4,7 +4,7 @@
 [{assign var="editval" value=$oView->getUserData()}]
 <form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" method="post" role="form" novalidate="novalidate">
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
         <input type="hidden" name="fnc" value="send"/>
         <input type="hidden" name="cl" value="contact"/>
     </div>

@@ -2,8 +2,8 @@
 [{assign var="editval" value=$oView->getInviteData()}]
 <form class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post">
     <div>
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="send">
         <input type="hidden" name="cl" value="invite">
         <input type="hidden" name="anid" value="[{$_oProduct->oxarticles__oxnid->value}]">

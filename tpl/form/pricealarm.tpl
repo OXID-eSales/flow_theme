@@ -5,8 +5,8 @@
 <p class="alert alert-info">[{oxmultilang ident="MESSAGE_PRICE_ALARM_PRICE_CHANGE"}]</p>
 <form class="js-oxValidate form-horizontal" name="pricealarm" action="[{$oViewConf->getSelfActionLink()}]" method="post" novalidate="novalidate">
     <div>
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
         [{if $oDetailsProduct}]
             <input type="hidden" name="anid" value="[{$oDetailsProduct->oxarticles__oxid->value}]">

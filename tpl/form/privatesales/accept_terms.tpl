@@ -2,8 +2,8 @@
     <form name="login" class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post" id="private-sales-login">
 
         <div>
-            [{$oViewConf->getHiddenSid()}]
-            [{$oViewConf->getNavFormParams()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
+            [{$oViewConf->getNavFormParams() nofilter}]
             <input type="hidden" name="fnc" value="login_noredirect">
             <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
             <input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">

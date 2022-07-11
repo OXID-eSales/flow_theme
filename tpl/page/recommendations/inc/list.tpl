@@ -16,7 +16,7 @@
                             [{if $blEdit}]
                                 <form action="[{$oViewConf->getSelfActionLink()}]" method="post" class="form-inline pull-right">
                                     <div class="hidden">
-                                        [{$oViewConf->getHiddenSid()}]
+                                        [{$oViewConf->getHiddenSid() nofilter}]
                                         <input type="hidden" name="cl" value="account_recommlist">
                                         <input type="hidden" name="fnc" value="editList">
                                         <input type="hidden" name="recommid" value="[{$recommlist->getId()}]">

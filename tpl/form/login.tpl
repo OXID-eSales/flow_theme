@@ -3,8 +3,8 @@
 
 <form class="js-oxValidate" name="login" action="[{$oViewConf->getSslSelfLink()}]" method="post" role="form" novalidate="novalidate">
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="login_noredirect">
         <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
     </div>

@@ -9,8 +9,8 @@
                 [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
                 <form action="[{$oViewConf->getSslSelfLink()}]" name="shipping" id="shipping" method="post">
                     <div class="hidden">
-                        [{$oViewConf->getHiddenSid()}]
-                        [{$oViewConf->getNavFormParams()}]
+                        [{$oViewConf->getHiddenSid() nofilter}]
+                        [{$oViewConf->getNavFormParams() nofilter}]
                         <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                         <input type="hidden" name="fnc" value="changeshipping">
                     </div>
@@ -89,8 +89,8 @@
             [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
             <form action="[{$oViewConf->getSslSelfLink()}]" class="form-horizontal js-oxValidate payment" id="payment" name="order" method="post" novalidate="novalidate">
                 <div class="hidden">
-                    [{$oViewConf->getHiddenSid()}]
-                    [{$oViewConf->getNavFormParams()}]
+                    [{$oViewConf->getHiddenSid() nofilter}]
+                    [{$oViewConf->getNavFormParams() nofilter}]
                     <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                     <input type="hidden" name="fnc" value="validatepayment">
                 </div>

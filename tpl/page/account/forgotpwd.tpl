@@ -24,7 +24,7 @@
 
         <form action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post" role="form">
             <div>
-                [{$oViewConf->getHiddenSid()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
                 <input type="hidden" name="cl" value="start">
                 <button id="backToShop" class="submitButton largeButton btn btn-primary" type="submit">
                     <i class="fa fa-caret-left"></i> [{oxmultilang ident="BACK_TO_SHOP"}]
@@ -37,7 +37,7 @@
             <div class="bar">
                 <form action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post">
                     <div>
-                        [{$oViewConf->getHiddenSid()}]
+                        [{$oViewConf->getHiddenSid() nofilter}]
                         <input type="hidden" name="cl" value="start">
                         <button id="backToShop" class="btn btn-primary submitButton largeButton" type="submit">
                             <i class="fa fa-caret-left"></i> [{oxmultilang ident="BACK_TO_SHOP"}]

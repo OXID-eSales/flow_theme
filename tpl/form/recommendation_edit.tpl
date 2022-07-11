@@ -1,7 +1,7 @@
 <form action="[{$oViewConf->getSelfActionLink()}]" name="saverecommlist" method="post" class="form-horizontal">
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="saveRecommList">
         <input type="hidden" name="cl" value="account_recommlist">
         [{if $actvrecommlist}]

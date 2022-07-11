@@ -5,8 +5,8 @@
 </div>
 <form action="[{$oViewConf->getCurrentHomeDir()}]index.php" method="post">
     <div>
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
         <input type="hidden" name="fnc" value="executeuserchoice">
         <input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">

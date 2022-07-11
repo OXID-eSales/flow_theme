@@ -28,8 +28,8 @@
 
     <form name="tobasket.[{$testid}]" [{if $blShowToBasket}]action="[{$oViewConf->getSelfActionLink()}]" method="post"[{else}]action="[{$_productLink}]" method="get"[{/if}]  class="js-oxProductForm">
         <div class="hidden">
-            [{$oViewConf->getNavFormParams()}]
-            [{$oViewConf->getHiddenSid()}]
+            [{$oViewConf->getNavFormParams() nofilter}]
+            [{$oViewConf->getHiddenSid() nofilter}]
             <input type="hidden" name="pgNr" value="[{$oView->getActPage()}]">
             [{if $recommid}]
                 <input type="hidden" name="recommid" value="[{$recommid}]">
@@ -217,7 +217,7 @@
     [{if $removeFunction && (($owishid && ($owishid==$oxcmp_user->oxuser__oxid->value)) || (($wishid==$oxcmp_user->oxuser__oxid->value)) || $recommid)}]
         <form action="[{$oViewConf->getSelfActionLink()}]" method="post" id="remove_[{$removeFunction}][{$testid}]" class="hidden">
             <div>
-                [{$oViewConf->getHiddenSid()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
                 <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
                 <input type="hidden" name="fnc" value="[{$removeFunction}]">
                 <input type="hidden" name="aid" value="[{$product->oxarticles__oxid->value}]">

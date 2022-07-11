@@ -8,8 +8,8 @@
 
 <form class="form-horizontal" action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post" novalidate="novalidate">
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="forgotpassword">
         <input type="hidden" name="cl" value="forgotpwd">
         <input type="hidden" name="actcontrol" value="forgotpwd">

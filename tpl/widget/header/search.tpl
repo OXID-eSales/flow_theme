@@ -1,7 +1,7 @@
 [{block name="widget_header_search_form"}]
     [{if $oView->showSearch()}]
         <form class="form search" role="form" action="[{$oViewConf->getSelfActionLink()}]" method="get" name="search">
-            [{$oViewConf->getHiddenSid()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
             <input type="hidden" name="cl" value="search">
 
             [{block name="dd_widget_header_search_form_inner"}]

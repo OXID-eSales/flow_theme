@@ -14,8 +14,8 @@
 					<div class="col-md-12 [{$sColClass}]">
 						<form action="[{$oViewConf->getSslSelfLink()}]" method="post">
 							<div class="hidden">
-								[{$oViewConf->getHiddenSid()}]
-								[{$oViewConf->getNavFormParams()}]
+								[{$oViewConf->getHiddenSid() nofilter}]
+								[{$oViewConf->getNavFormParams() nofilter}]
 								<input type="hidden" name="cl" value="user">
 								<input type="hidden" name="fnc" value="">
 								<input type="hidden" name="option" value="1">
@@ -46,8 +46,8 @@
 				<div class="col-md-12 [{$sColClass}]">
 					<form action="[{$oViewConf->getSslSelfLink()}]" method="post">
 						<div class="hidden">
-							[{$oViewConf->getHiddenSid()}]
-							[{$oViewConf->getNavFormParams()}]
+							[{$oViewConf->getHiddenSid() nofilter}]
+							[{$oViewConf->getNavFormParams() nofilter}]
 							<input type="hidden" name="cl" value="user">
 							<input type="hidden" name="fnc" value="">
 							<input type="hidden" name="option" value="3">
@@ -60,7 +60,7 @@
 							<div class="panel-body">
 								[{block name="checkout_options_reg_text"}]
 									[{oxifcontent ident="oxregistrationdescription" object="oCont"}]
-										[{$oCont->oxcontents__oxcontent->value}]
+										[{$oCont->oxcontents__oxcontent->value nofilter}]
 									[{/oxifcontent}]
 								[{/block}]
 							</div>

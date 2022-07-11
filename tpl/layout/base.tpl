@@ -150,7 +150,7 @@
 
         [{block name="head_css"}]
             [{foreach from=$oxidBlock_head item="_block"}]
-                [{$_block}]
+                [{$_block nofilter}]
             [{/foreach}]
         [{/block}]
     [{/strip}]
@@ -192,7 +192,7 @@
 <html lang="[{$oView->getActiveLangAbbr()}]" [{block name="head_html_namespace"}][{/block}]>
     <head>
         [{foreach from=$oxidBlock_pageHead item="_block"}]
-            [{$_block}]
+            [{$_block nofilter}]
         [{/foreach}]
         [{oxstyle}]
 
@@ -210,13 +210,13 @@
     <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
             <div class="main-row">
                 [{foreach from=$oxidBlock_pageBody item="_block"}]
-                    [{$_block}]
+                    [{$_block nofilter}]
                 [{/foreach}]
             </div>
         </div>
 
         [{foreach from=$oxidBlock_pagePopup item="_block"}]
-            [{$_block}]
+            [{$_block nofilter}]
         [{/foreach}]
 
         [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]
@@ -244,7 +244,7 @@
         [{/if}]
 
         [{foreach from=$oxidBlock_pageScript item="_block"}]
-            [{$_block}]
+            [{$_block nofilter}]
         [{/foreach}]
 
     </body>

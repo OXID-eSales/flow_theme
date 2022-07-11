@@ -5,8 +5,8 @@
     [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
 
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="changePassword">
         <input type="hidden" name="cl" value="account_password">
         <input type="hidden" name="CustomError" value='user'>

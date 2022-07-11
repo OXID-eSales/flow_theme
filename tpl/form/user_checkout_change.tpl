@@ -26,8 +26,8 @@
     <form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" name="order" method="post" novalidate="novalidate">
         [{block name="user_checkout_change_form"}]
             [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
-            [{$oViewConf->getHiddenSid()}]
-            [{$oViewConf->getNavFormParams()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
+            [{$oViewConf->getNavFormParams() nofilter}]
             <input type="hidden" name="cl" value="user">
             <input type="hidden" name="option" value="[{$oView->getLoginOption()}]">
             <input type="hidden" name="fnc" value="changeuser">

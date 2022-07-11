@@ -2,7 +2,7 @@
     <form name="wishlist_wishlist_status" action="[{$oViewConf->getSelfActionLink()}]" method="post" class="form-horizontal">
         <div class="wishlistPublish clear">
             <div class="hidden">
-                [{$oViewConf->getHiddenSid()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
                 <input type="hidden" name="fnc" value="togglepublic">
                 <input type="hidden" name="cl" value="account_wishlist">
             </div>

@@ -25,8 +25,8 @@
 
     <form name="tobasket[{$testid}]" [{if $blShowToBasket}]action="[{$oViewConf->getSelfActionLink()}]" method="post"[{else}]action="[{$_productLink}]" method="get"[{/if}]>
         <div class="hidden">
-            [{$oViewConf->getNavFormParams()}]
-            [{$oViewConf->getHiddenSid()}]
+            [{$oViewConf->getNavFormParams() nofilter}]
+            [{$oViewConf->getHiddenSid() nofilter}]
             <input type="hidden" name="pgNr" value="[{$oView->getActPage()}]">
             [{if $recommid}]
                 <input type="hidden" name="recommid" value="[{$recommid}]">

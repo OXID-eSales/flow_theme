@@ -27,7 +27,7 @@
                     [{else}]
                         <form name="basket" action="[{$oViewConf->getSelfActionLink()}]" method="post" role="form" id="giftoptions_modal_form">
                             <div class="hidden">
-                                [{$oViewConf->getHiddenSid()}]
+                                [{$oViewConf->getHiddenSid() nofilter}]
                                 <input type="hidden" name="cl" value="basket">
                                 <input type="hidden" name="fnc" value="changewrapping">
                             </div>

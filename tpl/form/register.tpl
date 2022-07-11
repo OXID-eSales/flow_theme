@@ -3,8 +3,8 @@
 <form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" name="order" method="post" novalidate="novalidate">
     <div class="hidden">
         [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="registeruser">
         <input type="hidden" name="cl" value="register">
         <input type="hidden" name="lgn_cook" value="0">

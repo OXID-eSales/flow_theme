@@ -27,7 +27,7 @@
                                 <form name="delete_my_account" action="[{$oViewConf->getSelfActionLink()}]"
                                       method="post" role="form">
                                     <div class="hidden">
-                                        [{$oViewConf->getHiddenSid()}]
+                                        [{$oViewConf->getHiddenSid() nofilter}]
                                         <input type="hidden" name="cl" value="account">
                                         <input type="hidden" name="fnc" value="deleteAccount">
                                     </div>

@@ -6,7 +6,7 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 
 <form name="basket[{$basketindex}]" id="basket_form" action="[{$oViewConf->getSelfActionLink()}]" method="post">
-    [{$oViewConf->getHiddenSid()}]
+    [{$oViewConf->getHiddenSid() nofilter}]
     <input type="hidden" name="cl" value="basket">
     <input type="hidden" name="fnc" value="changebasket">
     <input type="hidden" name="CustomError" value="basket">
@@ -27,7 +27,7 @@
             <form name="voucher" action="[{$oViewConf->getSelfActionLink()}]" method="post" class="js-oxValidate form-inline" role="form" novalidate="novalidate">
                 <div class="couponBox" id="coupon">
                     <div class="hidden">
-                        [{$oViewConf->getHiddenSid()}]
+                        [{$oViewConf->getHiddenSid() nofilter}]
                         <input type="hidden" name="cl" value="basket">
                         <input type="hidden" name="fnc" value="addVoucher">
                         <input type="hidden" name="CustomError" value="basket">

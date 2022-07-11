@@ -26,7 +26,7 @@
                                           action="[{$oViewConf->getSelfActionLink()}]"
                                           method="post">
                                         <div class="hidden">
-                                            [{$oViewConf->getHiddenSid()}]
+                                            [{$oViewConf->getHiddenSid() nofilter}]
                                             <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                                             <input type="hidden" name="fnc" value="deleteShippingAddress">
                                             <input type="hidden" name="oxaddressid"

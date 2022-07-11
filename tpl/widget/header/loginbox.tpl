@@ -8,8 +8,8 @@
 [{if !$oxcmp_user->oxuser__oxpassword->value}]
     <form class="form" id="login" name="login" action="[{$oViewConf->getSslSelfLink()}]" method="post">
         <div id="loginBox" class="loginBox" [{if $bIsError}]style="display: block;"[{/if}]>
-            [{$oViewConf->getHiddenSid()}]
-            [{$oViewConf->getNavFormParams()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
+            [{$oViewConf->getNavFormParams() nofilter}]
             <input type="hidden" name="fnc" value="login_noredirect">
             <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
             [{if $oViewConf->getTopActiveClassName() eq "content"}]

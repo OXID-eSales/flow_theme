@@ -2,7 +2,7 @@
     <form class="form-inline" role="form" action="[{$oViewConf->getSslSelfLink()}]" method="post">
         [{block name="dd_footer_newsletter_form_inner"}]
             <div class="hidden">
-                [{$oViewConf->getHiddenSid()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
                 <input type="hidden" name="fnc" value="fill">
                 <input type="hidden" name="cl" value="newsletter">
                 [{if $oView->getProduct()}]

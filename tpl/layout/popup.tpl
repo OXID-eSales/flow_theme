@@ -2,7 +2,7 @@
     <div id="wrapper">
         <div id="content" class="container">
             <div class="main-container">
-                [{foreach from=$oxidBlock_content item="_block"}][{$_block}][{/foreach}]
+                [{foreach from=$oxidBlock_content item="_block"}][{$_block nofilter}][{/foreach}]
              </div>
         </div>
     </div>

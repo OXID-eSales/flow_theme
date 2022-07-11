@@ -28,8 +28,8 @@
     <form class="form-horizontal js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" name="order" method="post" role="form" novalidate="novalidate">
         [{block name="user_checkout_noregistration_form"}]
             <div class="hidden">
-                [{$oViewConf->getHiddenSid()}]
-                [{$oViewConf->getNavFormParams()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
+                [{$oViewConf->getNavFormParams() nofilter}]
                 <input type="hidden" name="cl" value="user">
                 <input type="hidden" name="option" value="1">
                 [{if !$oxcmp_user->oxuser__oxpassword->value}]

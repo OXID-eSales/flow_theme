@@ -4,8 +4,8 @@
 <form class="form-horizontal" action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post" role="form"  novalidate="novalidate">
     [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
     <div class="hidden">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="fnc" value="updatePassword">
         <input type="hidden" name="uid" value="[{$oView->getUpdateId()}]">
         <input type="hidden" name="cl" value="forgotpwd">

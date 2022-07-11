@@ -5,8 +5,8 @@
     [{if $oxcmp_user->getRecommListsCount()}]
         <form action="[{$oViewConf->getSelfActionLink()}]" method="post">
             <div>
-                [{$oViewConf->getHiddenSid()}]
-                [{$oViewConf->getNavFormParams()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
+                [{$oViewConf->getNavFormParams() nofilter}]
                 <input type="hidden" name="fnc" value="addToRecomm">
                 <input type="hidden" name="cl" value="details">
                 <input type="hidden" name="anid" value="[{$product->oxarticles__oxid->value}]">

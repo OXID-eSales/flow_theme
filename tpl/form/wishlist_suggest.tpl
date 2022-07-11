@@ -8,7 +8,7 @@
         [{assign var="editval" value=$oView->getEnteredData()}]
         <form action="[{$oViewConf->getSelfActionLink()}]" method="post" class="form-horizontal">
             <div class="hidden">
-                [{$oViewConf->getHiddenSid()}]
+                [{$oViewConf->getHiddenSid() nofilter}]
                 <input type="hidden" name="fnc" value="sendwishlist">
                 <input type="hidden" name="cl" value="account_wishlist">
                 <input type="hidden" name="blshowsuggest" value="1">

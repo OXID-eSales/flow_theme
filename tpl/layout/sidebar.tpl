@@ -1,5 +1,5 @@
 [{foreach from=$oxidBlock_sidebar item="_block"}]
-    [{$_block}]
+    [{$_block nofilter}]
 [{/foreach}]
 
 [{block name="sidebar"}]

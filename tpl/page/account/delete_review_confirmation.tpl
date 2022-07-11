@@ -22,8 +22,8 @@
                                         method="post"
                                         id="remove_review_[{$reviewCounterIteration}]"
                                     >
-                                        [{$oViewConf->getNavFormParams()}]
-                                        [{$oViewConf->getHiddenSid()}]
+                                        [{$oViewConf->getNavFormParams() nofilter}]
+                                        [{$oViewConf->getHiddenSid() nofilter}]
                                         <input name="pgNr" value="[{$oView->getActPage()}]"  type="hidden">
                                         <input name="cl" value="account_reviewlist" type="hidden">
                                         <input name="fnc" value="deleteReviewAndRating" type="hidden">

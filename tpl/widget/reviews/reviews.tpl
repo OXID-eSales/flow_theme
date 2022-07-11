@@ -24,8 +24,8 @@
                                             <input id="productRating" type="hidden" name="artrating" value="0">
                                             <input id="recommListRating" type="hidden" name="recommlistrating" value="0">
                                         [{/if}]
-                                        [{$oViewConf->getHiddenSid()}]
-                                        [{$oViewConf->getNavFormParams()}]
+                                        [{$oViewConf->getHiddenSid() nofilter}]
+                                        [{$oViewConf->getNavFormParams() nofilter}]
                                         [{oxid_include_dynamic file="form/formparams.tpl"}]
                                         <input type="hidden" name="fnc" value="savereview">
                                         <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">

@@ -5,8 +5,8 @@
 			<div class="list-filter clearfix">
 				<form method="get" action="[{$oViewConf->getSelfActionLink()}]" name="_filterlist" id="filterList" class="pull-left">
 					<div class="hidden">
-						[{$oViewConf->getHiddenSid()}]
-						[{$oViewConf->getNavFormParams()}]
+						[{$oViewConf->getHiddenSid() nofilter}]
+						[{$oViewConf->getNavFormParams() nofilter}]
 						<input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
 						<input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">
 						<input type="hidden" name="oxloadid" value="[{$oViewConf->getActContentLoadId()}]">
@@ -45,8 +45,8 @@
 
 				[{if $hasActiveValue}]
 					<form method="get" action="[{$oViewConf->getSelfActionLink()}]" name="_resetFilter" id="resetFilter" class="pull-left">
-						[{$oViewConf->getHiddenSid()}]
-						[{$oViewConf->getNavFormParams()}]
+						[{$oViewConf->getHiddenSid() nofilter}]
+						[{$oViewConf->getNavFormParams() nofilter}]
 						<input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
 						<input type="hidden" name="fnc" value="resetFilter">
 

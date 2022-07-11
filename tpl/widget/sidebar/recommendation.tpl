@@ -34,7 +34,7 @@
                         <form name="basket" class="recommendationsSearchForm" action="[{$oViewConf->getSelfActionLink()}]" method="post">
                             <div>
                                 <input type="hidden" name="cl" value="recommlist">
-                                [{$oViewConf->getHiddenSid()}]
+                                [{$oViewConf->getHiddenSid() nofilter}]
                             </div>
                             <label>[{oxmultilang ident="SEARCH_FOR_LISTS"}]</label>
                             <div class="input-group">

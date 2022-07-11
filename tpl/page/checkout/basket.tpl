@@ -28,7 +28,7 @@
                         [{if $oView->showBackToShop()}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
                                 <div class="hidden">
-                                    [{$oViewConf->getHiddenSid()}]
+                                    [{$oViewConf->getHiddenSid() nofilter}]
                                     <input type="hidden" name="cl" value="basket">
                                     <input type="hidden" name="fnc" value="backtoshop">
                                 </div>
@@ -47,7 +47,7 @@
                         [{block name="basket_btn_next_top"}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-right">
                                 <div class="hidden">
-                                    [{$oViewConf->getHiddenSid()}]
+                                    [{$oViewConf->getHiddenSid() nofilter}]
                                     <input type="hidden" name="cl" value="user">
                                 </div>
                                 <button type="submit" class="btn btn-primary submitButton largeButton nextStep pull-right">
@@ -72,7 +72,7 @@
                         [{if $oView->showBackToShop()}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
                                 <div class="backtoshop">
-                                    [{$oViewConf->getHiddenSid()}]
+                                    [{$oViewConf->getHiddenSid() nofilter}]
                                     <input type="hidden" name="cl" value="basket">
                                     <input type="hidden" name="fnc" value="backtoshop">
                                     <button type="submit" class="btn btn-default submitButton largeButton pull-left">
@@ -91,7 +91,7 @@
                         [{block name="basket_btn_next_bottom"}]
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
                                 <div class="hidden">
-                                    [{$oViewConf->getHiddenSid()}]
+                                    [{$oViewConf->getHiddenSid() nofilter}]
                                     <input type="hidden" name="cl" value="user">
                                 </div>
                                 <button type="submit" class="btn btn-primary submitButton largeButton nextStep pull-right">

@@ -42,8 +42,8 @@
         <div class="variants">
             [{oxhasrights ident="TOBASKET"}]
                 [{if $blShowToBasket}]
-                    [{$oViewConf->getHiddenSid()}]
-                    [{$oViewConf->getNavFormParams()}]
+                    [{$oViewConf->getHiddenSid() nofilter}]
+                    [{$oViewConf->getNavFormParams() nofilter}]
                     <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                     [{if $owishid}]
                         <input type="hidden" name="owishid" value="[{$owishid}]">
@@ -144,8 +144,8 @@
 
     <form action="[{$oViewConf->getSelfActionLink()}]" method="post">
         <div class="hidden">
-            [{$oViewConf->getHiddenSid()}]
-            [{$oViewConf->getNavFormParams()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
+            [{$oViewConf->getNavFormParams() nofilter}]
             <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
             <input type="hidden" name="fnc" value="tocomparelist">
             <input type="hidden" name="aid" value="[{$product->oxarticles__oxid->value}]">

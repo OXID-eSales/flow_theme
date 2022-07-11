@@ -19,8 +19,8 @@
     [{oxscript add="oxVariantSelections  = [`$_sSelectionHashCollection`];"}]
 
     <form class="js-oxWidgetReload" action="[{$oView->getWidgetLink()}]" method="get">
-        [{$oViewConf->getHiddenSid()}]
-        [{$oViewConf->getNavFormParams()}]
+        [{$oViewConf->getHiddenSid() nofilter}]
+        [{$oViewConf->getNavFormParams() nofilter}]
         <input type="hidden" name="cl" value="[{$oView->getClassKey()}]">
         <input type="hidden" name="oxwparent" value="[{$oViewConf->getTopActiveClassName()}]">
         <input type="hidden" name="listtype" value="[{$oView->getListType()}]">
@@ -37,8 +37,8 @@
 [{oxhasrights ident="TOBASKET"}]
     <form class="js-oxProductForm" action="[{$oViewConf->getSelfActionLink()}]" method="post">
         <div class="hidden">
-            [{$oViewConf->getHiddenSid()}]
-            [{$oViewConf->getNavFormParams()}]
+            [{$oViewConf->getHiddenSid() nofilter}]
+            [{$oViewConf->getNavFormParams() nofilter}]
             <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
             <input type="hidden" name="aid" value="[{$oDetailsProduct->oxarticles__oxid->value}]">
             <input type="hidden" name="anid" value="[{$oDetailsProduct->oxarticles__oxnid->value}]">

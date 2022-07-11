@@ -27,8 +27,8 @@
             [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
             <div class="addressCollumns">
                 <div class="hidden">
-                    [{$oViewConf->getHiddenSid()}]
-                    [{$oViewConf->getNavFormParams()}]
+                    [{$oViewConf->getHiddenSid() nofilter}]
+                    [{$oViewConf->getNavFormParams() nofilter}]
                     <input type="hidden" name="fnc" value="changeuser_testvalues">
                     <input type="hidden" name="cl" value="account_user">
                     <input type="hidden" name="CustomError" value='user'>

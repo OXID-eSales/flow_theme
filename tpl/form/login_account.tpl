@@ -13,8 +13,8 @@
             <div class="panel-body">
                 <form name="login" class="js-oxValidate form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" method="post" novalidate="novalidate">
                     <div class="hidden">
-                        [{$oViewConf->getHiddenSid()}]
-                        [{$oViewConf->getNavFormParams()}]
+                        [{$oViewConf->getHiddenSid() nofilter}]
+                        [{$oViewConf->getNavFormParams() nofilter}]
                         <input type="hidden" name="fnc" value="login_noredirect">
                         <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                         <input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">
