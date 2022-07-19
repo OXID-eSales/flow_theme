@@ -31,6 +31,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `setup.sql` file support and file itself
 - Remove `ajax_econda_recommendations.tpl` use econda module instead
 
+## [3.8.1] - 2022-07-18
+
+### Fixed
+- CONTRIBUTING link
+
 ## [3.8.0] - 2021-11-26
 
 ### Fixed
@@ -295,7 +300,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - [Guestbook option remains in footer settings of the Flow theme](https://bugs.oxid-esales.com/view.php?id=6696)
 
-[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.8.0...v4.0.0
+[4.0.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.8.1...v4.0.0
+[3.8.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.8.0...v3.8.1
 [3.8.0]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.2...v3.8.0
 [3.7.2]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.1...v3.7.2
 [3.7.1]: https://github.com/OXID-eSales/flow_theme/compare/v3.7.0...v3.7.1
