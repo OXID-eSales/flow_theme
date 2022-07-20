@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of OXID eSales Flow theme.
  *
@@ -27,7 +28,7 @@ $aTheme = array(
     'title'       => 'Flow',
     'description' => 'Flow is OXID`s official responsive theme based on the CSS framework Bootstrap 3.',
     'thumbnail'   => 'theme.jpg',
-    'version'     => '3.8.0',
+    'version'     => '3.8.1',
     'author'      => '<a href="http://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
     'settings'    => array(
         array(
