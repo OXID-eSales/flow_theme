@@ -4,6 +4,7 @@
 
 *Flow* is a responsive theme for all OXID eShop editions.
 
+**Warning!** Flow theme is depreciated. See also [Wave Theme](https://github.com/OXID-eSales/wave-theme) and [Graph QL Api](https://github.com/OXID-eSales/graphql-storefront-module) for alternatives. 
 
 ## Installation
 
