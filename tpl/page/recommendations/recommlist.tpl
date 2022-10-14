@@ -4,19 +4,7 @@
         [{assign var="_actvrecommlist" value=$oView->getActiveRecommList()}]
         [{assign var="recommendation_head" value="LIST_BY"|oxmultilangassign}]
         [{assign var="recommendation_head" value=$_actvrecommlist->oxrecommlists__oxtitle->value|cat:" <span>("|cat:$recommendation_head|cat:" "|cat:$_actvrecommlist->oxrecommlists__oxauthor->value|cat:")</span>"}]
-        [{assign var="rsslinks" value=$oView->getRssLinks()}]
-        <h1 class="page-header">[{$recommendation_head}]
-
-        [{assign var='rsslinks' value=$oView->getRssLinks()}]
-
-        [{if $rsslinks.recommlistarts}]
-            <a class="rss js-external" id="rssRecommListProducts" href="[{$rsslinks.recommlistarts.link}]" title="[{$rsslinks.recommlistarts.title}]">
-                <img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslinks.recommlistarts.title}]">
-                <span class="FXgradOrange corners glowShadow">[{$rsslinks.recommlistarts.title}]</span>
-            </a>
-        [{/if}]
-
-        </h1>
+        <h1 class="page-header">[{$recommendation_head}]</h1>
         <div class="listRefine clear bottomRound">
             [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigation()}]
         </div>

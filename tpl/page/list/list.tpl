@@ -30,14 +30,7 @@
         [{/if}]
 
         <div class="page-header">
-            [{assign var='rsslinks' value=$oView->getRssLinks()}]
-            <h1>
-                [{$oView->getTitle()}]
-                [{if $rsslinks.activeCategory}]
-                    <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
-                        <i class="fa fa-rss"></i>
-                    </a>
-                [{/if}]
+            <h1>[{$oView->getTitle()}] [{/if}]
             </h1>
         </div>
 

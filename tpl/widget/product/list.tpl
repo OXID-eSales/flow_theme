@@ -35,11 +35,6 @@
             <div class="page-header">
                 <h2>
                     [{$head}]
-                    [{if $rsslink}]
-                        <a class="rss" id="[{$rssId}]" href="[{$rsslink.link}]" target="_blank">
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    [{/if}]
                 </h2>
 
                 [{if $subhead}]

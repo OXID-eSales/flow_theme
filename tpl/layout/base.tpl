@@ -139,15 +139,6 @@
             <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700,600' rel='stylesheet' type='text/css'>
         [{/block}]
 
-        [{assign var='rsslinks' value=$oView->getRssLinks()}]
-        [{block name="head_link_rss"}]
-            [{if $rsslinks}]
-                [{foreach from=$rsslinks item='rssentry'}]
-                    <link rel="alternate" type="application/rss+xml" title="[{$rssentry.title|strip_tags}]" href="[{$rssentry.link}]">
-                [{/foreach}]
-            [{/if}]
-        [{/block}]
-
         [{block name="head_css"}]
             [{foreach from=$oxidBlock_head item="_block"}]
                 [{$_block}]
