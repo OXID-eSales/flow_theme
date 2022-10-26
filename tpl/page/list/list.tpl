@@ -30,8 +30,7 @@
         [{/if}]
 
         <div class="page-header">
-            <h1>[{$oView->getTitle()}] [{/if}]
-            </h1>
+            <h1>[{$oView->getTitle()}]</h1>
         </div>
 
         [{assign var="oPageNavigation" value=$oView->getPageNavigation()}]
