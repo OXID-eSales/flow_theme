@@ -36,7 +36,7 @@
         [{assign var="oPageNavigation" value=$oView->getPageNavigation()}]
         [{if $actCategory && $actCategory->getShortDescription() && $oPageNavigation->actPage == 1}]
             <p id="catDescLocator" class="categoryDescription">
-                <em>[{$actCategory->oxcategories__oxdesc->rawValue}]</em>
+                <em>[{$actCategory->getShortDescription()}]</em>
             </p>
         [{/if}]
 
